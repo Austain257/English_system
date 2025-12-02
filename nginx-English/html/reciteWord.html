@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>英语词汇背诵 - 移动端优化版</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 500px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            overflow: hidden;
+            position: relative;
+        }
+        
+        /* 添加紫色竖条 */
+        .container::before,
+        .container::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 6px;
+            background: #764ba2;
+        }
+        
+        .container::before {
+            left: 0;
+        }
+        
+        .container::after {
+            right: 0;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 18px 15px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .header h1 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        .header p {
+            font-size: 0.85rem;
+            opacity: 0.9;
+        }
+        
+        .control-panel {
+            padding: 15px;
+            background: #f8f9fa;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .input-group {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .number-input {
+            flex: 1;
+            padding: 12px 15px;
+            border: 2px solid #4facfe;
+            border-radius: 10px;
+            font-size: 1rem;
+            outline: none;
+            min-height: 48px;
+        }
+        
+        .number-input:focus {
+            border-color: #00f2fe;
+            box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.2);
+        }
+        
+        .btn {
+            padding: 12px 16px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 48px;
+        }
+        
+        .btn-primary {
+            background: #4facfe;
+            color: white;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .word-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px 20px;
+            margin-bottom: 25px;
+            min-height: 180px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            transition: all 0.3s ease;
+            position: relative;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .word {
+            font-size: 2.2rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 12px;
+            position: relative;
+            padding-right: 45px;
+            line-height: 1.2;
+        }
+        
+        .pronounce {
+            color: #666;
+            font-style: italic;
+            font-size: 1.3rem;
+            margin-bottom: 16px;
+        }
+        
+        .chinese {
+            color: #2c3e50;
+            font-size: 1.2rem;
+            font-weight: bold;
+            line-height: 1.5;
+            margin-bottom: 16px;
+        }
+        
+        .times {
+            background: #4facfe;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        
+        .index-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        
+        .current-index {
+            color: #666;
+            font-size: 1rem;
+        }
+        
+        .total-words {
+            color: #28a745;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+        
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 15px;
+            gap: 10px;
+        }
+        
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+            flex: 1;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 1.1rem;
+            color: #666;
+        }
+        
+        .error {
+            text-align: center;
+            padding: 40px 20px;
+            color: #e74c3c;
+            font-size: 1.1rem;
+        }
+        
+        /* 朗读按钮样式 - 移动端优化 */
+        .speak-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #f0f4f8;
+            border: none;
+            border-radius: 50%;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+            z-index: 10;
+        }
+        
+        .speak-btn:active {
+            transform: scale(0.95);
+            background: #4facfe;
+        }
+        
+        .speak-btn:active .speak-icon {
+            color: white;
+        }
+        
+        .speak-icon {
+            font-size: 1.4rem;
+            color: #4facfe;
+        }
+        
+        /* 移动端优化提示 */
+        .mobile-hint {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #666;
+            padding: 15px 10px 5px;
+            background: #f9f9f9;
+            border-top: 1px solid #eee;
+        }
+        
+        /* 浏览器支持提示 */
+        .browser-warning {
+            background: #fff9db;
+            border: 1px solid #ffd43b;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 15px 0;
+            text-align: center;
+            display: none;
+        }
+        
+        .browser-warning.show {
+            display: block;
+        }
+        
+        .browser-warning p {
+            margin-bottom: 8px;
+            color: #5f3dc4;
+        }
+        
+        .browser-warning ul {
+            text-align: left;
+            padding-left: 20px;
+            margin: 10px 0;
+        }
+        
+        .browser-warning li {
+            margin-bottom: 5px;
+        }
+        
+        /* 媒体查询 - 小屏幕优化 */
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+            
+            .container {
+                border-radius: 12px;
+            }
+            
+            .header {
+                padding: 15px 10px;
+            }
+            
+            .header h1 {
+                font-size: 1.3rem;
+            }
+            
+            .control-panel {
+                padding: 12px;
+            }
+            
+            .input-group {
+                flex-direction: column;
+                gap: 8px;
+            }
+            
+            .word {
+                font-size: 1.9rem;
+                padding-right: 40px;
+            }
+            
+            .pronounce {
+                font-size: 1.1rem;
+            }
+            
+            .chinese {
+                font-size: 1.1rem;
+            }
+            
+            .buttons {
+                gap: 8px;
+            }
+            
+            .btn {
+                font-size: 0.95rem;
+                padding: 10px;
+            }
+            
+            .speak-btn {
+                width: 40px;
+                height: 40px;
+            }
+            
+            .speak-icon {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-book-open"></i> 英语词汇背诵</h1>
+            <p>掌握高频词汇，提升英语能力</p>
+        </div>
+        
+        <div class="control-panel">
+            <div class="input-group">
+                <input 
+                    type="number" 
+                    id="startIndexInput" 
+                    class="number-input" 
+                    placeholder="起始编号" 
+                    min="0" 
+                    value="0"
+                >
+                <input 
+                    type="number" 
+                    id="endIndexInput" 
+                    class="number-input" 
+                    placeholder="结束编号" 
+                    min="1" 
+                    value="50"
+                >
+            </div>
+            <button id="loadWordsBtn" class="btn btn-primary">
+                <i class="fas fa-download"></i> 加载单词
+            </button>
+        </div>
+        
+        <div class="content">
+            <div id="wordCard" class="word-card">
+                <div class="loading">请输入单词范围并点击加载</div>
+            </div>
+            
+            <div class="buttons">
+                <button id="prevWordBtn" class="btn btn-secondary">
+                    <i class="fas fa-arrow-left"></i> 上一个
+                </button>
+                <button id="nextWordBtn" class="btn btn-secondary">
+                    下一个 <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+            
+            <div class="mobile-hint">
+                提示：点击喇叭图标<i class="fas fa-volume-up" style="color:#4facfe; margin:0 5px;"></i>朗读单词
+            </div>
+            
+            <div id="browserWarning" class="browser-warning">
+                <p><i class="fas fa-exclamation-triangle"></i> 您的浏览器可能不支持语音朗读功能</p>
+                <p>建议使用以下浏览器：</p>
+                <ul>
+                    <li>Chrome（安卓版）</li>
+                    <li>Firefox（安卓版）</li>
+                    <li>Microsoft Edge（安卓版）</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const startIndexInput = document.getElementById('startIndexInput');
+            const endIndexInput = document.getElementById('endIndexInput');
+            const loadWordsBtn = document.getElementById('loadWordsBtn');
+            const wordCard = document.getElementById('wordCard');
+            const prevWordBtn = document.getElementById('prevWordBtn');
+            const nextWordBtn = document.getElementById('nextWordBtn');
+            const browserWarning = document.getElementById('browserWarning');
+            
+            let words = [];
+            let currentIndex = 0;
+            let isSpeaking = false;
+            let isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            
+            // 检测浏览器是否支持Web Speech API
+            if (!('speechSynthesis' in window) || !('SpeechSynthesisUtterance' in window)) {
+                browserWarning.classList.add('show');
+            }
+            
+            // 加载单词按钮点击事件
+            loadWordsBtn.addEventListener('click', loadWords);
+            
+            // 移动端键盘优化
+            startIndexInput.addEventListener('focus', function() {
+                setTimeout(() => {
+                    window.scrollTo(0, 0);
+                    document.body.scrollTop = 0;
+                }, 100);
+            });
+            
+            endIndexInput.addEventListener('focus', function() {
+                setTimeout(() => {
+                    window.scrollTo(0, 0);
+                    document.body.scrollTop = 0;
+                }, 100);
+            });
+            
+            // 回车键支持
+            startIndexInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    loadWords();
+                }
+            });
+            
+            endIndexInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    loadWords();
+                }
+            });
+            
+            // 上一个单词
+            prevWordBtn.addEventListener('click', function() {
+                if (words.length === 0) return;
+                
+                currentIndex = (currentIndex - 1 + words.length) % words.length;
+                renderCurrentWord();
+            });
+            
+            // 下一个单词
+            nextWordBtn.addEventListener('click', function() {
+                if (words.length === 0) return;
+                
+                currentIndex = (currentIndex + 1) % words.length;
+                renderCurrentWord();
+            });
+            
+            // 加载单词函数
+            function loadWords() {
+                const startIndex = parseInt(startIndexInput.value);
+                const endIndex = parseInt(endIndexInput.value);
+                
+                if (isNaN(startIndex) || startIndex < 0) {
+                    alert('请输入有效的起始编号（≥0）');
+                    return;
+                }
+                
+                if (isNaN(endIndex) || endIndex <= startIndex) {
+                    alert('结束编号必须大于起始编号');
+                    return;
+                }
+                
+                // 获取课本名称参数
+                const urlParams = new URLSearchParams(window.location.search);
+                const bookname = urlParams.get('bookname');
+                
+                // 显示加载状态
+                wordCard.innerHTML = '<div class="loading">正在加载词汇数据...</div>';
+                
+                // 构建带参数的URL
+                // let url = `http://localhost:8080/english/recite?start=${startIndex}&end=${endIndex}`;
+                let url = `http://8.148.209.41:8080/english/recite?start=${startIndex}&end=${endIndex}`;
+                if (bookname) {
+                    url += `&bookname=${encodeURIComponent(bookname)}`;
+                }
+                
+                fetch(url)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(`HTTP error! status: ${response.status}`);
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        if (data.code !== 1 || !data.data || data.data.length === 0) {
+                            wordCard.innerHTML = '<div class="error">暂无词汇数据</div>';
+                            words = [];
+                            return;
+                        }
+                        
+                        words = data.data;
+                        currentIndex = 0;
+                        renderCurrentWord();
+                    })
+                    .catch(error => {
+                        console.error('获取数据失败:', error);
+                        wordCard.innerHTML = `
+                            <div class="error">
+                                <p>数据加载失败: ${error.message}</p>
+                                <p>请检查后端服务是否已启动</p>
+                            </div>
+                        `;
+                        words = [];
+                    });
+            }
+            
+            // 朗读单词函数 (移动端兼容)
+            function speakWord(word) {
+                // 检查浏览器是否支持Web Speech API
+                if ('speechSynthesis' in window) {
+                    // 如果正在朗读，先停止
+                    if (isSpeaking) {
+                        speechSynthesis.cancel();
+                    }
+                    
+                    // 创建新的语音实例
+                    const utterance = new SpeechSynthesisUtterance(word);
+                    
+                    // 设置语音属性
+                    utterance.lang = 'en-US'; // 美式英语发音
+                    utterance.rate = 0.9;     // 稍慢语速，适合学习
+                    utterance.pitch = 1.0;    // 正常音调
+                    utterance.volume = 1.0;   // 最大音量
+                    
+                    // 移动端事件处理
+                    utterance.onstart = function() {
+                        isSpeaking = true;
+                        // 添加播放动画
+                        const speakBtn = document.querySelector('.speak-btn');
+                        if (speakBtn) {
+                            speakBtn.innerHTML = '<i class="fas fa-volume-up speak-icon" style="color:#4facfe;"></i>';
+                            speakBtn.classList.add('active');
+                        }
+                    };
+                    
+                    utterance.onend = function() {
+                        isSpeaking = false;
+                        // 恢复喇叭图标
+                        const speakBtn = document.querySelector('.speak-btn');
+                        if (speakBtn) {
+                            speakBtn.innerHTML = '<i class="fas fa-volume-up speak-icon"></i>';
+                            speakBtn.classList.remove('active');
+                        }
+                    };
+                    
+                    utterance.onerror = function(event) {
+                        console.error('朗读错误:', event.error);
+                        isSpeaking = false;
+                        alert('朗读失败: ' + event.error);
+                    };
+                    
+                    // 尝试使用高质量语音
+                    const voices = speechSynthesis.getVoices();
+                    let selectedVoice = null;
+                    
+                    // 优先选择移动端友好语音
+                    const mobileFriendlyVoices = voices.filter(voice => 
+                        voice.lang.startsWith('en') && 
+                        (voice.name.includes('Google') || 
+                         voice.name.includes('Samantha') || 
+                         voice.name.includes('English') || 
+                         voice.name.includes('Karen') || 
+                         voice.name.includes('Daniel'))
+                    );
+                    
+                    if (mobileFriendlyVoices.length > 0) {
+                        selectedVoice = mobileFriendlyVoices[0];
+                    } else if (voices.length > 0) {
+                        selectedVoice = voices[0];
+                    }
+                    
+                    if (selectedVoice) {
+                        utterance.voice = selectedVoice;
+                    }
+                    
+                    // 朗读单词
+                    speechSynthesis.speak(utterance);
+                } else {
+                    alert('抱歉，您的浏览器不支持语音朗读功能。请尝试使用Chrome、Edge或Safari浏览器。');
+                }
+            }
+            
+            // 渲染当前单词
+            function renderCurrentWord() {
+                if (words.length === 0) return;
+                
+                const word = words[currentIndex];
+                
+                wordCard.innerHTML = `
+                    <div class="word">${word.word}
+                        <button class="speak-btn" title="朗读单词">
+                            <i class="fas fa-volume-up speak-icon"></i>
+                        </button>
+                    </div>
+                    <div class="pronounce">${word.pronounce}</div>
+                    <div class="chinese">${word.chinese}</div>
+                    <div class="times">出现 ${word.times} 次</div>
+                    <div class="index-info">
+                        <div class="current-index">第 ${currentIndex + 1} / ${words.length} 个单词</div>
+                        <div class="total-words">共 ${words.length} 个单词</div>
+                    </div>
+                `;
+                
+                // 为朗读按钮添加事件监听器
+                const speakButton = document.querySelector('.speak-btn');
+                speakButton.addEventListener('click', () => {
+                    speakWord(word.word);
+                });
+            }
+            
+            // iOS特殊处理 - 需要用户交互后初始化语音
+            document.body.addEventListener('touchstart', initSpeechSynthesis, { once: true });
+            document.body.addEventListener('click', initSpeechSynthesis, { once: true });
+            
+            function initSpeechSynthesis() {
+                // 触发语音列表加载
+                speechSynthesis.getVoices();
+            }
+        });
+    </script>
+</body>
+</html>
+
+

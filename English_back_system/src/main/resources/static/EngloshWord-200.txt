@@ -1,0 +1,200 @@
+1;available;/əˈveɪləbl/;可利用的，可得到;414  
+2;resident;/ˈrezɪdənt/;定居的 n.居民;395  
+3;conversation;/ˌkɑːnvəˈseɪʃn/;交读，谈话;392  
+4;direction;/dəˈrekʃn/;方向，指导;386  
+5;sheet;/ʃiːt/;表格，一张(纸)，床单;312  
+6;correspond;/ˌkɔːrəˈspɑːnd/;符合，联系;251  
+7;advance;/ədˈvæns/;促进；提前 n.进步;247
+8;total;/ˈtoʊtl/;全部的 v.总数达 n.合计;219  
+9;contribute;/kənˈtrɪbjuːt/;贡献，捐献;212  
+10;single;/ˈsɪŋɡl/;一个的，单身的;201  
+11;information;/ˌɪnfərˈmeɪʃn/;消息，资料;189  
+12;research;/rɪˈsɜːrtʃ/;研究、调查;175  
+13;experience;/ɪkˈspɪriəns/;经验，经历;171  
+14;program;/ˈproʊɡræm/;程序，节目 v.编程;162  
+15;identify;/aɪˈdentɪfaɪ/;鉴定，认出，发现;154  
+16;digital;/ˈdɪdʒɪtl/;数码的，数字的;146  
+17;average;/ˈævərɪdʒ/;平均的 n.平均数;135  
+18;rate;/reɪt/;速度，价格 v.评价;128  
+19;position;/pəˈzɪʃn/;职位，位置 v.定位;125  
+20;appeal;/əˈpiːl/;呼吁，恳求；申诉;121  
+21;feature;/ˈfiːtʃər/;面貌特征，特点;118  
+22;individual;/ˌɪndɪˈvɪdʒuəl/;个人的 n.个人;108  
+23;academic;/ˌækəˈdemɪk/;学院的 n.大学教师;99  
+24;access;/ˈækses/;入口；接近...的方法;93  
+25;obesity;/oʊˈbiːsəti/;肥大，肥胖;91  
+26;item;/ˈaɪtəm/;物品，条款，项目;86  
+27;recession;/rɪˈseʃn/;经济衰退;85  
+28;process;/ˈprɑːses/;处理 n.过程；步骤;79  
+29;regulation;/ˌreɡjuˈleɪʃn/;规章;78  
+30;release;/rɪˈliːs/;释放；发布；放开;75  
+31;tend;/tend/;趋向;72  
+32;promote;/prəˈmoʊt/;促进；提升；推销;70  
+33;affect;/əˈfekt/;影响；感动；假装;65  
+34;involve;/ɪnˈvɑːlv/;包含；参与;65  
+35;communicate;/kəˈmjuːnɪkeɪt/;交流；传播;64  
+36;condition;/kənˈdɪʃn/;条件，状态;61  
+37;professional;/prəˈfeʃənl/;专业的;59  
+38;pose;/poʊz/;引起（困难等）；提出;59  
+39;concern;/kənˈsɜːrn/;涉及；n.担心;59  
+40;compound;/ˈkɑːmpaʊnd/;n.化合物 v.合成;58  
+41;approach;/əˈproʊtʃ/;接近 n.接近；方法;57  
+42;nature;/ˈneɪtʃər/;大自然；天性;52  
+43;occasion;/əˈkeɪʒn/;场合；时机;52  
+44;major;/ˈmeɪdʒər/;主要的 v.主修;52  
+45;impact;/ˈɪmpækt/;n/v.影响;51  
+46;financial;/faɪˈnænʃl/;财政的，金融的;50  
+47;derive;/dɪˈraɪv/;起源，来自;50  
+48;potential;/pəˈtenʃl/;n.潜力 a.潜在的;50  
+49;university;/ˌjuːnɪˈvɜːrsəti/;大学;49  
+50;function;/ˈfʌŋkʃn/;n. 功能 v. 起作用;49  
+51;light;/laɪt/;n. 光 v. 照亮;47  
+52;association;/əˌsəʊsiˈeɪʃn/;n. 协会，社团;47  
+53;divorce;/dɪˈvɔːs/;v. 离婚;47  
+54;innovation;/ˌɪnəˈveɪʃn/;n. 创新，改革;47  
+55;account;/əˈkaʊnt/;n. 账户；解释;46  
+56;positive;/ˈpɒzətɪv/;a. 积极的;46  
+57;engage;/ɪnˈɡeɪdʒ/;v. 参与，从事，雇佣;46  
+58;issue;/ˈɪʃuː/;n. 问题 v. 发行，发布;46  
+59;current;/ˈkʌrənt/;a. 当前的，流通的;46  
+60;support;/səˈpɔːt/;n./v. 支持;46  
+61;acquire;/əˈkwaɪə(r)/;v. 取得，获得;45  
+62;attach;/əˈtætʃ/;v. 系上，贴上，附加;45  
+63;consumption;/kənˈsʌmpʃn/;n. 消费，消耗;45  
+64;maintain;/meɪnˈteɪn/;v. 坚持，保持，维修;45  
+65;generation;/ˌdʒenəˈreɪʃn/;n. 一代（人）;44  
+66;generate;/ˈdʒenəreɪt/;v. 产生，发（热，电）;43  
+67;invest;/ɪnˈvest/;v. 投资;43  
+68;facility;/fəˈsɪləti/;n. 设施，场所;43  
+69;standard;/ˈstændəd/;n. 标准 a. 标准的;43  
+70;stick;/stɪk/;v. 粘贴，戳 n. 棍状物;42  
+71;participate;/pɑːˈtɪsɪpeɪt/;v. 参加;42  
+72;bacteria;/bækˈtɪəriə/;n. 细菌;42  
+73;character;/ˈkærəktə(r)/;n. 角色，性格，特点;41  
+74;instance;/ˈɪnstəns/;n. 例子，情况;41  
+75;assignment;/əˈsaɪnmənt/;n. 分配，任务;40  
+76;private;/ˈpraɪvət/;a. 私人的;39  
+77;motivate;/ˈməʊtɪveɪt/;v. 激发，激励;39  
+78;boost;/buːst/;n. 提高，促进;39  
+79;essential;/ɪˈsenʃl/;a. 必要的，基本的;38  
+80;ingredient;/ɪnˈɡriːdiənt/;n. 成分，配料，要素;38  
+81;previous;/ˈpriːviəs/;a. 先前的;38  
+82;emission;/iˈmɪʃn/;n. 排放，散发;37  
+83;budget;/ˈbʌdʒɪt/;n. 预算;37  
+84;intelligence;/ɪnˈtelɪdʒəns/;n. 智力，情报;37  
+85;excellent;/ˈeksələnt/;a. 优秀的，杰出的;37  
+86;document;/ˈdɒkjumənt/;n. 文件;37  
+87;neighbor;/ˈneɪbə(r)/;n. 邻居;36  
+88;commercial;/kəˈmɜːʃl/;a. 贸易的，商业的;36  
+89;secretary;/ˈsekrətri/;n. 秘书，大臣;36  
+90;alternative;/ɔːlˈtɜːnətɪv/;a. 供选择的;36  
+91;ultimately;/ˈʌltɪmətli/;adv. 最终;35  
+92;tobacco;/təˈbækəʊ/;n. 烟草;35  
+93;colleague;/ˈkɒliːɡ/;n. 同事;35  
+94;revolution;/ˌrevəˈluːʃn/;n. 革命;35  
+95;interaction;/ˌɪntərˈækʃn/;n. 互相交流 / 作用;34  
+96;reverse;/rɪˈvɜːs/;v. 使颠倒 a. 相反的;34  
+97;authority;/ɔːˈθɒrəti/;n. 权威，权威人士;34  
+98;exhaust;/ɪɡˈzɔːst/;v. 耗尽 n. 排气;33  
+99;cancel;/ˈkænsl/;v. 取消;34  
+100;curriculum;/kəˈrɪkjələm/;n. 课程;33  
+101;reject;/rɪˈdʒekt/;v. 拒绝;32  
+102;release;/rɪˈliːs/;v. 释放，发布;31  
+103;domestic;/dəˈmestɪk/;a. 家庭的，国内的;31  
+104;transfer;/trænsˈfɜː(r)/;n. 转移调任;31  
+105;appetite;/ˈæpɪtaɪt/;n. 食欲，爱好;31  
+106;principle;/ˈprɪnsəpl/;n. 原则，原理;30  
+107;reserve;/rɪˈzɜːv/;v. 保留，预定;30  
+108;spouse;/spaʊs/;n. 配偶;30  
+109;prospect;/ˈprɒspekt/;n. 前景 v. 寻找;29  
+110;suspect;/səˈspekt/;v. 怀疑 n. 嫌疑犯;29  
+111;pursue;/pəˈsjuː/;v. 追求，追逐;29  
+112;corporate;/ˈkɔːpərət/;a. 团体的，公司的;29  
+113;journal;/ˈdʒɜːnl/;n. 日志，期刊;28  
+114;quarter;/ˈkwɔːtə(r)/;n. 四分之一，一刻钟;28  
+115;highlight;/ˈhaɪlaɪt/;n. 突出的部分;28  
+116;contract;/ˈkɒntrækt/;n. 合同 v. 订合同;27  
+117;administration;/ədˌmɪnɪˈstreɪʃn/;n. 管理，行政;27  
+118;stimulate;/ˈstɪmjuleɪt/;v. 刺激，激励;27  
+119;penalty;/ˈpenəlti/;n. 惩罚;27  
+120;flexible;/ˈfleksəbl/;a. 灵活的;27  
+121;sensitive;/ˈsensətɪv/;a. 敏感的，体贴的;26  
+122;temperature;/ˈtemprətʃə(r)/;n. 温度;26  
+123;perception;/pəˈsepʃn/;n. 感知，看法;26  
+124;literature;/ˈlɪtrətʃə(r)/;n. 文学;25  
+125;vulnerable;/ˈvʌlnərəbl/;a. 脆弱的，易碎的;25  
+126;outcome;/ˈaʊtkʌm/;n. 结果，成果;25  
+127;conference;/ˈkɒnfərəns/;n. 大型会议;24  
+128;shrink;/ʃrɪŋk/;n. 收缩，退缩;23  
+129;decorate;/ˈdekəreɪt/;v. 装修，装饰;23  
+130;session;/ˈseʃn/;n. 学期，一段时间;21  
+131;restrict;/rɪˈstrɪkt/;v. 限制，约束;20  
+132;portion;/ˈpɔːʃn/;n. 部分 v. 分配;20  
+133;freeze;/friːz/;n./v. 冻结，严寒;20  
+134;quality;/ˈkwɒləti/;n. 质量，品质;20  
+135;division;/dɪˈvɪʒn/;n. 划分，除法，部门;19  
+136;sustain;/səˈsteɪn/;v. 支撑，维持;19  
+137;diabetes;/ˌdaɪəˈbiːtiːz/;n. 糖尿病;19  
+138;estate;/ɪˈsteɪt/;n. 庄园，财产;19  
+139;evolve;/ɪˈvɒlv/;v. 发展，进化;18  
+140;capacity;/kəˈpæsəti/;n. 容量，能力;18  
+141;circumstance;/ˈsɜːkəmstəns/;n. 环境，情况;18  
+142;graffiti;/ɡrəˈfiːti/;n. 涂鸦;18  
+143;perspective;/pəˈspektɪv/;n. 观点，视角;18  
+144;severe;/sɪˈvɪə(r)/;a. 严重的，严厉的;17  
+145;elementary;/ˌelɪˈmentri/;a. 初级的;17  
+146;manufacture;/ˌmænjuˈfæktʃə(r)/;v. 制造，编造;17  
+147;revenue;/ˈrevənjuː/;n. 收入，税收;17  
+148;integrity;/ɪnˈteɡrəti/;n. 完整，正直，诚实;17  
+149;rational;/ˈræʃnəl/;a. 理性的，合理的;17  
+150;margin;/ˈmɑːdʒɪn/;n. 边缘，利润，余地;17  
+151;shuttle;/ˈʃʌtl/;n. 往返，航天飞机;17  
+152;tunnel;/ˈtʌnl/;n. 隧道;17  
+153;massive;/ˈmæsɪv/;a. 大量的，巨大的;16  
+154;longevity;/lɒnˈdʒevəti/;n. 寿命，长寿;16  
+155;immune;/ɪˈmjuːn/;a. 免疫的，不受影响;16  
+156;estimate;/ˈestɪmeɪt/;v. 估算，估计;16  
+157;nutrition;/njuˈtrɪʃn/;n. 营养;16  
+158;culminate;/ˈkʌltɪveɪt/;v. 培养，栽培;15  
+159;moreover;/mɔːrˈəʊvə(r)/;adv. 而且，此外;15  
+160;counterpart;/ˈkaʊntəpɑːt/;n. 对应的人;15  
+161;discrimination;/dɪˌskrɪmɪˈneɪʃn/;n. 区别，歧视;15  
+162;permanent;/ˈpɜːmənənt/;a. 永久的，持久的;15  
+163;furniture;/ˈfɜːnɪtʃə(r)/;n. 家具;15  
+164;inflation;/ɪnˈfleɪʃn/;n. 通货膨胀;15  
+165;commerce;/ˈkɒmɜːs/;n. 商业，贸易;15  
+166;acknowledge;/əkˈnɒlɪdʒ/;v. 承认，答谢;15  
+167;definition;/ˌdefɪˈnɪʃn/;n. 定义，清晰度;14  
+168;heritage;/ˈherɪtɪdʒ/;n. 遗产，传统;14  
+169;appreciate;/əˈpriːʃieɪt/;v. 欣赏，感谢;14  
+170;atmosphere;/ˈætməsfɪə(r)/;n. 大气，气氛;14  
+171;commit;/kəˈmɪt/;v.（错）;14  
+172;sufficient;/səˈfɪʃnt/;a. 足够的;14  
+173;hinder;/ˈhɪndə(r)/;v. 阻碍，打扰;14  
+174;percentage;/pəˈsentɪdʒ/;n. 百分比;13  
+175;interpret;/ɪnˈtɜːprət/;v. 口译，解释;13  
+176;institute;/ˈɪnstɪtjuːt/;n. 学院，研究所;13  
+177;demonstrate;/ˈdemənstreɪt/;v. 展示，证明;13  
+178;dramatic;/drəˈmætɪk/;a. 戏剧性的;13  
+179;specialist;/ˈspeʃəlɪst/;n. 专家;13  
+180;fulfill;/fʊlˈfɪl/;v. 履行，实现;13  
+181;episode;/ˈepɪsəʊd/;n. 一集，插曲;13  
+182;multiple;/ˈmʌltɪpl/;a. 多样的 n. 倍数;12  
+183;tension;/ˈtenʃn/;n. 紧张;12  
+184;distraction;/dɪˈstrækʃn/;n. 分心，娱乐;12  
+185;density;/ˈdensəti/;n. 密度，浓度;12  
+186;universal;/ˌjuːnɪˈvɜːsl/;a. 普遍的;12  
+187;cognitive;/ˈkɒɡnətɪv/;a. 认知的;12  
+188;disorder;/dɪsˈɔːdə(r)/;n. 混乱，失调;12  
+189;capture;/ˈkæptʃə(r)/;v./n. 逮捕，捕捉;12  
+190;relieve;/rɪˈliːv/;v. 减轻，缓解;12  
+191;negotiate;/nɪˈɡəʊʃieɪt/;v. 谈判，协商;11  
+192;pediatrician;/ˌpiːdiəˈtrɪʃn/;n. 儿科医生;11  
+193;undermine;/ˌʌndəˈmaɪn/;v. 逐渐削弱;11  
+194;gadget;/ˈɡædʒɪt/;n. 小配件，小器具;11  
+195;marvelous;/ˈmɑːvələs/;a. 极好的;11  
+196;discipline;/ˈdɪsəplɪn/;n. 纪律，训练;11  
+197;accumulate;/əˈkjuːmjuleɪt/;v. 积累;11  
+198;attribute;/əˈtrɪbjuːt/;v. 把… 归因于;11  
+199;contaminate;/kənˈtæmɪneɪt/;v. 污染;12  
+200;restrict;/rɪˈstrɪkt/;v. 限制，约束;12

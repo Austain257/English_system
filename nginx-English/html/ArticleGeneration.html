@@ -1,0 +1,715 @@
+<!-- <!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI文章生成</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container {
+            max-width: 550px;
+            width: 100%;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 1.8em;
+            margin-bottom: 5px;
+        }
+        
+        .header p {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+        
+        .control-panel {
+            padding: 20px;
+            background: #f8f9fa;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .input-group {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .number-input {
+            flex: 1;
+            padding: 12px;
+            border: 2px solid #4facfe;
+            border-radius: 8px;
+            font-size: 1em;
+            outline: none;
+        }
+        
+        .number-input:focus {
+            border-color: #00f2fe;
+            box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.2);
+        }
+        
+        .btn {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            flex: 0 0 auto;
+        }
+        
+        .btn-primary {
+            background: #4facfe;
+            color: white;
+        }
+        
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+        
+        .btn-success {
+            background: #28a745;
+            color: white;
+        }
+        
+        .btn-danger {
+            background: #dc3545;
+            color: white;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .content {
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .article-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            min-height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .article-content {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #333;
+            text-align: left;
+            white-space: pre-wrap;
+            overflow-y: auto;
+            max-height: 300px;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 50px;
+            font-size: 1.2em;
+            color: #666;
+        }
+        
+        .error {
+            text-align: center;
+            padding: 50px;
+            color: #e74c3c;
+            font-size: 1.2em;
+        }
+        
+        .status-message {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            display: none;
+        }
+        
+        .status-success {
+            background-color: #d4edda;
+            color: #155724;
+            display: block;
+        }
+        
+        .status-error {
+            background-color: #f8d7da;
+            color: #721c24;
+            display: block;
+        }
+        
+        .typing-cursor {
+            display: inline-block;
+            width: 8px;
+            height: 16px;
+            background-color: #333;
+            animation: blink 1s infinite;
+            vertical-align: middle;
+            margin-left: 2px;
+        }
+        
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="inputContainer">
+        <div class="header">
+            <h1>📝 AI 文章生成</h1>
+            <p>输入单词范围，生成连贯文章</p>
+        </div>
+        
+        <div class="control-panel">
+            <div class="input-group">
+                <input 
+                    type="number" 
+                    id="startIndexInput" 
+                    class="number-input" 
+                    placeholder="起始编号" 
+                    min="0" 
+                    value="0"
+                >
+                <input 
+                    type="number" 
+                    id="endIndexInput" 
+                    class="number-input" 
+                    placeholder="结束编号" 
+                    min="1" 
+                    value="10"
+                >
+            </div>
+            <button id="generateBtn" class="btn btn-primary">生成文章</button>
+        </div>
+    </div>
+
+    <div class="container" id="outputContainer" style="display: none;">
+        <div class="header">
+            <h1>📝 生成结果</h1>
+            <p>AI正在为您创作...</p>
+        </div>
+        
+        <div class="content">
+            <div id="articleCard" class="article-card">
+                <div id="articleContent" class="article-content"></div>
+                <span id="typingCursor" class="typing-cursor"></span>
+            </div>
+            
+            <button id="backBtn" class="btn btn-secondary">返回</button>
+            
+            <div id="statusMessage" class="status-message"></div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const startIndexInput = document.getElementById('startIndexInput');
+            const endIndexInput = document.getElementById('endIndexInput');
+            const generateBtn = document.getElementById('generateBtn');
+            const backBtn = document.getElementById('backBtn');
+            const articleContent = document.getElementById('articleContent');
+            const statusMessage = document.getElementById('statusMessage');
+            const inputContainer = document.getElementById('inputContainer');
+            const outputContainer = document.getElementById('outputContainer');
+            const typingCursor = document.getElementById('typingCursor');
+            
+            let eventSource = null;
+            let currentContent = '';
+            let typingInterval = null;
+            let buffer = '';
+            let isTyping = false;
+
+            // 生成文章按钮点击事件
+            generateBtn.addEventListener('click', function() {
+                const startIndex = parseInt(startIndexInput.value);
+                const endIndex = parseInt(endIndexInput.value);
+                
+                if (isNaN(startIndex) || startIndex < 0) {
+                    alert('请输入有效的起始编号（≥0）');
+                    return;
+                }
+                
+                if (isNaN(endIndex) || endIndex <= startIndex) {
+                    alert('结束编号必须大于起始编号');
+                    return;
+                }
+                
+                // 切换到输出视图
+                inputContainer.style.display = 'none';
+                outputContainer.style.display = 'block';
+                
+                // 清空之前的内容
+                currentContent = '';
+                articleContent.textContent = '';
+                buffer = '';
+                showStatus('正在连接AI服务...', 'success');
+                
+                // 模拟流式数据接收
+                simulateStreamingResponse(startIndex, endIndex);
+                
+                // 实际使用时替换为以下代码：
+                /*
+                // 建立SSE连接
+                const words = "article,ache,astronaut,without,acid,specify,daylight,poetry,seven,fetch,immigrant";
+                const url = `http://localhost:8080/article/generation?words=${encodeURIComponent(words)}`;
+                
+                eventSource = new EventSource(url);
+                
+                eventSource.onmessage = function(event) {
+                    buffer += event.data;
+                    
+                    if (!isTyping) {
+                        startTypingEffect();
+                    }
+                };
+                
+                eventSource.onerror = function() {
+                    showStatus('连接已关闭', 'error');
+                    eventSource.close();
+                    stopTypingEffect();
+                };
+                */
+            });
+            
+            // 返回按钮点击事件
+            backBtn.addEventListener('click', function() {
+                // 关闭SSE连接
+                if (eventSource) {
+                    eventSource.close();
+                    eventSource = null;
+                }
+                
+                // 停止打字效果
+                stopTypingEffect();
+                
+                // 切换回输入视图
+                outputContainer.style.display = 'none';
+                inputContainer.style.display = 'block';
+            });
+            
+            // 显示状态消息
+            function showStatus(message, type) {
+                statusMessage.textContent = message;
+                statusMessage.className = 'status-message';
+                statusMessage.classList.add(type === 'success' ? 'status-success' : 'status-error');
+            }
+            
+            // 开始打字效果
+            function startTypingEffect() {
+                isTyping = true;
+                typingCursor.style.display = 'inline-block';
+                
+                typingInterval = setInterval(function() {
+                    if (buffer.length > 0) {
+                        const char = buffer.charAt(0);
+                        buffer = buffer.substring(1);
+                        currentContent += char;
+                        articleContent.textContent = currentContent;
+                        
+                        // 自动滚动到底部
+                        articleContent.scrollTop = articleContent.scrollHeight;
+                    } else {
+                        isTyping = false;
+                        stopTypingEffect();
+                    }
+                }, 30); // 调整这个值可以改变打字速度
+            }
+            
+            // 停止打字效果
+            function stopTypingEffect() {
+                if (typingInterval) {
+                    clearInterval(typingInterval);
+                    typingInterval = null;
+                }
+                typingCursor.style.display = 'none';
+            }
+            
+            // 模拟流式响应（仅用于演示）
+            function simulateStreamingResponse(startIndex, endIndex) {
+                showStatus('正在生成内容...', 'success');
+                
+                // 模拟的生成内容
+                const sampleText = `根据您选择的单词范围（${startIndex}-${endIndex}），AI生成了以下文章：
+
+在这个充满诗意的日子里，七位宇航员在日光下漫步，没有携带任何酸性物质。他们带着文章和诗歌，小心翼翼地获取着移民的故事。每一次的疼痛都成为他们创作的源泉，他们详细记录下每一个细节。
+
+这些文字穿越时空，如同白昼般明亮，又如诗歌般优美。七这个数字在东方文化中象征着幸运，而获取知识的过程则如同移民般充满挑战。`;
+
+                let index = 0;
+                const interval = setInterval(() => {
+                    if (index < sampleText.length) {
+                        currentContent += sampleText.charAt(index);
+                        articleContent.textContent = currentContent;
+                        articleContent.scrollTop = articleContent.scrollHeight;
+                        index++;
+                    } else {
+                        clearInterval(interval);
+                        showStatus('内容生成完成', 'success');
+                    }
+                }, 50);
+            }
+        });
+    </script>
+</body>
+</html> -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI文章生成</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container {
+            max-width: 550px;
+            width: 100%;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 1.8em;
+            margin-bottom: 5px;
+        }
+        
+        .header p {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+        
+        .control-panel {
+            padding: 20px;
+            background: #f8f9fa;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .input-group {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .number-input {
+            flex: 1;
+            padding: 12px;
+            border: 2px solid #4facfe;
+            border-radius: 8px;
+            font-size: 1em;
+            outline: none;
+        }
+        
+        .number-input:focus {
+            border-color: #00f2fe;
+            box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.2);
+        }
+        
+        .btn {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            flex: 0 0 auto;
+        }
+        
+        .btn-primary {
+            background: #4facfe;
+            color: white;
+        }
+        
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+        
+        .btn-success {
+            background: #28a745;
+            color: white;
+        }
+        
+        .btn-danger {
+            background: #dc3545;
+            color: white;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .content {
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .article-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            min-height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .article-content {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #333;
+            text-align: left;
+            white-space: pre-wrap;
+            overflow-y: auto;
+            max-height: 300px;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 50px;
+            font-size: 1.2em;
+            color: #666;
+        }
+        
+        .error {
+            text-align: center;
+            padding: 50px;
+            color: #e74c3c;
+            font-size: 1.2em;
+        }
+        
+        .status-message {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            display: none;
+        }
+        
+        .status-success {
+            background-color: #d4edda;
+            color: #155724;
+            display: block;
+        }
+        
+        .status-error {
+            background-color: #f8d7da;
+            color: #721c24;
+            display: block;
+        }
+        
+        .typing-cursor {
+            display: inline-block;
+            width: 8px;
+            height: 16px;
+            background-color: #333;
+            animation: blink 1s infinite;
+            vertical-align: middle;
+            margin-left: 2px;
+        }
+        
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="inputContainer">
+        <div class="header">
+            <h1>📝 AI 文章生成</h1>
+            <p>输入单词范围，生成连贯文章</p>
+        </div>
+        
+        <div class="control-panel">
+            <div class="input-group">
+                <input 
+                    type="number" 
+                    id="startIndexInput" 
+                    class="number-input" 
+                    placeholder="起始编号" 
+                    min="0" 
+                    value="0"
+                >
+                <input 
+                    type="number" 
+                    id="endIndexInput" 
+                    class="number-input" 
+                    placeholder="结束编号" 
+                    min="1" 
+                    value="10"
+                >
+            </div>
+            <button id="generateBtn" class="btn btn-primary">生成文章</button>
+        </div>
+    </div>
+
+    <div class="container" id="outputContainer" style="display: none;">
+        <div class="header">
+            <h1>📝 生成结果</h1>
+            <p>AI正在为您创作...</p>
+        </div>
+        
+        <div class="content">
+            <div id="articleCard" class="article-card">
+                <div id="articleContent" class="article-content"></div>
+            </div>
+            
+            <button id="backBtn" class="btn btn-secondary">返回</button>
+            
+            <div id="statusMessage" class="status-message"></div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const startIndexInput = document.getElementById('startIndexInput');
+            const endIndexInput = document.getElementById('endIndexInput');
+            const generateBtn = document.getElementById('generateBtn');
+            const backBtn = document.getElementById('backBtn');
+            const articleContent = document.getElementById('articleContent');
+            const statusMessage = document.getElementById('statusMessage');
+            const inputContainer = document.getElementById('inputContainer');
+            const outputContainer = document.getElementById('outputContainer');
+            
+            let eventSource = null;
+
+            // 生成文章按钮点击事件
+            generateBtn.addEventListener('click', function() {
+                const startIndex = parseInt(startIndexInput.value);
+                const endIndex = parseInt(endIndexInput.value);
+                
+                if (isNaN(startIndex) || startIndex < 0) {
+                    alert('请输入有效的起始编号（≥0）');
+                    return;
+                }
+                
+                if (isNaN(endIndex) || endIndex <= startIndex) {
+                    alert('结束编号必须大于起始编号');
+                    return;
+                }
+                
+                // 切换到输出视图
+                inputContainer.style.display = 'none';
+                outputContainer.style.display = 'block';
+                
+                // 清空之前的内容
+                articleContent.textContent = '';
+                showStatus('正在连接AI服务...', 'success');
+                
+                // 建立SSE连接
+                const url = `http://localhost:8080/article/generation?beginIndex=${startIndex}&endIndex=${endIndex}`;
+                
+                eventSource = new EventSource(url);
+                
+                eventSource.onmessage = function(event) {
+                    // 直接渲染后端返回的数据
+                    articleContent.textContent += event.data;
+                    // 自动滚动到底部
+                    articleContent.scrollTop = articleContent.scrollHeight;
+                    showStatus('正在接收数据...', 'success');
+                };
+                
+                eventSource.onerror = function() {
+                    showStatus('连接已关闭或发生错误', 'error');
+                    if (eventSource) {
+                        eventSource.close();
+                    }
+                };
+                
+                // 连接打开时的处理
+                eventSource.onopen = function() {
+                    showStatus('已连接到AI服务，开始生成内容...', 'success');
+                };
+            });
+            
+            // 返回按钮点击事件
+            backBtn.addEventListener('click', function() {
+                // 关闭SSE连接
+                if (eventSource) {
+                    eventSource.close();
+                    eventSource = null;
+                }
+                
+                // 切换回输入视图
+                outputContainer.style.display = 'none';
+                inputContainer.style.display = 'block';
+            });
+            
+            // 显示状态消息
+            function showStatus(message, type) {
+                statusMessage.textContent = message;
+                statusMessage.className = 'status-message';
+                statusMessage.classList.add(type === 'success' ? 'status-success' : 'status-error');
+            }
+        });
+    </script>
+</body>
+</html>

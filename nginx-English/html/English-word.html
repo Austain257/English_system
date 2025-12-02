@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>英语词汇学习</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container {
+            max-width: 550px;
+            width: 100%;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 1.8em;
+            margin-bottom: 5px;
+        }
+        
+        .header p {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+        
+        .control-panel {
+            padding: 20px;
+            background: #f8f9fa;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .input-group {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .number-input {
+            flex: 1;
+            padding: 12px;
+            border: 2px solid #4facfe;
+            border-radius: 8px;
+            font-size: 1em;
+            outline: none;
+        }
+        
+        .number-input:focus {
+            border-color: #00f2fe;
+            box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.2);
+        }
+        
+        .btn {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            flex: 0 0 auto;
+        }
+        
+        .btn-primary {
+            background: #4facfe;
+            color: white;
+        }
+        
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+        
+        .btn-success {
+            background: #28a745;
+            color: white;
+        }
+        
+        .btn-danger {
+            background: #dc3545;
+            color: white;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .content {
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .word-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            min-height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .word-info {
+            font-size: 2em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+        .pronounce {
+            color: #666;
+            font-style: italic;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        
+        .frequency {
+            background: #4facfe;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        
+        .chinese {
+            color: #2c3e50;
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-top: 15px;
+            padding: 15px;
+            background: rgba(79, 172, 254, 0.1);
+            border-radius: 8px;
+            border-left: 4px solid #4facfe;
+            opacity: 0;
+            height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .chinese.show {
+            opacity: 1;
+            height: auto;
+            padding: 15px;
+        }
+        
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 10px;
+            gap: 10px;
+        }
+        
+        .button-group {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 50px;
+            font-size: 1.2em;
+            color: #666;
+        }
+        
+        .error {
+            text-align: center;
+            padding: 50px;
+            color: #e74c3c;
+            font-size: 1.2em;
+        }
+        
+        .index-info {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+        
+        .word-count-info {
+            color: #28a745;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .status-message {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            display: none;
+        }
+        
+        .status-success {
+            background-color: #d4edda;
+            color: #155724;
+            display: block;
+        }
+        
+        .status-error {
+            background-color: #f8d7da;
+            color: #721c24;
+            display: block;
+        }
+        
+        .book-info {
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #6c757d;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📚 英语词汇学习</h1>
+            <p>掌握高频词汇，提升英语能力</p>
+        </div>
+        
+        <div class="control-panel">
+            <div class="input-group">
+                <input 
+                    type="number" 
+                    id="startIndexInput" 
+                    class="number-input" 
+                    placeholder="起始编号" 
+                    min="0" 
+                    value="0"
+                >
+                <input 
+                    type="number" 
+                    id="endIndexInput" 
+                    class="number-input" 
+                    placeholder="结束编号" 
+                    min="1" 
+                    value="10"
+                >
+            </div>
+            <button id="loadWordsBtn" class="btn btn-primary">加载单词</button>
+        </div>
+        
+        <div class="content">
+            <div id="wordCard" class="word-card">
+                <div class="loading">请输入单词范围并点击加载</div>
+            </div>
+            
+            <div class="buttons">
+                <div class="button-group">
+                    <button id="showChineseBtn" class="btn btn-primary">显示中文</button>
+                    <button id="addToCollectionBtn" class="btn btn-success">加入学习</button>
+                    <button id="removeFromCollectionBtn" class="btn btn-danger">移除单词</button>
+                </div>
+                <button id="nextWordBtn" class="btn btn-secondary">下一个</button>
+            </div>
+            
+            <div id="statusMessage" class="status-message"></div>
+            <div id="bookInfo" class="book-info"></div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const startIndexInput = document.getElementById('startIndexInput');
+            const endIndexInput = document.getElementById('endIndexInput');
+            const loadWordsBtn = document.getElementById('loadWordsBtn');
+            const wordCard = document.getElementById('wordCard');
+            const showChineseBtn = document.getElementById('showChineseBtn');
+            const addToCollectionBtn = document.getElementById('addToCollectionBtn');
+            const removeFromCollectionBtn = document.getElementById('removeFromCollectionBtn');
+            const nextWordBtn = document.getElementById('nextWordBtn');
+            const statusMessage = document.getElementById('statusMessage');
+            const bookInfo = document.getElementById('bookInfo');
+            
+            let words = [];
+            let currentIndex = 0;
+            let chineseVisible = false;
+            let currentWord = null;
+            let currentBookname = null;
+
+            // 页面加载时获取书本名称
+            const urlParams = new URLSearchParams(window.location.search);
+            currentBookname = urlParams.get('bookname');
+            
+            // 根据书本名称显示/隐藏按钮
+            if (currentBookname === 'againenglishword') {
+                addToCollectionBtn.style.display = 'none';
+                removeFromCollectionBtn.style.display = 'block';
+                bookInfo.textContent = `当前书本: ${currentBookname} (管理员模式)`;
+            } else {
+                addToCollectionBtn.style.display = 'block';
+                removeFromCollectionBtn.style.display = 'none';
+                if (currentBookname) {
+                    bookInfo.textContent = `当前书本: ${currentBookname}`;
+                }
+            }
+
+            // 加载单词按钮点击事件
+            loadWordsBtn.addEventListener('click', loadWords);
+            
+            // 回车键支持
+            startIndexInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    loadWords();
+                }
+            });
+            
+            endIndexInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    loadWords();
+                }
+            });
+            
+            // 显示/隐藏中文释义
+            showChineseBtn.addEventListener('click', function() {
+                const chineseElement = document.querySelector('.chinese');
+                chineseVisible = !chineseVisible;
+                
+                if (chineseVisible) {
+                    chineseElement.classList.add('show');
+                    showChineseBtn.textContent = '隐藏中文';
+                } else {
+                    chineseElement.classList.remove('show');
+                    showChineseBtn.textContent = '显示中文';
+                }
+            });
+            
+            // 添加到学习集
+            addToCollectionBtn.addEventListener('click', function() {
+                if (!currentWord) return;
+                
+                // 准备请求数据
+                const requestData = {
+                    bookname: currentBookname,
+                    id: currentWord.id,
+                    word: currentWord.word,
+                    chinese: currentWord.chinese,
+                    pronounce: currentWord.pronounce,
+                    times: currentWord.times
+                };
+                
+                // 发送POST请求
+                // fetch('http://localhost:8080/english/add', {
+                fetch('http://8.148.209.41:8080/english/add', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(requestData)
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    if (data.code === 1) {
+                        showStatus('成功加入学习集!', 'success');
+                    } else {
+                        showStatus('操作失败: ' + data.message, 'error');
+                    }
+                })
+                .catch(error => {
+                    console.error('添加到学习集失败:', error);
+                    showStatus('添加到学习集失败: ' + error.message, 'error');
+                });
+            });
+            
+            // 从学习集移除
+            removeFromCollectionBtn.addEventListener('click', function() {
+                if (!currentWord) return;
+                
+                // 准备请求数据
+                const requestData = {
+                    bookname: currentBookname,
+                    id: currentWord.id,
+                    word: currentWord.word,
+                    chinese: currentWord.chinese,
+                    pronounce: currentWord.pronounce,
+                    times: currentWord.times
+                };
+                
+                // 发送POST请求
+                // fetch('http://localhost:8080/english/remove', {
+                fetch('http://8.148.209.41:8080/english/remove', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(requestData)
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    if (data.code === 1) {
+                        showStatus('成功从学习集移除!', 'success');
+                        
+                        // 从当前单词列表中移除该单词
+                        words = words.filter(word => word.id !== currentWord.id);
+                        
+                        // 更新单词总数显示
+                        const wordCountInfo = document.querySelector('.word-count-info');
+                        if (wordCountInfo) {
+                            wordCountInfo.textContent = `共 ${words.length} 个单词`;
+                        }
+                        
+                        // 如果还有单词，自动切换到下一个
+                        if (words.length > 0) {
+                            // 如果当前是最后一个单词，回到第一个
+                            if (currentIndex >= words.length) {
+                                currentIndex = 0;
+                            }
+                            
+                            // 渲染下一个单词
+                            renderCurrentWord();
+                            
+                            // 隐藏中文释义
+                            chineseVisible = false;
+                            showChineseBtn.textContent = '显示中文';
+                        } else {
+                            // 如果没有单词了，显示提示信息
+                            wordCard.innerHTML = '<div class="error">当前范围没有更多单词了</div>';
+                        }
+                    } else {
+                        showStatus('操作失败: ' + data.message, 'error');
+                    }
+                })
+                .catch(error => {
+                    console.error('从学习集移除失败:', error);
+                    showStatus('从学习集移除失败: ' + error.message, 'error');
+                });
+            });
+            
+            // 下一个单词
+            nextWordBtn.addEventListener('click', function() {
+                if (words.length === 0) return;
+                
+                currentIndex = (currentIndex + 1) % words.length;
+                renderCurrentWord();
+                // 隐藏中文释义
+                chineseVisible = false;
+                showChineseBtn.textContent = '显示中文';
+            });
+            
+            // 加载单词函数
+            function loadWords() {
+                const startIndex = parseInt(startIndexInput.value);
+                const endIndex = parseInt(endIndexInput.value);
+                
+                if (isNaN(startIndex) || startIndex < 0) {
+                    alert('请输入有效的起始编号（≥0）');
+                    return;
+                }
+                
+                if (isNaN(endIndex) || endIndex <= startIndex) {
+                    alert('结束编号必须大于起始编号');
+                    return;
+                }
+                
+                // 显示加载状态
+                wordCard.innerHTML = '<div class="loading">正在加载词汇数据...</div>';
+                hideStatus();
+                
+                // 构建带参数的URL
+                // let url = `http://localhost:8080/english/list?start=${startIndex}&end=${endIndex}`;
+                let url = `http://8.148.209.41:8080/english/list?start=${startIndex}&end=${endIndex}`;
+                if (currentBookname) {
+                    url += `&bookname=${encodeURIComponent(currentBookname)}`;
+                }
+                
+                fetch(url)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(`HTTP error! status: ${response.status}`);
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        if (data.code !== 1 || !data.data || data.data.length === 0) {
+                            wordCard.innerHTML = '<div class="error">暂无词汇数据</div>';
+                            words = [];
+                            return;
+                        }
+                        
+                        words = data.data;
+                        currentIndex = 0;
+                        renderCurrentWord();
+                    })
+                    .catch(error => {
+                        console.error('获取数据失败:', error);
+                        wordCard.innerHTML = `
+                            <极速模式div class="error">
+                                <p>数据加载失败: ${error.message}</p>
+                                <p>请检查后端服务是否已启动</p>
+                            </div>
+                        `;
+                        words = [];
+                    });
+            }
+            
+            // 渲染当前单词
+            function renderCurrentWord() {
+                if (words.length === 0) return;
+                
+                const word = words[currentIndex];
+                currentWord = word; // 保存当前单词对象
+                
+                wordCard.innerHTML = `
+                    <div class="word-count-info">共 ${words.length} 个单词</div>
+                    <div class="index-info">第 ${currentIndex + 1} / ${words.length} 个单词</div>
+                    <div class="word-info">${word.word}</div>
+                    <div class="pronounce">${word.pronounce}</div>
+                    <div class="frequency">出现 ${word.times} 次</div>
+                    <div class="chinese">${word.chinese}</div>
+                `;
+                
+                // 隐藏状态消息
+                hideStatus();
+            }
+            
+            // 显示状态消息
+            function showStatus(message, type) {
+                statusMessage.textContent = message;
+                statusMessage.className = 'status-message';
+                statusMessage.classList.add(type === 'success' ? 'status-success' : 'status-error');
+                
+                // 5秒后自动隐藏
+                setTimeout(hideStatus, 5000);
+            }
+            
+            // 隐藏状态消息
+            function hideStatus() {
+                statusMessage.className = 'status-message';
+                statusMessage.textContent = '';
+            }
+        });
+    </script>
+</body>
+</html>

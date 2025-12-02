@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI文章生成</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container {
+            max-width: 550px;
+            width: 100%;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 1.8em;
+            margin-bottom: 5px;
+        }
+        
+        .header p {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+        
+        .control-panel {
+            padding: 20px;
+            background: #f8f9fa;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .input-group {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .number-input {
+            flex: 1;
+            padding: 12px;
+            border: 2px solid #4facfe;
+            border-radius: 8px;
+            font-size: 1em;
+            outline: none;
+        }
+        
+        .number-input:focus {
+            border-color: #00f2fe;
+            box-shadow: 0 极速响应 0 3px rgba(79, 172, 254, 0.2);
+        }
+        
+        .btn {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            flex: 0 0 auto;
+        }
+        
+        .btn-primary {
+            background: #4facfe;
+            color: white;
+        }
+        
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+        
+        .btn-success {
+            background: #28a745;
+            color:  white;
+        }
+        
+        .btn-danger {
+            background: #dc3545;
+            color: white;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+        
+        .content {
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .article-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            min-height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .article-content {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #333;
+            text-align: left;
+            white-space: pre-wrap;
+            overflow-y: auto;
+            max-height: 300px;
+        }
+        
+        .loading-indicator {
+            display: none;
+            text-align: center;
+            padding: 20px;
+            color: #4facfe;
+        }
+        
+        .loading-dots {
+            display: inline-block;
+            margin-left: 5px;
+        }
+        
+        .loading-dots span {
+            animation: blink 1.4s infinite both;
+            font-size: 1.2em;
+        }
+        
+        .loading-dots span:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        
+        .loading-dots span:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+        
+        .error {
+            text-align: center;
+            padding: 50px;
+            color: #e74c3c;
+            font-size: 1.2em;
+        }
+        
+        .status-message {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 0.9em;
+        }
+        
+        .status-success {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        
+        .status-error {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        
+        .status-info {
+            background-color: #d1ecf1;
+            color: #0c5460;
+        }
+        
+        .typing-cursor {
+            display: inline-block;
+            width: 8px;
+            height: 16px;
+            background-color: #333;
+            animation: blink 1s infinite;
+            vertical-align: middle;
+            margin-left: 2px;
+        }
+        
+        .progress-bar {
+            height: 4px;
+            width: 0;
+            background: linear-gradient(90deg, #4facfe, #00f2fe);
+            border-radius: 2px;
+            transition: width 0.3s ease;
+            margin-top: 10px;
+        }
+        
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="inputContainer">
+        <div class="header">
+            <h1>📝 AI 文章生成</h1>
+            <p>输入单词范围，生成连贯文章</p>
+        </div>
+        
+        <div class="control-panel">
+            <div class="input-group">
+                <input 
+                    type="number" 
+                    id="startIndexInput" 
+                    class="number-input" 
+                    placeholder="起始编号" 
+                    min="0" 
+                    value="0"
+                >
+                <input 
+                    type="number" 
+                    id="endIndexInput" 
+                    class="number-input" 
+                    placeholder="结束编号" 
+                    min="1" 
+                    value="10"
+                >
+            </div>
+            <button id="generateBtn" class="btn btn-primary">生成文章</button>
+        </div>
+    </div>
+
+    <div class="container" id="outputContainer" style="display: none;">
+        <div class="header">
+            <h1>📝 生成结果</h1>
+            <p>AI正在为您创作...</p>
+        </div>
+        
+        <div class="content">
+            <div id="articleCard" class="article-card">
+                <div id="articleContent" class="article-content"></div>
+                <span id="typingCursor" class="typing-cursor"></span>
+                <div id="loadingIndicator" class="loading-indicator">
+                    思考中<span class="loading-dots"><span>.</span><span>.</span><span>.</span></span>
+                </div>
+            </div>
+            
+            <div id="progressBar" class="progress-bar"></div>
+            
+            <button id="backBtn" class="btn btn-secondary" style="margin-top: 20px;">返回</button>
+            <button id="copyBtn" class="btn btn-success" style="margin-top: 20px; display: none;">复制内容</button>
+            
+            <div id="statusMessage" class="status-message status-info"></div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const startIndexInput = document.getElementById('startIndexInput');
+            const endIndexInput = document.getElementById('endIndexInput');
+            const generateBtn = document.getElementById('generateBtn');
+            const backBtn = document.getElementById('backBtn');
+            const copyBtn = document.getElementById('copyBtn');
+            const articleContent = document.getElementById('articleContent');
+            const statusMessage = document.getElementById('statusMessage');
+            const inputContainer = document.getElementById('inputContainer');
+            const outputContainer = document.getElementById('outputContainer');
+            const typingCursor = document.getElementById('typingCursor');
+            const loadingIndicator = document.getElementById('loadingIndicator');
+            const progressBar = document.getElementById('progressBar');
+            
+            let controller = null;
+            let currentContent = '';
+            let isGenerating = false;
+
+            // 生成文章按钮点击事件
+            generateBtn.addEventListener('click', function() {
+                if (isGenerating) return;
+                
+                const startIndex = parseInt(startIndexInput.value);
+                const endIndex = parseInt(endIndexInput.value);
+                
+                if (isNaN(startIndex) || startIndex < 0) {
+                    showStatus('请输入有效的起始编号（≥0）', 'error');
+                    return;
+                }
+                
+                if (isNaN(endIndex) || endIndex <= startIndex) {
+                    showStatus('结束编号必须大于起始编号', 'error');
+                    return;
+                }
+                
+                // 切换到输出视图
+                inputContainer.style.display = 'none';
+                outputContainer.style.display = 'block';
+                
+                // 清空之前的内容
+                currentContent = '';
+                articleContent.textContent = '';
+                progressBar.style.width = '0';
+                showStatus('正在连接AI服务...', 'info');
+                
+                // 开始生成
+                generateContent(startIndex, endIndex);
+            });
+            
+            // 返回按钮点击事件
+            backBtn.addEventListener('click', function() {
+                // 中止请求
+                if (controller) {
+                    controller.abort();
+                    controller = null;
+                }
+                
+                isGenerating = false;
+                
+                // 切换回输入视图
+                outputContainer.style.display = 'none';
+                inputContainer.style.display = 'block';
+            });
+            
+            // 复制按钮点击事件
+            copyBtn.addEventListener('click', function() {
+                navigator.clipboard.writeText(currentContent).then(() => {
+                    showStatus('内容已复制到剪贴板', 'success');
+                    setTimeout(() => {
+                        showStatus('', 'info');
+                    }, 2000);
+                }).catch(err => {
+                    showStatus('复制失败: ' + err, 'error');
+                });
+            });
+            
+            // 显示状态消息
+            function showStatus(message, type) {
+                statusMessage.textContent = message;
+                statusMessage.className = 'status-message';
+                if (type) {
+                    statusMessage.classList.add('status-' + type);
+                }
+            }
+            
+            // 生成内容
+            async function generateContent(startIndex, endIndex) {
+                isGenerating = true;
+                generateBtn.disabled = true;
+                loadingIndicator.style.display = 'block';
+                typingCursor.style.display = 'none';
+                
+                try {
+                    controller = new AbortController();
+                    const signal = controller.signal;
+                    
+                    const url = `http://localhost:8080/article/generation?beginIndex=${startIndex}&endIndex=${endIndex}`;
+                    
+                    const response = await fetch(url, {
+                        signal,
+                        headers: {
+                            'Accept': 'text/html;charset=utf-8'
+                        }
+                    });
+                    
+                    if (!response.ok) {
+                        throw new Error(`服务器错误: ${response.status} ${response.statusText}`);
+                    }
+                    
+                    const reader = response.body.getReader();
+                    const decoder = new TextDecoder('utf-8');
+                    let receivedLength = 0;
+                    
+                    showStatus('AI正在思考中...', 'info');
+                    
+                    while (true) {
+                        const { done, value } = await reader.read();
+                        
+                        if (done) {
+                            break;
+                        }
+                        
+                        receivedLength += value.length;
+                        const textChunk = decoder.decode(value, { stream: true });
+                        
+                        // 更新进度条
+                        progressBar.style.width = Math.min(receivedLength / 5000 * 100, 100) + '%';
+                        
+                        // 逐字显示内容
+                        for (const char of textChunk) {
+                            currentContent += char;
+                            articleContent.textContent = currentContent;
+                            
+                            // 自动滚动到底部
+                            articleContent.scrollTop = articleContent.scrollHeight;
+                            
+                            // 添加一点延迟，模拟打字效果
+                            await new Promise(resolve => setTimeout(resolve, 10));
+                        }
+                    }
+                    
+                    // 完成生成
+                    showStatus('内容生成完成', 'success');
+                    loadingIndicator.style.display = 'none';
+                    copyBtn.style.display = 'inline-block';
+                    typingCursor.style.display = 'none';
+                    progressBar.style.width = '100%';
+                    
+                } catch (error) {
+                    if (error.name === 'AbortError') {
+                        showStatus('请求已取消', 'info');
+                    } else {
+                        console.error('生成错误:', error);
+                        showStatus('生成失败: ' + error.message, 'error');
+                    }
+                    loadingIndicator.style.display = 'none';
+                    typingCursor.style.display = 'none';
+                } finally {
+                    isGenerating = false;
+                    generateBtn.disabled = false;
+                    controller = null;
+                }
+            }
+        });
+    </script>
+</body>
+</html>

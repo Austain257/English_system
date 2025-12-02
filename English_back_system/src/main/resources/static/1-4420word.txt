@@ -1,0 +1,4420 @@
+1。punctual。adj.准时的。/ˈpʌŋktʃuəl/
+2。lucky。adj.幸运的。/ˈlʌki/
+3。spit。vi.吐痰。/spɪt/
+4。heaven。n.天堂。/ˈhevn/
+5。consume。vt.消耗。/kənˈsuːm/
+6。bark。n.树皮。/bɑːrk/
+7。lock。n.锁。/lɑːk/
+8。shy。adj.害羞的。/ʃaɪ/
+9。adjective。n.形容词。/ˈædʒɪktɪv/
+10。death。n.死亡。/deθ/
+11。revenge。n.报复。/rɪˈvendʒ/
+12。import。n.进口。/ˈɪmpɔːrt/
+13。nucleus。n.核心。/ˈnuːkliəs/
+14。cost。n.成本。/kɔːst/
+15。Christian。n.基督徒。/ˈkrɪtʃən/
+16。their。pron.他们的。/ðer/
+17。bucket。n.桶。/ˈbʌkɪt/
+18。logical。adj.合逻辑的。/ˈlɑːdʒɪkl/
+19。careful。adj.仔细的。/ˈkerfl/
+20。dispute。n.辩论。/dɪˈspjuːt/
+21。certainty。n.必然。/ˈsɜːrtnti/
+22。shop。n.商店。/ʃɑːp/
+23。lap。n.大腿。/læp/
+24。respond。vi.回答。/rɪˈspɑːnd/
+25。special。adj.特别的。/ˈspeʃl/
+26。worth。adj.值…的。/wɜːrθ/
+27。bubble。n.气泡。/ˈbʌbl/
+28。last。adj.最后的。/læst/
+29。monkey。n.猴子。/ˈmʌŋki/
+30。auxiliary。adj.辅助的。/ɔːɡˈzɪliəri/
+31。airline。n.航空公司。/ˈerlaɪn/
+32。monitor。n.监视器。/ˈmɑːnɪtər/
+33。crawl。vi.爬行。/krɔːl/
+34。vital。adj.至关重要的。/ˈvaɪtl/
+35。lantern。n.灯笼。/ˈlæntərn/
+36。view。n.视野。/vjuː/
+37。phone。n.电话。/foʊn/
+38。radius。n.半径。/ˈreɪdiəs/
+39。defeat。vt.击败。/dɪˈfiːt/
+40。govern。vt.管理。/ˈɡʌvərn/
+41。burden。n.负担。/ˈbɜːrdn/
+42。spaceship。n.宇宙飞船。/ˈspeɪsʃɪp/
+43。burst。v.爆裂。/bɜːrst/
+44。expectation。n.期待。/ˌekspekˈteɪʃn/
+45。zeal。n.热情。/ziːl/
+46。certificate。n.证书。/sərˈtɪfɪkət/
+47。erect。adj.竖立的。/ɪˈrekt/
+48。gradual。adj.逐渐的。/ˈɡrædʒuəl/
+49。infect。vt.感染。/ɪnˈfekt/
+50。whenever。conj.无论何时。/wenˈevər/
+51。textile。n.纺织品。/ˈtekstaɪl/
+52。uncertain。adj.不确定的。/ʌnˈsɜːrtn/
+53。tale。n.故事。/teɪl/
+54。drip。n.水滴。/drɪp/
+55。furniture。n.家具。/ˈfɜːrnɪtʃər/
+56。memorial。n.纪念碑。/məˈmɔːriəl/
+57。Asian。n.亚洲人。/ˈeɪʒn/
+58。loosen。vt.放松。/ˈluːsn/
+59。wreath。n.花冠。/riːθ/
+60。bird。n.鸟。/bɜːrd/
+61。member。n.成员。/ˈmembər/
+62。mechanic。n.技工。/məˈkænɪk/
+63。normal。adj.正常的。/ˈnɔːrml/
+64。economic。adj.经济的。/ˌiːkəˈnɒmɪk/
+65。soft。adj.软的。/sɔːft/
+66。mad。adj.疯狂的。/mæd/
+67。private。adj.私人的。/ˈpraɪvət/
+68。cry。vi.哭。/kraɪ/
+69。cubic。adj.立方体的。/ˈkjuːbɪk/
+70。center。n.中心。/ˈsentər/
+71。clarify。vt.澄清。/ˈklærəfaɪ/
+72。sentence。n.句子。/ˈsentəns/
+73。physics。n.物理学。/ˈfɪzɪks/
+74。disable。vt.使残废。/dɪsˈeɪbl/
+75。weaken。vt.使变弱。/ˈwiːkən/
+76。facility。n.设施。/fəˈsɪləti/
+77。shortage。n.缺乏。/ˈʃɔːrtɪdʒ/
+78。hasty。adj.匆忙的。/ˈheɪsti/
+79。office。n.办公室。/ˈɑːfɪs/
+80。wide。adj.宽的。/waɪd/
+81。heat。n.高温。/hiːt/
+82。grey。adj.灰色的。/ɡreɪ/
+83。rail。n.铁轨。/reɪl/
+84。intimate。adj.亲密的。/ˈɪntɪmət/
+85。soil。n.土壤。/sɔɪl/
+86。grocer。n.杂货店。/ˈɡroʊsər/
+87。with。prep.有。/wɪð/
+88。hasten。vt.加速。/ˈheɪsn/
+89。hotel。n.旅馆。/hoʊˈtel/
+90。astonish。v.惊讶。/əˈstɑːnɪʃ/
+91。salary。n.薪水。/ˈsæləri/
+92。strawberry。n.草莓。/ˈstrɔːberi/
+93。attract。vt.吸引。/əˈtrækt/
+94。tube。n.管。/tuːb/
+95。whether。conj.是否。/ˈweðər/
+96。shower。n.淋浴。/ˈʃaʊər/
+97。generally。adv.通常。/ˈdʒenrəli/
+98。bloom。n.花。/bluːm/
+99。shortly。adv.立刻。/ˈʃɔːrtli/
+100。never。adv.从未。/ˈnevər/
+101。off。adj.空闲的。/ɔːf/
+102。candy。n.糖果。/ˈkændi/
+103。absolutely。adv.绝对地。/ˈæbsəluːtli/
+104。journalist。n.新闻工作者。/ˈdʒɜːrnəlɪst/
+105。helmet。n.钢盔。/ˈhelmɪt/
+106。afraid。adj.害怕的。/əˈfreɪd/
+107。mature。adj.成熟的。/məˈtʃʊr/
+108。actual。adj.真实的。/ˈæktʃuəl/
+109。summarize。vt.总结。/ˈsʌməraɪz/
+110。unlike。prep.不像。/ˌʌnˈlaɪk/
+111。heavily。adv.在很大程度上。/ˈhevɪli/
+112。show。vt.显示。/ʃoʊ/
+113。labor。n.劳动。/ˈleɪbər/
+114。scar。n.伤痕。/skɑːr/
+115。leap。v.跳。/liːp/
+116。apology。n.道歉。/əˈpɑːlədʒi/
+117。constant。adj.不变的。/ˈkɑːnstənt/
+118。upwards。adv.向上。/ˈʌpwərdz/
+119。throw。vt.投。/θroʊ/
+120。gum。n.口香糖。/ɡʌm/
+121。milk。n.牛奶。/mɪlk/
+122。decision。n.决定。/dɪˈsɪʒn/
+123。commit。vt.犯罪。/kəˈmɪt/
+124。gun。n.枪支。/ɡʌn/
+125。wall。n.墙壁。/wɔːl/
+126。combination。n.结合。/ˌkɑːmbɪˈneɪʃn/
+127。fault。n.故障。/fɔːlt/
+128。refresh。vt.更新。/rɪˈfreʃ/
+129。mountain。n.山。/ˈmaʊntn/
+130。consent。vi.同意。/kənˈsent/
+131。behavior。n.行为。/bɪˈheɪvjər/
+132。nobody。pron.无人。/ˈnoʊbədi/
+133。sure。adj.确信的。/ʃʊr/
+134。radium。n.镭。/ˈreɪdiəm/
+135。halt。n.停止。/hɔːlt/
+136。listener。n.听者。/ˈlɪsənər/
+137。coach。n.教练。/koʊtʃ/
+138。rent。n.租金。/rent/
+139。ceiling。n.天花板。/ˈsiːlɪŋ/
+140。increasingly。adv.越来越多地。/ɪnˈkriːsɪŋli/
+141。consist。vi.由…组成。/kənˈsɪst/
+142。narrow。adj.狭窄的。/ˈnæroʊ/
+143。system。n.制度。/ˈsɪstəm/
+144。trade。n.贸易。/treɪd/
+145。cellar。n.地窖。/ˈselər/
+146。scenery。n.风景。/ˈsiːnəri/
+147。unlikely。adj.不太可能的。/ʌnˈlaɪkli/
+148。able。adj.能。/ˈeɪbl/
+149。flexible。adj.灵活的。/ˈfleksəbl/
+150。greatly。adv.很。/ˈɡreɪtli/
+151。airplane。n.飞机。/ˈerpleɪn/
+152。crowd。n.人群。/kraʊd/
+153。nothing。pron.没有什么。/ˈnʌθɪŋ/
+154。stone。n.石头。/stoʊn/
+155。statesman。n.政治家。/ˈsteɪtsmən/
+156。shriek。v.尖叫。/ʃriːk/
+157。investment。n.投资。/ɪnˈvestmənt/
+158。recover。vt.恢复。/rɪˈkʌvər/
+159。stare。vi.凝视。/ster/
+160。hut。n.小屋。/hʌt/
+161。planet。n.行星。/ˈplænɪt/
+162。purely。adv.纯粹地。/ˈpjʊrli/
+163。marble。n.大理石。/ˈmɑːrbl/
+164。obtain。vi.获得。/əbˈteɪn/
+165。quart。n.夸脱。/kwɔːrt/
+166。concentrate。vi.集中。/ˈkɑːnsntreɪt/
+167。comprehensive。adj.综合的。/ˌkɑːmprɪˈhensɪv/
+168。save。vt.节省。/seɪv/
+169。like。n.爱好。/laɪk/
+170。market。n.市场。/ˈmɑːrkɪt/
+171。gratitude。n.感谢。/ˈɡrætɪtuːd/
+172。adult。adj.成年的。/əˈdʌlt/
+173。inevitable。adj.必然的。/ɪnˈevɪtəbl/
+174。bond。n.债券。/bɑːnd/
+175。plunge。v.使突然下落。/plʌndʒ/
+176。physical。adj.物理的。/ˈfɪzɪkl/
+177。horror。n.惊骇。/ˈhɔːrər/
+178。Japan。n.日本。/dʒəˈpæn/
+179。proceed。vi.开始。/proʊˈsiːd/
+180。girl。n.女孩。/ɡɜːrl/
+181。knot。n.结。/nɑːt/
+182。cover。n.盖子。/ˈkʌvər/
+183。amount。n.数量。/əˈmaʊnt/
+184。roller。n.滚筒。/ˈroʊlər/
+185。meanwhile。adv.同时。/ˈmiːnwaɪl/
+186。engine。n.引擎。/ˈendʒɪn/
+187。sophisticated。adj.复杂的。/səˈfɪstɪkeɪtɪd/
+188。commonly。adv.通常。/ˈkɑːmənli/
+189。ought。v.应该。/ɔːt/
+190。symbol。n.象征。/ˈsɪmbl/
+191。disposal。n.处理。/dɪˈspoʊzl/
+192。open。adj.公开的。/ˈoʊpən/
+193。render。vt.呈递。/ˈrendər/
+194。nervous。adj.神经的。/ˈnɜːrvəs/
+195。universe。n.宇宙。/ˈjuːnɪvɜːrs/
+196。sea。n.海。/siː/
+197。drunk。v.喝酒。/drʌŋk/
+198。exclusively。adv.唯一地。/ɪkˈskluːsɪvli/
+199。viewpoint。n.观点。/ˈvjuːpɔɪnt/
+200。step。n.步。/step/
+201。or。conj.或。/ɔːr/
+202。replace。vt.取代。/rɪˈpleɪs/
+203。sincere。adj.真诚的。/sɪnˈsɪr/
+204。anything。pron.任何东西。/ˈeniθɪŋ/
+205。bundle。n.束。/ˈbʌndl/
+206。knob。n.把手。/nɑːb/
+207。turkey。n.火鸡。/ˈtɜːrki/
+208。formula。n.公式。/ˈfɔːrmjələ/
+209。discharge。vt.卸下。/dɪsˈtʃɑːrdʒ/
+210。incident。n.事件。/ˈɪnsɪdənt/
+211。eastern。adj.东方的。/ˈiːstərn/
+212。lower。adj.较低的。/'loər/
+213。piece。n.块。/piːs/
+214。observation。n.观察。/ˌɑːbzərˈveɪʃn/
+215。shiver。v.颤抖。/ˈʃɪvər/
+216。twinkle。v.闪烁。/ˈtwɪŋkl/
+217。copy。n.副本。/ˈkɑːpi/
+218。core。n.核心。/kɔːr/
+219。academy。n.学院。/əˈkædəmi/
+220。competition。n.竞争。/ˌkɑːmpəˈtɪʃn/
+221。just。adj.正义的。/dʒʌst/
+222。calm。adj.平静的。/kɑːm/
+223。guard。n.守卫。/ɡɑːrd/
+224。tuition。n.学费。/tuˈɪʃn/
+225。digest。vt.消化。/daɪˈdʒest/
+226。dress。n.女服。/dres/
+227。gardener。n.园丁。/ˈɡɑːrdnər/
+228。care。n.关怀。/ker/
+229。cap。n.盖。/kæp/
+230。germ。n.胚芽。/dʒɜːrm/
+231。tax。n.税金。/tæks/
+232。magnet。n.磁铁。/ˈmæɡnət/
+233。better。adj.较好的。/ˈbetər/
+234。mourn。v.哀悼。/mɔːrn/
+235。unpleasant。adj.讨厌的。/ʌnˈpleznt/
+236。slave。n.奴隶。/sleɪv/
+237。golden。adj.金色的。/ˈɡoʊldən/
+238。virtually。adv.事实上。/ˈvɜːrtʃuəli/
+239。character。n.性格。/ˈkærəktər/
+240。colleague。n.同事。/ˈkɑːliːɡ/
+241。barber。n.理发师。/ˈbɑːrbər/
+242。grip。n.紧握。/ɡrɪp/
+243。publication。n.出版。/ˌpʌblɪˈkeɪʃn/
+244。promote。vt.促进。/prəˈmoʊt/
+245。onto。prep.在...之上。/ˈɑːntə/
+246。accordance。n.按照。/əˈkɔːrdns/
+247。punch。n.冲压机。/pʌntʃ/
+248。feast。n.筵席。/fiːst/
+249。achievement。n.成就。/əˈtʃiːvmənt/
+250。mud。n.泥。/mʌd/
+251。friction。n.摩擦。/ˈfrɪkʃn/
+252。rival。n.竞争对手。/ˈraɪvl/
+253。translate。vt.翻译。/trænzˈleɪt/
+254。stop。vt.停止。/stɑːp/
+255。die。vi.死亡。/daɪ/
+256。tribe。n.部落。/traɪb/
+257。blood。n.血。/blʌd/
+258。name。n.名字。/neɪm/
+259。dictate。vt.命令。/ˈdɪkteɪt/
+260。tonight。adv.在今晚。/təˈnaɪt/
+261。widespread。adj.普遍的。/ˈwaɪdspred/
+262。chicken。n.鸡肉。/ˈtʃɪkɪn/
+263。class。n.班级。/klæs/
+264。picnic。n.野餐。/ˈpɪknɪk/
+265。ahead。adv.朝前地。/əˈhed/
+266。river。n.河。/ˈrɪvər/
+267。treat。vt.治疗。/triːt/
+268。disk。n.磁盘。/dɪsk/
+269。employee。n.雇员。/ɪmˈplɔɪiː/
+270。evaporate。vt.使……蒸发。/ɪˈvæpəreɪt/
+271。fox。n.狐狸。/fɑːks/
+272。fountain。n.喷泉。/ˈfaʊntn/
+273。big。adj.大的。/bɪɡ/
+274。fit。n.突然发作。/fɪt/
+275。basin。n.水池。/ˈbeɪsn/
+276。vacant。adj.空的。/ˈveɪkənt/
+277。dissatisfy。v.使不满。/dɪs'sætɪs,fai/
+278。discipline。n.学科。/ˈdɪsəplɪn/
+279。slavery。n.奴隶制度。/ˈsleɪvəri/
+280。ordinary。adj.普通的。/ˈɔːrdneri/
+281。humorous。adj.诙谐的。/ˈhjuːmərəs/
+282。dusk。n.黄昏。/dʌsk/
+283。distress。n.危难。/dɪˈstres/
+284。knit。vi.编织。/nɪt/
+285。fast。adj.快速的。/fæst/
+286。stewardess。n.女服务员。/ˈstuːərdəs/
+287。nitrogen。n.氮。/ˈnaɪtrədʒən/
+288。relative。adj.相对的。/ˈrelətɪv/
+289。cow。n.奶牛。/kaʊ/
+290。predict。v.预言。/prɪˈdɪkt/
+291。warm。adj.温暖的。/wɔːrm/
+292。lane。n.小巷。/leɪn/
+293。insert。v.插入。/ɪnˈsɜːrt/
+294。guide。n.指南。/ɡaɪd/
+295。scorn。n.轻蔑。/skɔːrn/
+296。something。pron.某事。/ˈsʌmθɪŋ/
+297。comb。n.梳子。/koʊm/
+298。everybody。pron.每个人。/ˈevribɑːdi/
+299。approximate。adj.近似的。/əˈprɑːksɪmət/
+300。retell。vt.复述。/ˌriːˈtel/
+301。opponent。n.对手。/əˈpoʊnənt/
+302。approximately。adv.大约。/əˈprɑːksɪmətli/
+303。food。n.食物。/fuːd/
+304。velvet。n.天鹅绒。/ˈvelvɪt/
+305。evening。n.晚上。/ˈiːvnɪŋ/
+306。bow。n.弓。/baʊ/
+307。queen。n.女王。/kwiːn/
+308。tear。v.撕掉。/tɛːr/
+309。discover。vt.发现。/dɪˈskʌvər/
+310。abundant。adj.丰富的。/əˈbʌndənt/
+311。whole。adj.完整的。/hoʊl/
+312。him。pron.他。/hɪm/
+313。safety。n.安全。/ˈseɪfti/
+314。portrait。n.肖像。/ˈpɔːrtrət/
+315。whatever。pron.凡是。/wətˈevər/
+316。saving。n.节约。/ˈseɪvɪŋ/
+317。canteen。n.食堂。/kænˈtiːn/
+318。extraordinary。adj.非凡的。/ɪkˈstrɔːrdəneri/
+319。week。n.周。/wiːk/
+320。wave。v.挥手。/weɪv/
+321。merry。adj.愉快的。/ˈmeri/
+322。reliable。adj.可靠的。/rɪˈlaɪəbl/
+323。than。conj.比。/ðən/
+324。exactly。adv.恰好地。/ɪɡˈzæktli/
+325。complicated。adj.难懂的。/ˈkɑːmplɪkeɪtɪd/
+326。locate。vt.位于。/ˈloʊkeɪt/
+327。sun。n.太阳。/sʌn/
+328。approve。vt.批准。/əˈpruːv/
+329。fifteen。n.十五。/ˌfɪfˈtiːn/
+330。requirement。n.要求。/rɪˈkwaɪərmənt/
+331。fish。n.鱼。/fɪʃ/
+332。sympathy。n.同情。/ˈsɪmpəθi/
+333。challenge。n.挑战。/ˈtʃælɪndʒ/
+334。overhead。adj.在头上的。/ˌoʊvərˈhed/
+335。ticket。n.票。/ˈtɪkɪt/
+336。tea。n.茶叶。/tiː/
+337。plot。n.情节。/plɑːt/
+338。vacation。n.假期。/veɪˈkeɪʃn/
+339。scissors。n.剪刀。/ˈsɪzərz/
+340。raw。adj.生的。/rɔː/
+341。stern。adj.严厉的。/stɜːrn/
+342。slipper。n.拖鞋。/ˈslɪpər/
+343。east。n.东方。/iːst/
+344。accessory。n.配件。/əkˈsesəri/
+345。implication。n.含义。/ˌɪmplɪˈkeɪʃn/
+346。emit。vt.发出。/iˈmɪt/
+347。candidate。n.候选人。/ˈkændɪdət/
+348。brief。adj.简短的。/briːf/
+349。steal。vt.剽窃。/stiːl/
+350。tick。n.滴答声。/tɪk/
+351。fate。n.命运。/feɪt/
+352。Europe。n.欧洲。/ˈjʊrəp/
+353。presence。n.存在。/ˈprezns/
+354。reputation。n.名声。/ˌrepjuˈteɪʃn/
+355。physicist。n.物理学家。/ˈfɪzɪsɪst/
+356。certain。adj.某一。/ˈsɜːrtn/
+357。deed。n.行动。/diːd/
+358。mile。n.英里。/maɪl/
+359。typhoon。n.台风。/taɪˈfuːn/
+360。robot。n.机器人。/ˈroʊbɑːt/
+361。claw。n.爪。/klɔː/
+362。breakfast。n.早餐。/ˈbrekfəst/
+363。range。n.范围。/reɪndʒ/
+364。depart。vi.离开。/dɪˈpɑːrt/
+365。truck。n.卡车。/trʌk/
+366。forecast。n.预测。/ˈfɔːrkæst/
+367。zero。n.零点。/ˈzɪroʊ/
+368。nature。n.自然。/ˈneɪtʃər/
+369。booth。n.货摊。/buːθ/
+370。deduce。vt.推论。/dɪˈduːs/
+371。thirsty。adj.口渴的。/ˈθɜːrsti/
+372。ampere。n.安培。/æm'pɪr/
+373。aim。v.目的在于。/eɪm/
+374。ring。n.环。/rɪŋ/
+375。vain。adj.徒劳的。/veɪn/
+376。welcome。n.欢迎。/ˈwelkəm/
+377。powerful。adj.强大的。/ˈpaʊərfl/
+378。pond。n.池塘。/pɑːnd/
+379。propose。vt.建议。/prəˈpoʊz/
+380。myself。pron.我自己。/maɪˈself/
+381。await。vt.等候。/əˈweɪt/
+382。experiment。n.实验。/ɪkˈsperɪmənt/
+383。cast。n.投掷。/kæst/
+384。sensible。adj.明智的。/ˈsensəbl/
+385。heading。n.标题。/ˈhedɪŋ/
+386。retreat。n.撤退。/rɪˈtriːt/
+387。playground。n.运动场。/ˈpleɪɡraʊnd/
+388。soccer。n.英式足球。/ˈsɑːkər/
+389。collapse。n.倒塌。/kəˈlæps/
+390。nowhere。adv.无处。/ˈnoʊwer/
+391。physician。n.医师。/fɪˈzɪʃn/
+392。stamp。n.邮票。/stæmp/
+393。sigh。v.叹气。/saɪ/
+394。intentional。adj.故意的。/ɪnˈtenʃənl/
+395。base。n.底部。/beɪs/
+396。circuit。n.电路。/ˈsɜːrkɪt/
+397。fee。n.费用。/fiː/
+398。copper。n.铜。/ˈkɑːpər/
+399。terror。n.恐怖。/ˈterər/
+400。go。vi.走。/ɡoʊ/
+401。rank。n.等级。/ræŋk/
+402。writer。n.作家。/ˈraɪtər/
+403。gulf。n.海湾。/ɡʌlf/
+404。gift。n.礼物。/ɡɪft/
+405。unfortunate。adj.不幸的。/ʌnˈfɔːrtʃənət/
+406。bath。n.沐浴。/bæθ/
+407。key。n.钥匙。/kiː/
+408。evil。adj.邪恶的。/ˈiːvl/
+409。purify。vt.净化。/ˈpjʊrɪfaɪ/
+410。rescue。v.营救。/ˈreskjuː/
+411。exact。adj.准确的。/ɪɡˈzækt/
+412。fur。n.毛皮。/fɜːr/
+413。look。vt.看。/lʊk/
+414。alive。adj.活着的。/əˈlaɪv/
+415。absorb。vt.吸收。/əbˈzɔːrb/
+416。repair。v.修理。/rɪˈper/
+417。opera。n.歌剧。/ˈɑːprə/
+418。sudden。adj.突然的。/ˈsʌdn/
+419。saddle。n.鞍。/ˈsædl/
+420。compromise。n.妥协。/ˈkɑːmprəmaɪz/
+421。true。adj.真实的。/truː/
+422。elementary。adj.基本的。/ˌelɪˈmentri/
+423。box。n.盒子。/bɑːks/
+424。pig。n.猪。/pɪɡ/
+425。used。adj.习惯的。/juːst/
+426。alone。adj.独自的。/əˈloʊn/
+427。engineering。n.工程。/ˌendʒɪˈnɪrɪŋ/
+428。by。prep.由。/baɪ/
+429。stability。n.稳定性。/stəˈbɪləti/
+430。mathematical。adj.数学的。/ˌmæθəˈmætɪkl/
+431。dictation。n.听写。/dɪkˈteɪʃn/
+432。believe。vi.信任。/bɪˈliːv/
+433。rope。n.绳。/roʊp/
+434。lodge。n.门房。/lɑːdʒ/
+435。second。n.秒。/ˈsekənd/
+436。real。adj.实际的。/ˈriːəl/
+437。emergency。n.紧急情况。/ɪˈmɜːrdʒənsi/
+438。flourish。v.繁荣。/ˈflɜːrɪʃ/
+439。dump。vt.倾倒。/dʌmp/
+440。relate。vt.叙述。/rɪˈleɪt/
+441。Indian。adj.印度的。/ˈɪndiən/
+442。turnip。n.萝卜。/ˈtɜːrnɪp/
+443。robe。n.长袍。/roʊb/
+444。cup。n.杯子。/kʌp/
+445。left。adj.左边的。/left/
+446。wealthy。adj.富有的。/ˈwelθi/
+447。team。n.队。/tiːm/
+448。house。n.住宅。/haʊs/
+449。teacher。n.教师。/ˈtiːtʃər/
+450。railway。n.铁路。/ˈreɪlweɪ/
+451。successfully。adv.成功地。/səkˈsesfəli/
+452。write。vi.写。/raɪt/
+453。explosive。adj.爆炸的。/ɪkˈspləʊsɪv/
+454。undergo。vt.经历。/ˌʌndərˈɡoʊ/
+455。intellectual。adj.智力的。/ˌɪntəˈlektʃuəl/
+456。evident。adj.明显的。/ˈevɪdənt/
+457。Angle。n.盎格鲁人。/ˈæŋɡl/
+458。Swiss。adj.瑞士的。/swɪs/
+459。secure。adj.安全的。/sɪˈkjʊr/
+460。lazy。adj.懒惰的。/ˈleɪzi/
+461。search。v.搜索。/sɜːrtʃ/
+462。ancient。adj.古代的。/ˈeɪnʃənt/
+463。wrong。adj.错误的。/rɔːŋ/
+464。pint。n.品脱。/paɪnt/
+465。tolerate。vt.忍受。/ˈtɑːləreɪt/
+466。anyhow。adv.总之。/ˈenihaʊ/
+467。scale。n.刻度。/skeɪl/
+468。swamp。n.沼泽。/swɑːmp/
+469。inch。n.英寸。/ɪntʃ/
+470。odd。adj.奇数的。/ɑːd/
+471。dense。adj.稠密的。/dens/
+472。business。n.商业。/ˈbɪznəs/
+473。foreign。adj.外国的。/ˈfɔːrən/
+474。objection。n.异议。/əbˈdʒekʃn/
+475。imply。vt.意味。/ɪmˈplaɪ/
+476。otherwise。adv.否则。/ˈʌðərwaɪz/
+477。orchestra。n.管弦乐队。/ˈɔːrkɪstrə/
+478。born。v.出生。/bɔːrn/
+479。hillside。n.山坡。/ˈhɪlsaɪd/
+480。price。n.价格。/praɪs/
+481。slit。n.狭长的切口。/slɪt/
+482。hide。vt.隐藏。/haɪd/
+483。tell。vt.告诉。/tel/
+484。uncle。n.叔叔。/ˈʌŋkl/
+485。position。n.位置。/pəˈzɪʃn/
+486。contradiction。n.矛盾。/ˌkɑːntrəˈdɪkʃn/
+487。appetite。n.食欲。/ˈæpɪtaɪt/
+488。knee。n.膝盖。/niː/
+489。consideration。n.考虑。/kənˌsɪdəˈreɪʃn/
+490。weapon。n.武器。/ˈwepən/
+491。radiation。n.辐射。/ˌreɪdiˈeɪʃn/
+492。relatively。adv.相对地。/ˈrelətɪvli/
+493。insure。vt.给……保险。/ɪnˈʃʊr/
+494。defend。vt.辩护。/dɪˈfend/
+495。specially。adv.特别地。/ˈspeʃəli/
+496。education。n.教育。/ˌedʒuˈkeɪʃn/
+497。negative。adj.负的。/ˈneɡətɪv/
+498。brook。n.小溪。/brʊk/
+499。reject。vt.拒绝。/rɪˈdʒekt/
+500。element。n.元素。/ˈelɪmənt/
+501。virtue。n.美德。/ˈvɜːrtʃuː/
+502。style。n.风格。/staɪl/
+503。ride。v.骑。/raɪd/
+504。midst。n.中间。/mɪdst/
+505。from。prep.从。/frəm/
+506。mat。n.垫子。/mæt/
+507。own。adj.自己的。/oʊn/
+508。failure。n.失败。/ˈfeɪljər/
+509。read。v.读。/riːd/
+510。trap。n.陷阱。/træp/
+511。superior。adj.较高的。/suːˈpɪriər/
+512。tidy。adj.整洁的。/ˈtaɪdi/
+513。impose。vt.强加。/ɪmˈpoʊz/
+514。sketch。n.草图。/sketʃ/
+515。hell。n.地狱。/hel/
+516。gaseous。adj.气态的。/ˈɡæsiəs/
+517。crack。n.裂缝。/kræk/
+518。experimental。adj.实验的。/ɪkˌsperɪˈmentl/
+519。faith。n.信仰。/feɪθ/
+520。score。n.分数。/skɔːr/
+521。forest。n.森林。/ˈfɔːrɪst/
+522。assistant。n.助手。/əˈsɪstənt/
+523。scientific。adj.科学的。/ˌsaɪənˈtɪfɪk/
+524。accurate。adj.准确的。/ˈækjərət/
+525。recognize。vt.认出。/ˈrekəɡnaɪz/
+526。aggressive。adj.侵略性的。/əˈɡresɪv/
+527。string。n.细绳。/strɪŋ/
+528。mental。adj.精神的。/ˈmentl/
+529。downstairs。adv.在楼下。/ˌdaʊnˈsterz/
+530。defence。n.防御。/dɪˈfens/
+531。collective。adj.集体的。/kəˈlektɪv/
+532。affect。vt.影响。/əˈfekt/
+533。brick。n.砖。/brɪk/
+534。ornament。n.装饰品。/ˈɔːrnəmənt/
+535。maintain。vt.维持。/meɪnˈteɪn/
+536。laughter。n.笑声。/ˈlæftər/
+537。bathe。v.洗澡。/beɪð/
+538。gate。n.大门。/ɡeɪt/
+539。car。n.汽车。/kɑːr/
+540。reflection。n.反射。/rɪˈflekʃn/
+541。building。n.建筑物。/ˈbɪldɪŋ/
+542。bed。n.床。/bed/
+543。spirit。n.精神。/ˈspɪrɪt/
+544。waken。v.唤醒。/ˈweɪkən/
+545。trick。n.诡计。/trɪk/
+546。deepen。v.加深。/ˈdiːpən/
+547。appointment。n.约会。/əˈpɔɪntmənt/
+548。zone。n.地带。/zoʊn/
+549。separate。adj.分开的。/ˈsepərət/
+550。four。num.四。/fɔːr/
+551。consequently。adv.因此。/ˈkɑːnsɪkwəntli/
+552。medicine。n.医学。/ˈmedɪsn/
+553。sweat。n.汗。/swet/
+554。graduate。n.毕业生。/ˈɡrædʒuət/
+555。watch。v.观看。/wɑːtʃ/
+556。inefficient。adj.效率低的。/ˌɪnɪˈfɪʃnt/
+557。exclude。vt.排除。/ɪkˈskluːd/
+558。liberal。adj.自由的。/ˈlɪbərəl/
+559。forehead。n.前额。/ˈfɔːrhed/
+560。classroom。n.教室。/ˈklæsruːm/
+561。madam。n.夫人。/ˈmædəm/
+562。operate。v.操作。/ˈɑːpəreɪt/
+563。mineral。n.矿物。/ˈmɪnərəl/
+564。size。n.尺寸。/saɪz/
+565。because。conj.因为。/bɪˈkəz/
+566。run。v.跑。/rʌn/
+567。shave。v.剃须。/ʃeɪv/
+568。charity。n.慈善。/ˈtʃærəti/
+569。cunning。adj.狡猾的。/ˈkʌnɪŋ/
+570。thus。adv.因此。/ðʌs/
+571。construct。vt.建造。/kənˈstrʌkt/
+572。essay。n.短文。/ˈeseɪ/
+573。animal。n.动物。/ˈænɪml/
+574。restless。adj.不安的。/ˈrestləs/
+575。sob。v.啜泣。/sɑːb/
+576。future。n.未来。/ˈfjuːtʃər/
+577。reception。n.接待。/rɪˈsepʃn/
+578。reed。n.芦苇。/riːd/
+579。quiet。adj.安静的。/ˈkwaɪət/
+580。transfer。v.转移。/trænsˈfɜːr/
+581。profit。n.利润。/ˈprɑːfɪt/
+582。springtime。n.春天。/ˈsprɪŋtaɪm/
+583。crown。n.王冠。/kraʊn/
+584。somebody。pron.某人。/ˈsʌmbədi/
+585。Brazil。n.巴西。/brəˈzɪl/
+586。woman。n.女人。/ˈwʊmən/
+587。officer。n.军官。/ˈɑːfɪsər/
+588。mortal。adj.致命的。/ˈmɔːrtl/
+589。consistent。adj.一致的。/kənˈsɪstənt/
+590。melt。v.融化。/melt/
+591。aid。n.援助。/eɪd/
+592。grant。vt.授予。/ɡrænt/
+593。hour。n.小时。/ˈaʊər/
+594。delivery。n.递送。/dɪˈlɪvəri/
+595。loudspeaker。n.扬声器。/ˌlaʊdˈspiːkər/
+596。as。prep.作为。/æz/
+597。file。n.文件。/faɪl/
+598。riddle。n.谜语。/ˈrɪdl/
+599。adventure。n.冒险。/ədˈventʃər/
+600。castle。n.城堡。/ˈkæsl/
+601。pigeon。n.鸽子。/ˈpɪdʒɪn/
+602。communist。n.共产主义者。/ˈkɑːmjənɪst/
+603。clue。n.线索。/kluː/
+604。dissolve。v.溶解。/dɪˈzɑːlv/
+605。sand。n.沙子。/sænd/
+606。cafeteria。n.自助餐厅。/ˌkæfəˈtɪriə/
+607。widen。v.加宽。/ˈwaɪdn/
+608。intermediate。adj.中间的。/ˌɪntərˈmiːdiət/
+609。why。adv.为什么。/waɪ/
+610。act。v.行动。/ækt/
+611。protection。n.保护。/prəˈtekʃn/
+612。underneath。prep.在……下面。/ˌʌndərˈniːθ/
+613。award。n.奖品。/əˈwɔːrd/
+614。restrain。vt.抑制。/rɪˈstreɪn/
+615。cash。n.现金。/kæʃ/
+616。expensive。adj.昂贵的。/ɪkˈspensɪv/
+617。nest。n.巢。/nest/
+618。coffee。n.咖啡。/ˈkɔːfi/
+619。glass。n.玻璃。/ɡlæs/
+620。literary。adj.文学的。/ˈlɪtəreri/
+621。exist。vi.存在。/ɪɡˈzɪst/
+622。accuse。vt.指控。/əˈkjuːz/
+623。computer。n.计算机。/kəmˈpjuːtər/
+624。survive。v.幸存。/sərˈvaɪv/
+625。faithful。adj.忠诚的。/ˈfeɪθfl/
+626。technology。n.技术。/tekˈnɑːlədʒi/
+627。silent。adj.沉默的。/ˈsaɪlənt/
+628。lie。v.躺。/laɪ/
+629。crush。v.压碎。/krʌʃ/
+630。supermarket。n.超市。/ˈsuːpərmɑːrkɪt/
+631。edge。n.边缘。/edʒ/
+632。economy。n.经济。/ɪˈkɑːnəmi/
+633。strap。n.带子。/stræp/
+634。steep。adj.陡峭的。/stiːp/
+635。everyone。pron.每个人。/ˈevriwʌn/
+636。extreme。adj.极端的。/ɪkˈstriːm/
+637。volt。n.伏特。/voʊlt/
+638。boil。v.煮沸。/bɔɪl/
+639。sly。adj.狡猾的。/slaɪ/
+640。dull。adj.迟钝的。/dʌl/
+641。ending。n.结局。/ˈendɪŋ/
+642。atomic。adj.原子的。/əˈtɑːmɪk/
+643。they。pron.他们。/ðeɪ/
+644。choice。n.选择。/tʃɔɪs/
+645。important。adj.重要的。/ɪmˈpɔːrtnt/
+646。suggestion。n.建议。/səˈdʒestʃən/
+647。concern。n.关心。/kənˈsɜːrn/
+648。unit。n.单位。/ˈjuːnɪt/
+649。submit。v.提交。/səbˈmɪt/
+650。miss。v.错过。/mɪs/
+651。whichever。pron.无论哪个。/wɪtʃˈevər/
+652。pronoun。n.代词。/ˈproʊnaʊn/
+653。also。adv.也。/ˈɔːlsoʊ/
+654。generous。adj.慷慨的。/ˈdʒenərəs/
+655。baggage。n.行李。/ˈbæɡɪdʒ/
+656。household。n.家庭。/ˈhaʊshoʊld/
+657。steel。n.钢铁。/stiːl/
+658。hurt。v.伤害。/hɜːrt/
+659。coal。n.煤。/koʊl/
+660。racial。adj.种族的。/ˈreɪʃl/
+661。correspondent。n.记者。/ˌkɔːrəˈspɑːndənt/
+662。thermometer。n.温度计。/θərˈmɑːmɪtər/
+663。basketball。n.篮球。/ˈbæskɪtbɔːl/
+664。coin。n.硬币。/kɔɪn/
+665。strange。adj.奇怪的。/streɪndʒ/
+666。urge。v.敦促。/ɜːrdʒ/
+667。date。n.日期。/deɪt/
+668。vibrate。v.振动。/ˈvaɪbreɪt/
+669。metre。n.米。/ˈmiːtər/
+670。hand。n.手。/hænd/
+671。condense。v.浓缩。/kənˈdens/
+672。apart。adv.分开地。/əˈpɑːrt/
+673。portable。adj.便携的。/ˈpɔːrtəbl/
+674。preliminary。adj.初步的。/prɪˈlɪmɪneri/
+675。movement。n.运动。/ˈmuːvmənt/
+676。doubtless。adv.无疑地。/ˈdaʊtləs/
+677。every。adj.每一个。/ˈevri/
+678。host。n.主人。/hoʊst/
+679。reluctant。adj.不情愿的。/rɪˈlʌktənt/
+680。tooth。n.牙齿。/tuːθ/
+681。egg。n.蛋。/eɡ/
+682。dynamic。adj.动态的。/daɪˈnæmɪk/
+683。deceit。n.欺骗。/dɪˈsiːt/
+684。incline。v.倾斜。/ɪnˈklaɪn/
+685。addition。n.加法。/əˈdɪʃn/
+686。frequent。adj.频繁的。/ˈfriːkwənt/
+687。review。v.复习。/rɪˈvjuː/
+688。explore。v.探索。/ɪkˈsplɔːr/
+689。spark。n.火花。/spɑːrk/
+690。flare。v.闪耀。/fler/
+691。construction。n.建筑。/kənˈstrʌkʃn/
+692。invite。v.邀请。/ɪnˈvaɪt/
+693。chase。v.追逐。/tʃeɪs/
+694。barrel。n.桶。/ˈbærəl/
+695。silk。n.丝绸。/sɪlk/
+696。feeble。adj.虚弱的。/ˈfiːbl/
+697。principal。adj.主要的。/ˈprɪnsəpl/
+698。return。v.返回。/rɪˈtɜːrn/
+699。thoughtful。adj.深思的。/ˈθɔːtfl/
+700。enter。v.进入。/ˈentər/
+701。cigarette。n.香烟。/ˌsɪɡəˈret/
+702。management。n.管理。/ˈmænɪdʒmənt/
+703。heap。n.堆。/hiːp/
+704。cooperate。v.合作。/koʊˈɑːpəreɪt/
+705。troop。n.军队。/truːp/
+706。exposure。n.暴露。/ɪkˈspoʊʒər/
+707。bag。n.袋子。/bæɡ/
+708。county。n.县。/ˈkaʊnti/
+709。almost。adv.几乎。/ˈɔːlmoʊst/
+710。complicate。v.使复杂化。/ˈkɑːmplɪkeɪt/
+711。ministry。n.部门。/ˈmɪnɪstri/
+712。lip。n.嘴唇。/lɪp/
+713。radiate。v.辐射。/ˈreɪdieɪt/
+714。stuff。n.东西。/stʌf/
+715。introduction。n.介绍。/ˌɪntrəˈdʌkʃn/
+716。rest。n.休息。/rest/
+717。fruit。n.水果。/fruːt/
+718。original。adj.原始的。/əˈrɪdʒənl/
+719。average。n.平均数。/ˈævərɪdʒ/
+720。bathroom。n.浴室。/ˈbæθruːm/
+721。spider。n.蜘蛛。/ˈspaɪdər/
+722。trust。v.信任。/trʌst/
+723。capable。adj.有能力的。/ˈkeɪpəbl/
+724。slender。adj.细长的。/ˈslendər/
+725。triangle。n.三角形。/ˈtraɪæŋɡl/
+726。vary。v.变化。/ˈveri/
+727。cement。n.水泥。/sɪˈment/
+728。success。n.成功。/səkˈses/
+729。tennis。n.网球。/ˈtenɪs/
+730。barrier。n.障碍。/ˈbæriər/
+731。elastic。adj.有弹性的。/ɪˈlæstɪk/
+732。stem。n.茎。/stem/
+733。greeting。n.问候。/ˈɡriːtɪŋ/
+734。respectful。adj.恭敬的。/rɪˈspektfl/
+735。insult。v.侮辱。/ɪnˈsʌlt/
+736。speech。n.演讲。/spiːtʃ/
+737。on。prep.在……上。/ɑːn/
+738。musical。adj.音乐的。/ˈmjuːzɪkl/
+739。uncover。v.揭露。/ʌnˈkʌvər/
+740。revise。v.修订。/rɪˈvaɪz/
+741。comprise。v.包含。/kəmˈpraɪz/
+742。swell。v.膨胀。/swel/
+743。gold。n.黄金。/ɡoʊld/
+744。story。n.故事。/ˈstɔːri/
+745。mate。n.伙伴。/meɪt/
+746。architecture。n.建筑学。/ˈɑːrkɪtektʃər/
+747。lifetime。n.一生。/ˈlaɪftaɪm/
+748。border。n.边界。/ˈbɔːrdər/
+749。jolly。adj.愉快的。/ˈdʒɑːli/
+750。until。conj.直到。/ənˈtɪl/
+751。provide。vt.提供。/prəˈvaɪd/
+752。calendar。n.日历。/ˈkælɪndər/
+753。mayor。n.市长。/ˈmeɪər/
+754。jury。n.陪审团。/ˈdʒʊri/
+755。disgust。n.厌恶。/dɪsˈɡʌst/
+756。endless。adj.无止境的。/ˈendləs/
+757。wedding。n.婚礼。/ˈwedɪŋ/
+758。fellow。n.家伙。/ˈfeloʊ/
+759。fail。v.失败。/feɪl/
+760。accustomed。adj.习惯的。/əˈkʌstəmd/
+761。unconscious。adj.无意识的。/ʌnˈkɑːnʃəs/
+762。zealous。adj.热心的。/ˈzeləs/
+763。unlucky。adj.不幸的。/ʌnˈlʌki/
+764。postage。n.邮资。/ˈpoʊstɪdʒ/
+765。liner。n.班轮。/ˈlaɪnər/
+766。table。n.桌子。/ˈteɪbl/
+767。attitude。n.态度。/ˈætɪtuːd/
+768。groan。v.呻吟。/ɡroʊn/
+769。dam。n.水坝。/dæm/
+770。whilst。conj.当……时候。/waɪlst/
+771。steam。n.蒸汽。/stiːm/
+772。submerge。v.淹没。/səbˈmɜːrdʒ/
+773。adjust。v.调整。/əˈdʒʌst/
+774。grace。n.优雅。/ɡreɪs/
+775。frighten。v.使害怕。/ˈfraɪtn/
+776。season。n.季节。/ˈsiːzn/
+777。circulate。v.循环。/ˈsɜːrkjəleɪt/
+778。straight。adj.直的。/streɪt/
+779。farewell。n.告别。/ˌferˈwel/
+780。moral。adj.道德的。/ˈmɔːrəl/
+781。daughter。n.女儿。/ˈdɔːtər/
+782。brain。n.大脑。/breɪn/
+783。privilege。n.特权。/ˈprɪvəlɪdʒ/
+784。location。n.位置。/loʊˈkeɪʃn/
+785。philosopher。n.哲学家。/fəˈlɑːsəfər/
+786。front。n.前面。/frʌnt/
+787。underground。adj.地下的。/ˌʌndərˈɡraʊnd/
+788。gymnasium。n.体育馆。/dʒɪmˈneɪziəm/
+789。tailor。n.裁缝。/ˈteɪlər/
+790。wreck。n.残骸。/rek/
+791。cliff。n.悬崖。/klɪf/
+792。simply。adv.简单地。/ˈsɪmpli/
+793。middle。adj.中间的。/ˈmɪdl/
+794。oral。adj.口头的。/ˈɔːrəl/
+795。fleet。n.舰队。/fliːt/
+796。dash。v.猛冲。/dæʃ/
+797。fork。n.叉子。/fɔːrk/
+798。thousand。n.一千。/ˈθaʊznd/
+799。ankle。n.脚踝。/ˈæŋkl/
+800。earth。n.地球。/ɜːrθ/
+801。sharp。adj.锋利的。/ʃɑːrp/
+802。somehow。adv.以某种方式。/ˈsʌmhaʊ/
+803。productive。adj.多产的。/prəˈdʌktɪv/
+804。clothes。n.衣服。/kloʊðz/
+805。later。adv.后来。/ˈleɪtər/
+806。ruin。n.废墟。/ˈruːɪn/
+807。lieutenant。n.中尉。/luːˈtenənt/
+808。delicious。adj.美味的。/dɪˈlɪʃəs/
+809。fare。n.车费。/fer/
+810。completely。adv.完全地。/kəmˈpliːtli/
+811。bit。n.少量。/bɪt/
+812。prove。v.证明。/pruːv/
+813。annoy。v.使恼怒。/əˈnɔɪ/
+814。foolish。adj.愚蠢的。/ˈfuːlɪʃ/
+815。announcer。n.播音员。/əˈnaʊnsər/
+816。mask。n.面具。/mæsk/
+817。jazz。n.爵士乐。/dʒæz/
+818。entitle。v.给……权利。/ɪnˈtaɪtl/
+819。absence。n.缺席。/ˈæbsəns/
+820。quotation。n.引文。/kwoʊˈteɪʃn/
+821。wicked。adj.邪恶的。/ˈwɪkɪd/
+822。alarm。n.警报。/əˈlɑːrm/
+823。tower。n.塔。/ˈtaʊər/
+824。scold。v.责骂。/skoʊld/
+825。compound。n.化合物。/ˈkɑːmpaʊnd/
+826。root。n.根。/ruːt/
+827。stab。v.刺。/stæb/
+828。anybody。pron.任何人。/ˈenibɑːdi/
+829。mild。adj.温和的。/maɪld/
+830。release。v.释放。/rɪˈliːs/
+831。respectively。adv.分别地。/rɪˈspektɪvli/
+832。information。n.信息。/ˌɪnfərˈmeɪʃn/
+833。emerge。v.出现。/ɪˈmɜːrdʒ/
+834。angle。n.角度。/ˈæŋɡl/
+835。dish。n.盘子。/dɪʃ/
+836。stomach。n.胃。/ˈstʌmək/
+837。atmosphere。n.气氛。/ˈætməsfɪr/
+838。fix。vt.使固定。/fɪks/
+839。study。n.学习。/ˈstʌdi/
+840。tedious。adj.沉闷的。/ˈtiːdiəs/
+841。craft。n.工艺。/kræft/
+842。ceremony。n.典礼。/ˈserəmoʊni/
+843。fond。adj.喜欢的。/fɑːnd/
+844。cheap。adj.便宜的。/tʃiːp/
+845。mean。adj.低劣的。/miːn/
+846。slippery。adj.滑的。/ˈslɪpəri/
+847。support。vt.支撑。/səˈpɔːrt/
+848。aware。adj.意识到的。/əˈwer/
+849。attempt。n.企图。/əˈtempt/
+850。afternoon。n.午后。/ˌæftərˈnuːn/
+851。whirl。v.(使)旋转。/wɜːrl/
+852。shout。vi.呼喊。/ʃaʊt/
+853。blanket。n.毛毯。/ˈblæŋkɪt/
+854。kiss。n.吻。/kɪs/
+855。could。aux.能够。/kʊd,kəd/
+856。highly。adv.高度地。/ˈhaɪli/
+857。harbour。n.海港。/ˈhɑːrbər/
+858。enforce。vt.实施。/ɪnˈfɔːrs/
+859。then。adv.当时。/ðen/
+860。admit。vt.承认。/ədˈmɪt/
+861。blade。n.叶片。/bleɪd/
+862。cell。n.细胞。/sel/
+863。twenty。num.二十。/ˈtwenti/
+864。plenty。n.丰富。/ˈplenti/
+865。convenient。adj.方便的。/kənˈviːniənt/
+866。loft。n.阁楼。/lɔːft/
+867。bridge。n.桥。/brɪdʒ/
+868。whose。pron.谁的。/huːz/
+869。dark。adj.黑暗的。/dɑːrk/
+870。indispensable。adj.不可缺少的。/ˌɪndɪˈspensəbl/
+871。creep。vi.爬行。/kriːp/
+872。prize。n.奖品。/praɪz/
+873。wild。adj.野生的。/waɪld/
+874。thunder。n.雷。/ˈθʌndər/
+875。cupboard。n.碗柜。/ˈkʌbərd/
+876。lecture。n.演讲。/ˈlektʃər/
+877。neat。adj.整洁的。/niːt/
+878。orderly。adj.有秩序的。/ˈɔːrdərli/
+879。scheme。n.计划。/skiːm/
+880。juice。n.(水果)汁。/dʒuːs/
+881。country。n.国家。/ˈkʌntri/
+882。congress。n.国会。/ˈkɑːŋɡrəs/
+883。dialect。n.方言。/ˈdaɪəlekt/
+884。minor。adj.次要的。/ˈmaɪnər/
+885。reliability。n.可靠性。/rɪˌlaɪəˈbɪləti/
+886。during。prep.在……期间。/ˈdʊrɪŋ/
+887。remote。adj.遥远的。/rɪˈmoʊt/
+888。cricket。n.板球。/ˈkrɪkɪt/
+889。descend。vi.下降。/dɪˈsend/
+890。intelligence。n.智力。/ɪnˈtelɪdʒəns/
+891。microscope。n.显微镜。/ˈmaɪkrəskoʊp/
+892。this。pron.这。/ðɪs/
+893。attractive。adj.吸引人的。/əˈtræktɪv/
+894。scrape。n.刮。/skreɪp/
+895。grave。n.墓穴。/ɡreɪv; ɡrɑːv/
+896。instance。n.实例。/ˈɪnstəns/
+897。tortoise。n.龟。/ˈtɔːrtəs/
+898。opinion。n.意见。/əˈpɪnjən/
+899。input。n.投入。/ˈɪnpʊt/
+900。standpoint。n.立场。/ˈstændpɔɪnt/
+901。formation。n.形成。/fɔːrˈmeɪʃn/
+902。landing。n.登陆。/ˈlændɪŋ/
+903。chamber。n.(身体或器官内的)室。/ˈtʃeɪmbər/
+904。scare。v.(使)害怕。/sker/
+905。swim。vi.游泳。/swɪm/
+906。our。pron.我们的。/ɑːr,ˈaʊər/
+907。cattle。n.牛。/ˈkætl/
+908。sometime。adv.改天。/ˈsʌmtaɪm/
+909。unload。vt.卸。/ˌʌnˈloʊd/
+910。recollect。v.回忆。/ˌrekəˈlekt/
+911。variety。n.多样。/vəˈraɪəti/
+912。scarcely。adv.几乎不。/ˈskersli/
+913。invasion。n.入侵。/ɪnˈveɪʒn/
+914。whitewash。n.粉饰。/ˈwaɪtwɑːʃ/
+915。gather。vt.收集。/ˈɡæðər/
+916。chief。adj.主要的。/tʃiːf/
+917。warmth。n.温暖。/wɔːrmθ/
+918。necklace。n.项链。/ˈnekləs/
+919。probable。adj.很可能的。/ˈprɑːbəbl/
+920。empty。adj.空的。/ˈempti/
+921。rhythm。n.节奏。/ˈrɪðəm/
+922。restriction。n.限制。/rɪˈstrɪkʃn/
+923。row。n.行。/roʊ; raʊ/
+924。sideways。adv.向侧面地。/ˈsaɪdweɪz/
+925。liquid。adj.液体的。/ˈlɪkwɪd/
+926。unhappy。adj.不快乐的。/ʌnˈhæpi/
+927。cheque。n.支票。/tʃek/
+928。pride。n.自豪。/praɪd/
+929。simplicity。n.朴素。/sɪmˈplɪsəti/
+930。tempt。vt.诱惑。/tempt/
+931。hint。n.暗示。/hɪnt/
+932。suit。v.合适。/suːt/
+933。depth。n.深度。/depθ/
+934。post。n.岗位。/poʊst/
+935。short。adj.短的。/ʃɔːrt/
+936。together。adv.一起。/təˈɡeðər/
+937。canvas。n.帆布。/ˈkænvəs/
+938。freedom。n.自由。/ˈfriːdəm/
+939。property。n.性质。/ˈprɑːpərti/
+940。brood。n.(动物中鸟或家禽的)一窝。/bruːd/
+941。mirror。n.镜子。/ˈmɪrər/
+942。pretty。adj.漂亮的。/ˈprɪti/
+943。make。vt.制造。/meɪk/
+944。desperate。adj.不顾一切的。/ˈdespərət/
+945。glory。n.光荣。/ˈɡlɔːri/
+946。phrase。n.短语。/freɪz/
+947。eighty。num.八十。/ˈeɪti/
+948。reserve。n.储备。/rɪˈzɜːrv/
+949。campaign。n.运动。/kæmˈpeɪn/
+950。sharpen。vt.削尖。/ˈʃɑːrpən/
+951。add。vi.加。/æd/
+952。rein。n.缰绳。/reɪn/
+953。generation。n.一代。/ˌdʒenəˈreɪʃn/
+954。sole。adj.单独的。/soʊl/
+955。conventional。adj.传统的。/kənˈvenʃənl/
+956。debate。n.辩论。/dɪˈbeɪt/
+957。buy。vt.购买。/baɪ/
+958。reign。n.君主统治时期。/reɪn/
+959。group。n.组。/ɡruːp/
+960。worst。adj.最差的。/wɜːrst/
+961。inspection。n.视察。/ɪnˈspekʃn/
+962。medical。adj.医学的。/ˈmedɪkl/
+963。sour。adj.酸的。/ˈsaʊər/
+964。sphere。n.范围。/sfɪr/
+965。wire。n.电线。/ˈwaɪər/
+966。glide。vi.滑翔。/ɡlaɪd/
+967。control。n.控制。/kənˈtroʊl/
+968。maid。n.女仆。/meɪd/
+969。roar。n.咆哮。/rɔːr/
+970。weigh。vt.权衡。/weɪ/
+971。ambition。n.野心。/æmˈbɪʃn/
+972。estimate。n.估计。/ˈestɪmeɪt/
+973。bulk。n.体积。/bʌlk/
+974。shall。aux.应。/ʃæl,ʃəl/
+975。attach。vt.使依附。/əˈtætʃ/
+976。oppose。vt.反对。/əˈpoʊz/
+977。hobby。n.嗜好。/ˈhɑːbi/
+978。reporter。n.记者。/rɪˈpɔːrtər/
+979。loyal。adj.忠诚的。/ˈlɔɪəl/
+980。submarine。n.潜水艇。/ˌsʌbməˈriːn/
+981。Fahrenheit。adj.华氏温度计的。/ˈfærənhaɪt/
+982。brighten。vi.明亮。/ˈbraɪtn/
+983。gentleman。n.先生。/ˈdʒentlmən/
+984。husband。n.丈夫。/ˈhʌzbənd/
+985。normally。adv.正常地。/ˈnɔːrməli/
+986。optional。adj.可选择的。/ˈɑːpʃənl/
+987。cent。n.分。/sent/
+988。preposition。n.介词。/ˌprepəˈzɪʃn/
+989。pure。adj.纯的。/pjʊr/
+990。dot。n.点。/dɑːt/
+991。centre。n.中心。/ˈsentər/
+992。July。n.七月。/dʒuˈlaɪ/
+993。fiction。n.小说。/ˈfɪkʃn/
+994。hi。int.嗨!。/haɪ/
+995。appeal。n.请求。/əˈpiːl/
+996。cake。n.蛋糕。/keɪk/
+997。session。n.会议。/ˈseʃn/
+998。provision。n.规定。/prəˈvɪʒn/
+999。critical。adj.批评的。/ˈkrɪtɪkl/
+1000。intention。n.意图。/ɪnˈtenʃn/
+1001。leading。adj.领导的。/ˈliːdɪŋ; ˈledɪŋ/
+1002。explode。vi.爆炸。/ɪkˈsploʊd/
+1003。twin。n.双胞胎中一人。/twɪn/
+1004。garden。n.花园。/ˈɡɑːrdn/
+1005。pressure。n.压力。/ˈpreʃər/
+1006。minister。n.部长。/ˈmɪnɪstər/
+1007。approach。n.接近。/əˈproʊtʃ/
+1008。cloudy。adj.多云的。/ˈklaʊdi/
+1009。board。n.董事会。/bɔːrd/
+1010。available。adj.可获得的。/əˈveɪləbl/
+1011。hateful。adj.可憎的。/ˈheɪtfl/
+1012。lemon。n.柠檬。/ˈlemən/
+1013。sell。vt.销售。/sel/
+1014。athlete。n.运动员。/ˈæθliːt/
+1015。depend。vi.依赖。/dɪˈpend/
+1016。dip。v.浸。/dɪp/
+1017。fire。n.火。/ˈfaɪər/
+1018。ago。adv.以前。/əˈɡoʊ/
+1019。flower。n.花。/ˈflaʊər/
+1020。drama。n.戏剧。/ˈdrɑːmə/
+1021。cassette。n.卡带。/kəˈset/
+1022。interpret。vt.说明。/ɪnˈtɜːrprət/
+1023。ourselves。pron.我们自己。/ɑːrˈselvz/
+1024。sex。n.性。/seks/
+1025。poor。adj.贫穷的。/pʊr,pɔːr/
+1026。topic。n.主题。/ˈtɑːpɪk/
+1027。increase。v.增加。/ɪnˈkriːs; ˈɪnkriːs/
+1028。window。n.窗。/ˈwɪndoʊ/
+1029。regret。vt.后悔。/rɪˈɡret/
+1030。celebrate。vt.庆祝。/ˈselɪbreɪt/
+1031。impression。n.印象。/ɪmˈpreʃn/
+1032。finding。n.发现。/ˈfaɪndɪŋ/
+1033。entry。n.进入。/ˈentri/
+1034。illustration。n.说明。/ˌɪləˈstreɪʃn/
+1035。single。adj.单一的。/ˈsɪŋɡl/
+1036。number。n.数。/ˈnʌmbər/
+1037。filter。n.过滤器。/ˈfɪltər/
+1038。cathedral。n.大教堂。/kəˈθiːdrəl/
+1039。entire。adj.全部的。/ɪnˈtaɪər/
+1040。tune。n.曲调。/tuːn/
+1041。committee。n.委员会。/kəˈmɪti/
+1042。dumb。adj.哑的。/dʌm/
+1043。decorate。vt.装饰。/ˈdekəreɪt/
+1044。grasp。v.抓牢。/ɡræsp/
+1045。visible。adj.明显的。/ˈvɪzəbl/
+1046。echo。vt.反射。/ˈekoʊ/
+1047。generate。vt.使形成。/ˈdʒenəreɪt/
+1048。merely。adv.仅仅。/ˈmɪrli/
+1049。neglect。v.忽视。/nɪˈɡlekt/
+1050。metric。adj.公制的。/ˈmetrɪk/
+1051。subject。n.题目。/ˈsʌbdʒɪkt/
+1052。honest。adj.诚实的。/ˈɑːnɪst/
+1053。much。adv.非常。/mʌtʃ/
+1054。to。prep.向。/tə,tu,tuː/
+1055。ready。adj.准备好。/ˈredi/
+1056。renew。vt.使更新。/rɪˈnuː/
+1057。layer。n.层。/ˈleɪər/
+1058。accord。n.符合。/əˈkɔːrd/
+1059。sunrise。n.日出。/ˈsʌnraɪz/
+1060。republic。n.共和国。/rɪˈpʌblɪk/
+1061。cloth。n.布。/klɔːθ/
+1062。largely。adv.主要地。/ˈlɑːrdʒli/
+1063。culture。n.文化。/ˈkʌltʃər/
+1064。master。n.主人。/ˈmæstər/
+1065。textbook。n.教科书。/ˈtekstbʊk/
+1066。criticism。n.批评。/ˈkrɪtɪsɪzəm/
+1067。margin。n.边缘。/ˈmɑːrdʒɪn/
+1068。reasonable。adj.合理的。/ˈriːznəbl/
+1069。power。n.能力。/ˈpaʊər/
+1070。apartment。n.公寓。/əˈpɑːrtmənt/
+1071。extension。n.拓展。/ɪkˈstenʃn/
+1072。barn。n.谷仓。/bɑːrn/
+1073。relation。n.关系。/rɪˈleɪʃn/
+1074。should。aux.应该。/ʃəd,ʃʊd/
+1075。surrender。vt.使投降。/səˈrendər/
+1076。export。n.输出。/ˈekspɔːrt/
+1077。anxious。adj.焦虑的。/ˈæŋkʃəs/
+1078。curve。n.曲线。/kɜːrv/
+1079。prospect。n.前途。/ˈprɑːspekt/
+1080。dry。adj.干的。/draɪ/
+1081。exploit。vt.开发。/ɪkˈsplɔɪt/
+1082。drag。v.拖。/dræɡ/
+1083。term。n.术语。/tɜːrm/
+1084。asleep。adj.睡着的。/əˈsliːp/
+1085。diamond。n.钻石。/ˈdaɪmənd/
+1086。program。n.程序。/ˈproʊɡræm/
+1087。serve。vt.招待。/sɜːrv/
+1088。cottage。n.小屋。/ˈkɑːtɪdʒ/
+1089。electron。n.电子。/ɪˈlektrɑːn/
+1090。refreshment。n.点心。/rɪˈfreʃmənt/
+1091。rigid。adj.严格的。/ˈrɪdʒɪd/
+1092。being。n.存在。/ˈbiːɪŋ/
+1093。rapidly。adv.迅速地。/ˈræpɪdli/
+1094。senate。n.参议院。/ˈsenət/
+1095。worthwhile。adj.重要的。/ˌwɜːrθˈwaɪl/
+1096。handkerchief。n.手帕。/ˈhæŋkətʃɪf/
+1097。indirect。adj.间接的。/ˌɪndəˈrekt/
+1098。dependent。adj.依靠的。/dɪˈpendənt/
+1099。aero。adj.航空的。/ˈeroʊ/
+1100。establishment。n.确立。/ɪˈstæblɪʃmənt/
+1101。radar。n.雷达。/ˈreɪdɑːr/
+1102。critic。n.批评家。/ˈkrɪtɪk/
+1103。occasionally。adv.偶尔。/əˈkeɪʒnəli/
+1104。territory。n.领土。/ˈterətɔːri/
+1105。slam。v.砰地关上。/slæm/
+1106。throughout。adv.自始至终。/θruːˈaʊt/
+1107。finance。n.财政。/ˈfaɪnæns/
+1108。principle。n.原理。/ˈprɪnsəpl/
+1109。your。pron.你的。/jʊr,jər/
+1110。cord。n.绳索。/kɔːrd/
+1111。slice。n.薄片。/slaɪs/
+1112。specialist。n.专家。/ˈspeʃəlɪst/
+1113。invisible。adj.无形的。/ɪnˈvɪzəbl/
+1114。reality。n.现实。/riˈæləti/
+1115。log。n.航行日志。/lɔːɡ/
+1116。discuss。vt.讨论。/dɪˈskʌs/
+1117。comprehension。n.理解。/ˌkɑːmprɪˈhenʃn/
+1118。moist。adj.潮湿的。/mɔɪst/
+1119。heel。n.脚后跟。/hiːl/
+1120。conversely。adv.相反地。/ˈkɑːnvɜːrsli/
+1121。reel。n.(棉纱等的)卷轴。/riːl/
+1122。considerate。adj.体贴的。/kənˈsɪdərət/
+1123。fifth。adj.第五的。/fɪfθ/
+1124。scope。n.范围。/skoʊp/
+1125。beg。vt.乞讨。/beɡ/
+1126。quickly。adv.迅速地。/ˈkwɪkli/
+1127。princess。n.公主。/ˈprɪnses/
+1128。utility。n.实用。/juːˈtɪləti/
+1129。investigate。v.调查。/ɪnˈvestɪɡeɪt/
+1130。any。adj.任何的。/ˈeni/
+1131。lick。vt.舔。/lɪk/
+1132。roughly。adv.粗糙地。/ˈrʌfli/
+1133。magnetic。adj.地磁的。/mæɡˈnetɪk/
+1134。glimpse。n.一瞥。/ɡlɪmps/
+1135。kill。vt.杀死。/kɪl/
+1136。sick。adj.厌恶的。/sɪk/
+1137。substantial。adj.大量的。/səbˈstænʃl/
+1138。active。adj.积极的。/ˈæktɪv/
+1139。knife。n.刀。/naɪf/
+1140。see。vt.看见。/siː/
+1141。midnight。n.午夜。/ˈmɪdnaɪt/
+1142。despise。vt.轻视。/dɪˈspaɪz/
+1143。apply。vt.申请。/əˈplaɪ/
+1144。beloved。adj.心爱的。/bɪˈlʌvɪd/
+1145。basically。adv.主要地。/ˈbeɪsɪkli/
+1146。plus。prep.加上。/plʌs/
+1147。afterward。adv.以后。/ˈæftərwərd/
+1148。eighth。adj.第八的。/eɪtθ/
+1149。mistress。n.情妇。/ˈmɪstrəs/
+1150。blow。n.殴打。/bloʊ/
+1151。niece。n.外甥女。/niːs/
+1152。harmful。adj.有害的。/ˈhɑːrmfl/
+1153。infant。n.婴儿。/ˈɪnfənt/
+1154。rate。n.比率。/reɪt/
+1155。practically。adv.实际地。/ˈpræktɪkli/
+1156。doubt。n.怀疑。/daʊt/
+1157。ink。n.墨水。/ɪŋk/
+1158。either。adj.任一的。/ˈiːðər,ˈaɪðər/
+1159。surprising。adj.令人惊讶的。/sərˈpraɪzɪŋ/
+1160。proper。adj.适当的。/ˈprɑːpər/
+1161。back。adj.后面的。/bæk/
+1162。merit。n.优点。/ˈmerɪt/
+1163。diagram。n.图表。/ˈdaɪəɡræm/
+1164。navy。n.海军。/ˈneɪvi/
+1165。frontier。n.前沿。/frʌnˈtɪr/
+1166。wipe。vt.擦。/waɪp/
+1167。lord。n.主。/lɔːrd/
+1168。lame。adj.跛足的。/leɪm/
+1169。treatment。n.治疗。/ˈtriːtmənt/
+1170。poet。n.诗人。/ˈpoʊət/
+1171。object。n.目标。/ˈɑːbdʒekt,ˈɑːbdʒɪkt/
+1172。struggle。v.奋斗。/ˈstrʌɡl/
+1173。absent。adj.缺席的。/ˈæbsənt/
+1174。broad。adj.宽的。/brɔːd/
+1175。circular。adj.循环的。/ˈsɜːrkjələr/
+1176。correspond。vi.符合。/ˌkɔːrəˈspɑːnd/
+1177。surgeon。n.外科医生。/ˈsɜːrdʒən/
+1178。beast。n.野兽。/biːst/
+1179。dramatization。n.编剧。/ˌdræmətəˈzeɪʃn/
+1180。draw。vt.画。/drɔː/
+1181。efficiency。n.效率。/ɪˈfɪʃnsi/
+1182。chapter。n.章。/ˈtʃæptər/
+1183。forever。adv.永远。/fərˈevər/
+1184。false。adj.错误的。/fɔːls/
+1185。bread。n.面包。/bred/
+1186。nasty。adj.污秽的。/ˈnæsti/
+1187。pot。n.壶。/pɑːt/
+1188。slight。adj.轻微的。/slaɪt/
+1189。limited。adj.有限的。/ˈlɪmɪtɪd/
+1190。inventor。n.发明家。/ɪnˈventər/
+1191。competent。adj.胜任的。/ˈkɑːmpɪtənt/
+1192。tense。adj.紧张的。/tens/
+1193。few。adj.很少的。/fjuː/
+1194。suspend。vt.延缓。/səˈspend/
+1195。swear。vt.发誓。/swer/
+1196。smell。n.气味。/smel/
+1197。framework。n.框架。/ˈfreɪmwɜːrk/
+1198。urgent。adj.紧急的。/ˈɜːrdʒənt/
+1199。arouse。vt.引起。/əˈraʊz/
+1200。telephone。n.电话。/ˈtelɪfoʊn/
+1201。formal。adj.正式的。/ˈfɔːrml/
+1202。hat。n.帽子。/hæt/
+1203。thorn。n.刺。/θɔːrn/
+1204。brim。n.边。/brɪm/
+1205。preceding。adj.在前的。/prɪˈsiːdɪŋ/
+1206。in。prep.在...之内。/ɪn/
+1207。wound。n.创伤。/wuːnd; waʊnd/
+1208。wood。n.木材。/wʊd/
+1209。contain。vt.包含。/kənˈteɪn/
+1210。workshop。n.车间。/ˈwɜːrkʃɑːp/
+1211。hope。v.希望。/hoʊp/
+1212。couple。n.对。/ˈkʌpl/
+1213。speak。vi.说话。/spiːk/
+1214。countryside。n.农村。/ˈkʌntrisaɪd/
+1215。hesitate。vi.踌躇。/ˈhezɪteɪt/
+1216。monthly。adj.每月的。/ˈmʌnθli/
+1217。military。adj.军事的。/ˈmɪləteri/
+1218。absolute。adj.绝对的。/ˈæbsəluːt/
+1219。electronics。n.电子学。/ɪˌlekˈtrɑːnɪks/
+1220。nail。n.指甲。/neɪl/
+1221。regulate。vt.调节。/ˈreɡjuleɪt/
+1222。safe。adj.安全的。/seɪf/
+1223。side。n.方面。/saɪd/
+1224。exaggerate。vt.使扩大。/ɪɡˈzædʒəreɪt/
+1225。book。n.书籍。/bʊk/
+1226。intensive。adj.加强的。/ɪnˈtensɪv/
+1227。somewhat。adv.有点。/ˈsʌmwʌt/
+1228。overtime。n.加班时间。/ˈoʊvərtaɪm/
+1229。fortune。n.财富。/ˈfɔːrtʃən/
+1230。his。pron.他的。/hɪz,ɪz/
+1231。companion。n.同伴。/kəmˈpænjən/
+1232。repeat。n.重复。/rɪˈpiːt/
+1233。sway。vt.影响。/sweɪ/
+1234。understand。vt.理解。/ˌʌndərˈstænd/
+1235。civilize。vt.使文明。/ˈsɪvəlaɪz/
+1236。footstep。n.脚步。/ˈfʊtstep/
+1237。video。n.视频。/ˈvɪdioʊ/
+1238。ideal。adj.理想的。/aɪˈdiːəl/
+1239。freeze。v.(使)结冰。/friːz/
+1240。odour。n.气味。/ˈoʊdər/
+1241。social。adj.社会的。/ˈsoʊʃl/
+1242。semiconductor。n.半导体。/ˈsemikəndʌktər/
+1243。good。adj.好的。/ɡʊd/
+1244。presently。adv.目前。/ˈprezntli/
+1245。admire。vt.钦佩。/ədˈmaɪər/
+1246。courage。n.勇气。/ˈkɜːrɪdʒ/
+1247。silly。adj.愚蠢的。/ˈsɪli/
+1248。removal。n.免职。/rɪˈmuːvl/
+1249。Australia。n.澳大利亚。/ɔːˈstreɪljə/
+1250。alloy。n.合金。/ˈælɔɪ; əˈlɔɪ/
+1251。road。n.公路。/roʊd/
+1252。exceed。vt.超过。/ɪkˈsiːd/
+1253。local。adj.当地的。/ˈloʊkl/
+1254。content。n.内容。/ˈkɑːntent/
+1255。wheel。n.车轮。/wiːl/
+1256。here。adv.在这里。/hɪr/
+1257。document。n.文件。/ˈdɑːkjumənt/
+1258。concrete。adj.混凝土的。/ˈkɑːnkriːt/
+1259。harsh。adj.严厉的。/hɑːrʃ/
+1260。flush。n.奔流。/flʌʃ/
+1261。relevant。adj.相关的。/ˈreləvənt/
+1262。pollution。n.污染。/pəˈluːʃn/
+1263。level。n.水平。/ˈlevl/
+1264。nerve。n.神经。/nɜːrv/
+1265。spring。n.春天。/sprɪŋ/
+1266。stroke。n.击。/stroʊk/
+1267。wander。vi.徘徊。/ˈwɑːndər/
+1268。appoint。vt.任命。/əˈpɔɪnt/
+1269。lean。n.倾斜。/liːn/
+1270。flock。n.群。/flɑːk/
+1271。emotion。n.情感。/ɪˈmoʊʃn/
+1272。sow。vt.播种。/soʊ; saʊ/
+1273。spear。n.矛。/spɪr/
+1274。neighbour。n.邻居。/ˈneɪbər/
+1275。advisable。adj.明智的。/ədˈvaɪzəbl/
+1276。at。prep.在。/ət,æt/
+1277。fulfil。vt.履行。/fʊlˈfɪl/
+1278。overseas。adv.在海外。/ˌoʊvərˈsiːz/
+1279。everywhere。adv.到处。/ˈevriwer/
+1280。cabbage。n.卷心菜。/ˈkæbɪdʒ/
+1281。timid。adj.胆小的。/ˈtɪmɪd/
+1282。drop。v.推动。/drɑːp/
+1283。recent。adj.最近的。/ˈriːsnt/
+1284。express。vt.表达。/ɪkˈspres/
+1285。doctor。n.医生。/ˈdɑːktər/
+1286。century。n.世纪。/ˈsentʃəri/
+1287。contest。n.论争。/ˈkɑːntest/
+1288。deep。adj.深的。/diːp/
+1289。Roman。n.罗马人。/ˈroʊmən/
+1290。today。adv.今天。/təˈdeɪ/
+1291。arrive。vi.到达。/əˈraɪv/
+1292。lift。n.举起。/lɪft/
+1293。detect。vt.察觉。/dɪˈtekt/
+1294。beautiful。adj.美丽的。/ˈbjuːtɪfl/
+1295。include。vt.包含。/ɪnˈkluːd/
+1296。injury。n.伤害。/ˈɪndʒəri/
+1297。wage。n.工资。/weɪdʒ/
+1298。gross。adj.总共的。/ɡroʊs/
+1299。headline。n.大标题。/ˈhedlaɪn/
+1300。hence。adv.因此。/hens/
+1301。art。n.艺术。/ɑːrt/
+1302。specialize。v.专门从事。/ˈspeʃəlaɪz/
+1303。residence。n.住宅。/ˈrezɪdəns/
+1304。temptation。n.引诱。/tempˈteɪʃn/
+1305。capital。n.首都。/ˈkæpɪtl/
+1306。feature。n.特色。/ˈfiːtʃər/
+1307。yet。adv.还。/jet/
+1308。aspect。n.方面。/ˈæspekt/
+1309。wish。n.愿望。/wɪʃ/
+1310。refuse。vt.拒绝。/rɪˈfjuːz; ˈrefjuːs/
+1311。thirdly。adv.第三。/ˈθɜːrdli/
+1312。message。n.消息。/ˈmesɪdʒ/
+1313。influence。n.影响。/ˈɪnfluəns/
+1314。prevail。vi.盛行。/prɪˈveɪl/
+1315。bill。n.法案。/bɪl/
+1316。plain。adj.平的。/pleɪn/
+1317。habitual。adj.习惯的。/həˈbɪtʃuəl/
+1318。tide。n.趋势。/taɪd/
+1319。result。n.结果。/rɪˈzʌlt/
+1320。pipe。n.管。/paɪp/
+1321。scientist。n.科学家。/ˈsaɪəntɪst/
+1322。arrange。vt.安排。/əˈreɪndʒ/
+1323。confidence。n.信心。/ˈkɑːnfɪdəns/
+1324。scatter。v.撒播。/ˈskætər/
+1325。trunk。n.树干。/trʌŋk/
+1326。right。adj.正确的。/raɪt/
+1327。gramme。n.克。/ɡræm/
+1328。button。n.按钮。/ˈbʌtn/
+1329。omit。vt.省略。/əˈmɪt/
+1330。introduce。vt.介绍。/ˌɪntrəˈdjuːs/
+1331。gentle。adj.温和的。/ˈdʒentl/
+1332。who。pron.谁。/huː/
+1333。spray。n.喷雾。/spreɪ/
+1334。substance。n.物质。/ˈsʌbstəns/
+1335。function。n.功能。/ˈfʌŋkʃn/
+1336。regarding。prep.关于。/rɪˈɡɑːrdɪŋ/
+1337。twelve。num.十二。/twelv/
+1338。existence。n.存在。/ɪɡˈzɪstəns/
+1339。freely。adv.自由地。/ˈfriːli/
+1340。machine。n.机械。/məˈʃiːn/
+1341。restraint。n.抑制。/rɪˈstreɪnt/
+1342。bargain。n.交易。/ˈbɑːrɡən/
+1343。one。pron.一个人。/wʌn/
+1344。smog。n.烟雾。/smɑːɡ/
+1345。indication。n.指示。/ˌɪndɪˈkeɪʃn/
+1346。Negro。n.黑人（冒犯性）。/ˈniːɡroʊ/
+1347。pump。n.泵。/pʌmp/
+1348。bar。n.条。/bɑːr/
+1349。aircraft。n.飞机。/ˈerkræft/
+1350。surname。n.姓。/ˈsɜːrneɪm/
+1351。home。n.家。/hoʊm/
+1352。German。adj.德国的。/ˈdʒɜːrmən/
+1353。lawyer。n.律师。/ˈlɔɪər/
+1354。vivid。adj.生动的。/ˈvɪvɪd/
+1355。skill。n.技能。/skɪl/
+1356。hammer。n.铁锤。/ˈhæmər/
+1357。plural。adj.复数的。/ˈplʊrəl/
+1358。chew。vt.咀嚼。/tʃuː/
+1359。internal。adj.内部的。/ɪnˈtɜːrnl/
+1360。decent。adj.正派的。/ˈdiːsnt/
+1361。display。n.显示。/dɪˈspleɪ/
+1362。chair。n.椅子。/tʃer/
+1363。assess。vt.评定。/əˈses/
+1364。acceptable。adj.可接受的。/əkˈseptəbl/
+1365。traditional。adj.传统的。/trəˈdɪʃənl/
+1366。inhabit。vt.栖息。/ɪnˈhæbɪt/
+1367。outcome。n.结果。/ˈaʊtkʌm/
+1368。individual。adj.个人的。/ˌɪndɪˈvɪdʒuəl/
+1369。remark。n.注意。/rɪˈmɑːrk/
+1370。leave。vt.离开。/liːv/
+1371。mostly。adv.主要地。/ˈmoʊstli/
+1372。league。n.联盟。/liːɡ/
+1373。envelope。n.信封。/ˈenvələʊp/
+1374。double。n.两倍。/ˈdʌbl/
+1375。simplify。vt.简化。/ˈsɪmplɪfaɪ/
+1376。examine。vt.检查。/ɪɡˈzæmɪn/
+1377。southeast。n.东南。/ˌsaʊθˈiːst/
+1378。seem。vi.似乎。/siːm/
+1379。fridge。n.电冰箱。/frɪdʒ/
+1380。behave。vi.表现。/bɪˈheɪv/
+1381。tend。vi.趋向。/tend/
+1382。rare。adj.稀有的。/rer/
+1383。red。n.红色。/red/
+1384。advanced。adj.先进的。/ədˈvænst/
+1385。professor。n.教授。/prəˈfesər/
+1386。figure。n.数字。/ˈfɪɡjər/
+1387。pity。n.怜悯。/ˈpɪti/
+1388。outstanding。adj.杰出的。/aʊtˈstændɪŋ/
+1389。tram。n.电车。/træm/
+1390。tramp。v.重步行走。/træmp/
+1391。I。pron.我。/aɪ/
+1392。smile。v.微笑。/smaɪl/
+1393。grateful。adj.感谢的。/ˈɡreɪtfl/
+1394。bounce。v.(使)反跳。/baʊns/
+1395。violet。n.紫罗兰。/ˈvaɪələt/
+1396。line。n.路线。/laɪn/
+1397。pleasure。n.快乐。/ˈpleʒər/
+1398。lively。adj.活泼的。/ˈlaɪvli/
+1399。election。n.选举。/ɪˈlekʃn/
+1400。occurrence。n.发生。/əˈkɜːrəns/
+1401。deserve。vi.应受。/dɪˈzɜːrv/
+1402。resort。n.凭借。/rɪˈzɔːrt/
+1403。bud。n.芽。/bʌd/
+1404。bomb。n.炸弹。/bɑːm/
+1405。preserve。vt.保存。/prɪˈzɜːrv/
+1406。dinner。n.晚餐。/ˈdɪnər/
+1407。revolution。n.革命。/ˌrevəˈluːʃn/
+1408。hate。vt.憎恨。/heɪt/
+1409。goal。n.目标。/ɡoʊl/
+1410。dog。n.狗。/dɔːɡ/
+1411。holiday。n.假日。/ˈhɑːlədeɪ/
+1412。these。pron.这些。/ðiːz/
+1413。technical。adj.工艺的。/ˈteknɪkl/
+1414。orbit。n.轨道。/ˈɔːrbɪt/
+1415。downward。adj.向下的。/ˈdaʊnwərd/
+1416。organism。n.有机体。/ˈɔːrɡənɪzəm/
+1417。television。n.电视。/ˈtelɪvɪʒn/
+1418。cope。vi.处理。/koʊp/
+1419。turbulent。adj.动荡的。/ˈtɜːrbjələnt/
+1420。industrialize。vt.使工业化。/ɪnˈdʌstriəlaɪz/
+1421。kilometer。n.公里。/kɪˈlɑːmɪtər/
+1422。trouble。n.麻烦。/ˈtrʌbl/
+1423。toss。v.投。/tɔːs/
+1424。miserable。adj.悲惨的。/ˈmɪzrəbl/
+1425。charming。adj.迷人的。/ˈtʃɑːrmɪŋ/
+1426。enthusiasm。n.热心。/ɪnˈθuːziæzəm/
+1427。away。adv.离去。/əˈweɪ/
+1428。jungle。n.丛林。/ˈdʒʌŋɡl/
+1429。eleventh。num.第十一。/ɪˈlevnθ/
+1430。cough。v.咳嗽。/kɔːf/
+1431。lump。n.块。/lʌmp/
+1432。medium。adj.中间的。/ˈmiːdiəm/
+1433。imaginary。adj.虚构的。/ɪˈmædʒɪneri/
+1434。idiom。n.成语。/ˈɪdiəm/
+1435。blank。adj.空白的。/blæŋk/
+1436。despite。prep.即使。/dɪˈspaɪt/
+1437。complete。adj.完整的。/kəmˈpliːt/
+1438。weed。n.野草。/wiːd/
+1439。bottle。n.瓶子。/ˈbɑːtl/
+1440。region。n.地区。/ˈriːdʒən/
+1441。fill。vt.装满。/fɪl/
+1442。actor。n.男演员。/ˈæktər/
+1443。body。n.身体。/ˈbɑːdi/
+1444。tail。n.尾巴。/teɪl/
+1445。while。conj.当...的时候。/waɪl/
+1446。welfare。n.福利。/ˈwelfer/
+1447。focus。n.焦点。/ˈfoʊkəs/
+1448。succeed。vi.成功。/səkˈsiːd/
+1449。fundamental。adj.基本的。/ˌfʌndəˈmentl/
+1450。dye。n.染料。/daɪ/
+1451。declare。vt.宣布。/dɪˈkler/
+1452。measure。n.测量。/ˈmeʒər/
+1453。fry。v.油炸。/fraɪ/
+1454。terrible。adj.可怕的。/ˈterəbl/
+1455。laboratory。n.实验室。/ˈlæbrətri/
+1456。rejoice。vi.高兴。/rɪˈdʒɔɪs/
+1457。idle。adj.闲置的。/ˈaɪdl/
+1458。curse。n.诅咒。/kɜːrs/
+1459。area。n.区域。/ˈeriə/
+1460。sympathize。vi.同情。/ˈsɪmpəθaɪz/
+1461。brand。n.商标。/brænd/
+1462。resolution。n.分辨率。/ˌrezəˈluːʃn/
+1463。whoever。pron.无论谁。/huːˈevər/
+1464。fashionable。adj.流行的。/ˈfæʃnəbl/
+1465。detail。n.细节。/ˈdiːteɪl, dɪˈteɪl/
+1466。pine。n.松树。/paɪn/
+1467。invention。n.发明。/ɪnˈvenʃn/
+1468。plant。n.工厂。/plænt/
+1469。climb。v.攀登。/klaɪm/
+1470。service。n.服务。/ˈsɜːrvɪs/
+1471。automobile。n.汽车。/ˈɔːtəməbiːl/
+1472。head。n.头。/hed/
+1473。forty。n.四十。/ˈfɔːrti/
+1474。tablet。n.碑。/ˈtæblət/
+1475。note。n.笔记。/noʊt/
+1476。leader。n.领导者。/ˈliːdər/
+1477。pray。vt.祈祷。/preɪ/
+1478。institution。n.制度。/ˌɪnstɪˈtuːʃn/
+1479。set。vt.放置。/set/
+1480。shoot。vt.射击。/ʃuːt/
+1481。universal。adj.普遍的。/ˌjuːnɪˈvɜːrsl/
+1482。underline。vt.强调。/ˌʌndərˈlaɪn/
+1483。place。n.地方。/pleɪs/
+1484。old。adj.陈旧的。/oʊld/
+1485。outlet。n.出口。/ˈaʊtlet/
+1486。reference。n.参考。/ˈrefrəns/
+1487。description。n.描述。/dɪˈskrɪpʃn/
+1488。mosquito。n.蚊子。/məˈskiːtoʊ/
+1489。ripe。adj.熟的。/raɪp/
+1490。handwriting。n.笔迹。/ˈhændraɪtɪŋ/
+1491。compare。v.比较。/kəmˈper/
+1492。religious。adj.宗教的。/rɪˈlɪdʒəs/
+1493。solar。adj.太阳的。/ˈsoʊlər/
+1494。smooth。adj.顺利的。/smuːð/
+1495。rod。n.棒。/rɑːd/
+1496。conscience。n.道德心。/ˈkɑːnʃəns/
+1497。punishment。n.惩罚。/ˈpʌnɪʃmənt/
+1498。domestic。adj.国内的。/dəˈmestɪk/
+1499。sunny。adj.阳光充足的。/ˈsʌni/
+1500。let。vt.允许。/let/
+1501。diary。n.日志。/ˈdaɪəri/
+1502。produce。vt.生产。/prəˈduːs/
+1503。inexpensive。adj.便宜的。/ˌɪnɪkˈspensɪv/
+1504。dare。v.胆敢。/der/
+1505。apparatus。n.装置。/ˌæpəˈrætəs/
+1506。investigation。n.调查。/ɪnˌvestɪˈɡeɪʃn/
+1507。cherry。n.樱桃。/ˈtʃeri/
+1508。frame。n.结构。/freɪm/
+1509。via。prep.经由。/ˈviːə, ˈvaɪə/
+1510。tradition。n.惯例。/trəˈdɪʃn/
+1511。but。conj.但是。/bʌt/
+1512。less。n.较少。/les/
+1513。corner。n.角落。/ˈkɔːrner/
+1514。accident。n.事故。/ˈæksɪdənt/
+1515。folk。n.民族。/foʊk/
+1516。tumble。vi.摔倒。/ˈtʌmbl/
+1517。scholar。n.学者。/ˈskɑːlər/
+1518。spoil。vt.溺爱。/spɔɪl/
+1519。decade。n.十年。/ˈdekeɪd, dɪˈkeɪd/
+1520。daily。adj.日常的。/ˈdeɪli/
+1521。naughty。adj.顽皮的。/ˈnɔːti/
+1522。trend。n.趋势。/trend/
+1523。lens。n.透镜。/lenz/
+1524。himself。pron.他自己。/hɪmˈself/
+1525。lever。n.杠杆。/ˈlevər/
+1526。pull。vt.拉。/pʊl/
+1527。effective。adj.有效的。/ɪˈfektɪv/
+1528。send。vt.发送。/send/
+1529。begin。vt.开始。/bɪˈɡɪn/
+1530。swarm。n.一大群。/swɔːrm/
+1531。corresponding。adj.相当的。/ˌkɔːrəˈspɑːndɪŋ/
+1532。enough。adv.足够地。/ɪˈnʌf/
+1533。fund。n.基金。/fʌnd/
+1534。arm。n.手臂。/ɑːrm/
+1535。likewise。adv.同样地。/ˈlaɪkwaɪz/
+1536。full。adj.完全的。/fʊl/
+1537。autumn。n.秋天。/ˈɔːtəm/
+1538。British。adj.英国的。/ˈbrɪtɪʃ/
+1539。conscious。adj.意识到的。/ˈkɑːnʃəs/
+1540。helpless。adj.无助的。/ˈhelpləs/
+1541。excellent。adj.卓越的。/ˈeksələnt/
+1542。deadly。adj.致命的。/ˈdedli/
+1543。link。n.链环。/lɪŋk/
+1544。broadcast。n.广播。/ˈbrɔːdkæst/
+1545。rust。n.锈。/rʌst/
+1546。disturb。vt.打扰。/dɪˈstɜːrb/
+1547。decay。v.衰退。/dɪˈkeɪ/
+1548。each。det.各自。/iːtʃ/
+1549。acquire。vt.获得。/əˈkwaɪər/
+1550。start。vt.开始。/stɑːrt/
+1551。allow。vt.允许。/əˈlaʊ/
+1552。ocean。n.海洋。/ˈoʊʃn/
+1553。safely。adv.安全地。/ˈseɪfli/
+1554。organization。n.组织。/ˌɔːrɡənəˈzeɪʃn/
+1555。about。adv.附近。/əˈbaʊt/
+1556。breadth。n.宽度。/bredθ/
+1557。mute。adj.哑的。/mjuːt/
+1558。attention。n.注意力。/əˈtenʃn/
+1559。text。n.文本。/tekst/
+1560。plane。n.飞机。/pleɪn/
+1561。regular。adj.经常的。/ˈreɡjələr/
+1562。beat。n.敲打。/biːt/
+1563。once。adv.一次。/wʌns/
+1564。motor。n.发动机。/ˈmoʊtər/
+1565。conquest。n.征服。/ˈkɑːŋkwest/
+1566。minute。n.分。/ˈmɪnɪt/
+1567。complex。adj.复杂的。/kəmˈpleks, ˈkɑːmpleks/
+1568。crane。n.吊车。/kreɪn/
+1569。pipeline。n.管道。/ˈpaɪplaɪn/
+1570。choke。vt.呛。/tʃoʊk/
+1571。burn。vt.燃烧。/bɜːrn/
+1572。natural。adj.自然的。/ˈnætʃrəl/
+1573。accommodation。n.住处。/əˌkɑːməˈdeɪʃn/
+1574。judgement。n.意见。/ˈdʒʌdʒmənt/
+1575。bronze。n.青铜。/brɑːnz/
+1576。present。n.赠品。/ˈpreznt/
+1577。repeatedly。adv.反复地。/rɪˈpiːtɪdli/
+1578。duty。n.责任。/ˈduːti/
+1579。develop。vt.开发。/dɪˈveləp/
+1580。bicycle。n.自行车。/ˈbaɪsɪkl/
+1581。clock。n.时钟。/klɑːk/
+1582。suppose。vt.假设。/səˈpoʊz/
+1583。discussion。n.讨论。/dɪˈskʌʃn/
+1584。lot。n.所有。/lɑːt/
+1585。magic。n.魔法。/ˈmædʒɪk/
+1586。stranger。n.陌生人。/ˈstreɪndʒər/
+1587。nevertheless。adv.然而。/ˌnevərðəˈles/
+1588。religion。n.宗教。/rɪˈlɪdʒən/
+1589。resume。n.摘要。/rɪˈzuːm/
+1590。explosion。n.爆炸。/ɪkˈsploʊʒn/
+1591。gently。adv.轻轻地。/ˈdʒentli/
+1592。mathematics。n.数学。/ˌmæθəˈmætɪks/
+1593。appear。v.出现。/əˈpɪr/
+1594。easy。adj.容易的。/ˈiːzi/
+1595。even。adj.平的。/ˈiːvn/
+1596。establish。v.建立。/ɪˈstæblɪʃ/
+1597。impressive。adj.感人的。/ɪmˈpresɪv/
+1598。elephant。n.象。/ˈelɪfənt/
+1599。harden。v.(使)变硬。/ˈhɑːrdn/
+1600。needle。n.针。/ˈniːdl/
+1601。canon。n.标准。/ˈkænən/
+1602。conjunction。n.结合。/kənˈdʒʌŋkʃn/
+1603。far。adv.很。/fɑːr/
+1604。expand。vt.扩张。/ɪkˈspænd/
+1605。harmony。n.协调。/ˈhɑːrməni/
+1606。researcher。n.研究员。/rɪˈsɜːrtʃər/
+1607。judge。n.法官。/dʒʌdʒ/
+1608。unknown。adj.未知的。/ˌʌnˈnoʊn/
+1609。boss。n.老板。/bɔːs/
+1610。slow。adj.慢的。/sloʊ/
+1611。shell。n.壳。/ʃel/
+1612。outer。adj.外面的。/ˈaʊtər/
+1613。already。adv.已经。/ɔːlˈredi/
+1614。other。adj.其他的。/ˈʌðər/
+1615。newspaper。n.报纸。/ˈnuːzpeɪpər/
+1616。progress。n.进步。/ˈprɑːɡres, ˈprɑːɡrəs/
+1617。dislike。vt.不喜欢。/dɪsˈlaɪk/
+1618。clumsy。adj.笨拙的。/ˈklʌmzi/
+1619。rough。adj.粗糙的。/rʌf/
+1620。type。n.类型。/taɪp/
+1621。difficulty。n.困难。/ˈdɪfɪkəlti/
+1622。overtake。vt.赶上。/ˌoʊvərˈteɪk/
+1623。sprinkle。v.撒。/ˈsprɪŋkl/
+1624。tendency。n.倾向。/ˈtendənsi/
+1625。assume。vi.设想。/əˈsuːm/
+1626。prior。adj.优先的。/ˈpraɪər/
+1627。brake。n.刹车。/breɪk/
+1628。solid。adj.固体的。/ˈsɑːlɪd/
+1629。dangerous。adj.危险的。/ˈdeɪndʒərəs/
+1630。pretend。vi.假装。/prɪˈtend/
+1631。composition。n.作文。/ˌkɑːmpəˈzɪʃn/
+1632。deck。n.甲板。/dek/
+1633。horizontal。adj.水平的。/ˌhɔːrɪˈzɑːntl/
+1634。governor。n.主管人员。/ˈɡʌvərnər/
+1635。lonely。adj.寂寞的。/ˈloʊnli/
+1636。iron。n.熨斗。/ˈaɪərn/
+1637。inhabitant。n.居民。/ɪnˈhæbɪtənt/
+1638。bristle。n.刚毛。/ˈbrɪsl/
+1639。protective。adj.防护的。/prəˈtektɪv/
+1640。swan。n.天鹅。/swɑːn/
+1641。column。n.纵队。/ˈkɑːləm/
+1642。record。n.履历。/ˈrekərd; rɪˈkɔːrd/
+1643。strict。adj.严格的。/strɪkt/
+1644。necessity。n.需要。/nəˈsesəti/
+1645。soap。n.肥皂。/soʊp/
+1646。prayer。n.祈祷。/preɪər/
+1647。steward。n.管家。/ˈstuːərd/
+1648。exhaust。v.使精疲力尽。/ɪɡˈzɔːst/
+1649。ice。n.冰。/aɪs/
+1650。stumble。vi.踌躇。/ˈstʌmbl/
+1651。laundry。n.洗衣店。/ˈlɔːndri/
+1652。boast。vt.夸口说。/boʊst/
+1653。bunch。n.群。/bʌntʃ/
+1654。compete。vi.竞争。/kəmˈpiːt/
+1655。foremost。adj.最重要的。/ˈfɔːrmoʊst/
+1656。dimension。n.方面。/daɪˈmenʃn/
+1657。sensitive。adj.敏感的。/ˈsensətɪv/
+1658。waist。n.腰。/weɪst/
+1659。semester。n.学期。/sɪˈmestər/
+1660。example。n.例子。/ɪɡˈzæmpl/
+1661。publish。vt.出版。/ˈpʌblɪʃ/
+1662。nearby。adj.附近的。/ˌnɪrˈbaɪ/
+1663。union。n.联盟。/ˈjuːniən/
+1664。sixth。adj.第六的。/sɪkθ/
+1665。radish。n.萝卜。/ˈrædɪʃ/
+1666。however。adv.无论如何。/haʊˈevər/
+1667。attack。n.攻击。/əˈtæk/
+1668。chin。n.下巴。/tʃɪn/
+1669。waiter。n.服务员。/ˈweɪtər/
+1670。tie。n.带子。/taɪ/
+1671。mechanically。adv.机械地。/məˈkænɪkli/
+1672。wolf。n.狼。/wʊlf/
+1673。thought。n.思想。/θɔːt/
+1674。reason。n.理由。/ˈriːzn/
+1675。know。vt.知道。/noʊ/
+1676。professional。adj.专业的。/prəˈfeʃənl/
+1677。claim。n.要求。/kleɪm/
+1678。executive。adj.经营管理的。/ɪɡˈzekjətɪv/
+1679。dirt。n.污垢。/dɜːrt/
+1680。congratulate。vt.祝贺。/kənˈɡrætʃuleɪt/
+1681。clothing。n.服装。/ˈkloʊðɪŋ/
+1682。coast。n.海岸。/koʊst/
+1683。thrust。v.插。/θrʌst/
+1684。shopping。n.购物。/ˈʃɑːpɪŋ/
+1685。dead。adj.无生命的。/ded/
+1686。yell。vi.大叫。/jel/
+1687。nearly。adv.差不多。/ˈnɪrli/
+1688。appreciate。vt.欣赏。/əˈpriːʃieɪt/
+1689。influential。adj.有影响的。/ˌɪnfluˈenʃl/
+1690。blue。n.蓝色。/bluː/
+1691。million。n.百万。/ˈmɪljən/
+1692。poverty。n.贫困。/ˈpɑːvərti/
+1693。half。n.一半。/hæf/
+1694。vapour。n.蒸汽。/ˈveɪpər/
+1695。king。n.国王。/kɪŋ/
+1696。handful。n.少数。/ˈhændfʊl/
+1697。famine。n.饥荒。/ˈfæmɪn/
+1698。occasional。adj.偶然的。/əˈkeɪʒənl/
+1699。female。adj.女性的。/ˈfiːmeɪl/
+1700。hedge。n.树篱。/hedʒ/
+1701。unusual。adj.不寻常的。/ʌnˈjuːʒuəl/
+1702。telegraph。n.电报机。/ˈtelɪɡræf/
+1703。reproduce。vt.复制。/ˌriːprəˈduːs/
+1704。council。n.委员会。/ˈkaʊnsl/
+1705。sound。n.声音。/saʊnd/
+1706。plastic。n.塑料。/ˈplæstɪk/
+1707。evolve。vt.发展。/ɪˈvɑːlv/
+1708。through。prep.穿过。/θruː/
+1709。contribute。vt.贡献。/kənˈtrɪbjuːt/
+1710。flash。n.闪光。/flæʃ/
+1711。dew。n.露水。/duː/
+1712。vertical。adj.垂直的。/ˈvɜːrtɪkl/
+1713。morning。n.早晨。/ˈmɔːrnɪŋ/
+1714。dozen。n.十二个。/ˈdʌzn/
+1715。convention。n.大会。/kənˈvenʃn/
+1716。degree。n.程度。/dɪˈɡriː/
+1717。actress。n.女演员。/ˈæktrəs/
+1718。do。v.做。/duː; də; dʊ/
+1719。concert。n.音乐会。/ˈkɑːnsərt/
+1720。aunt。n.阿姨。/ænt/
+1721。pronounce。vt.发音。/prəˈnaʊns/
+1722。worship。n.崇拜。/ˈwɜːrʃɪp/
+1723。pill。n.药丸。/pɪl/
+1724。track。n.轨道。/træk/
+1725。most。adv.最。/moʊst/
+1726。retire。vi.退休。/rɪˈtaɪər/
+1727。conflict。n.冲突。/ˈkɑːnflɪkt/
+1728。radioactive。adj.放射性的。/ˌreɪdioʊˈæktɪv/
+1729。delay。v.延期。/dɪˈleɪ/
+1730。thumb。n.拇指。/θʌm/
+1731。prison。n.监狱。/ˈprɪzn/
+1732。spectacle。n.景象。/ˈspektəkl/
+1733。tight。adj.紧的。/taɪt/
+1734。distinction。n.区别。/dɪˈstɪŋkʃn/
+1735。deliver。vt.交付。/dɪˈlɪvər/
+1736。theory。n.理论。/ˈθiːəri, ˈθɪri/
+1737。interaction。n.相互作用。/ˌɪntərˈækʃn/
+1738。taxi。n.出租汽车。/ˈtæksi/
+1739。neutral。adj.中立的。/ˈnuːtrəl/
+1740。hole。n.洞。/hoʊl/
+1741。steer。vt.控制。/stɪr/
+1742。action。n.行动。/ˈækʃn/
+1743。little。adj.小的。/ˈlɪtl/
+1744。Germany。n.德国。/ˈdʒɜːrməni/
+1745。trail。n.踪迹。/treɪl/
+1746。tray。n.托盘。/treɪ/
+1747。awfully。adv.可怕地。/ˈɔːfli/
+1748。agree。vt.同意。/əˈɡriː/
+1749。frown。vi.皱眉。/fraʊn/
+1750。gasp。vi.喘气。/ɡæsp/
+1751。huge。adj.巨大的。/hjuːdʒ/
+1752。sympathetic。adj.同情的。/ˌsɪmpəˈθetɪk/
+1753。utilize。vt.利用。/ˈjuːtəlaɪz/
+1754。misunderstand。vt.误解。/ˌmɪsʌndərˈstænd/
+1755。manufacturer。n.制造商。/ˌmænjuˈfæktʃərər/
+1756。similar。adj.相似的。/ˈsɪmələr/
+1757。organize。vt.组织。/ˈɔːrɡənaɪz/
+1758。continent。n.大陆。/ˈkɑːntɪnənt/
+1759。nurse。n.护士。/nɜːrs/
+1760。excess。n.超过。/ɪkˈses/
+1761。breeze。n.微风。/briːz/
+1762。faculty。n.科。/ˈfæklti/
+1763。grandfather。n.祖父。/ˈɡrænfɑːðər/
+1764。beneath。prep.在……之下。/bɪˈniːθ/
+1765。undoubtedly。adv.确实地。/ʌnˈdaʊtɪdli/
+1766。miner。n.矿工。/ˈmaɪnər/
+1767。force。n.力量。/fɔːrs/
+1768。overcome。vt.克服。/ˌoʊvərˈkʌm/
+1769。basket。n.篮子。/ˈbæskɪt/
+1770。nor。conj.也不。/nɔːr/
+1771。debt。n.债务。/det/
+1772。origin。n.起源。/ˈɔːrɪdʒɪn/
+1773。lawn。n.草地。/lɔːn/
+1774。rain。n.雨。/reɪn/
+1775。shelter。n.庇护。/ˈʃeltər/
+1776。surely。adv.当然。/ˈʃʊrli/
+1777。fun。vi.开玩笑。/fʌn/
+1778。vex。vt.使烦恼。/veks/
+1779。refrigerator。n.冰箱。/rɪˈfrɪdʒəreɪtər/
+1780。conversion。n.转换。/kənˈvɜːrʒn/
+1781。win。vt.赢得。/wɪn/
+1782。shut。vt.关闭。/ʃʌt/
+1783。tender。adj.嫩的。/ˈtendər/
+1784。mission。n.使命。/ˈmɪʃn/
+1785。humble。adj.谦逊的。/ˈhʌmbl/
+1786。pocket。n.口袋。/ˈpɑːkɪt/
+1787。insist。vt.坚持。/ɪnˈsɪst/
+1788。injure。vt.伤害。/ˈɪndʒər/
+1789。tape。n.胶带。/teɪp/
+1790。admission。n.承认。/ədˈmɪʃn/
+1791。follow。vt.跟随。/ˈfɑːloʊ/
+1792。necessarily。adv.必要地。/ˌnesəˈserəli/
+1793。canoe。n.独木舟。/kəˈnuː/
+1794。imitate。vt.模仿。/ˈɪmɪteɪt/
+1795。victorious。adj.胜利的。/vɪkˈtɔːriəs/
+1796。break。n.休息。/breɪk/
+1797。joint。n.接缝。/dʒɔɪnt/
+1798。job。n.工作。/dʒɑːb/
+1799。rocket。n.火箭。/ˈrɑːkɪt/
+1800。sin。n.罪恶。/sɪn/
+1801。target。n.目标。/ˈtɑːrɡɪt/
+1802。solution。n.解决方案。/səˈluːʃn/
+1803。fruitful。adj.富有成效的。/ˈfruːtfəl/
+1804。mail。n.邮件。/meɪl/
+1805。skilled。adj.熟练的。/skɪld/
+1806。midday。n.中午。/ˌmɪdˈdeɪ/
+1807。communism。n.共产主义。/ˈkɑːmjunɪzəm/
+1808。premier。adj.首要的。/prɪˈmɪr, ˈpremiər/
+1809。fool。n.傻瓜。/fuːl/
+1810。discovery。n.发现。/dɪˈskʌvəri/
+1811。earnest。adj.认真的。/ˈɜːrnɪst/
+1812。gray。adj.灰色的。/ɡreɪ/
+1813。prominent。adj.突出的。/ˈprɑːmɪnənt/
+1814。meantime。n.其时。/ˈmiːntaɪm/
+1815。advantage。n.优势。/ədˈvæntɪdʒ/
+1816。cave。n.山洞。/keɪv/
+1817。convert。vt.使转变。/kənˈvɜːrt/
+1818。Asia。n.亚洲。/ˈeɪʒə/
+1819。properly。adv.适当地。/ˈprɑːpərli/
+1820。ensure。vt.保证。/ɪnˈʃʊr/
+1821。that。adj.那。/ðæt/
+1822。piano。n.钢琴。/piˈænoʊ/
+1823。enjoy。vt.欣赏。/ɪnˈdʒɔɪ/
+1824。English。adj.英格兰的。/ˈɪŋɡlɪʃ/
+1825。birth。n.出生。/bɜːrθ/
+1826。police。n.警察。/pəˈliːs/
+1827。cycle。n.循环。/ˈsaɪkl/
+1828。duration。n.持续。/duˈreɪʃn/
+1829。politician。n.政治家。/ˌpɑːləˈtɪʃn/
+1830。wisdom。n.智慧。/ˈwɪzdəm/
+1831。November。n.十一月。/noʊˈvembər/
+1832。insect。n.昆虫。/ˈɪnsekt/
+1833。first。adv.首先。/fɜːrst/
+1834。cart。n.二轮运货马车。/kɑːrt/
+1835。Thursday。n.星期四。/ˈθɜːrzdeɪ/
+1836。sharply。adv.急剧地。/ˈʃɑːrpli/
+1837。graph。n.图表。/ɡræf/
+1838。northwest。n.西北方。/ˌnɔːrθˈwest/
+1839。Atlantic。n.大西洋。/ətˈlæntɪk/
+1840。maintenance。n.维护。/ˈmeɪntənəns/
+1841。none。adv.决不。/nʌn/
+1842。exam。n.考试。/ɪɡˈzæm/
+1843。liar。n.说谎的人。/ˈlaɪər/
+1844。well。adv.很好地。/wel/
+1845。throat。n.喉咙。/θroʊt/
+1846。extend。vt.延伸。/ɪkˈstend/
+1847。porch。n.门廊。/pɔːrtʃ/
+1848。laser。n.激光。/ˈleɪzər/
+1849。tongue。n.舌头。/tʌŋ/
+1850。intensity。n.强度。/ɪnˈtensəti/
+1851。become。vi.成为。/bɪˈkʌm/
+1852。credit。n.信用。/ˈkredɪt/
+1853。process。n.过程。/ˈprɑːses/
+1854。shear。v.剪。/ʃɪr/
+1855。race。n.种族。/reɪs/
+1856。all。adj.全部的。/ɔːl/
+1857。except。prep.除……之外。/ɪkˈsept/
+1858。romantic。adj.浪漫的。/roʊˈmæntɪk/
+1859。background。n.背景。/ˈbækɡraʊnd/
+1860。possibly。adv.可能地。/ˈpɑːsəbli/
+1861。typewriter。n.打字机。/ˈtaɪpraɪtər/
+1862。razor。n.剃刀。/ˈreɪzər/
+1863。current。adj.现在的。/ˈkɜːrənt/
+1864。statement。n.声明。/ˈsteɪtmənt/
+1865。terminal。n.航空站。/ˈtɜːrmɪnl/
+1866。put。vt.放。/pʊt/
+1867。feather。n.羽毛。/ˈfeðər/
+1868。recommendation。n.推荐。/ˌrekəmenˈdeɪʃn/
+1869。nationality。n.国籍。/ˌnæʃəˈnæləti/
+1870。cage。n.笼。/keɪdʒ/
+1871。approval。n.批准。/əˈpruːvl/
+1872。matter。n.物质。/ˈmætər/
+1873。forbid。vt.禁止。/fərˈbɪd/
+1874。strategy。n.战略。/ˈstrætədʒi/
+1875。conquer。vt.战胜。/ˈkɑːŋkər/
+1876。fine。adj.好的。/faɪn/
+1877。owl。n.猫头鹰。/aʊl/
+1878。proof。n.证明。/pruːf/
+1879。modify。vt.修改。/ˈmɑːdɪfaɪ/
+1880。dirty。adj.下流的。/ˈdɜːrti/
+1881。proud。adj.自豪的。/praʊd/
+1882。sky。n.天空。/skaɪ/
+1883。moreover。adv.而且。/mɔːrˈoʊvər/
+1884。favour。n.偏爱。/ˈfeɪvər/
+1885。sister。n.姐妹。/ˈsɪstər/
+1886。president。n.总统。/ˈprezɪdənt/
+1887。amongst。prep.在......当中。/əˈmʌŋst/
+1888。invade。vt.侵略。/ɪnˈveɪd/
+1889。cheat。vt.欺骗。/tʃiːt/
+1890。main。n.主要部分。/meɪn/
+1891。primary。adj.主要的。/ˈpraɪmeri/
+1892。utmost。adj.极度的。/ˈʌtmoʊst/
+1893。division。n.除法。/dɪˈvɪʒn/
+1894。legend。n.传奇。/ˈledʒənd/
+1895。fly。vi.飞。/flaɪ/
+1896。height。n.高地。/haɪt/
+1897。lack。n.缺乏。/læk/
+1898。article。n.文章。/ˈɑːrtɪkl/
+1899。ache。n.疼痛。/eɪk/
+1900。astronaut。n.宇航员。/ˈæstrənɔːt/
+1901。without。prep.没有。/wɪˈðaʊt/
+1902。acid。n.酸。/ˈæsɪd/
+1903。specify。vt.指定。/ˈspesɪfaɪ/
+1904。daylight。n.白天。/ˈdeɪlaɪt/
+1905。poetry。n.诗。/ˈpoʊətri/
+1906。seven。num.七。/ˈsevn/
+1907。fetch。vt.取来。/fetʃ/
+1908。immigrant。adj.移民的。/ˈɪmɪɡrənt/
+1909。plough。vt.犁。/plaʊ/
+1910。fraction。n.分数。/ˈfrækʃn/
+1911。alter。vt.改变。/ˈɔːltər/
+1912。determine。v.(使)下决心。/dɪˈtɜːrmɪn/
+1913。hydrogen。n.[化学]氢。/ˈhaɪdrədʒən/
+1914。masterpiece。n.杰作。/ˈmæstərpiːs/
+1915。clever。adj.聪明的。/ˈklevər/
+1916。venture。n.冒险旅行。/ˈventʃər/
+1917。eager。adj.渴望的。/ˈiːɡər/
+1918。era。n.时代。/ˈɪrə, ˈerə/
+1919。newly。adv.最近。/ˈnuːli/
+1920。stage。n.阶段。/steɪdʒ/
+1921。screen。n.屏。/skriːn/
+1922。sleep。vi.睡。/sliːp/
+1923。ladder。n.阶梯。/ˈlædər/
+1924。oil。n.油。/ɔɪl/
+1925。miracle。n.奇迹。/ˈmɪrəkl/
+1926。demonstrate。vt.证明。/ˈdemənstreɪt/
+1927。clap。vi.鼓掌。/klæp/
+1928。volume。n.量。/ˈvɑːljuːm, ˈvɑːljəm/
+1929。irregular。adj.不整齐的。/ɪˈreɡjələr/
+1930。suspect。v.怀疑。/səˈspekt/
+1931。jew。n.犹太人。/dʒuː/
+1932。slightly。adv.些微地。/ˈslaɪtli/
+1933。sunset。n.日落。/ˈsʌnset/
+1934。preface。n.前言。/ˈprefəs/
+1935。honey。n.蜂蜜。/ˈhʌni/
+1936。fresh。adj.新鲜的。/freʃ/
+1937。refuge。n.避难。/ˈrefjuːdʒ/
+1938。battle。n.战役。/ˈbætl/
+1939。noise。n.噪音。/nɔɪz/
+1940。tough。adj.艰苦的。/tʌf/
+1941。model。n.模型。/ˈmɑːdl/
+1942。pour。v.灌。/pɔːr/
+1943。connection。n.连接。/kəˈnekʃn/
+1944。gallon。n.加仑。/ˈɡælən/
+1945。solve。vt.解决。/sɑːlv/
+1946。grind。vt.磨碎。/ɡraɪnd/
+1947。limitation。n.限制。/ˌlɪmɪˈteɪʃn/
+1948。accumulate。vi.累积。/əˈkjuːmjəleɪt/
+1949。educate。vt.教育。/ˈedʒukeɪt/
+1950。cold。adj.寒冷的。/koʊld/
+1951。eliminate。vt.消除。/ɪˈlɪmɪneɪt/
+1952。march。vi.前进。/mɑːrtʃ/
+1953。van。n.先锋。/væn/
+1954。ultimately。adv.最后。/ˈʌltɪmətli/
+1955。powder。n.粉。/ˈpaʊdər/
+1956。nut。n.螺母。/nʌt/
+1957。government。n.政府。/ˈɡʌvərnmənt/
+1958。puzzle。v.迷惑。/ˈpʌzl/
+1959。dramatic。adj.巨大的。/drəˈmætɪk/
+1960。instantly。adv.立即地。/ˈɪnstəntli/
+1961。role。n.角色。/roʊl/
+1962。grain。n.粮食。/ɡreɪn/
+1963。crop。n.产量。/krɑːp/
+1964。tiny。adj.微小的。/ˈtaɪni/
+1965。turning。n.转向。/ˈtɜːrnɪŋ/
+1966。sulphur。n.硫磺。/ˈsʌlfər/
+1967。free。adj.免费的。/friː/
+1968。alcohol。n.酒精。/ˈælkəhɔːl/
+1969。practical。adj.实际的。/ˈpræktɪkl/
+1970。continuous。adj.连续的。/kənˈtɪnjuəs/
+1971。dialog。n.对话。/ˈdaɪəlɔːɡ/
+1972。Marxism。n.马克思主义。/ˈmɑːrksɪzəm/
+1973。music。n.音乐。/ˈmjuːzɪk/
+1974。language。n.语言。/ˈlæŋɡwɪdʒ/
+1975。clay。n.粘土。/kleɪ/
+1976。annual。adj.年度的。/ˈænjuəl/
+1977。pillar。n.柱子。/ˈpɪlər/
+1978。brush。n.刷子。/brʌʃ/
+1979。require。vt.需要。/rɪˈkwaɪər/
+1980。ridiculous。adj.可笑的。/rɪˈdɪkjələs/
+1981。Tuesday。n.星期二。/ˈtjuːzdeɪ/
+1982。play。vt.游戏。/pleɪ/
+1983。eat。vt.吃。/iːt/
+1984。granddaughter。n.孙女。/ˈɡrændɔːtər/
+1985。transmit。vt.传输。/trænsˈmɪt/
+1986。boy。n.男孩。/bɔɪ/
+1987。grammatical。adj.文法的。/ɡrəˈmætɪkl/
+1988。discard。vt.抛弃。/dɪˈskɑːrd/
+1989。stocking。n.长袜。/ˈstɑːkɪŋ/
+1990。lend。vt.贷。/lend/
+1991。request。n.请求。/rɪˈkwest/
+1992。lamp。n.灯。/læmp/
+1993。suitable。adj.适当的。/ˈsuːtəbl/
+1994。poisonous。adj.有毒的。/ˈpɔɪzənəs/
+1995。along。prep.沿着。/əˈlɔːŋ/
+1996。trial。n.试验。/ˈtraɪəl/
+1997。temple。n.庙宇。/ˈtempl/
+1998。hello。int.喂。/həˈləʊ/
+1999。restaurant。n.餐馆。/ˈrestərɑːnt/
+2000。prevent。vt.预防。/prɪˈvent/
+1991。prevent。vt.预防。/prɪˈvent/
+1992。pinch。n.捏。/pɪntʃ/
+1993。destination。n.目的地。/ˌdestɪˈneɪʃn/
+1994。society。n.社会。/səˈsaɪəti/
+1995。signature。n.署名。/ˈsɪɡnətʃər/
+1996。football。n.足球。/ˈfʊtbɔːl/
+1997。province。n.省。/ˈprɑːvɪns/
+1998。sleepy。adj.困倦的。/ˈsliːpi/
+1999。cube。n.立方体。/kjuːb/
+2000。whisper。v.耳语。/ˈwɪspər/
+2001。dying。adj.垂死的。/ˈdaɪɪŋ/
+2002。moisture。n.水分。/ˈmɔɪstʃər/
+2003。clean。adj.清洁的。/kliːn/
+2004。noisy。adj.嘈杂的。/ˈnɔɪzi/
+2005。Russian。adj.俄国的。/ˈrʌʃn/
+2006。central。adj.中心的。/ˈsentrəl/
+2007。author。n.作者。/ˈɔːθər/
+2008。sixty。num.六十。/ˈsɪksti/
+2009。vest。n.背心。/vest/
+2010。orange。n.橙子。/'ɔrɪndʒ/
+2011。disguise。vt.掩饰。/dɪsˈɡaɪz/
+2012。restore。vt.恢复。/rɪˈstɔːr/
+2013。proclaim。vt.宣告。/prəˈkleɪm/
+2014。fatal。adj.致命的。/ˈfeɪtl/
+2015。inferior。adj.差的。/ɪnˈfɪriər/
+2016。collision。n.碰撞。/kəˈlɪʒn/
+2017。man。n.男人。/mæn/
+2018。screw。n.螺丝钉。/skruː/
+2019。hill。n.小山。/hɪl/
+2020。jacket。n.夹克。/ˈdʒækɪt/
+2021。exert。vt.运用。/ɪɡˈzɜːrt/
+2022。volcano。n.火山。/vɑːlˈkeɪnoʊ/
+2023。dread。v.惧怕。/dred/
+2024。card。n.卡片。/kɑːrd/
+2025。maths。n.数学。/mæθs/
+2026。childish。adj.幼稚的。/ˈtʃaɪldɪʃ/
+2027。beer。n.啤酒。/bɪr/
+2028。potential。adj.潜在的。/pəˈtenʃl/
+2029。drift。n.漂流。/drɪft/
+2030。kind。n.种类。/kaɪnd/
+2031。ashamed。adj.羞愧的。/əˈʃeɪmd/
+2032。heroic。adj.英雄的。/həˈroʊɪk/
+2033。splendid。adj.辉煌的。/ˈsplendɪd/
+2034。cancer。n.癌症。/ˈkænsər/
+2035。strongly。adv.坚定地。/ˈstrɔːŋli/
+2036。lace。n.花边。/leɪs/
+2037。teaching。n.教学。/ˈtiːtʃɪŋ/
+2038。talk。v.谈话。/tɔːk/
+2039。saucer。n.茶托。/ˈsɔːsər/
+2040。sorry。adj.遗憾的。/ˈsɑːri/
+2041。freight。n.货运。/freɪt/
+2042。hawk。n.鹰。/hɔːk/
+2043。jar。n.罐。/dʒɑːr/
+2044。shirt。n.衬衫。/ʃɜːrt/
+2045。French。adj.法国的。/frentʃ/
+2046。history。n.历史。/ˈhɪstri/
+2047。city。n.城市。/ˈsɪti/
+2048。load。n.负载。/loʊd/
+2049。warn。vt.警告。/wɔːrn/
+2050。glue。n.胶水。/ɡluː/
+2051。faulty。adj.有错误的。/ˈfɔːlti/
+2052。Africa。n.非洲。/ˈæfrɪkə/
+2053。least。adj.最小的。/liːst/
+2054。unkind。adj.不友善的。/ˌʌnˈkaɪnd/
+2055。psychological。adj.心理的。/ˌsaɪkəˈlɑːdʒɪkl/
+2056。have。vt.有。/həv,əv,hæv/
+2057。third。num.第三。/θɜːrd/
+2058。span。n.跨度。/spæn/
+2059。commercial。adj.商业的。/kəˈmɜːrʃl/
+2060。butterfly。n.蝴蝶。/ˈbʌtərflaɪ/
+2061。manly。adj.男子气概的。/ˈmænli/
+2062。quarrel。n.吵架。/ˈkwɑːrəl/
+2063。fertile。adj.肥沃的。/ˈfɜːrtl/
+2064。chain。n.链。/tʃeɪn/
+2065。hardly。adv.几乎不。/ˈhɑːrdli/
+2066。image。n.影像。/ˈɪmɪdʒ/
+2067。accompany。vt.陪伴。/əˈkʌmpəni/
+2068。temporary。adj.暂时的。/ˈtempəreri/
+2069。discourage。vt.阻止。/dɪsˈkɜːrɪdʒ/
+2070。frog。n.青蛙。/frɑːɡ/
+2071。cinema。n.电影。/ˈsɪnəmə/
+2072。photograph。n.照片。/ˈfoʊtəɡræf/
+2073。ultimate。adj.最终的。/ˈʌltɪmət/
+2074。Oceania。n.大洋洲。/ˌoʊʃiˈɑːniə/
+2075。dim。adj.暗淡的。/dɪm/
+2076。greenhouse。n.温室。/ˈɡriːnhaʊs/
+2077。loan。n.贷款。/loʊn/
+2078。preferable。adj.更好的。/ˈprefrəbl/
+2079。illegal。adj.非法的。/ɪˈliːɡl/
+2080。day。n.一天。/deɪ/
+2081。call。vi.呼叫。/kɔːl/
+2082。nowadays。adv.现今。/ˈnaʊədeɪz/
+2083。whip。n.鞭子。/wɪp/
+2084。hatred。n.憎恨。/ˈheɪtrɪd/
+2085。association。n.协会。/əˌsəʊsiˈeɪʃn/
+2086。pluck。n.勇气。/plʌk/
+2087。them。pron.他们。/ðəm; ðem/
+2088。hopeless。adj.绝望的。/ˈhoʊpləs/
+2089。status。n.地位。/ˈsteɪtəs/
+2090。weld。vt.焊接。/weld/
+2091。ad。n.广告。/æd/
+2092。rich。adj.富有的。/rɪtʃ/
+2093。supply。n.供给。/səˈplaɪ/
+2094。though。conj.虽然。/ðoʊ/
+2095。tremble。vi.发抖。/ˈtrembl/
+2096。lake。n.湖。/leɪk/
+2097。rub。vt.擦。/rʌb/
+2098。south。n.南方。/saʊθ/
+2099。anyone。pron.任何人。/ˈeniwʌn/
+2100。differ。vi.不同。/ˈdɪfər/
+2101。speed。n.速度。/spiːd/
+2102。stiff。adj.僵硬的。/stɪf/
+2103。give。vt.给。/ɡɪv/
+2104。destroy。vt.破坏。/dɪˈstrɔɪ/
+2105。count。v.计数。/kaʊnt/
+2106。common。adj.共同的。/ˈkɑːmən/
+2107。entrance。n.入口。/ˈentrəns/
+2108。zoo。n.动物园。/zuː/
+2109。exhibit。vt.展览。/ɪɡˈzɪbɪt/
+2110。crude。adj.粗糙的。/kruːd/
+2111。recall。vt.回忆。/rɪˈkɔːl/
+2112。thread。n.线。/θred/
+2113。agriculture。n.农业。/ˈæɡrɪkʌltʃər/
+2114。reflexion。n.反射。/rɪˈflekʃn/
+2115。mouse。n.老鼠。/maʊs/
+2116。exhibition。n.展览会。/ˌeksɪˈbɪʃn/
+2117。triumph。n.胜利。/ˈtraɪʌmf/
+2118。join。vt.加入。/dʒɔɪn/
+2119。happen。vi.发生。/ˈhæpən/
+2120。novel。n.小说。/ˈnɑːvl/
+2121。quicken。vi.加快。/ˈkwɪkən/
+2122。rotary。adj.旋转的。/ˈroʊtəri/
+2123。driver。n.驾驶员。/ˈdraɪvər/
+2124。bench。n.长凳。/bentʃ/
+2125。examination。n.考试。/ɪɡˌzæmɪˈneɪʃn/
+2126。blind。adj.盲的。/blaɪnd/
+2127。conservative。adj.保守的。/kənˈsɜːrvətɪv/
+2128。guest。n.客人。/ɡest/
+2129。lightly。adv.轻轻地。/ˈlaɪtli/
+2130。hatch。n.孵化。/hætʃ/
+2131。shield。n.盾牌。/ʃiːld/
+2132。hero。n.英雄。/ˈhɪroʊ/
+2133。youth。n.青年。/juːθ/
+2134。heating。n.加热。/ˈhiːtɪŋ/
+2135。standard。n.标准。/ˈstændərd/
+2136。organ。n.器官。/ˈɔːrɡən/
+2137。nuisance。n.讨厌的事。/ˈnuːsns/
+2138。kid。n.小孩。/kɪd/
+2139。benefit。n.利益。/ˈbenɪfɪt/
+2140。convince。vt.说服。/kənˈvɪns/
+2141。apple。n.苹果。/ˈæpl/
+2142。liquor。n.酒。/ˈlɪkər/
+2143。preparation。n.准备。/ˌprepəˈreɪʃn/
+2144。scan。vt.扫描。/skæn/
+2145。voyage。n.航行。/ˈvɔɪɪdʒ/
+2146。jump。v.跳跃。/dʒʌmp/
+2147。sit。vi.坐。/sɪt/
+2148。source。n.来源。/sɔːrs/
+2149。spare。adj.备用的。/sper/
+2150。satisfactory。adj.令人满意的。/ˌsætɪsˈfæktəri/
+2151。roll。v.滚动。/roʊl/
+2152。loaf。n.一条面包。/loʊf/
+2153。vague。adj.模糊的。/veɪɡ/
+2154。sadness。n.悲伤。/ˈsædnəs/
+2155。measurement。n.测量。/ˈmeʒərmənt/
+2156。yard。n.院子。/jɑːrd/
+2157。assign。vt.分配。/əˈsaɪn/
+2158。nursery。n.托儿所。/ˈnɜːrsəri/
+2159。prompt。adj.迅速的。/prɑːmpt/
+2160。strike。n.罢工。/straɪk/
+2161。angel。n.天使。/ˈeɪndʒl/
+2162。torch。n.火炬。/tɔːrtʃ/
+2163。eight。num.八。/eɪt/
+2164。itself。pron.它自己。/ɪtˈself/
+2165。politics。n.政治。/ˈpɑːlətɪks/
+2166。pillow。n.枕头。/ˈpɪloʊ/
+2167。sacrifice。n.牺牲。/ˈsækrɪfaɪs/
+2168。namely。adv.也就是。/ˈneɪmli/
+2169。envy。n.嫉妒。/ˈenvi/
+2170。memory。n.记忆。/ˈmeməri/
+2171。square。n.广场。/skwer/
+2172。inherit。vt.继承。/ɪnˈherɪt/
+2173。mine。n.矿。/maɪn/
+2174。outward。adj.向外的。/ˈaʊtwərd/
+2175。father。n.父亲。/ˈfɑːðər/
+2176。telegram。n.电报。/ˈtelɪɡræm/
+2177。tub。n.浴盆。/tʌb/
+2178。banana。n.香蕉。/bəˈnænə/
+2179。practise。v.练习。/ˈpræktɪs/
+2180。attend。vt.出席。/əˈtend/
+2181。ambulance。n.救护车。/ˈæmbjələns/
+2182。up。adv.向上。/ʌp/
+2183。living。n.生活。/ˈlɪvɪŋ/
+2184。useful。adj.有用的。/ˈjuːsfl/
+2185。crow。n.乌鸦。/kroʊ/
+2186。assure。vt.保证。/əˈʃʊr/
+2187。oblige。vt.迫使。/əˈblaɪdʒ/
+2188。outskirt。n.郊区。/ˈaʊtskɜːrt/
+2189。below。prep.在...下面。/bɪˈloʊ/
+2190。vigorous。adj.有力的。/ˈvɪɡərəs/
+2191。agency。n.代理。/ˈeɪdʒənsi/
+2192。plentiful。adj.丰富的。/ˈplentɪfl/
+2193。mixture。n.混合物。/ˈmɪkstʃər/
+2194。naturally。adv.自然地。/ˈnætʃrəli/
+2195。regularly。adv.定期地。/ˈreɡjələrli/
+2196。long。adj.长的。/lɔːŋ/
+2197。unwilling。adj.不愿意的。/ʌnˈwɪlɪŋ/
+2198。logic。n.逻辑。/ˈlɑːdʒɪk/
+2199。although。conj.尽管。/ɔːlˈðoʊ/
+2200。sir。n.先生。/sɜːr,sər/
+2201。match。n.比赛。/mætʃ/
+2202。puppet。n.木偶。/ˈpʌpɪt/
+2203。anyway。adv.无论如何。/ˈeniweɪ/
+2204。effort。n.努力。/ˈefərt/
+2205。civilization。n.文明。/ˌsɪvələˈzeɪʃn/
+2206。visit。n.拜访。/ˈvɪzɪt/
+2207。uncomfortable。adj.不舒服的。/ʌnˈkʌmftəbl/
+2208。structure。n.结构。/ˈstrʌktʃər/
+2209。woollen。adj.羊毛制的。/ˈwʊlən/
+2210。stiffen。vt.使变硬。/ˈstɪfn/
+2211。fence。n.栅栏。/fens/
+2212。indifferent。adj.冷淡的。/ɪnˈdɪfrənt/
+2213。enthusiastic。adj.热情的。/ɪnˌθuːziˈæstɪk/
+2214。cushion。n.垫子。/ˈkʊʃn/
+2215。her。pron.她的。/hə(r)/
+2216。detection。n.侦查。/dɪˈtekʃn/
+2217。balance。n.平衡。/ˈbæləns/
+2218。eleven。num.十一。/ɪˈlevn/
+2219。find。vt.找到。/faɪnd/
+2220。manager。n.经理。/ˈmænɪdʒər/
+2221。banner。n.横幅。/ˈbænər/
+2222。nylon。n.尼龙。/ˈnaɪlɑːn/
+2223。political。adj.政治的。/pəˈlɪtɪkl/
+2224。pollute。vt.污染。/pəˈluːt/
+2225。against。prep.反对。/əˈɡeɪnst/
+2226。bowl。n.碗。/boʊl/
+2227。dream。n.梦想。/driːm/
+2228。unsuitable。adj.不适合的。/ʌnˈsuːtəbl/
+2229。weary。adj.疲倦的。/ˈwɪri/
+2230。sailor。n.水手。/ˈseɪlər/
+2231。socialism。n.社会主义。/ˈsoʊʃəlɪzəm/
+2232。say。vt.说。/seɪ/
+2233。rainbow。n.彩虹。/ˈreɪnboʊ/
+2234。supplement。n.增补。/ˈsʌplɪmənt/
+2235。listen。vi.听。/ˈlɪsn/
+2236。criticize。vt.批评。/ˈkrɪtɪsaɪz/
+2237。distinct。adj.明显的。/dɪˈstɪŋkt/
+2238。exception。n.例外。/ɪkˈsepʃn/
+2239。ten。num.十。/ten/
+2240。attraction。n.吸引。/əˈtrækʃn/
+2241。useless。adj.无用的。/ˈjuːsləs/
+2242。weather。n.天气。/ˈweðər/
+2243。beginning。n.开始。/bɪˈɡɪnɪŋ/
+2244。turn。vt.转动。/tɜːrn/
+2245。Spanish。adj.西班牙的。/ˈspænɪʃ/
+2246。low。adj.低的。/loʊ/
+2247。steamer。n.轮船。/ˈstiːmər/
+2248。beggar。n.乞丐。/ˈbeɡər/
+2249。cheek。n.脸颊。/tʃiːk/
+2250。photographic。adj.摄影的。/ˌfoʊtəˈɡræfɪk/
+2251。destruction。n.破坏。/dɪˈstrʌkʃn/
+2252。may。aux.可能。/meɪ/
+2253。address。n.地址。/əˈdres/
+2254。speaker。n.演讲者。/ˈspiːkər/
+2255。employment。n.雇用。/ɪmˈplɔɪmənt/
+2256。Arabian。adj.阿拉伯的。/əˈreɪbiən/
+2257。crime。n.罪行。/kraɪm/
+2258。brilliant。adj.灿烂的。/ˈbrɪliənt/
+2259。early。adj.早的。/ˈɜːrli/
+2260。seller。n.卖方。/ˈselər/
+2261。limit。n.限制。/ˈlɪmɪt/
+2262。super。adj.超级的。/ˈsuːpər/
+2263。progressive。adj.进步的。/prəˈɡresɪv/
+2264。occupy。vt.占据。/ˈɑːkjupaɪ/
+2265。needless。adj.不必要的。/ˈniːdləs/
+2266。consumption。n.消费。/kənˈsʌmpʃn/
+2267。somewhere。adv.某处。/ˈsʌmwer/
+2268。upstairs。adj.楼上的。/ˌʌpˈsterz/
+2269。sometimes。adv.有时。/ˈsʌmtaɪmz/
+2270。bus。n.公共汽车。/bʌs/
+2271。risk。n.风险。/rɪsk/
+2272。apologize。vi.道歉。/əˈpɑːlədʒaɪz/
+2273。lose。vt.失去。/luːz/
+2274。color。n.颜色。/ˈkʌlər/
+2275。whom。pron.谁。/huːm/
+2276。stony。adj.石头覆盖的。/ˈstoʊni/
+2277。geography。n.地理。/dʒiˈɑːɡrəfi/
+2278。butter。n.黄油。/ˈbʌtər/
+2279。community。n.社区。/kəˈmjuːnəti/
+2280。cloak。n.斗篷。/kloʊk/
+2281。exclaim。vi.呼喊。/ɪkˈskleɪm/
+2282。science。n.科学。/ˈsaɪəns/
+2283。harvest。n.收获。/ˈhɑːrvɪst/
+2284。fuel。n.燃料。/ˈfjuːəl/
+2285。complaint。n.抱怨。/kəmˈpleɪnt/
+2286。static。adj.静态的。/ˈstætɪk/
+2287。drug。n.药物。/drʌɡ/
+2288。fall。n.秋天。/fɔːl/
+2289。clasp。n.扣子。/klæsp/
+2290。cargo。n.货物。/ˈkɑːrɡoʊ/
+2291。marry。vt.结婚。/ˈmæri/
+2292。coil。v.盘绕。/kɔɪl/
+2293。abandon。v.遗弃。/əˈbændən/
+2294。nuclear。adj.原子能的。/ˈnuːkliər/
+2295。socialist。n.社会主义者。/ˈsoʊʃəlɪst/
+2296。bulb。n.灯泡。/bʌlb/
+2297。friend。n.朋友。/frend/
+2298。gang。n.群。/ɡæŋ/
+2299。superficial。adj.表面的。/ˌsuːpərˈfɪʃl/
+2300。motion。n.动作。/ˈmoʊʃn/
+2301。captive。adj.被俘虏的。/ˈkæptɪv/
+2302。expose。vt.揭露。/ɪkˈspoʊz/
+2303。dishonour。n.耻辱。/dɪsˈɒnə(r)/
+2304。delete。vt.删除。/dɪˈliːt/
+2305。willing。adj.愿意的。/ˈwɪlɪŋ/
+2306。bear。n.熊。/beə(r)/
+2307。site。n.地点。/saɪt/
+2308。be。v.是。/biː/
+2309。fourth。adj.第四。/fɔːrθ/
+2310。charge。v.充电。/tʃɑːrdʒ/
+2311。marine。adj.海洋的。/məˈriːn/
+2312。rib。n.肋骨。/rɪb/
+2313。garbage。n.垃圾。/ˈɡɑːrbɪdʒ/
+2314。space。n.空间。/speɪs/
+2315。structural。adj.结构的。/ˈstrʌktʃərəl/
+2316。ground。n.地面。/ɡraʊnd/
+2317。unbearable。adj.难以忍受的。/ʌnˈberəbl/
+2318。sheet。n.床单。/ʃiːt/
+2319。neighbourhood。n.邻近地区。/ˈneɪbəhʊd/
+2320。cross。n.十字。/krɒs/
+2321。leather。n.皮革。/ˈleðə(r)/
+2322。nation。n.国家。/ˈneɪʃn/
+2323。spoon。n.勺子。/spuːn/
+2324。attain。vt.达到。/əˈteɪn/
+2325。club。n.俱乐部。/klʌb/
+2326。jet。n.喷气式飞机。/dʒet/
+2327。plaster。n.石膏。/ˈplɑːstə(r)/
+2328。federal。adj.联邦的。/ˈfedərəl/
+2329。surface。n.表面。/ˈsɜːrfɪs/
+2330。stitch。n.针脚。/stɪtʃ/
+2331。hundred。num.百。/ˈhʌndrəd/
+2332。spell。v.拼写。/spel/
+2333。secondly。adv.其次。/ˈsekəndli/
+2334。native。adj.本地的。/ˈneɪtɪv/
+2335。mode。n.模式。/moʊd/
+2336。proportion。n.比例。/prəˈpɔːrʃn/
+2337。carriage。n.马车。/ˈkærɪdʒ/
+2338。obstacle。n.障碍。/ˈɑːbstəkl/
+2339。satellite。n.卫星。/ˈsætəlaɪt/
+2340。access。n.访问。/ˈækses/
+2341。insufficient。adj.不足的。/ˌɪnsəˈfɪʃnt/
+2342。waggon。n.货车。/ˈwæɡən/
+2343。timetable。n.时间表。/ˈtaɪmteɪbl/
+2344。gaze。v.凝视。/ɡeɪz/
+2345。towel。n.毛巾。/ˈtaʊəl/
+2346。humour。n.幽默。/ˈhjuːmə(r)/
+2347。feedback。n.反馈。/ˈfiːdbæk/
+2348。comfortable。adj.舒适的。/ˈkʌmftəbl/
+2349。bake。v.烤。/beɪk/
+2350。notice。n.通知。/ˈnoʊtɪs/
+2351。suddenly。adv.突然。/ˈsʌdənli/
+2352。prosperous。adj.繁荣的。/ˈprɑːspərəs/
+2353。scarf。n.围巾。/skɑːrf/
+2354。enable。v.使能够。/ɪˈneɪbl/
+2355。industrial。adj.工业的。/ɪnˈdʌstriəl/
+2356。beyond。prep.超出。/biˈjɑːnd/
+2357。settle。v.解决。/ˈsetl/
+2358。healthy。adj.健康的。/ˈhelθi/
+2359。index。n.索引。/ˈɪndeks/
+2360。mutton。n.羊肉。/ˈmʌtn/
+2361。health。n.健康。/helθ/
+2362。tan。v.晒黑。/tæn/
+2363。gracious。adj.亲切的。/ˈɡreɪʃəs/
+2364。instinct。n.本能。/ˈɪnstɪŋkt/
+2365。applicable。adj.适用的。/əˈplɪkəbl/
+2366。noticeable。adj.明显的。/ˈnoʊtɪsəbl/
+2367。arithmetic。n.算术。/əˈrɪθmətɪk/
+2368。inquiry。n.询问。/ɪnˈkwaɪəri/
+2369。crew。n.全体人员。/kruː/
+2370。evidence。n.证据。/ˈevɪdəns/
+2371。radio。n.收音机。/ˈreɪdioʊ/
+2372。industry。n.工业。/ˈɪndəstri/
+2373。dial。v.拨号。/ˈdaɪəl/
+2374。bean。n.豆。/biːn/
+2375。shake。v.摇动。/ʃeɪk/
+2376。attentive。adj.注意的。/əˈtentɪv/
+2377。it。pron.它。/ɪt/
+2378。dragon。n.龙。/ˈdræɡən/
+2379。meeting。n.会议。/ˈmiːtɪŋ/
+2380。mention。v.提及。/ˈmenʃn/
+2381。basis。n.基础。/ˈbeɪsɪs/
+2382。fair。adj.公平的。/fer/
+2383。analyse。v.分析。/ˈænəlaɪz/
+2384。heir。n.继承人。/er/
+2385。typist。n.打字员。/ˈtaɪpɪst/
+2386。found。v.建立。/faʊnd/
+2387。seal。v.密封。/siːl/
+2388。correct。adj.正确的。/kəˈrekt/
+2389。wife。n.妻子。/waɪf/
+2390。strain。v.拉紧。/streɪn/
+2391。choose。v.选择。/tʃuːz/
+2392。following。adj.下列的。/ˈfɑːloʊɪŋ/
+2393。beginner。n.初学者。/bɪˈɡɪnər/
+2394。glitter。v.闪光。/ˈɡlɪtər/
+2395。court。n.法庭。/kɔːrt/
+2396。champion。n.冠军。/ˈtʃæmpiən/
+2397。fierce。adj.凶猛的。/fɪrs/
+2398。mutter。v.咕哝。/ˈmʌtər/
+2399。highway。n.公路。/ˈhaɪweɪ/
+2400。classmate。n.同学。/ˈklæsmeɪt/
+2401。breast。n.乳房。/brest/
+2402。blast。n.爆炸。/blæst/
+2403。adverb。n.副词。/ˈædvɜːrb/
+2404。within。prep.在...之内。/wɪˈðɪn/
+2405。identify。vt.识别。/aɪˈdentɪfaɪ/
+2406。employ。vt.雇用。/ɪmˈplɔɪ/
+2407。dispose。vt.处理。/dɪˈspoʊz/
+2408。invest。vt.投资。/ɪnˈvest/
+2409。major。adj.主要的。/ˈmeɪdʒər/
+2410。distant。adj.遥远的。/ˈdɪstənt/
+2411。speciality。n.专业。/ˌspeʃiˈæləti/
+2412。belong。vi.属于。/bɪˈlɔːŋ/
+2413。emphasize。vt.强调。/ˈemfəsaɪz/
+2414。practice。n.练习。/ˈpræktɪs/
+2415。shoulder。n.肩膀。/ˈʃoʊldər/
+2416。smoothly。adv.顺利地。/ˈsmuːðli/
+2417。missing。adj.失踪的。/ˈmɪsɪŋ/
+2418。Bible。n.圣经。/ˈbaɪbl/
+2419。setting。n.环境。/ˈsetɪŋ/
+2420。worse。adj.更坏的。/wɜːrs/
+2421。disorder。n.混乱。/dɪsˈɔːrdər/
+2422。explain。v.解释。/ɪkˈspleɪn/
+2423。scene。n.场景。/siːn/
+2424。round。adj.圆的。/raʊnd/
+2425。create。vt.创造。/kriˈeɪt/
+2426。glance。n.一瞥。/ɡlæns/
+2427。shed。n.棚。/ʃed/
+2428。communication。n.通讯。/kəˌmjuːnɪˈkeɪʃn/
+2429。manner。n.方式。/ˈmænər/
+2430。regardless。adv.不管。/rɪˈɡɑːrdləs/
+2431。millimetre。n.毫米。/ˈmɪlimiːtər/
+2432。issue。n.问题。/ˈɪʃuː/
+2433。catch。vt.抓住。/kætʃ/
+2434。lid。n.盖子。/lɪd/
+2435。fertilizer。n.肥料。/ˈfɜːrtəlaɪzər/
+2436。difficult。adj.困难的。/ˈdɪfɪkəlt/
+2437。moon。n.月亮。/muːn/
+2438。brown。adj.棕色的。/braʊn/
+2439。devote。vt.奉献。/dɪˈvoʊt/
+2440。temper。n.脾气。/ˈtempər/
+2441。close。v.关闭。/kloʊz/
+2442。jaw。n.下巴。/dʒɔː/
+2443。drawer。n.抽屉。/drɔːr/
+2444。ski。v.滑雪。/skiː/
+2445。curl。v.卷曲。/kɜːrl/
+2446。compile。vt.编译。/kəmˈpaɪl/
+2447。net。n.网。/net/
+2448。tomb。n.坟墓。/tuːm/
+2449。slogan。n.标语。/ˈsloʊɡən/
+2450。bad。adj.坏的。/bæd/
+2451。contrast。n.对比。/ˈkɑːntræst/
+2452。imagine。vt.想象。/ɪˈmædʒɪn/
+2453。skate。v.滑冰。/skeɪt/
+2454。weak。adj.弱的。/wiːk/
+2455。statistical。adj.统计的。/stəˈtɪstɪkl/
+2456。traffic。n.交通。/ˈtræfɪk/
+2457。overall。adj.全面的。/ˌoʊvərˈɔːl/
+2458。dig。v.挖。/dɪɡ/
+2459。chart。n.图表。/tʃɑːrt/
+2460。liberty。n.自由。/ˈlɪbərti/
+2461。stable。adj.稳定的。/ˈsteɪbl/
+2462。violence。n.暴力。/ˈvaɪələns/
+2463。hard。adj.硬的。/hɑːrd/
+2464。shore。n.岸。/ʃɔːr/
+2465。experience。n.经验。/ɪkˈspɪriəns/
+2466。receiver。n.接收器。/rɪˈsiːvər/
+2467。tomato。n.番茄。/təˈmeɪtoʊ/
+2468。yield。n.产量。/jiːld/
+2469。purity。n.纯度。/ˈpjʊrəti/
+2470。throng。n.人群。/θrɔːŋ/
+2471。pulse。n.脉搏。/pʌls/
+2472。overnight。adv.一夜之间。/ˌoʊvərˈnaɪt/
+2473。delight。n.高兴。/dɪˈlaɪt/
+2474。hostess。n.女主人。/ˈhoʊstəs/
+2475。concentration。n.浓度。/ˌkɑːnsnˈtreɪʃn/
+2476。bosom。n.胸部。/ˈbʊzəm/
+2477。succession。n.连续。/səkˈseʃn/
+2478。clear。adj.清楚的。/klɪr/
+2479。abuse。n.滥用。/əˈbjuːs/
+2480。policeman。n.警察。/pəˈliːsmən/
+2481。joy。n.快乐。/dʒɔɪ/
+2482。indefinite。adj.不确定的。/ɪnˈdefɪnət/
+2483。shampoo。n.洗发水。/ʃæmˈpuː/
+2484。classical。adj.古典的。/ˈklæsɪkl/
+2485。offer。vt.提供。/ˈɔːfər/
+2486。favourable。adj.有利的。/ˈfeɪvərəbl/
+2487。different。adj.不同的。/ˈdɪfrənt/
+2488。desirable。adj.值得拥有的。/dɪˈzaɪərəbl/
+2489。fasten。vt.系紧。/ˈfæsn/
+2490。voluntary。adj.自愿的。/ˈvɑːlənteri/
+2491。light。n.光。/laɪt/
+2492。breath。n.呼吸。/breθ/
+2493。pursuit。n.追求。/pərˈsuːt/
+2494。twice。adv.两次。/twaɪs/
+2495。lab。n.实验室。/læb/
+2496。grandson。n.孙子。/ˈɡrænsʌn/
+2497。work。n.工作。/wɜːrk/
+2498。chocolate。n.巧克力。/ˈtʃɔːklət/
+2499。rabbit。n.兔子。/ˈræbɪt/
+2500。beside。prep.在...旁边。/bɪˈsaɪd/
+2501。error。n.错误。/ˈerər/
+2502。hungry。adj.饥饿的。/ˈhʌŋɡri/
+2503。sore。adj.疼痛的。/sɔːr/
+2504。orphan。n.孤儿。/ˈɔːrfn/
+2505。sequence。n.序列。/ˈsiːkwəns/
+2506。hair。n.头发。/her/
+2507。editor。n.编辑。/ˈedɪtər/
+2508。January。n.一月。/ˈdʒænjueri/
+2509。phenomenon。n.现象。/fəˈnɑːmɪnən/
+2510。loyalty。n.忠诚。/ˈlɔɪəlti/
+2511。fame。n.名声。/feɪm/
+2512。farm。n.农场。/fɑːrm/
+2513。pick。v.挑选。/pɪk/
+2514。sheep。n.羊。/ʃiːp/
+2515。distinguish。vt.区分。/dɪˈstɪŋɡwɪʃ/
+2516。training。n.训练。/ˈtreɪnɪŋ/
+2517。wavelength。n.波长。/ˈweɪvleŋθ/
+2518。diligent。adj.勤奋的。/ˈdɪlɪdʒənt/
+2519。blackboard。n.黑板。/ˈblækbɔːrd/
+2520。broom。n.扫帚。/bruːm/
+2521。lead。v.领导。/liːd/
+2522。workman。n.工人。/ˈwɜːrkmən/
+2523。value。n.价值。/ˈvæljuː/
+2524。sandwich。n.三明治。/ˈsænwɪtʃ/
+2525。handsome。adj.英俊的。/ˈhænsəm/
+2526。thereby。adv.因此。/ˌðerˈbaɪ/
+2527。interpretation。n.解释。/ɪnˌtɜːrprəˈteɪʃn/
+2528。plug。n.插头。/plʌɡ/
+2529。course。n.课程。/kɔːrs/
+2530。oneself。pron.自己。/wʌnˈself/
+2531。technique。n.技术。/tekˈniːk/
+2532。terrific。adj.极好的。/təˈrɪfɪk/
+2533。mind。n.头脑。/maɪnd/
+2534。empire。n.帝国。/ˈempaɪər/
+2535。turbine。n.涡轮。/ˈtɜːrbaɪn/
+2536。nap。n.小睡。/næp/
+2537。exciting。adj.令人兴奋的。/ɪkˈsaɪtɪŋ/
+2538。transportation。n.运输。/ˌtrænspɔːrˈteɪʃn/
+2539。lover。n.爱人。/ˈlʌvər/
+2540。learned。adj.有学问的。/ˈlɜːrnɪd/
+2541。seventy。num.七十。/ˈsevnti/
+2542。visitor。n.访客。/ˈvɪzɪtər/
+2543。whistle。n.口哨。/ˈwɪsl/
+2544。extensive。adj.广泛的。/ɪkˈstensɪv/
+2545。congratulation。n.祝贺。/kənˌɡrætʃuˈleɪʃn/
+2546。son。n.儿子。/sʌn/
+2547。furthermore。adv.此外。/ˌfɜːrðərˈmɔːr/
+2548。he。pron.他。/hiː/
+2549。foreigner。n.外国人。/ˈfɔːrənər/
+2550。north。n.北方。/nɔːrθ/
+2551。time。n.时间。/taɪm/
+2552。situation。n.情况。/ˌsɪtʃuˈeɪʃn/
+2553。thank。v.感谢。/θæŋk/
+2554。recite。v.背诵。/rɪˈsaɪt/
+2555。component。n.组件。/kəmˈpoʊnənt/
+2556。positive。adj.积极的。/ˈpɑːzətɪv/
+2557。suspicion。n.怀疑。/səˈspɪʃn/
+2558。remarkable。adj.显著的。/rɪˈmɑːrkəbl/
+2559。down。adv.向下。/daʊn/
+2560。tobacco。n.烟草。/təˈbækoʊ/
+2561。again。adv.再次。/əˈɡen/
+2562。case。n.情况。/keɪs/
+2563。ditch。n.沟渠。/dɪtʃ/
+2564。luggage。n.行李。/ˈlʌɡɪdʒ/
+2565。elsewhere。adv.在别处。/ˌelsˈwer/
+2566。react。v.反应。/riˈækt/
+2567。assemble。v.组装。/əˈsembl/
+2568。tolerance。n.容忍。/ˈtɑːlərəns/
+2569。blossom。v.开花。/ˈblɑːsəm/
+2570。resident。n.居民。/ˈrezɪdənt/
+2571。leaf。n.叶子。/liːf/
+2572。priest。n.牧师。/priːst/
+2573。cream。n.奶油。/kriːm/
+2574。around。prep.周围。/əˈraʊnd/
+2575。mobile。adj.移动的。/ˈmoʊbl/
+2576。significant。adj.重要的。/sɪɡˈnɪfɪkənt/
+2577。quick。adj.快的。/kwɪk/
+2578。honourable。adj.可敬的。/ˈɒnərəbl/
+2579。previous。adj.以前的。/ˈpriːviəs/
+2580。economical。adj.经济的。/ˌiːkəˈnɑːmɪkl/
+2581。drown。v.淹死。/draʊn/
+2582。way。n.方式。/weɪ/
+2583。favourite。adj.最喜欢的。/ˈfeɪvərɪt/
+2584。disaster。n.灾难。/dɪˈzæstər/
+2585。generator。n.发电机。/ˈdʒenəreɪtər/
+2586。development。n.发展。/dɪˈveləpmənt/
+2587。title。n.标题。/ˈtaɪtl/
+2588。Australian。adj.澳大利亚的。/ɔːˈstreɪliən/
+2589。successive。adj.连续的。/səkˈsesɪv/
+2590。transport。n.运输。/ˈtrænspɔːrt/
+2591。kitchen。n.厨房。/ˈkɪtʃɪn/
+2592。salt。n.盐。/sɔːlt/
+2593。learning。n.学习。/ˈlɜːrnɪŋ/
+2594。genius。n.天才。/ˈdʒiːniəs/
+2595。procession。n.游行。/prəˈseʃn/
+2596。merchant。n.商人。/ˈmɜːrtʃənt/
+2597。handy。adj.方便的。/ˈhændi/
+2598。mainly。adv.主要地。/ˈmeɪnli/
+2599。reach。v.到达。/riːtʃ/
+2600。airport。n.机场。/ˈerpɔːrt/
+2601。goodness。n.善良。/ˈɡʊdnəs/
+2602。automation。n.自动化。/ˌɔːtəˈmeɪʃn/
+2603。theatre。n.剧院。/ˈθiːətər/
+2604。moment。n.时刻。/ˈmoʊmənt/
+2605。ninth。adj.第九。/naɪnθ/
+2606。sportsman。n.运动员。/ˈspɔːrtsmən/
+2607。pistol。n.手枪。/ˈpɪstl/
+2608。aloud。adv.大声地。/əˈlaʊd/
+2609。fade。v.褪色。/feɪd/
+2610。damage。n.损坏。/ˈdæmɪdʒ/
+2611。scarce。adj.稀有的。/skers/
+2612。still。adv.仍然。/stɪl/
+2613。ribbon。n.丝带。/ˈrɪbən/
+2614。opportunity。n.机会。/ˌɑːpərˈtuːnəti/
+2615。badly。adv.严重地。/ˈbædli/
+2616。hook。n.钩子。/hʊk/
+2617。relax。v.放松。/rɪˈlæks/
+2618。loose。adj.松的。/luːs/
+2619。young。adj.年轻的。/jʌŋ/
+2620。reap。v.收获。/riːp/
+2621。scholarship。n.奖学金。/ˈskɑːlərʃɪp/
+2622。brandy。n.白兰地。/ˈbrændi/
+2623。twelfth。adj.第十二。/twelfθ/
+2624。money。n.钱。/ˈmʌni/
+2625。sticky。adj.粘的。/ˈstɪki/
+2626。strip。n.条。/strɪp/
+2627。amplify。v.放大。/ˈæmplɪfaɪ/
+2628。tool。n.工具。/tuːl/
+2629。provided。conj.假如。/prəˈvaɪdɪd/
+2630。take。v.拿。/teɪk/
+2631。wealth。n.财富。/welθ/
+2632。lavatory。n.厕所。/ˈlævətɔːri/
+2633。conclude。v.总结。/kənˈkluːd/
+2634。excite。v.使兴奋。/ɪkˈsaɪt/
+2635。withstand。v.承受。/wɪθˈstænd/
+2636。fisherman。n.渔夫。/ˈfɪʃərmən/
+2637。so。conj.所以。/soʊ/
+2638。birthday。n.生日。/ˈbɜːrθdeɪ/
+2639。garage。n.车库。/ɡəˈrɑːʒ/
+2640。toilet。n.厕所。/ˈtɔɪlət/
+2641。stir。v.搅拌。/stɜːr/
+2642。elder。adj.年长的。/ˈeldər/
+2643。brass。n.黄铜。/bræs/
+2644。tone。n.音调。/toʊn/
+2645。reliance。n.依赖。/rɪˈlaɪəns/
+2646。oh。int.哦。/oʊ/
+2647。marriage。n.婚姻。/ˈmærɪdʒ/
+2648。very。adv.非常。/ˈveri/
+2649。purchase。n.购买。/ˈpɜːrtʃəs/
+2650。stimulate。v.刺激。/ˈstɪmjuleɪt/
+2651。teenager。n.青少年。/ˈtiːneɪdʒər/
+2652。scent。n.气味。/sent/
+2653。ship。n.船。/ʃɪp/
+2654。draft。n.草稿。/dræft/
+2655。softly。adv.柔软地。/ˈsɔːftli/
+2656。northern。adj.北方的。/ˈnɔːrðərn/
+2657。cordial。adj.热忱的。/ˈkɔːrdʒəl/
+2658。repent。v.后悔。/rɪˈpent/
+2659。thirteen。num.十三。/ˌθɜːrˈtiːn/
+2660。skillful。adj.熟练的。/ˈskɪlfl/
+2661。eyesight。n.视力。/ˈaɪsaɪt/
+2662。prime。adj.主要的。/praɪm/
+2663。journey。n.旅程。/ˈdʒɜːrni/
+2664。equality。n.平等。/iˈkwɑːləti/
+2665。uniform。n.制服。/ˈjuːnɪfɔːrm/
+2666。curiosity。n.好奇心。/ˌkjʊriˈɑːsəti/
+2667。vitamin。n.维生素。/ˈvaɪtəmɪn/
+2668。occur。v.发生。/əˈkɜːr/
+2669。bore。v.使厌烦。/bɔːr/
+2670。various。adj.各种各样的。/ˈveriəs/
+2671。eye。n.眼睛。/aɪ/
+2672。verb。n.动词。/vɜːrb/
+2673。continue。v.继续。/kənˈtɪnjuː/
+2674。grow。v.生长。/ɡroʊ/
+2675。flow。v.流动。/floʊ/
+2676。dust。n.灰尘。/dʌst/
+2677。lorry。n.卡车。/ˈlɔːri/
+2678。build。v.建造。/bɪld/
+2679。labour。n.劳动。/ˈleɪbər/
+2680。collect。v.收集。/kəˈlekt/
+2681。veil。n.面纱。/veɪl/
+2682。live。v.生活。/lɪv/
+2683。stadium。n.体育场。/ˈsteɪdiəm/
+2684。grade。n.等级。/ɡreɪd/
+2685。relief。n.缓解。/rɪˈliːf/
+2686。engage。v.从事。/ɪnˈɡeɪdʒ/
+2687。torrent。n.激流。/ˈtɔːrənt/
+2688。nonsense。n.胡说。/ˈnɑːnsens/
+2689。bush。n.灌木。/bʊʃ/
+2690。aside。adv.在旁边。/əˈsaɪd/
+2691。prescribe。v.规定。/prɪˈskraɪb/
+2692。rush。v.冲。/rʌʃ/
+2693。observer。n.观察者。/əbˈzɜːrvər/
+2694。popular。adj.流行的。/ˈpɑːpjələr/
+2695。rake。n.耙子。/reɪk/
+2696。happy。adj.快乐的。/ˈhæpi/
+2697。unless。conj.除非。/ənˈles/
+2698。those。pron.那些。/ðoʊz/
+2699。feasible。adj.可行的。/ˈfiːzəbl/
+2700。brute。adj.残忍的。/bruːt/
+2701。print。v.打印。/prɪnt/
+2702。loss。n.损失。/lɔːs/
+2703。onion。n.洋葱。/ˈʌnjən/
+2704。ridge。n.山脊。/rɪdʒ/
+2705。philosophy。n.哲学。/fəˈlɑːsəfi/
+2706。uneasy。adj.不安的。/ʌnˈiːzi/
+2707。immediately。adv.立即。/ɪˈmiːdiətli/
+2708。layout。n.布局。/ˈleɪaʊt/
+2709。manufacture。v.制造。/ˌmænjuˈfæktʃər/
+2710。late。adj.迟的。/leɪt/
+2711。tiger。n.老虎。/ˈtaɪɡər/
+2712。tour。n.旅行。/tʊr/
+2713。vehicle。n.车辆。/ˈviːəkl/
+2714。acute。adj.急性的。/əˈkjuːt/
+2715。France。n.法国。/fræns/
+2716。accept。v.接受。/əkˈsept/
+2717。soul。n.灵魂。/soʊl/
+2718。classify。v.分类。/ˈklæsɪfaɪ/
+2719。drain。v.排水。/dreɪn/
+2720。representative。n.代表。/ˌreprɪˈzentətɪv/
+2721。really。adv.真正地。/ˈriːəli/
+2722。cafe。n.咖啡馆。/ˈkæfeɪ/
+2723。oppress。v.压迫。/əˈpres/
+2724。emphasis。n.强调。/ˈemfəsɪs/
+2725。camera。n.相机。/ˈkæmərə/
+2726。carry。v.携带。/ˈkæri/
+2727。sting。v.刺。/stɪŋ/
+2728。threaten。v.威胁。/ˈθretn/
+2729。promise。n.承诺。/ˈprɑːmɪs/
+2730。field。n.领域。/fiːld/
+2731。several。adj.几个的。/ˈsevrəl/
+2732。improvement。n.改进。/ɪmˈpruːvmənt/
+2733。drive。v.驾驶。/draɪv/
+2734。immense。adj.巨大的。/ɪˈmens/
+2735。electronic。adj.电子的。/ɪˌlekˈtrɑːnɪk/
+2736。readily。adv.乐意地。/ˈredɪli/
+2737。spill。v.溢出。/spɪl/
+2738。corporation。n.公司。/ˌkɔːrpəˈreɪʃn/
+2739。valley。n.山谷。/ˈvæli/
+2740。upright。adj.直立的。/ˈʌpraɪt/
+2741。cut。v.切割。/kʌt/
+2742。unique。adj.独特的。/juˈniːk/
+2743。ripen。v.成熟。/ˈraɪpən/
+2744。flu。n.流感。/fluː/
+2745。plantation。n.种植园。/plænˈteɪʃn/
+2746。coward。n.懦夫。/ˈkaʊərd/
+2747。sunlight。n.阳光。/ˈsʌnlaɪt/
+2748。interrupt。v.打断。/ˌɪntəˈrʌpt/
+2749。reproach。v.责备。/rɪˈproʊtʃ/
+2750。democracy。n.民主。/dɪˈmɑːkrəsi/
+2751。wake。v.醒来。/weɪk/
+2752。medal。n.奖牌。/ˈmedl/
+2753。magazine。n.杂志。/ˈmæɡəziːn/
+2754。gloomy。adj.阴暗的。/ˈɡluːmi/
+2755。expense。n.费用。/ɪkˈspens/
+2756。shape。n.形状。/ʃeɪp/
+2757。how。adv.如何。/haʊ/
+2758。inn。n.小旅馆。/ɪn/
+2759。capture。v.捕获。/ˈkæptʃər/
+2760。citizen。n.公民。/ˈsɪtɪzn/
+2761。purpose。n.目的。/ˈpɜːrpəs/
+2762。AI。n.人工智能。/ˌeɪ ˈaɪ/
+2763。material。n.材料。/məˈtɪriəl/
+2764。bough。n.大树枝。/baʊ/
+2765。tractor。n.拖拉机。/ˈtræktər/
+2766。sign。n.标志。/saɪn/
+2767。official。adj.官方的。/əˈfɪʃl/
+2768。cancel。v.取消。/ˈkænsl/
+2769。the。art.定冠词。/ðə/
+2770。bend。v.弯曲。/bend/
+2771。divide。v.划分。/dɪˈvaɪd/
+2772。infer。v.推断。/ɪnˈfɜːr/
+2773。check。v.检查。/tʃek/
+2774。shock。n.震惊。/ʃɑːk/
+2775。belief。n.信仰。/bɪˈliːf/
+2776。spiritual。adj.精神的。/ˈspɪrɪtʃuəl/
+2777。eagle。n.鹰。/ˈiːɡl/
+2778。guess。v.猜测。/ɡes/
+2779。violin。n.小提琴。/ˌvaɪəˈlɪn/
+2780。west。n.西方。/west/
+2781。elbow。n.肘。/ˈelboʊ/
+2782。neck。n.脖子。/nek/
+2783。leadership。n.领导。/ˈliːdərʃɪp/
+2784。engineer。n.工程师。/ˌendʒɪˈnɪr/
+2785。consider。v.考虑。/kənˈsɪdər/
+2786。church。n.教堂。/tʃɜːrtʃ/
+2787。bury。v.埋葬。/ˈberi/
+2788。February。n.二月。/ˈfebrueri/
+2789。vibration。n.振动。/vaɪˈbreɪʃn/
+2790。over。prep.超过。/ˈoʊvər/
+2791。sweep。v.打扫。/swiːp/
+2792。green。adj.绿色的。/ɡriːn/
+2793。surround。v.包围。/səˈraʊnd/
+2794。rubbish。n.垃圾。/ˈrʌbɪʃ/
+2795。bone。n.骨头。/boʊn/
+2796。jealous。adj.嫉妒的。/ˈdʒeləs/
+2797。difference。n.差异。/ˈdɪfrəns/
+2798。try。v.尝试。/traɪ/
+2799。rice。n.米饭。/raɪs/
+2800。cheer。v.欢呼。/tʃɪr/
+2801。arise。v.出现。/əˈraɪz/
+2802。meadow。n.草地。/ˈmedoʊ/
+2803。prosperity。n.繁荣。/prɑːˈsperəti/
+2804。gunpowder。n.火药。/ˈɡʌnpaʊdər/
+2805。when。conj.当...时。/wen/
+2806。rebellion。n.叛乱。/rɪˈbeljən/
+2807。month。n.月份。/mʌnθ/
+2808。shepherd。n.牧羊人。/ˈʃepərd/
+2809。synthetic。adj.合成的。/sɪnˈθetɪk/
+2810。acquaintance。n.熟人。/əˈkweɪntəns/
+2811。vine。n.藤。/vaɪn/
+2812。gas。n.气体。/ɡæs/
+2813。sustain。v.维持。/səˈsteɪn/
+2814。possession。n.拥有。/pəˈzeʃn/
+2815。modern。adj.现代的。/ˈmɑːdərn/
+2816。growth。n.增长。/ɡroʊθ/
+2817。naked。adj.裸体的。/ˈneɪkɪd/
+2818。lime。n.石灰。/laɪm/
+2819。messenger。n.信使。/ˈmesɪndʒər/
+2820。respect。n.尊重。/rɪˈspekt/
+2831。rubber。n. 橡胶。/ˈrʌbər/
+2832。prefer。vt. 更喜欢。/prɪˈfɜːr/
+2833。learn。vt. 学习。/lɜːrn/
+2834。grape。n. 葡萄。/ɡreɪp/
+2835。change。vt. 改变。/tʃeɪndʒ/
+2836。feel。vt. 感觉。/fiːl/
+2837。plan。n. 计划。/plæn/
+2838。snow。n. 雪。/snoʊ/
+2839。backward。adv. 向后地。/ˈbækwərd/
+2840。travel。v. 旅行。/ˈtrævl/
+2841。funny。adj. 有趣的。/ˈfʌni/
+2842。bay。n. 海湾。/beɪ/
+2843。comrade。n. 同志。/ˈkɑːmræd/
+2844。heart。n. 心脏。/hɑːrt/
+2845。excursion。n. 远足。/ɪkˈskɜːrʒn/
+2846。catalog。n. [图情][计] 目录。/ˈkætəlɔːɡ/
+2847。importance。n. 重要。/ɪmˈpɔːrtns/
+2848。routine。n. 常规。/ruːˈtiːn/
+2849。civil。adj. 公民的。/ˈsɪvl/
+2850。mill。n. 压榨机。/mɪl/
+2851。complain。vi. 投诉。/kəmˈpleɪn/
+2852。winter。n. 冬季。/ˈwɪntər/
+2853。bitter。adj. 苦的。/ˈbɪtər/
+2854。seed。n. 种子。/siːd/
+2855。definition。n. 定义。/ˌdefɪˈnɪʃn/
+2856。hollow。adj. 空的。/ˈhɑːloʊ/
+2857。distance。n. 距离。/ˈdɪstəns/
+2858。black。n. 黑色。/blæk/
+2859。praise。v. 赞扬。/preɪz/
+2860。lag。n. 落后。/læɡ/
+2861。problem。n. 难题。/ˈprɑːbləm/
+2862。think。vt. 想。/θɪŋk/
+2863。network。n. 网络。/ˈnetwɜːrk/
+2864。emperor。n. 皇帝。/ˈempərər/
+2865。ball。n. 球。/bɔːl/
+2866。prince。n. 王子。/prɪns/
+2867。pilot。n. 飞行员。/ˈpaɪlət/
+2868。improve。vt. 改善。/ɪmˈpruːv/
+2869。ash。n. 灰。/æʃ/
+2870。tank。n. 坦克。/tæŋk/
+2871。quiz。n. 考查。/kwɪz/
+2872。extremely。adv. 非常。/ɪkˈstriːmli/
+2873。shoe。n. 鞋。/ʃuː/
+2874。sum。n. 金额。/sʌm/
+2875。stake。n. 桩。/steɪk/
+2876。contact。n. 接触。/ˈkɑːntækt/
+2877。farther。adv. 更远地。/ˈfɑːrðər/
+2878。postpone。vt. 使……延期。/poʊˈspoʊn/
+2879。cucumber。n. 黄瓜。/ˈkjuːkʌmbər/
+2880。inquire。vt. 询问。/ɪnˈkwaɪər/
+2881。glad。adj. 高兴的。/ɡlæd/
+2882。weekend。n. 周末。/ˈwiːkend/
+2883。butcher。n. 屠夫。/ˈbʊtʃər/
+2884。would。v. 将（will 的过去式）。/wʊd,wəd,əd/
+2885。trip。n. (短途)旅行。/trɪp/
+2886。density。n. 密度。/ˈdensəti/
+2887。fan。n. 扇子。/fæn/
+2888。resolve。vt. 决定。/rɪˈzɑːlv/
+2889。storage。n. 存储。/ˈstɔːrɪdʒ/
+2890。fancy。adj. 奇特的。/ˈfænsi/
+2891。minority。n. 少数民族。/maɪˈnɔːrəti/
+2892。seaport。n. 海港。/ˈsiːpɔːrt/
+2893。festival。n. 节日。/ˈfestɪvl/
+2894。greedy。adj. 贪婪的。/ˈɡriːdi/
+2895。giant。n. 巨人。/ˈdʒaɪənt/
+2896。flour。n. 面粉。/ˈflaʊər/
+2897。always。adv. 永远。/ˈɔːlweɪz/
+2898。hire。v. 租用。/ˈhaɪər/
+2899。fortunately。adv. 幸运地。/ˈfɔːrtʃənətli/
+2900。cable。n. 缆绳。/ˈkeɪbl/
+2901。dear。adj. 昂贵的。/dɪr/
+2902。cannon。n. 大炮。/ˈkænən/
+2903。weakness。n. 弱点。/ˈwiːknəs/
+2904。accustom。v. 使习惯于。/əˈkʌstəm/
+2905。shortcoming。n. 缺点。/ˈʃɔːrtkʌmɪŋ/
+2906。thin。adj. 薄的。/θɪn/
+2907。undo。vt. 取消。/ʌnˈduː/
+2908。mouthful。n. 一口。/ˈmaʊθfʊl/
+2909。depress。vt. 压抑。/dɪˈpres/
+2910。supper。n. 晚餐。/ˈsʌpər/
+2911。phase。n. 月相。/feɪz/
+2912。external。adj. 外部的。/ɪkˈstɜːrnl/
+2913。sword。n. 刀。/sɔːrd/
+2914。nephew。n. 侄子。/ˈnefjuː,ˈnevjuː/
+2915。royal。adj. 皇家的。/ˈrɔɪəl/
+2916。resign。vt. 辞职。/rɪˈzaɪn/
+2917。subtract。vt. 减去。/səbˈtrækt/
+2918。encourage。vt. 鼓励。/ɪnˈkɜːrɪdʒ/
+2919。bureau。n. 局。/ˈbjʊroʊ/
+2920。probability。n. 可能性。/ˌprɑːbəˈbɪləti/
+2921。musician。n. 音乐家。/mjuˈzɪʃn/
+2922。pork。n. 猪肉。/pɔːrk/
+2923。fertilize。vt. 使受精。/ˈfɜːrtəlaɪz/
+2924。determination。n. 决心。/dɪˌtɜːrmɪˈneɪʃn/
+2925。motive。n. 动机。/ˈmoʊtɪv/
+2926。argue。vi. 争论。/ˈɑːrɡjuː/
+2927。artist。n. 艺术家。/ˈɑːrtɪst/
+2928。film。n. 电影。/fɪlm/
+2929。racket。n. 球拍。/ˈrækɪt/
+2930。bacteria。n. [微] 细菌。/bækˈtɪriə/
+2931。resignation。n. 辞职。/ˌrezɪɡˈneɪʃn/
+2932。inner。adj. 内部的。/ˈɪnər/
+2933。room。n. 房间。/ruːm,rʊm/
+2934。blame。vt. 责备。/bleɪm/
+2935。gravity。n. 重力。/ˈɡrævəti/
+2936。seldom。adv. 很少。/ˈseldəm/
+2937。six。num. 数字6。/sɪks/
+2938。luxury。n. 奢侈。/ˈlʌkʃəri/
+2939。village。n. 村庄。/ˈvɪlɪdʒ/
+2940。furnish。vt. 提供。/ˈfɜːrnɪʃ/
+2941。breathe。vi. 呼吸。/briːð/
+2942。conference。n. 会议。/ˈkɑːnfərəns/
+2943。maybe。adv. 也许。/ˈmeɪbi/
+2944。navigation。n. 航行。/ˌnævɪˈɡeɪʃn/
+2945。confusion。n. 混淆。/kənˈfjuːʒn/
+2946。ratio。n. 比率。/ˈreɪʃioʊ/
+2947。question。n. 问题。/ˈkwestʃən/
+2948。tuck。n. 缝摺。/tʌk/
+2949。pile。n. 堆。/paɪl/
+2950。mercury。n. [化]汞。/ˈmɜːrkjəri/
+2951。taste。n. 味道。/teɪst/
+2952。spin。vi. 旋转。/spɪn/
+2953。agreement。n. 协议。/əˈɡriːmənt/
+2954。flesh。n. 肉。/fleʃ/
+2955。yes。adv. 是，是的。/jes/
+2956。porridge。n. 粥。/ˈpɔːrɪdʒ/
+2957。grocery。n. 食品杂货店。/ˈɡroʊsəri/
+2958。specific。adj. 特殊的。/spəˈsɪfɪk/
+2959。Friday。n. 星期五。/ˈfraɪdeɪ,ˈfraɪdi/
+2960。production。n. 成果。/prəˈdʌkʃn/
+2961。distribute。vt. 分配。/dɪˈstrɪbjuːt/
+2962。advertisement。n. 广告。/ˌædvərˈtaɪzmənt/
+2963。purse。n. (女士)手提袋。/pɜːrs/
+2964。whisky。n. 威士忌酒。/ˈwɪski/
+2965。lessen。vt. 使…变小。/ˈlesn/
+2966。suggest。vt. 提议。/səˈdʒest,səɡˈdʒest/
+2967。servant。n. 仆人。/ˈsɜːrvənt/
+2968。amuse。vt. 娱乐。/əˈmjuːz/
+2969。interpreter。n. 解释者。/ɪnˈtɜːrprətər/
+2970。collection。n. 采集。/kəˈlekʃn/
+2971。calculator。n. 计算器。/ˈkælkjuleɪtər/
+2972。platform。n. 平台。/ˈplætfɔːrm/
+2973。mould。n. [亦作mold] 肥土。/moʊld/
+2974。subway。n. 地铁。/ˈsʌbweɪ/
+2975。seriously。adv. 认真地。/ˈsɪriəsli/
+2976。design。n. 设计。/dɪˈzaɪn/
+2977。more。adv. 更多。/mɔːr/
+2978。swing。v. 摇摆。/swɪŋ/
+2979。expression。n. 表现。/ɪkˈspreʃn/
+2980。repetition。n. 重复。/ˌrepəˈtɪʃn/
+2981。channel。n. 海峡。/ˈtʃænl/
+2982。ignorant。adj. 无知的。/ˈɪɡnərənt/
+2983。certainly。adv. 当然。/ˈsɜːrtnli/
+2984。reduce。vt. 减少。/rɪˈduːs/
+2985。direct。adj. 直接的。/dəˈrekt,daɪˈrekt/
+2986。automatic。adj. 自动的。/ˌɔːtəˈmætɪk/
+2987。rusty。adj. 生锈的。/ˈrʌsti/
+2988。knowledge。n. 知识。/ˈnɑːlɪdʒ/
+2989。stair。n. 楼梯。/ster/
+2990。pole。n. 杆。/poʊl/
+2991。camel。n. [畜牧][脊椎] 骆驼。/ˈkæml/
+2992。helicopter。n. [航] 直升飞机。/ˈhelɪkɑːptər/
+2993。seize。vt. 抓住。/siːz/
+2994。strictly。adv. 严格地。/ˈstrɪktli/
+2995。likely。adj. 很可能的。/ˈlaɪkli/
+2996。describe。vt. 描述。/dɪˈskraɪb/
+2997。attribute。n. 属性。/əˈtrɪbjuːt/
+2998。seat。n. 座位。/siːt/
+2999。further。adv. 更远地。/ˈfɜːrðər/
+3000。army。n. 陆军。/ˈɑːrmi/
+3001。shot。n. 发射。/ʃɑːt/
+3002。chop。n. 砍。/tʃɑːp/
+3003。meet。vt. 满足。/miːt/
+3004。firm。n. 商行。/fɜːrm/
+3005。lighten。vi. 减轻。/ˈlaɪtn/
+3006。stick。vt. 刺。/stɪk/
+3007。soak。vt. 吸收。/soʊk/
+3008。robbery。n. 抢劫。/ˈrɑːbəri/
+3009。primarily。adv. 首先。/praɪˈmerəli/
+3010。poem。n. 诗。/ˈpoʊəm/
+3011。writing。n. 书写。/ˈraɪtɪŋ/
+3012。skirt。n. 裙子。/skɜːrt/
+3013。spend。vt. 度过。/spend/
+3014。Wednesday。n. 星期三。/'wenzdei/
+3015。clerk。n. 职员。/klɜːrk/
+3016。unfair。adj. 不公平的。/ˌʌnˈfer/
+3017。feed。n. 饲养。/fiːd/
+3018。altogether。adv. 完全地。/ˌɔːltəˈɡeðər/
+3019。dormitory。n. 宿舍。/ˈdɔːrmətɔːri/
+3020。concept。n. 观念。/ˈkɑːnsept/
+3021。hurry。v. (使)赶紧。/ˈhɜːri/
+3022。China。n. 中国。/ˈtʃaɪnə/
+3023。output。n. 输出。/ˈaʊtpʊt/
+3024。floor。n. 地板。/flɔːr/
+3025。receipt。n. 收到。/rɪˈsiːt/
+3026。stain。vt. 玷污。/steɪn/
+3027。two。num. 二。/tuː/
+3028。trumpet。n. 喇叭。/ˈtrʌmpɪt/
+3029。beard。n. 胡须。/bɪrd/
+3030。procedure。n. 程序。/prəˈsiːdʒər/
+3031。atmospheric。adj. 大气的。/ˌætməsˈfɪrɪk,ˌætməsˈferɪk/
+3032。door。n. 门。/dɔːr/
+3033。jam。n. 果酱。/dʒæm/
+3034。reader。n. 读者。/ˈriːdər/
+3035。width。n. 宽度。/wɪdθ,wɪtθ/
+3036。direction。n. 方向。/dəˈrekʃn/
+3037。Brazilian。adj. 巴西的。/brəˈzɪliən/
+3038。out。adj. 外面的。/aʊt/
+3039。item。n. 条款。/ˈaɪtəm/
+3040。rid。v. 使摆脱。/rɪd/
+3041。adapt。vt. 使适应。/əˈdæpt/
+3042。spur。n. 马刺。/spɜːr/
+3043。sunshine。n. 阳光。/ˈsʌnʃaɪn/
+3044。seventh。num. 第七。/ˈsevnθ/
+3045。treason。n. [法] 叛国罪。/ˈtriːzn/
+3046。form。n. 形式。/fɔːrm/
+3047。therefore。adv. 因此。/ˈðerfɔːr/
+3048。snowy。adj. 下雪的。/ˈsnoʊi/
+3049。duck。n. 鸭子。/dʌk/
+3050。climate。n. 气候。/ˈklaɪmət/
+3051。disappear。vi. 消失。/ˌdɪsəˈpɪr/
+3052。wrist。n. 手腕。/rɪst/
+3053。muddy。adj. 泥泞的。/ˈmʌdi/
+3054。strength。n. 力量。/streŋkθ/
+3055。successful。adj. 成功的。/səkˈsesfl/
+3056。possible。adj. 可能的。/ˈpɑːsəbl/
+3057。linen。n. 亚麻布。/ˈlɪnɪn/
+3058。commerce。n. 贸易。/ˈkɑːmɜːrs/
+3059。elimination。n. 消除。/ɪˌlɪmɪˈneɪʃn/
+3060。accordingly。adv. 因此。/əˈkɔːrdɪŋli/
+3061。ancestor。n. 始祖。/ˈænsestər/
+3062。abnormal。adj. 反常的。/æbˈnɔːrml/
+3063。disclose。vt. 公开。/dɪsˈkloʊz/
+3064。fifty。n. 五十。/ˈfɪfti/
+3065。my。pron. 我的。/maɪ/
+3066。vegetable。n. 蔬菜。/ˈvedʒtəbl/
+3067。funeral。n. 葬礼。/ˈfjuːnərəl/
+3068。brisk。adj. 敏锐的。/brɪsk/
+3069。European。adj. 欧洲的。/ˌjʊrəˈpiːən/
+3070。durable。adj. 耐用的。/ˈdʊrəbl/
+3071。bless。vt. 祝福。/bles/
+3072。southwest。n. 西南方。/ˌsaʊθˈwest/
+3073。hostile。adj. 敌对的。/ˈhɑːstl,ˈhɑːstaɪl/
+3074。jewish。adj. 犹太人的。/ˈdʒuːɪʃ/
+3075。strengthen。vt. 加强。/ˈstreŋθn/
+3076。rather。adv. 宁可。/ˈræðər/
+3077。owner。n. [经] 所有者。/ˈoʊnər/
+3078。foot。n. 脚。/fʊt/
+3079。smart。adj. 聪明的。/smɑːrt/
+3080。constitution。n. 宪法。/ˌkɑːnstɪˈtuːʃn/
+3081。awkward。adj. 尴尬的。/ˈɔːkwərd/
+3082。new。adj. 新的。/nuː/
+3083。after。prep. 在……之后。/ˈæftər/
+3084。definitely。adv. 清楚地。/ˈdefɪnətli/
+3085。mercy。n. 仁慈。/ˈmɜːrsi/
+3086。reply。vi. 回答。/rɪˈplaɪ/
+3087。soon。adv. 快。/suːn/
+3088。wheat。n. 小麦。/wiːt/
+3089。there。adv. 在那里。/ðer/
+3090。quantity。n. 量。/ˈkwɑːntəti/
+3091。lumber。n. 美木材。/ˈlʌmbər/
+3092。option。n. [计] 选项。/ˈɑːpʃn/
+3093。suck。vt. 吸吮。/sʌk/
+3094。interest。n. 兴趣。/ˈɪntrəst/
+3095。white。adj. 白色的。/waɪt/
+3096。worry。v. (使)担心。/ˈwɜːri/
+3097。soldier。n. 军人。/ˈsoʊldʒər/
+3098。initial。adj. 最初的。/ɪˈnɪʃl/
+3099。train。n. 火车。/treɪn/
+3100。kilogram。n. 公斤。/ˈkɪləɡræm/
+3101。arrival。n. 到来。/əˈraɪvl/
+3102。puff。n. 一阵喷烟。/pʌf/
+3103。opposite。adj. 相反的。/ˈɑːpəzɪt/
+3104。instruction。n. 指令。/ɪnˈstrʌkʃn/
+3105。precaution。n. 预防。/prɪˈkɔːʃn/
+3106。ninety。n. 九十。/ˈnaɪnti/
+3107。hen。n. 母鸡。/hen/
+3108。wash。n. 洗。/wɑːʃ/
+3109。vacuum。n. 真空。/ˈvækjuːm/
+3110。prohibit。vt. 阻止。/prəˈhɪbɪt,proʊˈhɪbɪt/
+3111。moderate。adj. 稳健的。/ˈmɑːdərət/
+3112。gauge。n. 计量器。/ɡeɪdʒ/
+3113。love。n. 爱。/lʌv/
+3114。tourist。n. 旅行者。/ˈtʊrɪst/
+3115。bind。vi. 结合。/baɪnd/
+3116。pit。n. 深坑。/pɪt/
+3117。previously。adv. 以前。/ˈpriːviəsli/
+3118。vase。n. 瓶。/veɪs,veɪz/
+3119。concerning。prep. 关于。/kənˈsɜːrnɪŋ/
+3120。stupid。adj. 愚蠢的。/ˈstuːpɪd/
+3121。must。aux. 必须。/məst,mʌst/
+3122。maximum。n. [数] 极大。/ˈmæksɪməm/
+3123。variable。adj. 变量的。/ˈveriəbl,ˈværiəbl/
+3124。flight。n. 飞行。/flaɪt/
+3125。effect。n. 影响。/ɪˈfekt/
+3126。stormy。adj. 暴风雨的。/ˈstɔːrmi/
+3127。headquarters。n. 总部。/ˈhedkwɔːrtərz/
+3128。conversation。n. 交谈。/ˌkɑːnvərˈseɪʃn/
+3129。impress。vt. 盖印。/ɪmˈpres/
+3130。crisis。n. 危机。/ˈkraɪsɪs/
+3131。grammar。n. 语法。/ˈɡræmər/
+3132。coordinate。v. 调节。/koʊˈɔːrdɪneɪt/
+3133。pudding。n. 布丁。/ˈpʊdɪŋ/
+3134。proposal。n. 提议。/prəˈpoʊzl/
+3135。creative。adj. 创造性的。/kriˈeɪtɪv/
+3136。cure。v. 治愈。/kjʊr/
+3137。transmission。n. 传动装置。/trænzˈmɪʃn/
+3138。hamburger。n. 汉堡包。/ˈhæmbɜːrɡər/
+3139。tin。n. 锡。/tɪn/
+3140。angry。adj. 生气的。/ˈæŋɡri/
+3141。cloud。n. 云。/klaʊd/
+3142。innocent。adj. 无辜的。/ˈɪnəsnt/
+3143。desire。n. 欲望。/dɪˈzaɪər/
+3144。commander。n. 指挥官。/kəˈmændər/
+3145。grieve。vt. 使悲伤。/ɡriːv/
+3146。manual。adj. 体力的。/ˈmænjuəl/
+3147。three。num. 三。/θriː/
+3148。gown。n. 长袍。/ɡaʊn/
+3149。worker。n. 工人。/ˈwɜːrkər/
+3150。mug。n. 杯子。/mʌɡ/
+3151。yellow。adj. 黄色的。/ˈjeloʊ/
+3152。contract。n. 合同。/ˈkɑːntrækt/
+3153。moan。vi. 抱怨。/moʊn/
+3154。instruct。vt. 指导。/ɪnˈstrʌkt/
+3155。assignment。n. 分配。/əˈsaɪnmənt/
+3156。administration。n. 管理。/ədˌmɪnɪˈstreɪʃn/
+3157。bruise。n. 擦伤。/bruːz/
+3158。year。n. 年。/jɪr/
+3159。family。n. 家庭。/ˈfæməli/
+3160。mistake。n. 错误。/mɪˈsteɪk/
+3161。kingdom。n. 王国。/ˈkɪŋdəm/
+3162。ours。pron. 我们的。/ɑːrz,ˈaʊərz/
+3163。list。n. 目录。/lɪst/
+3164。okay。int. 好，行。/oʊˈkeɪ/
+3165。sightseeing。n. 观光。/ˈsaɪtsiːɪŋ/
+3166。bank。n. 银行。/bæŋk/
+3167。protein。n. 蛋白质。/ˈproʊtiːn/
+3168。supreme。adj. 最高的。/suːˈpriːm/
+3169。spacecraft。n. [航] 宇宙飞船。/ˈspeɪskræft/
+3170。audience。n. 观众。/ˈɔːdiəns/
+3171。agent。n. 代理人。/ˈeɪdʒənt/
+3172。among。prep. 在……中间。/əˈmʌŋ/
+3173。rouse。vt. 唤醒。/raʊz/
+3174。appropriate。adj. 适当的。/əˈproʊpriət/
+3175。camp。n. 露营地。/kæmp/
+3176。convenience。n. 便利。/kənˈviːniəns/
+3177。spade。n. 铁锹。/speɪd/
+3178。quite。adv. 很。/kwaɪt/
+3179。keyboard。n. 键盘。/ˈkiːbɔːrd/
+3180。launch。v. 发射。/lɔːntʃ/
+3181。England。n. 英格兰。/ˈɪŋɡlənd/
+3182。slope。n. 斜坡。/sloʊp/
+3183。commission。n. 委员会。/kəˈmɪʃn/
+3184。fluid。n. 流体。/ˈfluːɪd/
+3185。feeling。n. 感觉。/ˈfiːlɪŋ/
+3186。elaborate。adj. 精心制作的。/ɪˈlæbərət; ɪˈlæbəreɪt; ɪˈlæbərɪt/
+3187。loudly。adv. 大声地。/ˈlaʊdli/
+3188。which。pron. 哪个。/wɪtʃ/
+3189。mood。n. 情绪。/muːd/
+3190。outwards。adv. 向外地。/ˈaʊtwərdz/
+3191。Mister。n. 先生。/ˈmɪstər/
+3192。diameter。n. 直径。/daɪˈæmɪtər/
+3193。consciousness。n. 意识。/ˈkɑːnʃəsnəs/
+3194。interfere。vi. 干涉。/ˌɪntərˈfɪr/
+3195。slowly。adv. 缓慢地。/ˈsloʊli/
+3196。you。pron. 你。/jə,juː/
+3197。fold。n. 折。/foʊld/
+3198。some。adj. 一些。/səm,sʌm/
+3199。satisfaction。n. 满意。/ˌsætɪsˈfækʃn/
+3200。confuse。vt. 使混乱。/kənˈfjuːz/
+3201。stoop。vi. 弯腰。/stuːp/
+3202。respective。adj. 分别的。/rɪˈspektɪv/
+3203。only。adv. 只。/ˈoʊnli/
+3204。station。n. 车站。/ˈsteɪʃn/
+3205。classification。n. 分类。/ˌklæsɪfɪˈkeɪʃn/
+3206。punish。vt. 惩罚。/ˈpʌnɪʃ/
+3207。queue。n. 队列。/kjuː/
+3208。bullet。n. 子弹。/ˈbʊlɪt/
+3209。preference。n. 偏爱。/ˈprefrəns/
+3210。swallow。vt. 忍受。/ˈswɑːloʊ/
+3211。beef。n. 牛肉。/biːf/
+3212。refer。vi. 参考。/rɪˈfɜːr/
+3213。buckle。n. 带扣。/ˈbʌkl/
+3214。canal。n. 运河。/kəˈnæl/
+3215。recovery。n. 恢复。/rɪˈkʌvəri/
+3216。upset。vt. 使心烦。/ʌpˈset/
+3217。rage。n. 愤怒。/reɪdʒ/
+3218。curtain。n. 幕。/ˈkɜːrtn/
+3219。happiness。n. 幸福。/ˈhæpinəs/
+3220。operator。n. 经营者。/ˈɑːpəreɪtər/
+3221。press。n. 压。/pres/
+3222。squirrel。n. 松鼠。/ˈskwɜːrəl/
+3223。devil。n. 魔鬼。/ˈdevl/
+3224。sandy。adj. 沙地的。/ˈsændi/
+3225。soda。n. 苏打。/ˈsoʊdə/
+3226。retain。vt. 保持。/rɪˈteɪn/
+3227。register。n. 记录。/ˈredʒɪstər/
+3228。awful。adj. 可怕的。/ˈɔːfl/
+3229。meal。n. 一餐。/miːl/
+3230。cheese。n. [食品] 奶酪。/tʃiːz/
+3231。land。n. 国土。/lænd/
+3232。prisoner。n. 囚犯。/ˈprɪznər/
+3233。sacred。adj. 神的。/ˈseɪkrɪd/
+3234。hang。vt. 悬挂。/hæŋ/
+3235。God。n. 神。/ɡɑːd/
+3236。insurance。n. 保险。/ɪnˈʃʊrəns/
+3237。ruler。n. 尺。/ˈruːlər/
+3238。liver。n. 肝脏。/ˈlɪvər/
+3239。authority。n. 权威。/əˈθɔːrəti/
+3240。laugh。v. 笑。/læf/
+3241。song。n. 歌曲。/sɔŋ/
+3242。ore。n. 矿。/ɔːr/
+3243。crazy。adj. 疯狂的。/ˈkreɪzi/
+3244。outline。n. 轮廓。/ˈaʊtlaɪn/
+3245。fortnight。n. 两星期。/ˈfɔːrtnaɪt/
+3246。chalk。n. 粉笔。/tʃɔːk/
+3247。equal。adj. 平等的。/ˈiːkwəl/
+3248。arrangement。n. 布置。/əˈreɪndʒmənt/
+3249。spontaneous。adj. 自发的。/spɑːnˈteɪniəs/
+3250。vice。n. 恶习。/vaɪs/
+3251。route。n. 路线。/ruːt,raʊt/
+3252。goods。n. 商品。/ɡʊdz/
+3253。encounter。v. 遭遇。/ɪnˈkaʊntər/
+3254。goose。n. 鹅。/ɡuːs/
+3255。indeed。adv. 的确。/ɪnˈdiːd/
+3256。delegation。n. 代表团。/ˌdelɪˈɡeɪʃn/
+3257。what。pron. 什么。/wʌt/
+3258。protect。vt. 保护。/prəˈtekt/
+3259。American。n. 美国人。/əˈmerɪkən/
+3260。separation。n. 分离。/ˌsepəˈreɪʃn/
+3261。bet。n. 赌。/bet/
+3262。India。n. 印度。/ˈɪndiə/
+3263。ill。adj. 生病的。/ɪl/
+3264。wholly。adv. 完全地。/ˈhoʊlli/
+3265。chairman。n. 主席。/ˈtʃermən/
+3266。share。v. 分享。/ʃer/
+3267。fever。n. 发烧。/ˈfiːvər/
+3268。December。n. 十二月。/dɪˈsembər/
+3269。wine。n. 酒。/waɪn/
+3270。honour。n. 荣誉。/ˈɑːnər/
+3271。glove。n. 手套。/ɡlʌv/
+3272。faint。adj. 模糊的。/feɪnt/
+3273。near。adj. 亲近的。/nɪr/
+3274。thorough。adj. 彻底的。/ˈθɜːroʊ/
+3275。thing。n. 事情。/θɪŋ/
+3276。exchange。n. 交换。/ɪksˈtʃeɪndʒ/
+3277。rotate。vi. 旋转。/ˈroʊteɪt/
+3278。bell。n. 铃。/bel/
+3279。environment。n. 环境。/ɪnˈvaɪrənmənt/
+3280。mystery。n. 秘密。/ˈmɪstəri/
+3281。capacity。n. 能力。/kəˈpæsəti/
+3282。deposit。n. 存款。/dɪˈpɑːzɪt/
+3283。cool。adj. 凉爽的。/kuːl/
+3284。cease。vi. 停止。/siːs/
+3285。anger。n. 怒。/ˈæŋɡər/
+3286。operational。adj. 操作的。/ˌɑːpəˈreɪʃənl/
+3287。port。n. 港口。/pɔːrt/
+3288。mere。adj. 仅仅的。/mɪr/
+3289。goodbye。int. 再见。/ˌɡʊdˈbaɪ/
+3290。volleyball。n. 排球。/ˈvɑːlibɔːl/
+3291。harm。n. 伤害。/hɑːrm/
+3292。possess。vt. 控制。/pəˈzes/
+3293。gradually。adv. 逐步地。/ˈɡrædʒuəli/
+3294。knock。vi. 敲。/nɑːk/
+3295。amaze。vt. 使吃惊。/əˈmeɪz/
+3296。university。n. 大学。/ˌjuːnɪˈvɜːrsəti/
+3297。horsepower。n. 马力。/ˈhɔːrspaʊər/
+3298。latter。adj. 后者的。/ˈlætər/
+3299。quit。vt. 离开。/kwɪt/
+3300。grass。n. 草。/ɡræs/
+3301。winner。n. 获胜者。/ˈwɪnər/
+3302。electric。adj. 电的。/ɪˈlektrɪk/
+3303。hit。vt. 打击。/hɪt/
+3304。wooden。adj. 木制的。/ˈwʊdn/
+3305。liberate。vt. 解放。/ˈlɪbəreɪt/
+3306。rider。n. 骑手。/ˈraɪdər/
+3307。bold。adj. 大胆的。/boʊld/
+3308。obey。vt. 服从。/əˈbeɪ/
+3309。stock。n. 树干。/stɑːk/
+3310。rise。n. 上升。/raɪz/
+3311。instant。adj. 立即的。/ˈɪnstənt/
+3312。smoke。n. 烟。/smoʊk/
+3313。container。n. 集装箱。/kənˈteɪnər/
+3314。such。adj. 这样的。/sʌtʃ/
+3315。campus。n. (大学)校园。/ˈkæmpəs/
+3316。measurable。adj. 可测量的。/ˈmeʒərəbl/
+3317。reduction。n. 减少。/rɪˈdʌkʃn/
+3318。sausage。n. 香肠。/ˈsɔːsɪdʒ/
+3319。skin。n. 皮肤。/skɪn/
+3320。devise。vt. 设计。/dɪˈvaɪz/
+3321。soup。n. 汤。/suːp/
+3322。waterfall。n. 瀑布。/ˈwɔːtərfɔːl/
+3323。reform。v. 改革。/rɪˈfɔːrm/
+3324。we。pron. 我们。/wi,wiː/
+3325。clothe。vt. 给…穿衣。/kloʊð/
+3326。dairy。n. 奶制品。/ˈderi/
+3327。handle。n. 柄。/ˈhændl/
+3328。relativity。n. 相对论。/ˌreləˈtɪvəti/
+3329。noon。n. 中午。/nuːn/
+3330。divorce。n. 离婚。/dɪˈvɔːrs/
+3331。infinite。adj. 无限的。/ˈɪnfɪnət/
+3332。rapid。adj. 迅速的。/ˈræpɪd/
+3333。tissue。n. 组织。/ˈtɪʃuː/
+3334。float。vi. 浮动。/floʊt/
+3335。muscle。n. 肌肉。/ˈmʌsl/
+3336。international。adj. 国际的。/ˌɪntərˈnæʃnəl/
+3337。cheerful。adj. 快乐的。/ˈtʃɪrfl/
+3338。movie。n. 电影。/ˈmuːvi/
+3339。everyday。adj. 每天的。/ˈevrideɪ/
+3340。yawn。v. 打哈欠。/jɔːn/
+3341。friendly。adj. 友好的。/ˈfrendli/
+3342。opening。n. 开始。/ˈoʊpənɪŋ/
+3343。lovely。adj. 可爱的。/ˈlʌvli/
+3344。coat。n. 外套。/koʊt/
+3345。lung。n. 肺。/lʌŋ/
+3346。unsatisfactory。adj. 不令人满意的。/ˌʌnˌsætɪsˈfæktəri/
+3347。tenth。num. 第十。/tenθ/
+3348。joyful。adj. 欢喜的。/ˈdʒɔɪfl/
+3349。weekday。n. 平日。/ˈwiːkdeɪ/
+3350。carrier。n. [化学] 载体。/ˈkæriər/
+3351。arbitrary。adj. [数] 任意的。/ˈɑːrbɪtreri/
+3352。comfort。n. 安慰。/ˈkʌmfərt/
+3353。invent。vt. 发明。/ɪnˈvent/
+3354。beneficial。adj. 有益的。/ˌbenɪˈfɪʃl/
+3355。remains。n. 残余物。/rɪˈmeɪnz/
+3356。contrary。adj. 相反的。/'kɑntreri/
+3357。bring。vt. 带来。/brɪŋ/
+3358。verify。vt. 核实。/ˈverɪfaɪ/
+3359。indignant。adj. 愤愤不平的。/ɪnˈdɪɡnənt/
+3360。justify。vt. 证明……是正当的。/ˈdʒʌstɪfaɪ/
+3361。abroad。adv. 在国外。/əˈbrɔːd/
+3362。security。n. 安全。/sɪˈkjʊrəti/
+3363。Portuguese。adj. 葡萄牙的。/ˌpɔːrtʃuˈɡiːz/
+3364。violent。adj. 暴力的。/ˈvaɪələnt/
+3365。farmer。n. 农夫。/ˈfɑːrmər/
+3366。deceive。v. 欺骗。/dɪˈsiːv/
+3367。product。n. 产品。/ˈprɑːdʌkt/
+3368。dictionary。n. 字典。/ˈdɪkʃəneri/
+3369。calculation。n. 计算。/ˌkælkjuˈleɪʃn/
+3370。block。n. 块。/blɑːk/
+3371。flood。n. 洪水。/flʌd/
+3372。despair。n. 绝望。/dɪˈsper/
+3373。guilty。adj. 有罪的。/ˈɡɪlti/
+3374。surprise。n. 惊奇。/sərˈpraɪz/
+3375。weekly。adj. 每周的。/ˈwiːkli/
+3376。usual。adj. 通常的。/ˈjuːʒuəl,ˈjuːʒəl/
+3377。visual。adj. 视觉的。/ˈvɪʒuəl/
+3378。rose。n. 蔷薇属。/roʊz/
+3379。acre。n. 土地。/ˈeɪkər/
+3380。foundation。n. 基础。/faʊnˈdeɪʃn/
+3381。observe。vt. 观察。/əbˈzɜːrv/
+3382。answer。n. 答案。/ˈænsər/
+3383。correction。n. 改正。/kəˈrekʃn/
+3384。heavy。adj. 沉重的。/ˈhevi/
+3385。thirty。n. 三十年代。/ˈθɜːrti/
+3386。crash。n. 碰撞。/kræʃ/
+3387。exit。n. 出口。/ˈeksɪt,ˈeɡzɪt/
+3388。cook。v. 做饭。/kʊk/
+3389。sauce。n. 酱油。/sɔːs/
+3390。conductor。n. 导体。/kənˈdʌktər/
+3391。achieve。vt. 取得。/əˈtʃiːv/
+3392。policy。n. 政策。/ˈpɑːləsi/
+3393。due。adj. 到期的。/duː/
+3394。daring。adj. 大胆的。/ˈderɪŋ/
+3395。sorrow。n. 悲伤。/ˈsɑːroʊ/
+3396。relieve。vt. 解除。/rɪˈliːv/
+3397。ignore。vt. 忽视。/ɪɡˈnɔːr/
+3398。settlement。n. 解决。/ˈsetlmənt/
+3399。restrict。vt. 限制。/rɪˈstrɪkt/
+3400。understanding。n. 谅解。/ˌʌndərˈstændɪŋ/
+3401。translation。n. 翻译。/trænzˈleɪʃn/
+3402。spot。n. 地点。/spɑːt/
+3403。consult。vt. 查阅。/kənˈsʌlt/
+3404。overlook。vt. 忽略。/ˌoʊvərˈlʊk/
+3405。noun。n. 名词。/naʊn/
+3406。yesterday。adv. 在昨天。/ˈjestədeɪ/
+3407。comment。n. 注释。/ˈkɑːment/
+3408。valid。adj. 有效的。/ˈvælɪd/
+3409。accent。n. 口音。/ˈæksənt/
+3410。task。n. (困难的)任务。/tæsk/
+3411。bother。vt. 烦扰。/ˈbɑːðər/
+3412。brave。adj. 勇敢的。/breɪv/
+3413。selection。n. 选择。/sɪˈlekʃn/
+3414。surgery。n. 外科。/ˈsɜːrdʒəri/
+3415。flat。adj. 平坦的。/flæt/
+3416。carve。vt. 雕刻。/kɑːrv/
+3417。toast。n. 干杯。/toʊst/
+3418。bleed。vt. 使出血。/bliːd/
+3419。optical。adj. 光学的。/ˈɑːptɪkl/
+3420。electrical。adj. 有关电的。/ɪˈlektrɪkl/
+3421。rainy。adj. 下雨的。/ˈreɪni/
+3422。child。n. 儿童。/tʃaɪld/
+3423。usage。n. 使用。/ˈjuːsɪdʒ/
+3424。forward。adj. 早的。/ˈfɔːrwərd/
+3425。yearly。adj. 每年的。/ˈjɪrli/
+3426。helpful。adj. 有帮助的。/ˈhelpfl/
+3427。school。n. 学校。/skuːl/
+3428。inward。adj. 向内的。/ˈɪnwərd/
+3429。inform。vt. 通知。/ɪnˈfɔːrm/
+3430。wit。n. 智慧。/wɪt/
+3431。not。adv. 表示否定，不。/nɑːt/
+3432。delicate。adj. 微妙的。/ˈdelɪkət/
+3433。withdraw。vt. 撤退。/wɪðˈdrɔː/
+3434。represent。vt. 代表。/ˌreprɪˈzent/
+3435。truth。n. 真理。/truːθ/
+3436。spy。n. 间谍。/spaɪ/
+3437。troublesome。adj. 麻烦的。/ˈtrʌblsəm/
+3438。pie。n. 馅饼。/paɪ/
+3439。population。n. 人口。/ˌpɑːpjuˈleɪʃn/
+3440。disadvantage。n. 缺点。/ˌdɪsədˈvæntɪdʒ/
+3441。marvelous。adj. 了不起的。/ˈmɑːrvələs/
+3442。fashion。n. 时尚。/ˈfæʃn/
+3443。tragedy。n. 悲剧。/ˈtrædʒədi/
+3444。aural。adj. 听觉的。/ˈɔːrəl/
+3445。come。vi. 来。/kʌm/
+3446。weep。v. 哭泣。/wiːp/
+3447。horse。n. 马。/hɔːrs/
+3448。sock。n. 短袜。/sɑːk/
+3449。large。adj. 大的。/lɑːrdʒ/
+3450。stale。adj. 陈腐的。/steɪl/
+3451。pound。n. 英镑。/paʊnd/
+3452。colony。n. 殖民地。/ˈkɑːləni/
+3453。expert。n. 专家。/ˈekspɜːrt/
+3454。shine。v. 照耀。/ʃaɪn/
+3455。data。n. 数据。/ˈdeɪtə,ˈdætə/
+3456。majority。n. 多数。/məˈdʒɔːrəti/
+3457。primitive。adj. 原始的。/ˈprɪmətɪv/
+3458。geometry。n. 几何学。/dʒiˈɑːmətri/
+3459。mouth。n. 口。/maʊθ/
+3460。state。n. 国家。/steɪt/
+3461。trousers。n. 裤子。/ˈtraʊzərz/
+3462。finger。n. 手指。/ˈfɪŋɡər/
+3463。possibility。n. 可能性。/ˌpɑːsəˈbɪləti/
+3464。grand。adj. 宏伟的。/ɡrænd/
+3465。involve。vt. 包含。/ɪnˈvɑːlv/
+3466。snowstorm。n. 暴风雪。/ˈsnoʊstɔːrm/
+3467。schedule。n. 时间表。/ˈskedʒuːl/
+3468。prepare。vt. 准备。/prɪˈper/
+3469。mysterious。adj. 神秘的。/mɪˈstɪriəs/
+3470。salad。n. 色拉。/ˈsæləd/
+3471。biscuit。n. 小点心。/ˈbɪskɪt/
+3472。impossible。adj. 不可能的。/ɪmˈpɑːsəbl/
+3473。soluble。adj. [化学] 可溶的。/ˈsɑːljəbl/
+3474。nod。v. 点头。/nɑːd/
+3475。Italian。adj. 意大利的。/ɪˈtæliən/
+3476。ability。n. 能力。/əˈbɪləti/
+3477。leisure。n. 闲暇。/ˈliːʒər/
+3478。typical。adj. 典型的。/ˈtɪpɪkl/
+3479。reaction。n. 反应。/riˈækʃn/
+3480。she。pron. 她。/ʃi,ʃiː/
+3481。equivalent。adj. (在价值、数量等方面)相等的。/ɪˈkwɪvələnt/
+3482。bright。adj. 明亮的。/braɪt/
+3483。museum。n. 博物馆。/mjuˈziːəm/
+3484。costly。adj. 昂贵的。/ˈkɑːstli/
+3485。honesty。n. 诚实。/ˈɑːnəsti/
+3486。communicate。vi. 通讯。/kəˈmjuːnɪkeɪt/
+3487。heroine。n. 女主角。/ˈheroʊɪn/
+3488。trifle。n. 少量。/ˈtraɪfl/
+3489。sing。vi. 唱歌。/sɪŋ/
+3490。guidance。n. 指导。/ˈɡaɪdns/
+3491。transparent。adj. 透明的。/trænsˈpærənt/
+3492。nice。adj. 精密的。/naɪs/
+3493。alternative。adj. 供选择的。/ɔːlˈtɜːrnətɪv/
+3494。illness。n. 病。/ˈɪlnəs/
+3495。September。n. 九月。/sepˈtembər/
+3496。silver。n. 银。/ˈsɪlvər/
+3497。loud。adj. 大声的。/laʊd/
+3498。dwelling。n. 住处。/ˈdwelɪŋ/
+3499。fairly。adv. 相当地。/ˈferli/
+3500。surprisingly。adv. 惊人地。/sərˈpraɪzɪŋli/
+3501。indoors。adv. 在室内。/ˌɪnˈdɔːrz/
+3502。survey。n. 调查。/ˈsɜːrveɪ/
+3503。globe。n. 地球。/ɡloʊb/
+3504。towards。prep. 朝。/tɔːrdz/
+3505。final。adj. 最终的。/ˈfaɪnl/
+3506。missile。n. 导弹。/ˈmɪsl/
+3507。wise。adj. 明智的。/waɪz/
+3508。gasoline。n. 汽油。/ˈɡæsəliːn/
+3509。tunnel。n. 隧道。/ˈtʌnl/
+3510。pool。n. 联营。/puːl/
+3511。rude。adj. 粗鲁的。/ruːd/
+3512。advice。n. 建议。/ədˈvaɪs/
+3513。public。adj. 公众的。/ˈpʌblɪk/
+3514。casual。adj. 随便的。/ˈkæʒuəl/
+3515。murderer。n. 凶手。/ˈmɜːrdərər/
+3516。world。n. 世界。/wɜːrld/
+3517。adequate。adj. 充足的。/ˈædɪkwət/
+3518。sort。n. 种类。/sɔːrt/
+3519。proportional。adj. 比例的。/prəˈpɔːrʃənl/
+3520。often。adv. 常常。/ˈɔːfn,ˈɔːftən/
+3521。fatigue。n. 疲劳。/fəˈtiːɡ/
+3522。basic。adj. 基本的。/ˈbeɪsɪk/
+3523。disappoint。vt. 使失望。/ˌdɪsəˈpɔɪnt/
+3524。carpenter。n. 木匠。/ˈkɑːrpəntər/
+3525。tyre。n. 轮胎。/ˈtaɪər/
+3526。creature。n. 动物。/ˈkriːtʃər/
+3527。Monday。n. 星期一。/ˈmʌndeɪ,ˈmʌndi/
+3528。outlook。n. 展望。/ˈaʊtlʊk/
+3529。chance。n. 机会。/tʃæns/
+3530。shift。n. 移动。/ʃɪft/
+3531。code。n. 代码。/koʊd/
+3532。unnecessary。adj. 不必要的。/ʌnˈnesəseri/
+3533。accomplish。vt. 完成。/əˈkɑːmplɪʃ/
+3534。of。prep. 属于。/əv,ʌv/
+3535。drought。n. 干旱。/draʊt/
+3536。revolutionary。adj. 革命的。/ˌrevəˈluːʃəneri/
+3537。explanation。n. 说明。/ˌekspləˈneɪʃn/
+3538。deal。n. 交易。/diːl/
+3539。materialism。n. 唯物主义。/məˈtɪriəlɪzəm/
+3540。help。vt. 帮助。/help/
+3541。raid。n. 袭击。/reɪd/
+3542。pleasant。adj. 令人愉快的。/ˈpleznt/
+3543。section。n. 截面。/ˈsekʃn/
+3544。sweater。n. 毛线衣。/ˈswetər/
+3545。atom。n. 原子。/ˈætəm/
+3546。agony。n. 苦恼。/ˈæɡəni/
+3547。continual。adj. 持续不断的。/kənˈtɪnjuəl/
+3548。letter。n. 信。/ˈletər/
+3549。minus。adj. 负的。/ˈmaɪnəs/
+3550。theoretical。adj. 理论的。/ˌθiːəˈretɪkl/
+3551。drum。n. 鼓。/drʌm/
+3552。waste。n. 浪费。/weɪst/
+3553。finally。adv. 最后。/ˈfaɪnəli/
+3554。wet。adj. [气象][物] 潮湿的。/wet/
+3555。forgive。vt. 原谅。/fərˈɡɪv/
+3556。secretary。n. 秘书。/ˈsekrəteri/
+3557。thrive。vi. 繁荣。/θraɪv/
+3558。famous。adj. 著名的。/ˈfeɪməs/
+3559。forget。vt. 忘记。/fərˈɡet/
+3560。clearly。adv. 清晰地。/ˈklɪrli/
+3561。borrow。vi. 借。/ˈbɔːroʊ/
+3562。organic。adj. [有化] 有机的。/ɔːrˈɡænɪk/
+3563。themselves。pron. 他们自己。/ðəmˈselvz/
+3564。receive。vt. 收到。/rɪˈsiːv/
+3565。behind。adv. 在后地。/bɪˈhaɪnd/
+3566。unjust。adj. 不公平的。/ˌʌnˈdʒʌst/
+3567。satisfy。vi. 令人满意。/ˈsætɪsfaɪ/
+3568。condemn。vt. 谴责。/kənˈdem/
+3569。wonderful。adj. 极好的。/ˈwʌndərfl/
+3570。horn。n. 喇叭。/hɔːrn/
+3571。talent。n. 才能。/ˈtælənt/
+3572。donkey。n. 驴子。/ˈdɑːŋki/
+3573。undertaking。n. 事业。/ˌʌndərˈteɪkɪŋ/
+3574。dive。vi. 潜水。/daɪv/
+3575。hers。pron. (上文提过的女性)她的。/hɜːrz,ɜːrz/
+3576。independent。adj. 独立的。/ˌɪndɪˈpendənt/
+3577。summary。n. 总结。/ˈsʌməri/
+3578。age。n. 年龄。/eɪdʒ/
+3579。company。n. 公司。/ˈkʌmpəni/
+3580。evaluate。vt. 评价。/ɪˈvæljueɪt/
+3581。wireless。adj. 无线的。/ˈwaɪərləs/
+3582。alphabet。n. 字母表。/ˈælfəbet/
+3583。singer。n. 歌手。/ˈsɪŋər/
+3584。justice。n. 司法。/ˈdʒʌstɪs/
+3585。cock。n. 公鸡。/kɑːk/
+3586。energy。n. [物] 能量。/ˈenərdʒi/
+3587。multiple。adj. 多重的。/ˈmʌltɪpl/
+3588。china。n. 瓷器。/ˈtʃaɪnə/
+3589。wherever。adv. 无论什么地方。/werˈevər/
+3590。rot。v. (使)腐烂。/rɑːt/
+3591。upon。prep. 在……之上。/əˈpɑːn/
+3592。precision。n. 精度。/prɪˈsɪʒn/
+3593。store。n. 商店。/stɔːr/
+3594。liter。n. [计量] 公升。/ˈliːtər/
+3595。version。n. 版本。/ˈvɜːrʒn/
+3596。compel。vt. 强迫。/kəmˈpel/
+3597。lady。n. 女士。/ˈleɪdi/
+3598。housewife。n. 家庭主妇。/ˈhaʊswaɪf/
+3599。circumference。n. 圆周。/sərˈkʌmfərəns/
+3600。above。adj. 上面的。/əˈbʌv/
+3601。arrest。v. 逮捕。/əˈrest/
+3602。interference。n. 干扰。/ˌɪntərˈfɪrəns/
+3603。tip。n. 顶。/tɪp/
+3604。license。n. 执照。/ˈlaɪsns/
+3605。characteristic。adj. 典型的。/ˌkærəktəˈrɪstɪk/
+3606。install。vt. 安装。/ɪnˈstɔːl/
+3607。customer。n. 顾客。/ˈkʌstəmər/
+3608。saw。n. 锯。/sɔː/
+3609。postman。n. 邮递员。/ˈpoʊstmən/
+3610。spread。vi. 传播。/spred/
+3611。compute。vt. 计算。/kəmˈpjuːt/
+3612。western。adj. 西方的。/ˈwestərn/
+3613。biology。n. (一个地区全部的)生物。/baɪˈɑːlədʒi/
+3614。ever。adv. 永远。/ˈevər/
+3615。comparison。n. 比较。/kəmˈpærɪsn/
+3616。flame。n. 火焰。/fleɪm/
+3617。reinforce。vt. 加强。/ˌriːɪnˈfɔːrs/
+3618。cabin。n. 小屋。/ˈkæbɪn/
+3619。before。adv. 在前。/bɪˈfɔːr/
+3620。length。n. 长度。/leŋkθ/
+3621。excessive。adj. 过多的。/ɪkˈsesɪv/
+3622。cabinet。n. 内阁。/ˈkæbɪnət/
+3623。disease。n. 病。/dɪˈziːz/
+3624。circumstance。n. 环境。/ˈsɜːrkəmstæns/
+3625。expect。vt. 期望。/ɪkˈspekt/
+3626。scream。vi. 尖叫。/skriːm/
+3627。actually。adv. 实际上。/ˈæktʃuəli/
+3628。widely。adv. 广泛地。/ˈwaɪdli/
+3629。stripe。n. 条纹。/straɪp/
+3630。victim。n. 受害人。/ˈvɪktɪm/
+3631。harness。n. 马具。/ˈhɑːrnɪs/
+3632。sale。n. 销售。/seɪl/
+3633。inspire。vt. 激发。/ɪnˈspaɪər/
+3634。Marxist。n. 马克思主义者。/ˈmɑːrksɪst/
+3635。avoid。vt. 避免。/əˈvɔɪd/
+3636。confine。vt. 限制。/kənˈfaɪn/
+3637。bang。n. 刘海。/bæŋ/
+3638。splash。n. 溅。/splæʃ/
+3639。obviously。adv. 明显地。/ˈɑːbviəsli/
+3640。outdoor。adj. 户外的。/ˈaʊtdɔːr/
+3641。simple。adj. 简单的。/ˈsɪmpl/
+3642。tropical。adj. 热带的。/ˈtrɑːpɪkl/
+3643。vanish。vi. 消失。/ˈvænɪʃ/
+3644。upper。adj. 上面的。/ˈʌpər/
+3645。immediate。adj. 立即的。/ɪˈmiːdiət/
+3646。seek。vt. 寻求。/siːk/
+3647。weave。vt. 编织。/wiːv/
+3648。jail。n. 监狱。/dʒeɪl/
+3649。extra。adj. 额外的。/ˈekstrə/
+3650。utter。adj. 完全的。/ˈʌtər/
+3651。naval。adj. 海军的。/ˈneɪvl/
+3652。corridor。n. 走廊。/ˈkɔːrɪdɔːr/
+3653。slum。n. 贫民窟。/slʌm/
+3654。nine。num. 九。/naɪn/
+3655。endure。vt. 忍耐。/ɪnˈdʊr/
+3656。another。det. 又一。/əˈnʌðər/
+3657。end。n. 结束。/end/
+3658。invitation。n. 邀请。/ˌɪnvɪˈteɪʃn/
+3659。operation。n. 操作。/ˌɑːpəˈreɪʃn/
+3660。acceptance。n. 接纳。/əkˈseptəns/
+3661。rational。adj. 合理的。/ˈræʃnəl/
+3662。hold。vt. 持有。/hoʊld/
+3663。aboard。adv. 在(飞机、火车、船)上。/əˈbɔːrd/
+3664。betray。vt. 背叛。/bɪˈtreɪ/
+3665。wax。n. 蜡。/wæks/
+3666。remember。vt. 记得。/rɪˈmembər/
+3667。institute。n. (尤指科学、教育的)机构。/ˈɪnstɪtuːt/
+3668。earn。vt. 赚。/ɜːrn/
+3669。academic。adj. 学术的。/ˌækəˈdemɪk/
+3670。impatient。adj. 焦躁的。/ɪmˈpeɪʃnt/
+3671。democratic。adj. 民主的。/ˌdeməˈkrætɪk/
+3672。impact。n. 影响。/ˈɪmpækt/
+3673。method。n. 方法。/ˈmeθəd/
+3674。June。n. 六月。/dʒuːn/
+3675。zebra。n. [脊椎] 斑马。/ˈziːbrə/
+3676。collar。n. 衣领。/ˈkɑːlər/
+3677。reading。n. 阅读。/ˈriːdɪŋ/
+3678。motivate。v. 刺激。/ˈmoʊtɪveɪt/
+3679。tenant。n. 承租人。/ˈtenənt/
+3680。resemble。vt. 类似。/rɪˈzembl/
+3681。behalf。n. 代表。/bɪˈhæf/
+3682。carpet。n. 地毯。/ˈkɑːrpɪt/
+3683。branch。n. 分支。/bræntʃ/
+3684。habit。n. 习惯。/ˈhæbɪt/
+3685。glare。v. 怒目而视。/ɡler/
+3686。tree。n. 树。/triː/
+3687。custom。n. 习惯。/ˈkʌstəm/
+3688。salute。n. 致敬。/səˈluːt/
+3689。event。n. 事件。/ɪˈvent/
+3690。mutual。adj. 共同的。/ˈmjuːtʃuəl/
+3691。polite。adj. 有礼貌的。/pəˈlaɪt/
+3692。sample。n. 标本。/ˈsæmpl/
+3693。stool。n. 凳子。/stuːl/
+3694。guarantee。n. 保证。/ˌɡærənˈtiː/
+3695。ton。n. 吨。/tʌn/
+3696。now。adv. 现在。/naʊ/
+3697。wing。n. 翼。/wɪŋ/
+3698。murder。n. 谋杀。/ˈmɜːrdər/
+3699。Sunday。n. 星期日。/'sʌndi/
+3700。rebel。n. 造反者。/ˈrebl/
+3701。device。n. 装置。/dɪˈvaɪs/
+3702。ray。n. 射线。/reɪ/
+3703。ghost。n. 鬼。/ɡoʊst/
+3704。hopeful。adj. 有希望的。/ˈhoʊpfl/
+3705。berry。n. 浆果。/ˈberi/
+3706。decide。vt. 决定。/dɪˈsaɪd/
+3707。storm。n. 暴风雨。/stɔːrm/
+3708。equipment。n. 设备。/ɪˈkwɪpmənt/
+3709。eve。n. 夏娃。/iːv/
+3710。exceedingly。adv. 非常。/ɪkˈsiːdɪŋli/
+3711。idea。n. 想法。/aɪˈdiːə/
+3712。bike。n. 自行车。/baɪk/
+3713。hay。n. 干草。/heɪ/
+3714。purple。adj. 紫色的。/ˈpɜːrpl/
+3715。recorder。n. 录音机。/rɪˈkɔːrdər/
+3716。remain。vi. 保持。/rɪˈmeɪn/
+3717。associate。vt. 使发生联系。/əˈsəʊsieɪt/
+3718。African。adj. (与)非洲(有关)的。/ˈæfrɪkən/
+3719。skim。v. 撇去。/skɪm/
+3720。mainland。n. 大陆。/ˈmeɪnlænd/
+3721。senior。adj. 高级的。/ˈsiːniər/
+3722。switch。n. 开关。/swɪtʃ/
+3723。project。n. 计划。/ˈprɑːdʒekt/
+3724。pronunciation。n. 发音。/prəˌnʌnsiˈeɪʃn/
+3725。umbrella。n. 雨伞。/ʌmˈbrelə/
+3726。electricity。n. 电力。/ɪˌlekˈtrɪsəti/
+3727。candle。n. 蜡烛。/ˈkændl/
+3728。unfortunately。adv. 不幸地。/ʌnˈfɔːrtʃənətli/
+3729。forth。adv. 向前。/fɔːrth/
+3730。fist。n. 拳。/fɪst/
+3731。Japanese。adj. 日本(人)的。/ˌdʒæpəˈniːz/
+3732。ox。n. 牛。/ɑːks/
+3733。liable。adj. 有责任的。/ˈlaɪəbl/
+3734。badminton。n. 羽毛球。/ˈbædmɪntən/
+3735。isolate。vt. 使隔离。/ˈaɪsəleɪt/
+3736。cat。n. 猫。/kæt/
+3737。wear。vt. 穿。/wer/
+3738。belt。n. 带。/belt/
+3739。its。pron. 它的。/ɪts/
+3740。meaning。n. 意义。/ˈmiːnɪŋ/
+3741。strong。adj. 坚强的。/strɔːŋ/
+3742。wallet。n. 钱包。/ˈwɑːlɪt/
+3743。adopt。vt. 采取。/əˈdɑːpt/
+3744。sleeve。n. [机] 套筒。/sliːv/
+3745。stress。n. 压力。/stres/
+3746。blend。vt. 混合。/blend/
+3747。colonel。n. 陆军上校。/ˈkɜːrnl/
+3748。dollar。n. 美元。/ˈdɑːlər/
+3749。velocity。n. 【物】速度。/vəˈlɑːsəti/
+3750。responsible。adj. 负责的。/rɪˈspɑːnsəbl/
+3751。goat。n. 山羊。/goʊt/
+3752。illustrate。vt. 阐明。/ˈɪləstreɪt/
+3753。comparative。adj. 比较的。/kəmˈpærətɪv/
+3754。resistance。n. 阻力。/rɪˈzɪstəns/
+3755。game。n. 游戏。/ɡeɪm/
+3756。frost。n. 严寒天气。/frɔːst/
+3757。shrink。v. 收缩。/ʃrɪŋk/
+3758。vinegar。n. 醋。/ˈvɪnɪɡər/
+3759。axis。n. 轴。/ˈæksɪs/
+3760。director。n. 主任。/dəˈrektə(r)/
+3761。technician。n. 技师。/tekˈnɪʃn/
+3762。October。n. [天] 十月。/ɑːkˈtoʊbər/
+3763。pierce。v. (锋利尖锐物体)刺穿。/pɪrs/
+3764。kettle。n. 壶。/ˈketl/
+3765。significance。n. 意义。/sɪɡˈnɪfɪkəns/
+3766。revolt。n. 违抗。/rɪˈvoʊlt/
+3767。push。vt. 推动。/pʊʃ/
+3768。meat。n. 肉。/miːt/
+3769。objective。n. 目的。/əbˈdʒektɪv/
+3770。leg。n. 腿。/leɡ/
+3771。westward。adj. 向西的。/ˈwestwərd/
+3772。transformer。n. [电] 变压器。/trænsˈfɔːrmər/
+3773。definite。adj. 一定的。/ˈdefɪnət/
+3774。embrace。vt. 拥抱。/ɪmˈbreɪs/
+3775。Polish。adj. 波兰的。/ˈpɑːlɪʃ/
+3776。factor。n. 因素。/ˈfæktər/
+3777。fibre。n. 纤维。/ˈfaɪbər/
+3778。closely。adv. 紧密地。/ˈkloʊsli/
+3779。account。n. 账户。/əˈkaʊnt/
+3780。protest。n. 抗议。/ˈprəʊtest/
+3781。vote。n. 投票。/voʊt/
+3782。player。n. 运动员。/ˈpleɪər/
+3783。boat。n. 小船。/boʊt/
+3784。reveal。vt. 显示。/rɪˈviːl/
+3785。refute。vt. 反驳。/rɪˈfjuːt/
+3786。rag。n. 破布。/ræɡ/
+3787。interesting。adj. 有趣的。/ˈɪntrəstɪŋ/
+3788。refusal。n. 拒绝。/rɪˈfjuːzl/
+3789。confident。adj. 自信的。/ˈkɑːnfɪdənt/
+3790。occasion。n. 时机。/əˈkeɪʒn/
+3791。emotional。adj. 情绪的。/ɪˈmoʊʃənl/
+3792。sail。vi. 航行。/seɪl/
+3793。injection。n. 注射。/ɪnˈdʒekʃn/
+3794。sparkle。v. (使)闪耀。/ˈspɑːrkl/
+3795。usually。adv. 通常。/ˈjuːʒəli/
+3796。cultivate。vt. 培养。/ˈkʌltɪveɪt/
+3797。reverse。n. 相反。/rɪˈvɜːrs/
+3798。alike。adj. 相似的。/əˈlaɪk/
+3799。compass。n. 指南针。/ˈkʌmpəs/
+3800。holy。adj. 圣洁的。/ˈhoʊli/
+3801。intense。adj. 强烈的。/ɪnˈtens/
+3802。advise。vt. 建议。/ədˈvaɪz/
+3803。fortunate。adj. 幸运的。/ˈfɔːrtʃənət/
+3804。toward。prep. 向。/tɔːrd/
+3805。stay。vi. 停留。/steɪ/
+3806。enclose。vt. 围绕。/ɪnˈkloʊz/
+3807。boundary。n. 边界。/ˈbaʊndri/
+3808。split。vt. 分离。/splɪt/
+3809。thick。adj. 厚的。/θɪk/
+3810。into。prep. 到……里面。/ˈɪntuː/
+3811。yourself。pron. 你自己。/jɔːˈself/
+3812。aviation。n. 航空。/ˌeɪviˈeɪʃn/
+3813。glow。vi. 发光。/ɡloʊ/
+3814。toy。n. 玩具。/tɔɪ/
+3815。defect。n. 缺点。/'diːfekt/
+3816。pop。n. 取出。/pɑːp/
+3817。war。n. 战争。/wɔːr/
+3818。everything。pron. 每件事物。/ˈevriθɪŋ/
+3819。hospital。n. 医院。/ˈhɑːspɪtl/
+3820。youthful。adj. 年轻的。/ˈjuːθfl/
+3821。optimistic。adj. 乐观的。/ˌɑːptɪˈmɪstɪk/
+3822。rule。n. 规则。/ruːl/
+3823。avenue。n. 大街。/ˈævənuː/
+3824。treaty。n. 条约。/ˈtriːti/
+3825。jewel。n. 宝石。/ˈdʒuːəl/
+3826。fluent。adj. 流畅的。/ˈfluːənt/
+3827。conservation。n. 保存。/ˌkɑːnsərˈveɪʃn/
+3828。rifle。n. 步枪。/ˈraɪfl/
+3829。use。n. 使用。/juːz/
+3830。high。adj. 高的。/haɪ/
+3831。point。n. 要点。/pɔɪnt/
+3832。lately。adv. 近来。/ˈleɪtli/
+3833。kneel。vi. 跪下。/niːl/
+3834。separately。adv. 分别地。/ˈseprətli/
+3835。trim。adj. 整齐的。/trɪm/
+3836。torture。n. 折磨。/ˈtɔːrtʃər/
+3837。landlord。n. 房东。/ˈlændlɔːrd/
+3838。condition。n. 条件。/kənˈdɪʃn/
+3839。both。det. 双方。/boʊθ/
+3840。undertake。vt. 承担。/ˌʌndərˈteɪk/
+3841。hunger。n. 饿。/ˈhʌŋɡər/
+3842。pitch。n. 程度。/pɪtʃ/
+3843。assembly。n. 装配。/əˈsembli/
+3844。student。n. 学生。/ˈstuːdnt/
+3845。define。vt. 定义。/dɪˈfaɪn/
+3846。frequently。adv. 频繁地。/ˈfriːkwəntli/
+3847。rat。n. 鼠。/ræt/
+3848。stand。vi. 站立。/stænd/
+3849。mix。v. 使混和。/mɪks/
+3850。rock。n. 岩石。/rɑːk/
+3851。chemist。n. 化学家。/ˈkemɪst/
+3852。under。prep. 在...之下。/ˈʌndər/
+3853。conclusion。n. 结论。/kənˈkluːʒn/
+3854。same。adj. 相同的。/seɪm/
+3855。shady。adj. 成荫的。/ˈʃeɪdi/
+3856。severe。adj. 严峻的。/sɪˈvɪr/
+3857。careless。adj. 粗心的。/ˈkerləs/
+3858。greet。vt. 欢迎。/ɡriːt/
+3859。evolution。n. 演变。/ˌevəˈluːʃn/
+3860。unstable。adj. 不稳定的。/ʌnˈsteɪbl/
+3861。wool。n. 羊毛。/wʊl/
+3862。liberation。n. 释放。/ˌlɪbəˈreɪʃn/
+3863。squeeze。n. 压榨。/skwiːz/
+3864。familiar。adj. 熟悉的。/fəˈmɪliər/
+3865。numerous。adj. 许多的。/ˈnuːmərəs/
+3866。upward。adj. 向上的。/ˈʌpwərd/
+3867。childhood。n. 童年时期。/ˈtʃaɪldhʊd/
+3868。mislead。vt. 误导。/ˌmɪsˈliːd/
+3869。thickness。n. 厚度。/ˈθɪknəs/
+3870。quality。n. 质量。/ˈkwɑːləti/
+3871。roof。n. 屋顶。/ruːf/
+3872。lest。conj. 唯恐。/lest/
+3873。aeroplane。n. 飞机。/ˈerəpleɪn/
+3874。dance。n. 舞蹈。/dæns/
+3875。inside。n. 里面。/ˌɪnˈsaɪd/
+3876。imagination。n. [心理] 想象力。/ɪˌmædʒɪˈneɪʃn/
+3877。reward。n. [劳经] 报酬。/rɪˈwɔːrd/
+3878。worthless。adj. 无价值的。/ˈwɜːrθləs/
+3879。connect。vt. 连接。/kəˈnekt/
+3880。corn。n. (美)玉米。/kɔːrn/
+3881。anxiety。n. 焦虑。/æŋˈzaɪəti/
+3882。derive。vt. 源于。/dɪˈraɪv/
+3883。shopkeeper。n. 店主。/ˈʃɑːpkiːpər/
+3884。walk。vi. 步，行，走。/wɔːk/
+3885。northeast。n. 东北方。/ˌnɔːrθˈiːst/
+3886。junior。n. 年少者。/ˈdʒuːniər/
+3887。battery。n. [电] 电池。/ˈbætəri/
+3888。for。prep. (表示目的)为了。/fər,fɔːr/
+3889。porter。n. 门房。/'potər/
+3890。kick。v. 踢。/kɪk/
+3891。additional。adj. 附加的。/əˈdɪʃənl/
+3892。altitude。n. 高地。/ˈæltɪtuːd/
+3893。response。n. 响应。/rɪˈspɑːns/
+3894。headmaster。n. 校长。/ˌhedˈmæstər/
+3895。imprison。vt. 监禁。/ɪmˈprɪzn/
+3896。intelligent。adj. 智能的。/ɪnˈtelɪdʒənt/
+3897。eighteen。n. 十八。/ˌeɪˈtiːn/
+3898。quarterly。adj. 季度的。/ˈkwɔːrtərli/
+3899。melon。n. 瓜。/ˈmelən/
+3900。expansion。n. 膨胀。/ɪkˈspænʃn/
+3901。occupation。n. 职业。/ˌɑːkjuˈpeɪʃn/
+3902。bat。n. 蝙蝠。/bæt/
+3903。ear。n. 耳朵。/ɪr/
+3904。secondary。adj. 第二的。/ˈsekənderi/
+3905。afford。vt. 买得起。/əˈfɔːrd/
+3906。solely。adv. 单独地。/ˈsoʊlli/
+3907。unable。adj. 不会的。/ʌnˈeɪbl/
+3908。enemy。n. 敌人。/ˈenəmi/
+3909。precious。adj. 宝贵的。/ˈpreʃəs/
+3910。earthquake。n. 地震。/ˈɜːrθkweɪk/
+3911。deaf。adj. 聋的。/def/
+3912。resistant。adj. 抵抗的。/rɪˈzɪstənt/
+3913。seventeen。n. 十七。/ˌsevnˈtiːn/
+3914。ownership。n. 所有权。/ˈoʊnərʃɪp/
+3915。contemporary。adj. 发生(属)于同时期的。/kənˈtempəreri/
+3916。mother。n. 母亲。/ˈmʌðər/
+3917。mend。vt. 修理。/mend/
+3918。thief。n. 小偷。/θiːf/
+3919。tap。v. 轻敲。/tæp/
+3920。startle。vt. 使吓一跳。/ˈstɑːrtl/
+3921。storey。n. [建] 楼层。/ˈstɔːri/
+3922。mechanics。n. 力学。/məˈkænɪks/
+3923。sack。n. 麻布袋。/sæk/
+3924。will。n. 意志。/wɪl/
+3925。graceful。adj. 优雅的。/ˈɡreɪsfl/
+3926。artificial。adj. 人造的。/ˌɑːrtɪˈfɪʃl/
+3927。damp。adj. 潮湿的。/dæmp/
+3928。fear。n. 害怕。/fɪr/
+3929。compress。vi. 受压缩小。/kəmˈpres/
+3930。independence。n. 独立性。/ˌɪndɪˈpendəns/
+3931。pioneer。n. 先锋。/ˌpaɪəˈnɪr/
+3932。sugar。n. 糖。/ˈʃʊɡər/
+3933。legal。adj. 法律的。/ˈliːɡl/
+3934。worm。n. 虫。/wɜːrm/
+3935。rotation。n. 旋转。/roʊˈteɪʃn/
+3936。grandmother。n. 祖母。/ˈɡrænmʌðər/
+3937。former。adj. 从前的。/ˈfɔːrmər/
+3938。mass。n. 块。/mæs/
+3939。ant。n. 蚂蚁。/ænt/
+3940。Greek。n. 希腊语。/ɡriːk/
+3941。till。prep. 直到。/tɪl/
+3942。minimum。n. 最小值。/ˈmɪnɪməm/
+3943。qualify。vt. 限定。/ˈkwɑːlɪfaɪ/
+3944。sickness。n. 疾病。/ˈsɪknəs/
+3945。Christmas。n. 圣诞节。/ˈkrɪsməs/
+3946。tame。adj. 驯服的。/teɪm/
+3947。menu。n. 菜单。/ˈmenjuː/
+3948。no。n. 否定。/noʊ/
+3949。arrow。n. 箭。/ˈæroʊ/
+3950。shade。n. 荫。/ʃeɪd/
+3951。lunch。n. 午餐。/lʌntʃ/
+3952。librarian。n. 图书馆员。/laɪˈbreriən/
+3953。vision。n. 视力。/ˈvɪʒn/
+3954。word。n. [语] 单词。/wɜːrd/
+3955。Chinese。n. 中文。/ˌtʃaɪˈniːz/
+3956。timber。n. 木材。/ˈtɪmbər/
+3957。sponsor。n. 赞助者。/ˈspɑːnsər/
+3958。transformation。n. [遗] 转化。/ˌtrænsfərˈmeɪʃn/
+3959。regard。n. 注意。/rɪˈɡɑːrd/
+3960。beach。n. 海滩。/biːtʃ/
+3961。nineteen。num. 十九。/ˌnaɪnˈtiːn/
+3962。resist。vi. 抵抗。/rɪˈzɪst/
+3963。trace。n. 痕迹。/treɪs/
+3964。shallow。adj. 浅的。/ˈʃæloʊ/
+3965。general。adj. 一般的。/ˈdʒenrəl/
+3966。confirm。vt. 确认。/kənˈfɜːrm/
+3967。please。vt. 使喜欢。/pliːz/
+3968。accommodate。vt. 容纳。/əˈkɑːmədeɪt/
+3969。news。n. 新闻。/nuːz/
+3970。rehearsal。n. 排演。/rɪˈhɜːrsl/
+3971。pupil。n. 学生。/ˈpjuːpl/
+3972。anchor。n. 锚。/ˈæŋkər/
+3973。captain。n. 队长。/ˈkæptɪn/
+3974。digital。adj. 数字的。/ˈdɪdʒɪtl/
+3975。displease。vt. 使生气。/dɪsˈpliːz/
+3976。tag。n. 标签。/tæɡ/
+3977。picture。n. 照片。/ˈpɪktʃər/
+3978。brother。n. 兄弟。/ˈbrʌðər/
+3979。balloon。n. 气球。/bəˈluːn/
+3980。departure。n. 离开。/dɪˈpɑːrtʃər/
+3981。select。vt. 选择。/sɪˈlekt/
+3982。teach。vt. 教。/tiːtʃ/
+3983。application。n. 应用。/ˌæplɪˈkeɪʃn/
+3984。star。n. 星。/stɑːr/
+3985。blaze。n. 火焰。/bleɪz/
+3986。indicate。vt. 表明。/ˈɪndɪkeɪt/
+3987。oriental。adj. 东方的。/ˌɔːriˈentl/
+3988。slide。v. (使)滑动。/slaɪd/
+3989。remove。vt. 移动。/rɪˈmuːv/
+3990。stream。n. 溪流。/striːm/
+3991。wait。vt. 等候。/weɪt/
+3992。transform。vt. 改变。/trænsˈfɔːrm/
+3993。appearance。n. 外貌。/əˈpɪrəns/
+3994。tire。v. 疲劳。/ˈtaɪər/
+3995。thirst。n. 渴望。/θɜːrst/
+3996。compose。vt. 构成。/kəmˈpoʊz/
+3997。statue。n. 雕像。/ˈstætʃuː/
+3998。employer。n. 雇主。/ɪmˈplɔɪər/
+3999。especially。adv. 特别。/ɪˈspeʃəli/
+4000。runner。n. 跑步者。/ˈrʌnər/
+4001。loop。n. 环。/luːp/
+4002。ask。vt. 问。/æsk/
+4003。outset。n. 开始。/ˈaʊtset/
+4004。furious。adj. 激烈的。/ˈfjʊriəs/
+4005。relationship。n. 关系。/rɪˈleɪʃnʃɪp/
+4006。baby。n. 婴儿。/ˈbeɪbi/
+4007。worthy。adj. 值得的。/ˈwɜːrði/
+4008。furnace。n. 火炉。/ˈfɜːrnɪs/
+4009。humid。adj. 潮湿的。/ˈhjuːmɪd/
+4010。wind。n. 风。/wɪnd; waɪnd/
+4011。traitor。n. 叛徒。/ˈtreɪtər/
+4012。rug。n. 小地毯。/rʌɡ/
+4013。report。n. 报告。/rɪˈpɔːrt/
+4014。criminal。adj. 犯罪的。/ˈkrɪmɪnl/
+4015。unexpected。adj. 意外的。/ˌʌnɪkˈspektɪd/
+4016。overcoat。n. 大衣。/ˈoʊvərkoʊt/
+4017。gain。n. 增加。/ɡeɪn/
+4018。unite。vt. 使…混合。/juˈnaɪt/
+4019。salesman。n. 推销员。/ˈseɪlzmən/
+4020。serious。adj. 严肃的。/ˈsɪriəs/
+4021。gay。adj. 同性恋的。/ɡeɪ/
+4022。chemical。n. 化学制品。/ˈkemɪkl/
+4023。centigrade。adj. 摄氏温度的。/ˈsentɪɡreɪd/
+4024。drink。n. 饮料。/drɪŋk/
+4025。solemn。adj. 庄严的。/ˈsɑːləm/
+4026。queer。n. 同性恋者。/kwɪr/
+4027。sight。n. 视力。/saɪt/
+4028。touch。n. 触。/tʌtʃ/
+4029。execute。vt. 实行。/ˈeksɪkjuːt/
+4030。distribution。n. 分布。/ˌdɪstrɪˈbjuːʃn/
+4031。suffer。vt. 遭受。/ˈsʌfər/
+4032。coarse。adj. 粗糙的。/kɔːrs/
+4033。throne。n. 王座。/θroʊn/
+4034。victory。n. 胜利。/ˈvɪktəri/
+4035。shadow。n. 阴影。/ˈʃædoʊ/
+4036。demand。n. (坚决的或困难的)要求。/dɪˈmænd/
+4037。department。n. 部。/dɪˈpɑːrtmənt/
+4038。carbon。n. [化学] 碳。/ˈkɑːrbən/
+4039。crust。n. 地壳。/krʌst/
+4040。great。adj. 伟大的。/ɡreɪt/
+4041。oar。n. 桨。/ɔːr/
+4042。raise。vt. 提高。/reɪz/
+4043。conduct。v. 组织。/kənˈdʌkt/
+4044。want。vt. 需要。/wɑːnt/
+4045。danger。n. 危险。/ˈdeɪndʒər/
+4046。Britain。n. 英国。/ˈbrɪtn/
+4047。summer。n. 夏季。/ˈsʌmər/
+4048。hall。n. 过道。/hɔːl/
+4049。genuine。adj. 真实的。/ˈdʒenjuɪn/
+4050。toe。n. 脚趾。/toʊ/
+4051。railroad。n. 铁路。/ˈreɪlroʊd/
+4052。interruption。n. 中断。/ˌɪntəˈrʌpʃn/
+4053。frank。adj. 坦白的。/fræŋk/
+4054。sparrow。n. 麻雀。/ˈspæroʊ/
+4055。decrease。v. 减少。/dɪˈkriːs; ˈdiːkriːs/
+4056。August。n. 八月。/ɔːˈɡʌst/
+4057。cotton。n. 棉花。/ˈkɑːtn/
+4058。command。n. 命令。/kəˈmænd/
+4059。silence。n. 沉默。/ˈsaɪləns/
+4060。keep。vt. 保持。/kiːp/
+4061。notebook。n. 笔记本。/ˈnoʊtbʊk/
+4062。since。prep. 自……以后。/sɪns/
+4063。manage。vt. 管理。/ˈmænɪdʒ/
+4064。water。n. 水。/ˈwɔːtər/
+4065。Canadian。adj. 加拿大的。/kəˈneɪdiən/
+4066。rural。adj. 农村的。/ˈrʊrəl/
+4067。self。n. 自己。/self/
+4068。activity。n. 活动。/ækˈtɪvəti/
+4069。ease。n. 容易。/iːz/
+4070。variation。n. 变化。/ˌveriˈeɪʃn/
+4071。lion。n. 狮子。/ˈlaɪən/
+4072。mess。n. 混乱。/mes/
+4073。ax。v. 削减。/æks/
+4074。dorm。n. 宿舍。/dɔːrm/
+4075。rotten。adj. 腐烂的。/ˈrɑːtn/
+4076。gap。n. 间隙。/ɡæp/
+4077。unity。n. 团结。/ˈjuːnəti/
+4078。Canada。n. 加拿大。/ˈkænədə/
+4079。hot。adj. 热的。/hɑːt/
+4080。recognition。n. 识别。/ˌrekəɡˈnɪʃn/
+4081。polish。n. 磨光。/ˈpɑːlɪʃ/
+4082。bitterly。adv. 苦涩地。/ˈbɪtərli/
+4083。incorrect。adj. 错误的。/ˌɪnkəˈrekt/
+4084。library。n. 图书馆。/ˈlaɪbreri/
+4085。deer。n. 鹿。/dɪr/
+4086。easily。adv. 容易地。/ˈiːzəli/
+4087。calculate。vi. 计算。/ˈkælkjuleɪt/
+4088。affair。n. 事情。/əˈfer/
+4089。dismiss。vt. 解散。/dɪsˈmɪs/
+4090。identical。adj. 同一的。/aɪˈdentɪkl/
+4091。multiply。vt. 乘。/ˈmʌltɪplaɪ/
+4092。brittle。adj. 易碎的。/ˈbrɪtl/
+4093。nose。n. 鼻子。/noʊz/
+4094。sew。vt. 缝合。/soʊ/
+4095。Soviet。n. 苏维埃。/,sovɪ'et/
+4096。threat。n. 威胁。/θret/
+4097。centimetre。n. 厘米。/ˈsentɪmiːtər/
+4098。next。adj. 紧接在后的。/nekst/
+4099。if。conj. (表条件)如果。/ɪf/
+4100。realize。vt. 实现。/ˈriːəlaɪz/
+4101。secret。adj. 秘密的。/ˈsiːkrət/
+4102。haircut。n. 理发。/ˈherkʌt/
+4103。across。adv. 横过。/əˈkrɔːs/
+4104。fact。n. 事实。/fækt/
+4105。acceleration。n. 加速。/əkˌseləˈreɪʃn/
+4106。leak。n. 漏洞。/liːk/
+4107。prejudice。n. 偏见。/ˈpredʒudɪs/
+4108。mist。n. 薄雾。/mɪst/
+4109。lay。vt. 放置。/leɪ/
+4110。darling。n. 心爱的人。/ˈdɑːrlɪŋ/
+4111。street。n. 街道。/striːt/
+4112。test。n. 测验。/test/
+4113。herd。n. 兽群。/hɜːrd/
+4114。curious。adj. 好奇的。/ˈkjʊriəs/
+4115。enormous。adj. 庞大的。/ɪˈnɔːrməs/
+4116。interior。n. 内部。/ɪnˈtɪriər/
+4117。truly。adv. 真实地。/ˈtruːli/
+4118。lesson。n. 教训。/ˈlesn/
+4119。Portugal。n. 葡萄牙。/ˈpɔːrtʃʊɡl/
+4120。where。adv. 在哪里。/wer/
+4121。dawn。n. 黎明。/dɔːn/
+4122。map。n. 地图。/mæp/
+4123。top。n. 顶部。/tɑːp/
+4124。lightning。n. 闪电。/ˈlaɪtnɪŋ/
+4125。April。n. 四月。/ˈeɪprəl/
+4126。roast。v. 烤。/roʊst/
+4127。substitute。n. 代用品。/ˈsʌbstɪtuːt/
+4128。can。vt. 装进罐中。/kæn; kən/
+4129。surroundings。n. 环境。/səˈraʊndɪŋz/
+4130。quote。vt. 引用。/kwoʊt/
+4131。means。n. 手段。/miːnz/
+4132。chill。n. 寒冷。/tʃɪl/
+4133。luck。n. 运气。/lʌk/
+4134。mount。n. 乘用马。/maʊnt/
+4135。might。aux. 可能。/maɪt/
+4136。college。n. 大学。/ˈkɑːlɪdʒ/
+4137。quilt。n. 被子。/kwɪlt/
+4138。national。adj. 国家的。/ˈnæʃnəl/
+4139。seaman。n. 海员。/ˈsiːmən/
+4140。sober。adj. 冷静的。/ˈsoʊbər/
+4141。southern。adj. 南的。/ˈsʌðərn/
+4142。appliance。n. 器具。/əˈplaɪəns/
+4143。small。adj. 少的。/smɔːl/
+4144。too。adv. 太。/tuː/
+4145。vast。adj. 广阔的。/væst/
+4146。instrument。n. 仪器。/ˈɪnstrəmənt/
+4147。saint。n. 圣人。/seɪnt/
+4148。anywhere。adv. 在任何地方。/ˈeniwer/
+4149。magnificent。adj. 高尚的。/mæɡˈnɪfɪsnt/
+4150。sense。n. 感觉。/sens/
+4151。extent。n. 程度。/ɪkˈstent/
+4152。flavour。n. 香味。/ˈfleɪvər/
+4153。drill。n. 训练。/drɪl/
+4154。journal。n. 日报。/ˈdʒɜːrnl/
+4155。monument。n. 纪念碑。/ˈmɑːnjumənt/
+4156。awake。adj. 醒着的。/əˈweɪk/
+4157。fearful。adj. 可怕的。/ˈfɪrfl/
+4158。interview。n. 接见。/ˈɪntərvjuː/
+4159。elect。vt. 选举。/ɪˈlekt/
+4160。career。n. 生涯。/kəˈrɪr/
+4161。radioactivity。n. 放射性。/ˌreɪdioʊækˈtɪvəti/
+4162。tent。n. 帐篷。/tent/
+4163。rack。n. [机] 齿条。/ræk/
+4164。chest。n. 胸。/tʃest/
+4165。conceal。vt. 隐藏。/kənˈsiːl/
+4166。landlady。n. 女房东。/ˈlændleɪdi/
+4167。embarrass。v. (尤指在社交场合)使窘迫。/ɪmˈbærəs/
+4168。bare。adj. 空的。/ber/
+4169。slip。n. 滑倒。/slɪp/
+4170。escape。n. 逃。/ɪˈskeɪp/
+4171。married。adj. 已婚的。/ˈmærid/
+4172。interval。n. 间隔。/ˈɪntərvl/
+4173。artistic。adj. 艺术的。/ɑːrˈtɪstɪk/
+4174。life。n. 生活。/laɪf/
+4175。fragment。n. 碎片。/ˈfræɡmənt; fræɡˈment/
+4176。metal。n. 金属。/ˈmetl/
+4177。assist。v. 援助。/əˈsɪst/
+4178。night。n. 夜晚。/naɪt/
+4179。breed。v. (使)繁殖。/briːd/
+4180。steadily。adv. 稳定地。/ˈstedəli/
+4181。and。conj. 和。/ənd,ən,n,ænd/
+4182。realm。n. 领域。/relm/
+4183。rear。n. 后面。/rɪr/
+4184。abstract。adj. 纯理论的。/ˈæbstrækt/
+4185。someone。pron. 有人。/ˈsʌmwʌn/
+4186。mankind。n. 人类。/mænˈkaɪnd/
+4187。obvious。adj. 明显的。/ˈɑːbviəs/
+4188。anticipate。v. 预料。/ænˈtɪsɪpeɪt/
+4189。snake。n. 蛇。/sneɪk/
+4190。transistor。n. 晶体管。/trænˈzɪstə(r)/
+4191。twentieth。n. 第二十。/ˈtwentiəθ/
+4192。voice。n. 声音。/vɔɪs/
+4193。broken。adj. 破碎的。/ˈbroʊkən/
+4194。accelerate。vt. 使……加快。/əkˈseləreɪt/
+4195。us。pron. 我们。/əs,ʌs/
+4196。desert。n. 沙漠。/dɪ'zɜːt; 'dezət/
+4197。tired。adj. 疲倦的。/ˈtaɪərd/
+4198。island。n. 岛。/ˈaɪlənd/
+4199。Saturday。n. 星期六。/'sætədei/
+4200。undergraduate。n. 大学本科生。/ˌʌndərˈɡrædʒuət/
+4201。kindness。n. 仁慈。/ˈkaɪndnəs/
+4202。sufficiently。adv. 充分地。/səˈfɪʃntli/
+4203。sponge。n. 海绵。/spʌndʒ/
+4204。severely。adv. 严重地。/sɪˈvɪrli/
+4205。between。prep. (空间、时间、数量等)在……之间。/bɪˈtwiːn/
+4206。analysis。n. 分析。/əˈnæləsɪs/
+4207。boot。n. 美(长统)靴。/buːt/
+4208。else。adv. 其他。/els/
+4209。probably。adv. 大概。/ˈprɑːbəbli/
+4210。bull。n. [动]公牛。/bʊl/
+4211。research。n. 研究。/rɪ'sɜːtʃ/
+4212。kite。n. 风筝。/kaɪt/
+4213。chess。n. 国际象棋。/tʃes/
+4214。spelling。n. 拼写。/ˈspelɪŋ/
+4215。witness。n. 证人。/ˈwɪtnəs/
+4216。plate。n. 碟。/pleɪt/
+4217。steady。adj. 稳定的。/ˈstedi/
+4218。keen。adj. 敏锐的。/kiːn/
+4219。horizon。n. [天] 地平线。/həˈraɪzn/
+4220。beauty。n. 美。/ˈbjuːti/
+4221。tall。adj. 高的。/tɔːl/
+4222。grant。v. (合法地)授予。/ɡrænt/
+4223。staircase。n. 楼梯。/ˈsterkeɪs/
+4224。shilling。n. 先令。/ˈʃɪlɪŋ/
+4225。equip。vt. 装备。/ɪˈkwɪp/
+4226。profession。n. 职业。/prəˈfeʃn/
+4227。considerable。adj. 相当大的。/kənˈsɪdərəbl/
+4228。elevator。n. 电梯。/ˈelɪveɪtər/
+4229。best。adj. 最好的。/best/
+4230。historical。adj. 历史的。/hɪˈstɔːrɪkl/
+4231。hare。n. 野兔。/her/
+4232。cousin。n. 堂兄弟姊妹。/ˈkʌzn/
+4233。sake。n. 目的。/seɪk; ˈsɑːki/
+4234。waterproof。adj. 防水的。/ˈwɔːtərpruːf/
+4235。telescope。n. 望远镜。/ˈtelɪskoʊp/
+4236。mushroom。n. 蘑菇。/ˈmʌʃrʊm,ˈmʌʃruːm/
+4237。combine。vt. 使化合。/kəmˈbaɪn/
+4238。rarely。adv. 很少地。/ˈrerli/
+4239。apparent。adj. 显然的。/əˈpærənt/
+4240。excuse。n. 借口。/ɪkˈskjuːs/
+4241。doubtful。adj. 可疑的。/ˈdaʊtfl/
+4242。gallery。n. 画廊。/ˈɡæləri/
+4243。owe。vt. 欠。/oʊ/
+4244。drawing。n. 图画。/ˈdrɔːɪŋ/
+4245。resource。n. 资源。/rɪˈsɔːs/
+4246。total。adj. 全部的。/ˈtoʊtl/
+4247。sweet。adj. 甜的。/swiːt/
+4248。refine。vt. 精炼。/rɪˈfaɪn/
+4249。move。v. 移动。/muːv/
+4250。precise。adj. 精确的。/prɪˈsaɪs/
+4251。income。n. 收入。/ˈɪnkʌm,ˈɪnkəm/
+4252。cause。n. 原因。/kɔːz/
+4253。tutor。n. 导师。/ˈtuːtər/
+4254。user。n. 用户。/ˈjuːzər/
+4255。honeymoon。n. 蜜月。/ˈhʌnimuːn/
+4256。bound。n. 跃进。/baʊnd/
+4257。hardware。n. 计算机硬件。/ˈhɑːrdwer/
+4258。finish。n. 完成。/ˈfɪnɪʃ/
+4259。male。adj. 男性的。/meɪl/
+4260。necessary。adj. 必要的。/ˈnesəseri/
+4261。beam。n. 横梁。/biːm/
+4262。recently。adv. 最近。/ˈriːsntli/
+4263。rely。vi. 依靠。/rɪˈlaɪ/
+4264。town。n. 城镇。/taʊn/
+4265。bee。n. 蜜蜂。/biː/
+4266。edition。n. 版本。/ɪˈdɪʃn/
+4267。glorious。adj. 光荣的。/ˈɡlɔːriəs/
+4268。joke。n. 玩笑。/dʒoʊk/
+4269。promising。adj. 有希望的。/ˈprɑːmɪsɪŋ/
+4270。convey。vt. 传达。/kənˈveɪ/
+4271。gesture。n. 姿态。/ˈdʒestʃər/
+4272。Latin。n. 拉丁语。/ˈlætn/
+4273。staff。n. 棒。/stæf/
+4274。microcomputer。n. 微电脑。/ˈmaɪkroʊkəmpjuːtər/
+4275。human。adj. 人的。/ˈhjuːmən/
+4276。sad。adj. 难过的。/sæd/
+4277。consequence。n. 结果。/ˈkɑːnsɪkwens/
+4278。portion。n. 部分。/ˈpɔːrʃn/
+4279。desk。n. 办公桌。/desk/
+4280。stove。n. 火炉。/stoʊv/
+4281。friendship。n. 友谊。/ˈfrendʃɪp/
+4282。cripple。v. (使)跛。/ˈkrɪpl/
+4283。haste。n. 匆忙。/heɪst/
+4284。pin。n. 大头针。/pɪn/
+4285。pink。n. 粉红色。/pɪŋk/
+4286。suburb。n. 郊区。/ˈsʌbɜːrb/
+4287。flag。n. 旗。/flæɡ/
+4288。many。det. 许多。/ˈmeni/
+4289。valuable。adj. 有价值的。/ˈvæljuəbl/
+4290。advance。n. 发展。/ədˈvæns/
+4291。outside。n. 外面。/ˌaʊtˈsaɪd/
+4292。specimen。n. 样品。/ˈspesɪmən/
+4293。eventually。adv. 最后。/ɪˈventʃuəli/
+4294。brow。n. 眉。/braʊ/
+4295。reflect。vt. 反映。/rɪˈflekt/
+4296。aluminium。n. 铝。/ˌæljəˈmɪniəm/
+4297。vessel。n. 船。/ˈvesl/
+4298。deny。vt. 否定。/dɪˈnaɪ/
+4299。bottom。n. 底部。/ˈbɑːtəm/
+4300。hunt。v. 打猎。/hʌnt/
+4301。sadly。adv. 悲哀地。/ˈsædli/
+4302。chimney。n. 烟囱。/ˈtʃɪmni/
+4303。cruel。adj. 残酷的。/ˈkruːəl/
+4304。essential。adj. 基本的。/ɪˈsenʃl/
+4305。sixteen。num. 十六。/ˌsɪksˈtiːn/
+4306。hazard。n. 冒险。/ˈhæzərd/
+4307。equation。n. 方程式。/ɪˈkweɪʒn/
+4308。shame。n. 羞耻。/ʃeɪm/
+4309。besides。prep. 除……之外(还)。/bɪˈsaɪdz/
+4310。keeper。n. 监护人。/ˈkiːpər/
+4311。scratch。n. 擦伤。/skrætʃ/
+4312。ounce。n. 盎司。/aʊns/
+4313。sufficient。adj. 足够的。/səˈfɪʃnt/
+4314。stack。n. 堆。/stæk/
+4315。confess。vt. 承认。/kənˈfes/
+4316。mechanical。adj. 机械的。/məˈkænɪkl/
+4317。similarly。adv. 类似地。/ˈsɪmələrli/
+4318。hardship。n. 困苦。/ˈhɑːrdʃɪp/
+4319。responsibility。n. 责任。/rɪˌspɑːnsəˈbɪləti/
+4320。Mediterranean。n. 地中海。/ˌmedɪtəˈreɪniən/
+4321。temperature。n. 温度。/ˈtemprətʃər,ˈtemprətʃʊr/
+4322。unusually。adv. 特别地。/ʌnˈjuːʒuəli/
+4323。carrot。n. 胡萝卜。/ˈkærət/
+4324。dose。n. 剂量。/doʊs/
+4325。accidental。adj. 意外的。/ˌæksɪˈdentl/
+4326。installation。n. 安装。/ˌɪnstəˈleɪʃn/
+4327。oven。n. 炉。/ˈʌvn/
+4328。contempt。n. 轻视。/kənˈtempt/
+4329。widow。n. 寡妇。/ˈwɪdoʊ/
+4330。factory。n. 工厂。/ˈfæktri,ˈfæktəri/
+4331。treasure。n. 财富。/ˈtreʒər/
+4332。Italy。n. 意大利。/ˈɪtəli/
+4333。tomorrow。adv. 在明天。/təˈmɑːroʊ/
+4334。molecule。n. [化学] 分子。/ˈmɑːlɪkjuːl/
+4335。inspect。vt. 检查。/ɪnˈspekt/
+4336。swift。adj. 迅速的。/swɪft/
+4337。heal。vt. 治愈。/hiːl/
+4338。modest。adj. 谦虚的。/ˈmɑːdɪst/
+4339。sink。vi. 沉下。/sɪŋk/
+4340。frequency。n. 频率。/ˈfriːkwənsi/
+4341。order。n. 命令。/ˈɔːrdər/
+4342。robber。n. 强盗。/ˈrɑːbər/
+4343。district。n. 区域。/ˈdɪstrɪkt/
+4344。limb。n. 肢。/lɪm/
+4345。series。n. 系列。/ˈsɪriːz/
+4346。accuracy。n. [数] 精确度。/ˈækjərəsi/
+4347。microphone。n. 扩音器。/ˈmaɪkrəfoʊn/
+4348。label。n. 标签。/ˈleɪbl/
+4349。need。n. 需要。/niːd/
+4350。recommend。vt. 推荐。/ˌrekəˈmend/
+4351。locomotive。n. 机车。/ˌloʊkəˈmoʊtɪv/
+4352。shelf。n. 架子。/ʃelf/
+4353。weight。n. 重量。/weɪt/
+4354。offend。vt. 冒犯。/əˈfend/
+4355。singular。adj. 单数的。/ˈsɪŋɡjələr/
+4356。financial。adj. 金融的。/faɪˈnænʃl/
+4357。signal。n. 信号。/ˈsɪɡnəl/
+4358。oak。n. 橡树。/oʊk/
+4359。busy。adj. 忙碌的。/ˈbɪzi/
+4360。rumour。n. 谣言。/ˈruːmər/
+4361。bite。vt. 咬。/baɪt/
+4362。literature。n. 文学。/ˈlɪtrətʃər; ˈlɪtrətʃʊr/
+4363。stretch。v. 伸展。/stretʃ/
+4364。remind。vt. 提醒。/rɪˈmaɪnd/
+4365。tremendous。adj. 极大的。/trəˈmendəs/
+4366。regulation。n. 管理。/ˌreɡjuˈleɪʃn/
+4367。enlarge。vi. 扩大。/ɪnˈlɑːrdʒ/
+4368。affection。n. 喜爱。/əˈfekʃn/
+4369。mark。n. 标志。/mɑːrk/
+4370。circle。n. 循环。/ˈsɜːrkl/
+4371。announce。vt. 宣布。/əˈnaʊns/
+4372。twist。n. 一扭。/twɪst/
+4373。neither。conj. 也不。/ˈniːðər,ˈnaɪðər/
+4374。fight。n. 打架。/faɪt/
+4375。fireman。n. 消防队员。/ˈfaɪərmən/
+4376。theirs。pron. 他们的。/ðerz/
+4377。vanity。n. 虚荣心。/ˈvænəti/
+4378。intend。vt. 打算。/ɪnˈtend/
+4379。billion。n. 十亿。/ˈbɪljən/
+4380。veteran。n. 老兵。/ˈvetərən/
+4381。exterior。adj. 外部的。/ɪkˈstɪriər/
+4382。diverse。adj. 不同的。/daɪˈvɜːrs/
+4383。vocabulary。n. 词汇。/vəˈkæbjəleri/
+4384。poison。n. 毒药。/ˈpɔɪzn/
+4385。five。num. 五。/faɪv/
+4386。remedy。n. 补救。/ˈremədi/
+4387。scout。n. 搜索。/skaʊt/
+4388。straw。n. 稻草。/strɔː/
+4389。quarter。n. 四分之一。/ˈkwɔːrtər/
+4390。entertain。vt. 娱乐。/ˌentərˈteɪn/
+4391。disagree。vi. 不同意。/ˌdɪsəˈɡriː/
+4392。noble。adj. 高尚的。/ˈnoʊbl/
+4393。wrap。vt. 包。/ræp/
+4394。starve。vi. 饿死。/stɑːrv/
+4395。ugly。adj. 丑陋的。/ˈʌɡli/
+4396。air。n. 空气。/er/
+4397。rob。v. 抢劫。/rɑːb/
+4398。subsequent。adj. 随后的。/ˈsʌbsɪkwənt/
+4399。golf。n. 高尔夫球。/ɡɑːlf/
+4400。republican。adj. 共和国的。/rɪˈpʌblɪkən/
+4401。potato。n. [作物] 土豆。/pəˈteɪtoʊ/
+4402。get。vt. 使得。/ɡet/
+4403。chemistry。n. 化学。/ˈkemɪstri/
+4404。counter。n. 计算器。/ˈkaʊntər/
+4405。crystal。n. 结晶。/ˈkrɪstl/
+4406。instead。adv. 代替。/ɪnˈsted/
+4407。America。n. 美洲。/əˈmerɪkə/
+4408。law。n. 法。/lɔː/
+4409。bolt。n. 门闩。/boʊlt/
+4410。exercise。n. 运动。/ˈeksərsaɪz/
+4411。pursue。vt. 继续。/pərˈsuː/
+4412。lamb。n. 羔羊。/læm/
+4413。thrill。n. 激动。/θrɪl/
+4414。hear。vt. 听到。/hɪr/
+4415。directly。adv. 直接地。/dəˈrektli/
+4416。fog。n. 雾。/fɑːɡ/
+4417。herself。pron. 她自己。/həˈself/
+4418。argument。n. 论证。/ˈɑːrɡjumənt/
+4419。wonder。n. 奇迹。/ˈwʌndər/
+4420。me。pron. 我（宾格）。/mi; miː/

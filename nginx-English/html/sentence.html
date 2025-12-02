@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>英语句子学习</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #4a6ee0 0%, #6a11cb 100%);
+            color: white;
+            padding: 25px 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: pulse 8s infinite linear;
+        }
+        
+        @keyframes pulse {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .header h1 {
+            font-size: 2.2em;
+            margin-bottom: 8px;
+            font-weight: 700;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .control-panel {
+            padding: 25px 30px;
+            background: #f8f9ff;
+            border-bottom: 1px solid #e6e9ff;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .range-inputs {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .range-label {
+            font-weight: 600;
+            color: #4a6ee0;
+            white-space: nowrap;
+        }
+        
+        .input-group {
+            display: flex;
+            gap: 10px;
+            flex: 1;
+        }
+        
+        .number-input {
+            flex: 1;
+            padding: 14px 16px;
+            border: 2px solid #d1d9ff;
+            border-radius: 12px;
+            font-size: 1em;
+            outline: none;
+            transition: all 0.3s;
+            background: white;
+            font-weight: 500;
+        }
+        
+        .number-input:focus {
+            border-color: #4a6ee0;
+            box-shadow: 0 0 0 4px rgba(74, 110, 224, 0.1);
+        }
+        
+        .btn {
+            padding: 14px 24px;
+            border: none;
+            border-radius: 12px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #4a6ee0 0%, #6a11cb 100%);
+            color: white;
+        }
+        
+        .btn-secondary {
+            background: #f0f2ff;
+            color: #4a6ee0;
+            border: 2px solid #d1d9ff;
+        }
+        
+        .btn-success {
+            background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+            color: white;
+        }
+        
+        .btn-info {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            color: white;
+        }
+        
+        .btn-danger {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            color: white;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 15px rgba(0,0,0,0.1);
+        }
+        
+        .btn:active {
+            transform: translateY(-1px);
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .sentence-card {
+            background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+            border-radius: 16px;
+            padding: 35px;
+            margin-bottom: 25px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e6e9ff;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .sentence-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(to bottom, #4a6ee0, #6a11cb);
+        }
+        
+        .chinese-info {
+            font-size: 2.2em;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            line-height: 1.3;
+            text-align: center;
+        }
+        
+        .sentence-info {
+            color: #2c3e50;
+            font-size: 1.8em;
+            line-height: 1.6;
+            padding: 20px;
+            background: rgba(74, 110, 224, 0.05);
+            border-radius: 12px;
+            border-left: 4px solid #4a6ee0;
+            opacity: 0;
+            height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            text-align: center;
+            font-weight: 700;
+            margin-top: 10px;
+        }
+        
+        .sentence-info.show {
+            opacity: 1;
+            height: auto;
+            padding: 20px;
+        }
+        
+        .user-input-section {
+            margin-bottom: 25px;
+            position: relative;
+        }
+        
+        .user-input {
+            width: 100%;
+            padding: 20px;
+            border: 2px solid #d1d9ff;
+            border-radius: 12px;
+            font-size: 1.4em;
+            outline: none;
+            text-align: center;
+            font-weight: 600;
+            background: #f8f9ff;
+            transition: all 0.3s;
+            box-shadow: inset 0 2px 5px rgba(0,0,0,0.05);
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .user-input:focus {
+            border-color: #4a6ee0;
+            box-shadow: 0 0 0 4px rgba(74, 110, 224, 0.1), inset 0 2px 5px rgba(0,0,0,0.05);
+            background: white;
+        }
+        
+        .user-input::placeholder {
+            color: #aab2bd;
+            font-weight: 500;
+        }
+        
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 15px;
+            gap: 15px;
+        }
+        
+        .button-group {
+            display: flex;
+            gap: 12px;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 50px;
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .error {
+            text-align: center;
+            padding: 50px;
+            color: #e74c3c;
+            font-size: 1.2em;
+        }
+        
+        .index-info {
+            color: #7f8c8d;
+            font-size: 1em;
+            margin-bottom: 15px;
+            text-align: center;
+            font-weight: 500;
+        }
+        
+        .sentence-count-info {
+            color: #4a6ee0;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-align: center;
+            font-size: 1.1em;
+        }
+        
+        .status-message {
+            margin-top: 15px;
+            padding: 12px 16px;
+            border-radius: 8px;
+            font-size: 0.95em;
+            display: none;
+            font-weight: 500;
+        }
+        
+        .status-success {
+            background-color: #d4f5e2;
+            color: #155724;
+            display: block;
+            border-left: 4px solid #2ecc71;
+        }
+        
+        .status-error {
+            background-color: #fde8e6;
+            color: #721c24;
+            display: block;
+            border-left: 4px solid #e74c3c;
+        }
+        
+        .book-info {
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #7f8c8d;
+            font-style: italic;
+            text-align: center;
+        }
+        
+        .validation-result {
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 12px;
+            display: none;
+            font-weight: 500;
+        }
+        
+        .validation-correct {
+            background-color: #d4f5e2;
+            color: #155724;
+            display: block;
+            border-left: 4px solid #2ecc71;
+        }
+        
+        .validation-incorrect {
+            background-color: #fde8e6;
+            color: #721c24;
+            display: block;
+            border-left: 4px solid #e74c3c;
+        }
+        
+        .progress-container {
+            width: 100%;
+            background-color: #e6e9ff;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            height: 10px;
+        }
+        
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(135deg, #4a6ee0 0%, #6a11cb 100%);
+            border-radius: 10px;
+            width: 0%;
+            transition: width 0.5s ease;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            font-size: 0.9em;
+            color: #7f8c8d;
+        }
+        
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .stat-value {
+            font-size: 1.4em;
+            font-weight: 700;
+            color: #4a6ee0;
+        }
+        
+        .hint {
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 0.9em;
+            margin-top: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                max-width: 95%;
+                border-radius: 15px;
+            }
+            
+            .header h1 {
+                font-size: 1.8em;
+            }
+            
+            .input-group {
+                flex-direction: column;
+            }
+            
+            .buttons {
+                flex-direction: column;
+            }
+            
+            .button-group {
+                width: 100%;
+                justify-content: space-between;
+            }
+            
+            .btn {
+                flex: 1;
+                padding: 12px 16px;
+            }
+            
+            .chinese-info {
+                font-size: 1.8em;
+            }
+            
+            .user-input {
+                font-size: 1.2em;
+                padding: 16px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .header {
+                padding: 20px 15px;
+            }
+            
+            .content {
+                padding: 20px 15px;
+            }
+            
+            .sentence-card {
+                padding: 20px 15px;
+            }
+            
+            .chinese-info {
+                font-size: 1.6em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📝 英语句子学习</h1>
+            <p>根据中文释义默写英文句子</p>
+        </div>
+        
+        <div class="control-panel">
+            <div class="range-inputs">
+                <span class="range-label">句子范围：</span>
+                <div class="input-group">
+                    <input 
+                        type="number" 
+                        id="startIndexInput" 
+                        class="number-input" 
+                        placeholder="起始编号" 
+                        min="0" 
+                        value="1"
+                    >
+                    <input 
+                        type="number" 
+                        id="endIndexInput" 
+                        class="number-input" 
+                        placeholder="结束编号" 
+                        min="1" 
+                        value="10"
+                    >
+                </div>
+            </div>
+            <button id="loadSentencesBtn" class="btn btn-primary">
+                <span>📥 加载句子</span>
+            </button>
+        </div>
+        
+        <div class="content">
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-value" id="correctCount">0</span>
+                    <span>正确</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value" id="totalCount">0</span>
+                    <span>总数</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value" id="accuracy">0%</span>
+                    <span>准确率</span>
+                </div>
+            </div>
+            
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+            
+            <div id="sentenceCard" class="sentence-card">
+                <div class="loading">请输入句子范围并点击加载</div>
+            </div>
+            
+            <div class="user-input-section">
+                <textarea 
+                    id="userInput" 
+                    class="user-input" 
+                    placeholder="在这里输入英文句子..."
+                    autocomplete="off"
+                ></textarea>
+                <div class="hint">按 Enter 键快速提交答案</div>
+            </div>
+            
+            <div id="validationResult" class="validation-result"></div>
+            
+            <div class="buttons">
+                <div class="button-group">
+                    <button id="prevSentenceBtn" class="btn btn-secondary">
+                        <span>◀ 上一句</span>
+                    </button>
+                    <button id="toggleSentenceBtn" class="btn btn-info">
+                        <span>👁️ 查看答案</span>
+                    </button>
+                    <button id="validateBtn" class="btn btn-primary">
+                        <span>✓ 校验</span>
+                    </button>
+                </div>
+                <button id="nextSentenceBtn" class="btn btn-secondary">
+                    <span>下一句 ▶</span>
+                </button>
+            </div>
+            
+            <div id="statusMessage" class="status-message"></div>
+            <div id="bookInfo" class="book-info"></div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const startIndexInput = document.getElementById('startIndexInput');
+            const endIndexInput = document.getElementById('endIndexInput');
+            const loadSentencesBtn = document.getElementById('loadSentencesBtn');
+            const sentenceCard = document.getElementById('sentenceCard');
+            const userInput = document.getElementById('userInput');
+            const prevSentenceBtn = document.getElementById('prevSentenceBtn');
+            const toggleSentenceBtn = document.getElementById('toggleSentenceBtn');
+            const validateBtn = document.getElementById('validateBtn');
+            const nextSentenceBtn = document.getElementById('nextSentenceBtn');
+            const statusMessage = document.getElementById('statusMessage');
+            const bookInfo = document.getElementById('bookInfo');
+            const validationResult = document.getElementById('validationResult');
+            const correctCountEl = document.getElementById('correctCount');
+            const totalCountEl = document.getElementById('totalCount');
+            const accuracyEl = document.getElementById('accuracy');
+            const progressBar = document.getElementById('progressBar');
+            
+            let sentences = [];
+            let currentIndex = 0;
+            let currentSentence = null;
+            let sentenceVisible = false;
+            let correctCount = 0;
+            let totalAttempts = 0;
+
+            // 加载句子按钮点击事件
+            loadSentencesBtn.addEventListener('click', loadSentences);
+            
+            // 回车键支持
+            startIndexInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    loadSentences();
+                }
+            });
+            
+            endIndexInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    loadSentences();
+                }
+            });
+            
+            // 输入框回车键提交
+            userInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    validateBtn.click();
+                }
+            });
+            
+            // 显示/隐藏英文句子
+            toggleSentenceBtn.addEventListener('click', function() {
+                const sentenceElement = document.querySelector('.sentence-info');
+                sentenceVisible = !sentenceVisible;
+                
+                if (sentenceVisible) {
+                    sentenceElement.classList.add('show');
+                    toggleSentenceBtn.innerHTML = '<span>🙈 隐藏英文</span>';
+                } else {
+                    sentenceElement.classList.remove('show');
+                    toggleSentenceBtn.innerHTML = '<span>👁️ 显示英文</span>';
+                }
+            });
+            
+            // 上一句按钮
+            prevSentenceBtn.addEventListener('click', function() {
+                if (sentences.length === 0) return;
+                
+                currentIndex = (currentIndex - 1 + sentences.length) % sentences.length;
+                renderCurrentSentence();
+                userInput.value = '';
+                userInput.focus();
+                hideValidationResult();
+                // 重置句子显示状态
+                sentenceVisible = false;
+                toggleSentenceBtn.innerHTML = '<span>👁️ 显示英文</span>';
+            });
+            
+            // 校验按钮
+            validateBtn.addEventListener('click', function() {
+                if (!currentSentence) return;
+                
+                const userText = userInput.value.trim();
+                const correctText = currentSentence.sentence.trim();
+                
+                if (userText === '') {
+                    showStatus('请输入句子后再校验', 'error');
+                    return;
+                }
+                
+                totalAttempts++;
+                validateSentence(userText, correctText);
+            });
+            
+            // 下一句按钮
+            nextSentenceBtn.addEventListener('click', function() {
+                if (sentences.length === 0) return;
+                
+                currentIndex = (currentIndex + 1) % sentences.length;
+                renderCurrentSentence();
+                userInput.value = '';
+                userInput.focus();
+                hideValidationResult();
+                // 重置句子显示状态
+                sentenceVisible = false;
+                toggleSentenceBtn.innerHTML = '<span>👁️ 显示英文</span>';
+            });
+            
+            // 加载句子函数
+            function loadSentences() {
+                const startIndex = parseInt(startIndexInput.value);
+                const endIndex = parseInt(endIndexInput.value);
+                
+                if (isNaN(startIndex) || startIndex < 0) {
+                    alert('请输入有效的起始编号（≥0）');
+                    return;
+                }
+                
+                if (isNaN(endIndex) || endIndex <= startIndex) {
+                    alert('结束编号必须大于起始编号');
+                    return;
+                }
+                
+                // 显示加载状态
+                sentenceCard.innerHTML = '<div class="loading">正在加载句子数据...</div>';
+                hideStatus();
+                hideValidationResult();
+                
+                // 构建API URL
+                const url = `http://8.148.209.41:8080/english/sentence?start=${startIndex}&end=${endIndex}`;
+                
+                // 从后端API获取数据
+                fetch(url)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(`HTTP错误! 状态码: ${response.status}`);
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        if (data.code !== 1 || !data.data || data.data.length === 0) {
+                            sentenceCard.innerHTML = '<div class="error">没有找到句子数据</div>';
+                            sentences = [];
+                            return;
+                        }
+                        
+                        sentences = data.data;
+                        currentIndex = 0;
+                        correctCount = 0;
+                        totalAttempts = 0;
+                        updateStats();
+                        renderCurrentSentence();
+                    })
+                    .catch(error => {
+                        console.error('获取数据失败:', error);
+                        sentenceCard.innerHTML = `
+                            <div class="error">
+                                <p>数据加载失败: ${error.message}</p>
+                                <p>请检查后端服务是否已启动</p>
+                            </div>
+                        `;
+                        sentences = [];
+                    });
+            }
+            
+            // 渲染当前句子
+            function renderCurrentSentence() {
+                if (sentences.length === 0) return;
+                
+                const sentence = sentences[currentIndex];
+                currentSentence = sentence;
+                
+                sentenceCard.innerHTML = `
+                    <div class="sentence-count-info">共 ${sentences.length} 个句子</div>
+                    <div class="index-info">第 ${currentIndex + 1} / ${sentences.length} 个句子</div>
+                    <div class="chinese-info">${sentence.chinese}</div>
+                    <div class="sentence-info">${sentence.sentence}</div>
+                `;
+                
+                // 重置句子显示状态
+                sentenceVisible = false;
+                toggleSentenceBtn.innerHTML = '<span>👁️ 显示英文</span>';
+                
+                // 更新进度条
+                progressBar.style.width = `${((currentIndex + 1) / sentences.length) * 100}%`;
+                
+                // 隐藏状态消息
+                hideStatus();
+                
+                // 自动聚焦输入框
+                setTimeout(() => {
+                    userInput.focus();
+                }, 100);
+            }
+            
+            // 校验句子
+            function validateSentence(userText, correctText) {
+                if (userText.toLowerCase() === correctText.toLowerCase()) {
+                    correctCount++;
+                    validationResult.innerHTML = `
+                        <div class="validation-correct">
+                            <strong>✓ 正确！</strong> 你输入的句子完全正确。
+                        </div>
+                    `;
+                    validationResult.className = 'validation-result validation-correct';
+                    
+                    // 自动跳转到下一个句子
+                    setTimeout(() => {
+                        if (currentIndex < sentences.length - 1) {
+                            nextSentenceBtn.click();
+                        }
+                    }, 1000);
+                } else {
+                    // 找出差异
+                    const diff = compareSentences(userText, correctText);
+                    validationResult.innerHTML = `
+                        <div class="validation-incorrect">
+                            <strong>✗ 错误</strong>
+                            <div style="margin-top: 10px;">${diff}</div>
+                            <div style="margin-top: 10px; font-style: italic;">正确句子: ${correctText}</div>
+                        </div>
+                    `;
+                    validationResult.className = 'validation-result validation-incorrect';
+                }
+                
+                updateStats();
+            }
+            
+            // 比较句子并高亮差异
+            function compareSentences(userText, correctText) {
+                const userWords = userText.toLowerCase().split(/\s+/);
+                const correctWords = correctText.toLowerCase().split(/\s+/);
+                let result = '';
+                let i = 0, j = 0;
+                
+                while (i < userWords.length || j < correctWords.length) {
+                    if (i < userWords.length && j < correctWords.length) {
+                        if (userWords[i] === correctWords[j]) {
+                            result += `<span class="highlight-correct">${userWords[i]}</span> `;
+                            i++;
+                            j++;
+                        } else {
+                            // 用户单词错误
+                            result += `<span class="highlight-incorrect">${userWords[i]}</span> `;
+                            i++;
+                        }
+                    } else if (i < userWords.length) {
+                        // 用户有多余的单词
+                        result += `<span class="highlight-incorrect">${userWords[i]}</span> `;
+                        i++;
+                    } else if (j < correctWords.length) {
+                        // 用户缺少单词
+                        result += `<span class="highlight-missing">${correctWords[j]}</span> `;
+                        j++;
+                    }
+                }
+                
+                return result;
+            }
+            
+            // 更新统计信息
+            function updateStats() {
+                correctCountEl.textContent = correctCount;
+                totalCountEl.textContent = totalAttempts;
+                const accuracy = totalAttempts > 0 ? Math.round((correctCount / totalAttempts) * 100) : 0;
+                accuracyEl.textContent = `${accuracy}%`;
+            }
+            
+            // 显示状态消息
+            function showStatus(message, type) {
+                statusMessage.textContent = message;
+                statusMessage.className = 'status-message';
+                statusMessage.classList.add(type === 'success' ? 'status-success' : 'status-error');
+                
+                // 5秒后自动隐藏
+                setTimeout(hideStatus, 5000);
+            }
+            
+            // 隐藏状态消息
+            function hideStatus() {
+                statusMessage.className = 'status-message';
+                statusMessage.textContent = '';
+            }
+            
+            // 隐藏校验结果
+            function hideValidationResult() {
+                validationResult.className = 'validation-result';
+                validationResult.innerHTML = '';
+            }
+        });
+    </script>
+</body>
+</html>

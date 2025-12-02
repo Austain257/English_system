@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习记录与清单</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #4a6ee0 0%, #6a11cb 100%);
+            color: white;
+            padding: 25px 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: pulse 8s infinite linear;
+        }
+        
+        @keyframes pulse {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .header h1 {
+            font-size: 2.2em;
+            margin-bottom: 8px;
+            font-weight: 700;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .table-selector {
+            padding: 20px 30px;
+            background: #f8f9ff;
+            border-bottom: 1px solid #e6e9ff;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .table-btn {
+            padding: 12px 20px;
+            border: 2px solid #d1d9ff;
+            border-radius: 12px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: white;
+            color: #4a6ee0;
+            flex: 1;
+            max-width: 180px;
+            text-align: center;
+        }
+        
+        .table-btn.active {
+            background: linear-gradient(135deg, #4a6ee0 0%, #6a11cb 100%);
+            color: white;
+            border-color: #4a6ee0;
+            box-shadow: 0 5px 15px rgba(74, 110, 224, 0.3);
+        }
+        
+        .table-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .content-section {
+            padding: 30px;
+        }
+        
+        .section-title {
+            font-size: 1.4em;
+            color: #4a6ee0;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+            font-weight: 600;
+        }
+        
+        .input-group {
+            margin-bottom: 20px;
+        }
+        
+        .text-input {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #d1d9ff;
+            border-radius: 12px;
+            font-size: 1em;
+            outline: none;
+            resize: vertical;
+            min-height: 120px;
+            margin-bottom: 15px;
+            background: #f8f9ff;
+            transition: all 0.3s;
+        }
+        
+        .text-input:focus {
+            border-color: #4a6ee0;
+            box-shadow: 0 0 0 4px rgba(74, 110, 224, 0.1);
+            background: white;
+        }
+        
+        .btn {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 12px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #4a6ee0 0%, #6a11cb 100%);
+            color: white;
+        }
+        
+        .btn-secondary {
+            background: #f0f2ff;
+            color: #4a6ee0;
+            border: 2px solid #d1d9ff;
+        }
+        
+        .btn-success {
+            background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+            color: white;
+        }
+        
+        .btn-info {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            color: white;
+        }
+        
+        .btn-danger {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            color: white;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 15px rgba(0,0,0,0.1);
+        }
+        
+        .btn:active {
+            transform: translateY(-1px);
+        }
+        
+        .study-list-container {
+            background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+            border-radius: 16px;
+            padding: 25px;
+            margin-top: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e6e9ff;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .study-list-container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(to bottom, #4a6ee0, #6a11cb);
+        }
+        
+        .study-list-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .study-list-content {
+            min-height: 150px;
+            border: 1px dashed #d1d9ff;
+            border-radius: 12px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.7);
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 50px;
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .error {
+            text-align: center;
+            padding: 50px;
+            color: #e74c3c;
+            font-size: 1.2em;
+        }
+        
+        .status-message {
+            margin-top: 15px;
+            padding: 12px 16px;
+            border-radius: 8px;
+            font-size: 0.95em;
+            display: none;
+            font-weight: 500;
+        }
+        
+        .status-success {
+            background-color: #d4f5e2;
+            color: #155724;
+            display: block;
+            border-left: 4px solid #2ecc71;
+        }
+        
+        .status-error {
+            background-color: #fde8e6;
+            color: #721c24;
+            display: block;
+            border-left: 4px solid #e74c3c;
+        }
+        
+        .study-content {
+            padding: 15px;
+        }
+        
+        .study-list {
+            margin: 15px 0;
+        }
+        
+        .study-list ul {
+            list-style-type: none;
+        }
+        
+        .study-list li {
+            padding: 15px;
+            margin-bottom: 12px;
+            background-color: #f8f9ff;
+            border-radius: 10px;
+            border-left: 4px solid #4a6ee0;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+        }
+        
+        .study-list li:hover {
+            background-color: #e9ecef;
+            transform: translateX(5px);
+        }
+        
+        .study-list li.selected {
+            background-color: #e2f0ff;
+            border-left: 4px solid #2ecc71;
+        }
+        
+        .study-list strong {
+            color: #2c3e50;
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+        
+        .study-time {
+            color: #7f8c8d;
+            font-size: 0.9em;
+            margin-top: 5px;
+            display: block;
+        }
+        
+        .duration {
+            background-color: #d1ecf1;
+            color: #0c5460;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: 600;
+            border-left: 4px solid #0c5460;
+            margin-top: 15px;
+        }
+        
+        .current-date-display {
+            font-size: 16px;
+            color: #7f8c8d;
+            margin-top: 5px;
+        }
+
+        .study-list ul li input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            margin: 0;
+            flex-shrink: 0;
+            accent-color: #4a6ee0;
+        }
+        
+        .no-data {
+            text-align: center;
+            padding: 30px;
+            color: #7f8c8d;
+            font-style: italic;
+        }
+        
+        .reviewed-section {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #dee2e6;
+            text-align: center;
+        }
+        
+        .reviewed-info {
+            margin-bottom: 15px;
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+        
+        .btn-reviewed {
+            background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+            color: white;
+            padding: 12px 25px;
+            font-size: 1em;
+        }
+        
+        .current-table-info {
+            text-align: center;
+            margin-top: 10px;
+            color: #4a6ee0;
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+        
+        .mark-button-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                max-width: 95%;
+                border-radius: 15px;
+            }
+            
+            .header h1 {
+                font-size: 1.8em;
+            }
+            
+            .table-selector {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .table-btn {
+                max-width: 100%;
+                width: 100%;
+            }
+            
+            .study-list-header {
+                flex-direction: column;
+                gap: 15px;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📝📝 学习记录与清单</h1>
+            <p>记录每日学习内容，查看学习进度</p>
+        </div>
+        
+        <div class="table-selector">
+            <div class="table-btn active" data-table="daily_record">每日记录表</div>
+            <div class="table-btn" data-table="study_record">学习记录表</div>
+            <div class="table-btn" data-table="sentence_record">句子记录表</div>
+            <div class="table-btn" data-table="word_record">单词记录表</div>
+            <div class="table-btn" data-table="listening_record">听力记录表</div>
+        </div>
+        <div class="current-table-info" id="currentTableInfo">当前查看：学习记录表</div>
+        
+        <div class="content-section">
+            <h2 class="section-title">记录学习内容</h2>
+            <div class="input-group">
+                <textarea 
+                    id="studyContentInput" 
+                    class="text-input" 
+                    placeholder="请输入今天完成的学习内容..."
+                ></textarea>
+                <button id="submitContentBtn" class="btn btn-primary">
+                    <span>📤📤 提交学习记录</span>
+                </button>
+            </div>
+            
+            <div id="submitStatus" class="status-message"></div>
+            
+            <div class="study-list-container">
+                <div class="study-list-header">
+                    <div>
+                        <h2 class="section-title" style="margin: 0;">今日学习清单</h2>
+                        <div class="current-date-display" id="current-date"></div>
+                    </div>
+                    <button id="refreshListBtn" class="btn btn-secondary">
+                        <span>🔄🔄 刷新清单</span>
+                    </button>
+                </div>
+                
+                <div id="studyListContent" class="study-list-content">
+                    <div class="loading">点击"刷新清单"获取今日学习内容</div>
+                </div>
+                
+                <div class="mark-button-container">
+                    <button id="markReviewedBtn" class="btn btn-success">标记为已复习</button>
+                </div>
+                
+                <div class="reviewed-section">
+                    <div class="reviewed-info" id="selectedCount">已选择 0 项学习记录</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const studyContentInput = document.getElementById('studyContentInput');
+            const submitContentBtn = document.getElementById('submitContentBtn');
+            const refreshListBtn = document.getElementById('refreshListBtn');
+            const studyListContent = document.getElementById('studyListContent');
+            const submitStatus = document.getElementById('submitStatus');
+            const currentDateElement = document.getElementById('current-date');
+            const markReviewedBtn = document.getElementById('markReviewedBtn');
+            const selectedCountElement = document.getElementById('selectedCount');
+            const tableButtons = document.querySelectorAll('.table-btn');
+            const currentTableInfo = document.getElementById('currentTableInfo');
+            
+            // 存储选中的学习记录ID
+            let selectedIds = [];
+            // 当前选中的表名
+            let currentTable = 'daily_record';
+            // 学习记录数据
+            let studyData = [];
+            
+            // 更新当前日期
+            function updateCurrentDate() {
+                const now = new Date();
+                const options = { 
+                    year: 'numeric', 
+                    month: 'long', 
+                    day: 'numeric',
+                    hour: 'numeric',
+                    minute: 'numeric',
+                    hour12: false
+                };
+                currentDateElement.textContent = now.toLocaleDateString('zh-CN', options);
+            }
+            
+            // 初始化日期显示
+            updateCurrentDate();
+            
+            // 表选择按钮事件
+            tableButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // 移除所有按钮的active类
+                    tableButtons.forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+                    // 为当前点击的按钮添加active类
+                    this.classList.add('active');
+                    // 更新当前表
+                    currentTable = this.getAttribute('data-table');
+                    // 更新显示
+                    currentTableInfo.textContent = `当前查看：${getTableName(currentTable)}`;
+                    // 刷新学习清单
+                    refreshStudyList();
+                });
+            });
+            
+            // 根据表名获取显示名称
+            function getTableName(table) {
+                switch(table) {
+                    case 'study_record': return '学习记录表';
+                    case 'sentence_record': return '句子记录表';
+                    case 'daily_record': return '每日记录表';
+                    case 'word_record': return '单词记录表';
+                    case 'listening_record': return '听力记录表';
+                    default: return '未知表';
+                }
+            }
+            
+            // 提交学习内容
+            submitContentBtn.addEventListener('click', function() {
+                const content = studyContentInput.value.trim();
+                
+                if (!content) {
+                    showStatus(submitStatus, '请输入学习内容', 'error');
+                    return;
+                }
+                
+                // 显示加载状态
+                showStatus(submitStatus, '提交中...', 'success');
+                
+                // 调用后端接口提交学习内容
+                submitStudyContent(content)
+                    .then(result => {
+                        if (result.code === 1) {
+                            showStatus(submitStatus, '学习记录提交成功！', 'success');
+                            studyContentInput.value = '';
+                            
+                            // 自动刷新学习清单
+                            refreshStudyList();
+                        } else {
+                            showStatus(submitStatus, `提交失败: ${result.msg || '未知错误'}`, 'error');
+                        }
+                    })
+                    .catch(error => {
+                        showStatus(submitStatus, `提交失败: ${error.message}`, 'error');
+                    });
+            });
+            
+            // 刷新学习清单
+            refreshListBtn.addEventListener('click', function() {
+                refreshStudyList();
+            });
+            
+            // 标记为已复习按钮点击事件
+            markReviewedBtn.addEventListener('click', function() {
+                if (selectedIds.length === 0) {
+                    showStatus(submitStatus, '没有选中的学习记录，但可以继续处理', 'error');
+                    return;
+                }
+                
+                markAsReviewed(selectedIds)
+                    .then(result => {
+                        if (result.code === 1) {
+                            showStatus(submitStatus, '已成功标记为已复习！', 'success');
+                            // 刷新学习清单
+                            refreshStudyList();
+                        } else {
+                            showStatus(submitStatus, `标记失败: ${result.msg || '未知错误'}`, 'error');
+                        }
+                    })
+                    .catch(error => {
+                        showStatus(submitStatus, `标记失败: ${error.message}`, 'error');
+                    });
+            });
+            
+            // 提交学习内容到后端
+            async function submitStudyContent(content) {
+                // 将表名作为参数传递
+                const response = await fetch(`http://8.148.209.41:8080/study/record?table=${currentTable}`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        record: content
+                    })
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP错误! 状态码: ${response.status}`);
+                }
+                
+                return await response.json();
+            }
+            
+            // 获取学习清单
+            async function refreshStudyList() {
+                studyListContent.innerHTML = '<div class="loading">正在获取学习清单...</div>';
+                
+                try {
+                    // 将表名作为参数传递
+                    const response = await fetch(`http://8.148.209.41:8080/study/list?table=${currentTable}`);
+                    // const response = await fetch(`http://localhost:8080/study/list?table=${currentTable}`);
+                    
+                    if (!response.ok) {
+                        throw new Error(`HTTP错误! 状态码: ${response.status}`);
+                    }
+                    
+                    const result = await response.json();
+                    
+                    if (result.code === 1) {
+                        // 使用后端返回的JSON数据生成学习清单
+                        renderStudyList(result.data);
+                    } else {
+                        studyListContent.innerHTML = `<div class="error">获取失败: ${result.msg || '未知错误'}</div>`;
+                    }
+                } catch (error) {
+                    studyListContent.innerHTML = `<div class="error">获取失败: ${error.message}</div>`;
+                }
+            }
+            
+            // 标记为已复习
+            async function markAsReviewed(ids) {
+                // 将表名作为参数传递
+                const response = await fetch(`http://8.148.209.41:8080/study/mark?table=${currentTable}`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        ids: ids
+                    })
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP错误! 状态码: ${response.status}`);
+                }
+                
+                return await response.json();
+            }
+            
+            // 渲染学习清单
+            function renderStudyList(data) {
+                studyData = data || [];
+                
+                if (studyData.length === 0) {
+                    studyListContent.innerHTML = '<div class="no-data">今日暂无学习内容</div>';
+                    // 清空已选择记录
+                    selectedIds = [];
+                    updateSelectedCount();
+                    return;
+                }
+                
+                // 重置选中的ID数组
+                selectedIds = [];
+                
+                // 格式化日期时间
+                function formatDateTime(dateTimeStr) {
+                    const date = new Date(dateTimeStr);
+                    return date.toLocaleString('zh-CN', {
+                        year: 'numeric',
+                        month: '2-digit',
+                        day: '2-digit',
+                        hour: '2-digit',
+                        minute: '2-digit'
+                    });
+                }
+                
+                // 计算总学习天数
+                const totalDays = Math.max(...studyData.map(item => item.toDate));
+                
+                let html = `
+                    <div class="study-content">
+                        <div class="study-list">
+                            <ul>
+                `;
+                
+                // 生成每个学习项目的HTML
+                studyData.forEach((item, index) => {
+                    const isChecked = item.alreadyReviewed === 1;
+                    if (isChecked) {
+                        selectedIds.push(item.id);
+                    }
+                    
+                    html += `
+                        <li class="${index === 0 ? 'selected' : ''}" data-id="${item.id}" data-index="${index}">
+                            <input type="checkbox" data-id="${item.id}" ${isChecked ? 'checked' : ''}>
+                            <div>
+                                <strong>${item.record}</strong>
+                                <span class="study-time">学习时间：${formatDateTime(item.createTime)} | 距今${item.toDate}天</span>
+                            </div>
+                        </li>
+                    `;
+                });
+                
+                html += `
+                            </ul>
+                        </div>
+                        <div class="duration">今日需学习${studyData.length}项内容</div>
+                    </div>
+                `;
+                
+                studyListContent.innerHTML = html;
+                
+                // 更新已选择数量
+                updateSelectedCount();
+                
+                // 为所有列表项添加点击事件监听器
+                const listItems = document.querySelectorAll('.study-list li');
+                listItems.forEach(item => {
+                    item.addEventListener('click', function(e) {
+                        // 防止点击复选框时触发两次事件
+                        if (e.target.type === 'checkbox') return;
+                        
+                        const id = this.getAttribute('data-id');
+                        const checkbox = this.querySelector('input[type="checkbox"]');
+                        
+                        // 切换选中状态
+                        checkbox.checked = !checkbox.checked;
+                        
+                        if (checkbox.checked) {
+                            // 如果选中，添加到数组
+                            if (!selectedIds.includes(id)) {
+                                selectedIds.push(id);
+                            }
+                            this.classList.add('selected');
+                        } else {
+                            // 如果取消选中，从数组中移除
+                            const index = selectedIds.indexOf(id);
+                            if (index > -1) {
+                                selectedIds.splice(index, 1);
+                            }
+                            this.classList.remove('selected');
+                        }
+                        
+                        // 更新已选择数量
+                        updateSelectedCount();
+                    });
+                });
+                
+                // 为所有复选框添加事件监听器
+                const checkboxes = document.querySelectorAll('.study-list input[type="checkbox"]');
+                checkboxes.forEach(checkbox => {
+                    checkbox.addEventListener('change', function() {
+                        const id = this.getAttribute('data-id');
+                        const listItem = this.closest('li');
+                        
+                        if (this.checked) {
+                            // 如果选中，添加到数组
+                            if (!selectedIds.includes(id)) {
+                                selectedIds.push(id);
+                            }
+                            listItem.classList.add('selected');
+                        } else {
+                            // 如果取消选中，从数组中移除
+                            const index = selectedIds.indexOf(id);
+                            if (index > -1) {
+                                selectedIds.splice(index, 1);
+                            }
+                            listItem.classList.remove('selected');
+                        }
+                        
+                        // 更新已选择数量
+                        updateSelectedCount();
+                    });
+                });
+            }
+            
+            // 更新已选择数量
+            function updateSelectedCount() {
+                selectedCountElement.textContent = `已选择 ${selectedIds.length} 项学习记录`;
+            }
+            
+            // 显示状态消息
+            function showStatus(element, message, type) {
+                element.textContent = message;
+                element.className = 'status-message';
+                element.classList.add(type === 'success' ? 'status-success' : 'status-error');
+                
+                // 5秒后自动隐藏成功消息，错误消息保持显示
+                if (type === 'success') {
+                    setTimeout(() => {
+                        element.className = 'status-message';
+                        element.textContent = '';
+                    }, 5000);
+                }
+            }
+        });
+    </script>
+</body>
+</html>

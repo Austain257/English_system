@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>英语词汇背诵</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container {
+            max-width: 500px;
+            width: 100%;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+            position: relative;
+        }
+        
+        /* 添加紫色竖条 */
+        .container::before,
+        .container::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 8px;
+            background: #764ba2;
+        }
+        
+        .container::before {
+            left: 0;
+        }
+        
+        .container::after {
+            right: 0;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 1.8em;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .header h1::before {
+            content: "📚";
+            margin-right: 10px;
+        }
+        
+        .header p {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+        
+        .control-panel {
+            padding: 20px;
+            background: #f8f9fa;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .input-group {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .number-input {
+            flex: 1;
+            padding: 12px;
+            border: 2px solid #4facfe;
+            border-radius: 8px;
+            font-size: 1em;
+            outline: none;
+        }
+        
+        .number-input:focus {
+            border-color: #00f2fe;
+            box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.2);
+        }
+        
+        .btn {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary {
+            background: #4facfe;
+            color: white;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .content {
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .word-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .word {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+        .pronounce {
+            color: #666;
+            font-style: italic;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+        
+        .chinese {
+            color: #2c3e50;
+            font-size: 1.3em;
+            font-weight: bold;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .times {
+            background: #4facfe;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 25px;
+        }
+        
+        .current-index {
+            color: #666;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+        
+        .total-words {
+            color: #28a745;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 20px;
+        }
+        
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 50px;
+            font-size: 1.2em;
+            color: #666;
+        }
+        
+        .error {
+            text-align: center;
+            padding: 50px;
+            color: #e74c3c;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>英语词汇背诵</h1>
+            <p>掌握高频词汇，提升英语能力</p>
+        </div>
+        
+        <div class="control-panel">
+            <div class="input-group">
+                <input 
+                    type="number" 
+                    id="startIndexInput" 
+                    class="number-input" 
+                    placeholder="起始编号" 
+                    min="0" 
+                    value="0"
+                >
+                <input 
+                    type="number" 
+                    id="endIndexInput" 
+                    class="number-input" 
+                    placeholder="结束编号" 
+                    min="1" 
+                    value="50"
+                >
+            </div>
+            <button id="loadWordsBtn" class="btn btn-primary">加载单词</button>
+        </div>
+        
+        <div class="content">
+            <div id="wordCard" class="word-card">
+                <div class="loading">请输入单词范围并点击加载</div>
+            </div>
+            
+            <div class="buttons">
+                <button id="prevWordBtn" class="btn btn-secondary">上一个</button>
+                <button id="nextWordBtn" class="btn btn-secondary">下一个</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const startIndexInput = document.getElementById('startIndexInput');
+            const endIndexInput = document.getElementById('endIndexInput');
+            const loadWordsBtn = document.getElementById('loadWordsBtn');
+            const wordCard = document.getElementById('wordCard');
+            const prevWordBtn = document.getElementById('prevWordBtn');
+            const nextWordBtn = document.getElementById('nextWordBtn');
+            
+            let words = [];
+            let currentIndex = 0;
+            
+            // 加载单词按钮点击事件
+            loadWordsBtn.addEventListener('click', loadWords);
+            
+            // 回车键支持
+            startIndexInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    loadWords();
+                }
+            });
+            
+            endIndexInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    loadWords();
+                }
+            });
+            
+            // 上一个单词
+            prevWordBtn.addEventListener('click', function() {
+                if (words.length === 0) return;
+                
+                currentIndex = (currentIndex - 1 + words.length) % words.length;
+                renderCurrentWord();
+            });
+            
+            // 下一个单词
+            nextWordBtn.addEventListener('click', function() {
+                if (words.length === 0) return;
+                
+                currentIndex = (currentIndex + 1) % words.length;
+                renderCurrentWord();
+            });
+            
+            // 加载单词函数
+            function loadWords() {
+                const startIndex = parseInt(startIndexInput.value);
+                const endIndex = parseInt(endIndexInput.value);
+                
+                if (isNaN(startIndex) || startIndex < 0) {
+                    alert('请输入有效的起始编号（≥0）');
+                    return;
+                }
+                
+                if (isNaN(endIndex) || endIndex <= startIndex) {
+                    alert('结束编号必须大于起始编号');
+                    return;
+                }
+                
+                // 显示加载状态
+                wordCard.innerHTML = '<div class="loading">正在加载词汇数据...</div>';
+                
+                // 构建带参数的URL
+                const url = `http://192.168.0.110:8080/english/recite?start=${startIndex}&end=${endIndex}`;
+                
+                fetch(url)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(`HTTP error! status: ${response.status}`);
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        if (data.code !== 1 || !data.data || data.data.length === 0) {
+                            wordCard.innerHTML = '<div class="error">暂无词汇数据</div>';
+                            words = [];
+                            return;
+                        }
+                        
+                        words = data.data;
+                        currentIndex = 0;
+                        renderCurrentWord();
+                    })
+                    .catch(error => {
+                        console.error('获取数据失败:', error);
+                        wordCard.innerHTML = `
+                            <div class="error">
+                                <p>数据加载失败: ${error.message}</p>
+                                <p>请检查后端服务是否已启动</p>
+                            </div>
+                        `;
+                        words = [];
+                    });
+            }
+            
+            // 渲染当前单词 - 完全按照图片样式
+            function renderCurrentWord() {
+                if (words.length === 0) return;
+                
+                const word = words[currentIndex];
+                
+                wordCard.innerHTML = `
+                    <div class="word">${word.word}</div>
+                    <div class="pronounce">${word.pronounce}</div>
+                    <div class="chinese">${word.chinese}</div>
+                    <div class="times">出现 ${word.times} 次</div>
+                    <div class="current-index">第 ${currentIndex + 1} / ${words.length} 个单词</div>
+                    <div class="total-words">共 ${words.length} 个单词</div>
+                `;
+            }
+        });
+    </script>
+</body>
+</html>

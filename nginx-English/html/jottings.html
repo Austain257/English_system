@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>英语知识积累本</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container {
+            max-width: 1000px;
+            width: 100%;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #4a6ee0 0%, #6a11cb 100%);
+            color: white;
+            padding: 25px 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: pulse 8s infinite linear;
+        }
+        
+        @keyframes pulse {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .header h1 {
+            font-size: 2.2em;
+            margin-bottom: 8px;
+            font-weight: 700;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .content-section {
+            padding: 30px;
+        }
+        
+        .section-title {
+            font-size: 1.4em;
+            color: #4a6ee0;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+            font-weight: 600;
+        }
+        
+        .form-group {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .text-input {
+            flex: 1;
+            padding: 15px;
+            border: 2px solid #d1d9ff;
+            border-radius: 12px;
+            font-size: 1em;
+            outline: none;
+            background: #f8f9ff;
+            transition: all 0.3s;
+        }
+        
+        .text-input:focus {
+            border-color: #4a6ee0;
+            box-shadow: 0 0 0 4px rgba(74, 110, 224, 0.1);
+            background: white;
+        }
+        
+        .btn {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 12px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #4a6ee0 0%, #6a11cb 100%);
+            color: white;
+        }
+        
+        .btn-secondary {
+            background: #f0f2ff;
+            color: #4a6ee0;
+            border: 2px solid #d1d9ff;
+        }
+        
+        .btn-success {
+            background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+            color: white;
+        }
+        
+        .btn-danger {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            color: white;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 15px rgba(0,0,0,0.1);
+        }
+        
+        .btn:active {
+            transform: translateY(-1px);
+        }
+        
+        .knowledge-list-container {
+            background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+            border-radius: 16px;
+            padding: 25px;
+            margin-top: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e6e9ff;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .knowledge-list-container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(to bottom, #4a6ee0, #6a11cb);
+        }
+        
+        .knowledge-list-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .knowledge-list-content {
+            min-height: 150px;
+            border: 1px dashed #d1d9ff;
+            border-radius: 12px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.7);
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 50px;
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .error {
+            text-align: center;
+            padding: 50px;
+            color: #e74c3c;
+            font-size: 1.2em;
+        }
+        
+        .status-message {
+            margin-top: 15px;
+            padding: 12px 16px;
+            border-radius: 8px;
+            font-size: 0.95em;
+            display: none;
+            font-weight: 500;
+        }
+        
+        .status-success {
+            background-color: #d4f5e2;
+            color: #155724;
+            display: block;
+            border-left: 4px solid #2ecc71;
+        }
+        
+        .status-error {
+            background-color: #fde8e6;
+            color: #721c24;
+            display: block;
+            border-left: 4px solid #e74c3c;
+        }
+        
+        .knowledge-item {
+            padding: 15px;
+            margin-bottom: 12px;
+            background-color: #f8f9ff;
+            border-radius: 10px;
+            border-left: 4px solid #4a6ee0;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+        
+        .knowledge-item:hover {
+            background-color: #e9ecef;
+            transform: translateX(5px);
+        }
+        
+        .knowledge-item.selected {
+            background-color: #e2f0ff;
+            border-left: 4px solid #2ecc71;
+        }
+        
+        .knowledge-content {
+            flex: 1;
+        }
+        
+        .knowledge-english {
+            color: #2c3e50;
+            font-weight: 600;
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+        
+        .knowledge-chinese {
+            color: #7f8c8d;
+            font-size: 0.95em;
+        }
+        
+        .knowledge-meta {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 0.9em;
+            color: #7f8c8d;
+        }
+        
+        .knowledge-actions {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .knowledge-item input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            margin: 0;
+            flex-shrink: 0;
+            accent-color: #4a6ee0;
+        }
+        
+        .review-btn {
+            padding: 5px 10px;
+            font-size: 12px;
+            min-width: 80px;
+        }
+        
+        .review-btn.reviewed {
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+        }
+        
+        .no-data {
+            text-align: center;
+            padding: 30px;
+            color: #7f8c8d;
+            font-style: italic;
+        }
+        
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            gap: 10px;
+        }
+        
+        .pagination-btn {
+            padding: 8px 15px;
+            border: 1px solid #d1d9ff;
+            border-radius: 8px;
+            background: white;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .pagination-btn:hover {
+            background: #f0f2ff;
+        }
+        
+        .pagination-btn.active {
+            background: #4a6ee0;
+            color: white;
+            border-color: #4a6ee0;
+        }
+        
+        .pagination-info {
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+        
+        .batch-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #dee2e6;
+        }
+        
+        .selected-count {
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+        
+        .select-all-container {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .select-all-label {
+            font-size: 14px;
+            color: #4a6ee0;
+            cursor: pointer;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .modal-title {
+            font-size: 1.3em;
+            color: #4a6ee0;
+            font-weight: 600;
+        }
+        
+        .close-btn {
+            background: none;
+            border: none;
+            font-size: 1.5em;
+            cursor: pointer;
+            color: #7f8c8d;
+        }
+        
+        .modal-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .form-row {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        
+        .form-label {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        .modal-actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                max-width: 95%;
+                border-radius: 15px;
+            }
+            
+            .header h1 {
+                font-size: 1.8em;
+            }
+            
+            .form-group {
+                flex-direction: column;
+            }
+            
+            .knowledge-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .knowledge-actions {
+                width: 100%;
+                justify-content: flex-end;
+            }
+            
+            .batch-actions {
+                flex-direction: column;
+                gap: 15px;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📚📚 英语知识积累本</h1>
+            <p>记录、学习和复习英语知识</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title">添加新知识</h2>
+            <div class="form-group">
+                <input type="text" id="englishInput" class="text-input" placeholder="英文内容">
+                <input type="text" id="chineseInput" class="text-input" placeholder="中文释义">
+                <button id="addKnowledgeBtn" class="btn btn-primary">添加知识</button>
+            </div>
+            
+            <div id="submitStatus" class="status-message"></div>
+            
+            <div class="knowledge-list-container">
+                <div class="knowledge-list-header">
+                    <h2 class="section-title" style="margin: 0;">知识列表</h2>
+                    <button id="refreshListBtn" class="btn btn-secondary">刷新列表</button>
+                </div>
+                
+                <div id="knowledgeListContent" class="knowledge-list-content">
+                    <div class="loading">正在加载知识列表...</div>
+                </div>
+                
+                <div class="batch-actions">
+                    <div class="select-all-container">
+                        <input type="checkbox" id="selectAllCheckbox">
+                        <label for="selectAllCheckbox" class="select-all-label">全选</label>
+                    </div>
+                    <div class="selected-count" id="selectedCount">已选择 0 项知识</div>
+                    <div>
+                        <button id="batchDeleteBtn" class="btn btn-danger">批量删除</button>
+                    </div>
+                </div>
+                
+                <div class="pagination" id="pagination">
+                    <!-- 分页控件将通过JavaScript动态生成 -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 编辑知识模态框 -->
+    <div class="modal" id="editModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">编辑知识</h3>
+                <button class="close-btn" id="closeEditModal">&times;</button>
+            </div>
+            <div class="modal-form">
+                <input type="hidden" id="editId">
+                <div class="form-row">
+                    <label class="form-label" for="editEnglish">英文内容</label>
+                    <input type="text" id="editEnglish" class="text-input">
+                </div>
+                <div class="form-row">
+                    <label class="form-label" for="editChinese">中文释义</label>
+                    <input type="text" id="editChinese" class="text-input">
+                </div>
+                <div class="form-row">
+                    <label class="form-label">
+                        <input type="checkbox" id="editReviewed"> 已复习
+                    </label>
+                </div>
+            </div>
+            <div class="modal-actions">
+                <button class="btn btn-secondary" id="cancelEdit">取消</button>
+                <button class="btn btn-primary" id="saveEdit">保存</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 元素引用
+            const englishInput = document.getElementById('englishInput');
+            const chineseInput = document.getElementById('chineseInput');
+            const addKnowledgeBtn = document.getElementById('addKnowledgeBtn');
+            const refreshListBtn = document.getElementById('refreshListBtn');
+            const knowledgeListContent = document.getElementById('knowledgeListContent');
+            const submitStatus = document.getElementById('submitStatus');
+            const selectedCountElement = document.getElementById('selectedCount');
+            const batchDeleteBtn = document.getElementById('batchDeleteBtn');
+            const paginationElement = document.getElementById('pagination');
+            const selectAllCheckbox = document.getElementById('selectAllCheckbox');
+            
+            // 模态框相关元素
+            const editModal = document.getElementById('editModal');
+            const closeEditModal = document.getElementById('closeEditModal');
+            const cancelEdit = document.getElementById('cancelEdit');
+            const saveEdit = document.getElementById('saveEdit');
+            const editId = document.getElementById('editId');
+            const editEnglish = document.getElementById('editEnglish');
+            const editChinese = document.getElementById('editChinese');
+            const editReviewed = document.getElementById('editReviewed');
+            
+            // 全局变量
+            let selectedIds = [];
+            let currentPage = 1;
+            let pageSize = 10;
+            let totalItems = 0;
+            let knowledgeData = [];
+            const baseURL = 'http://8.148.209.41:8080/jotting';
+            
+            // 初始化页面
+            loadKnowledgeList();
+            
+            // 添加知识
+            addKnowledgeBtn.addEventListener('click', function() {
+                const english = englishInput.value.trim();
+                const chinese = chineseInput.value.trim();
+                
+                if (!english || !chinese) {
+                    showStatus(submitStatus, '请输入英文和中文内容', 'error');
+                    return;
+                }
+                
+                // 创建新知识对象
+                const newKnowledge = {
+                    english: english,
+                    chinese: chinese,
+                    reviewed: false
+                };
+                addKnowledge(newKnowledge)
+                    .then(result => {
+                        if (String(result.code) === '1') {
+                            showStatus(submitStatus, '知识添加成功！', 'success');
+                            englishInput.value = '';
+                            chineseInput.value = '';
+                            loadKnowledgeList();
+                        } else {
+                            showStatus(submitStatus, `添加失败: ${result.msg || '未知错误'}`, 'error');
+                        }
+                    })
+                    .catch(error => {
+                        showStatus(submitStatus, `添加失败: ${error.message}`, 'error');
+                    });
+            });
+            
+            // 刷新列表
+            refreshListBtn.addEventListener('click', function() {
+                loadKnowledgeList();
+            });
+            
+            // 全选功能
+            selectAllCheckbox.addEventListener('change', function() {
+                const checkboxes = document.querySelectorAll('.knowledge-item input[type="checkbox"]');
+                const currentPageIds = knowledgeData.map(item => item.id);
+                
+                if (this.checked) {
+                    // 全选
+                    checkboxes.forEach(checkbox => {
+                        checkbox.checked = true;
+                        const id = parseInt(checkbox.getAttribute('data-id'));
+                        if (!selectedIds.includes(id)) {
+                            selectedIds.push(id);
+                        }
+                        const knowledgeItem = checkbox.closest('.knowledge-item');
+                        if (knowledgeItem) {
+                            knowledgeItem.classList.add('selected');
+                        }
+                    });
+                } else {
+                    // 取消全选
+                    checkboxes.forEach(checkbox => {
+                        checkbox.checked = false;
+                        const id = parseInt(checkbox.getAttribute('data-id'));
+                        const index = selectedIds.indexOf(id);
+                        if (index > -1) {
+                            selectedIds.splice(index, 1);
+                        }
+                        const knowledgeItem = checkbox.closest('.knowledge-item');
+                        if (knowledgeItem) {
+                            knowledgeItem.classList.remove('selected');
+                        }
+                    });
+                }
+                
+                updateSelectedCount();
+            });
+            
+            // 批量删除
+            batchDeleteBtn.addEventListener('click', function() {
+                if (selectedIds.length === 0) {
+                    showStatus(submitStatus, '请选择要删除的知识', 'error');
+                    return;
+                }
+                
+                if (confirm(`确定要删除选中的 ${selectedIds.length} 项知识吗？`)) {
+                    batchDeleteKnowledge(selectedIds)
+                        .then(result => {
+                            if (String(result.code) === '1') {
+                                showStatus(submitStatus, '批量删除成功！', 'success');
+                                selectedIds = [];
+                                selectAllCheckbox.checked = false;
+                                updateSelectedCount();
+                                loadKnowledgeList();
+                            } else {
+                                showStatus(submitStatus, `删除失败: ${result.msg || '未知错误'}`, 'error');
+                            }
+                        })
+                        .catch(error => {
+                            showStatus(submitStatus, `删除失败: ${error.message}`, 'error');
+                        });
+                }
+            });
+            
+            // 关闭编辑模态框
+            closeEditModal.addEventListener('click', closeModal);
+            cancelEdit.addEventListener('click', closeModal);
+            
+            // 保存编辑
+            saveEdit.addEventListener('click', function() {
+                const id = parseInt(editId.value);
+                const english = editEnglish.value.trim();
+                const chinese = editChinese.value.trim();
+                const reviewed = editReviewed.checked;
+                
+                if (!english || !chinese) {
+                    showStatus(submitStatus, '请输入英文和中文内容', 'error');
+                    return;
+                }
+                
+                const updatedKnowledge = {
+                    english: english,
+                    chinese: chinese,
+                    reviewed: reviewed
+                };
+                
+                updateKnowledge(id, updatedKnowledge)
+                    .then(result => {
+                        if (String(result.code) === '1') {
+                            showStatus(submitStatus, '知识更新成功！', 'success');
+                            closeModal();
+                            loadKnowledgeList();
+                        } else {
+                            showStatus(submitStatus, `更新失败: ${result.msg || '未知错误'}`, 'error');
+                        }
+                    })
+                    .catch(error => {
+                        showStatus(submitStatus, `更新失败: ${error.message}`, 'error');
+                    });
+            });
+            
+            // 加载知识列表
+            function loadKnowledgeList() {
+                knowledgeListContent.innerHTML = '<div class="loading">正在获取知识列表...</div>';
+                
+                getKnowledgeList(currentPage, pageSize)
+                    .then(result => {
+                        if (String(result.code) === '1') {
+                            const data = result.data || {};
+                            const list = Array.isArray(data.list) ? data.list : (Array.isArray(data.records) ? data.records : []);
+                            const totalRaw = data.total;
+                            const total = typeof totalRaw === 'number' ? totalRaw : (typeof totalRaw === 'string' ? parseInt(totalRaw, 10) : list.length);
+                            const normalized = { list, total: isNaN(total) ? list.length : total };
+
+                            const totalPages = Math.ceil(normalized.total / pageSize);
+                            if (totalPages > 0 && currentPage > totalPages) {
+                                currentPage = totalPages;
+                                loadKnowledgeList();
+                                return;
+                            }
+                            renderKnowledgeList(normalized);
+                        } else {
+                            knowledgeListContent.innerHTML = `<div class="error">获取失败: ${result.msg || '未知错误'}</div>`;
+                        }
+                    })
+                    .catch(error => {
+                        knowledgeListContent.innerHTML = `<div class="error">获取失败: ${error.message}</div>`;
+                    });
+            }
+            
+            // 渲染知识列表
+            function renderKnowledgeList(data) {
+                knowledgeData = (data.list && Array.isArray(data.list)) ? data.list : (data.records && Array.isArray(data.records) ? data.records : []);
+                totalItems = (typeof data.total === 'number') ? data.total : (typeof data.total === 'string' ? parseInt(data.total, 10) : (Array.isArray(knowledgeData) ? knowledgeData.length : 0));
+                
+                if (knowledgeData.length === 0) {
+                    knowledgeListContent.innerHTML = '<div class="no-data">暂无知识记录</div>';
+                    renderPagination();
+                    return;
+                }
+                
+                // 重置选中的ID数组
+                selectedIds = [];
+                selectAllCheckbox.checked = false;
+                
+                let html = '';
+                
+                // 生成每个知识项目的HTML
+                knowledgeData.forEach(item => {
+                    html += `
+                        <div class="knowledge-item" data-id="${item.id}">
+                            <input type="checkbox" data-id="${item.id}">
+                            <div class="knowledge-content">
+                                <div class="knowledge-english">${item.english}</div>
+                                <div class="knowledge-chinese">${item.chinese}</div>
+                            </div>
+                            <div class="knowledge-meta">
+                                <span>${item.createTime}</span>
+                            </div>
+                            <div class="knowledge-actions">
+                                <button class="btn btn-success review-btn ${item.reviewed ? 'reviewed' : ''}" data-id="${item.id}">${item.reviewed ? '已复习' : '标记复习'}</button>
+                                <button class="btn btn-secondary edit-btn" data-id="${item.id}">编辑</button>
+                                <button class="btn btn-danger delete-btn" data-id="${item.id}">删除</button>
+                            </div>
+                        </div>
+                    `;
+                });
+                
+                knowledgeListContent.innerHTML = html;
+                
+                // 更新已选择数量
+                updateSelectedCount();
+                
+                // 为复选框添加事件监听器
+                const checkboxes = document.querySelectorAll('.knowledge-item input[type="checkbox"]');
+                checkboxes.forEach(checkbox => {
+                    checkbox.addEventListener('change', function() {
+                        const id = parseInt(this.getAttribute('data-id'));
+                        const knowledgeItem = this.closest('.knowledge-item');
+                        
+                        if (this.checked) {
+                            if (!selectedIds.includes(id)) {
+                                selectedIds.push(id);
+                            }
+                            knowledgeItem.classList.add('selected');
+                        } else {
+                            const index = selectedIds.indexOf(id);
+                            if (index > -1) {
+                                selectedIds.splice(index, 1);
+                            }
+                            knowledgeItem.classList.remove('selected');
+                        }
+                        
+                        // 更新全选复选框状态
+                        updateSelectAllCheckbox();
+                        updateSelectedCount();
+                    });
+                });
+                
+                // 为编辑按钮添加事件监听器
+                const editButtons = document.querySelectorAll('.edit-btn');
+                editButtons.forEach(button => {
+                    button.addEventListener('click', function() {
+                        const id = parseInt(this.getAttribute('data-id'));
+                        openEditModal(id);
+                    });
+                });
+                
+            // 为删除按钮添加事件监听器
+            const deleteButtons = document.querySelectorAll('.delete-btn');
+            deleteButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const id = parseInt(this.getAttribute('data-id'));
+                    if (confirm('确定要删除这条知识吗？')) {
+                        deleteKnowledge(id)
+                            .then(result => {
+                                if (String(result.code) === '1') {
+                                    showStatus(submitStatus, '删除成功！', 'success');
+                                    loadKnowledgeList();
+                                } else {
+                                    showStatus(submitStatus, `删除失败: ${result.msg || '未知错误'}`, 'error');
+                                }
+                            })
+                            .catch(error => {
+                                showStatus(submitStatus, `删除失败: ${error.message}`, 'error');
+                            });
+                    }
+                });
+            });
+            
+            // 为标记复习按钮添加事件监听器
+            const reviewButtons = document.querySelectorAll('.review-btn');
+            reviewButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const id = parseInt(this.getAttribute('data-id'));
+                    const knowledge = knowledgeData.find(item => String(item.id) === String(id));
+                    
+                    if (knowledge) {
+                        // 更新复习状态为相反状态
+                        const updatedKnowledge = {
+                            english: knowledge.english,
+                            chinese: knowledge.chinese,
+                            reviewed: !knowledge.reviewed
+                        };
+                        
+                        updateKnowledge(id, updatedKnowledge)
+                            .then(result => {
+                                if (String(result.code) === '1') {
+                                    showStatus(submitStatus, '状态更新成功！', 'success');
+                                    loadKnowledgeList();
+                                } else {
+                                    showStatus(submitStatus, `状态更新失败: ${result.msg || '未知错误'}`, 'error');
+                                }
+                            })
+                            .catch(error => {
+                                showStatus(submitStatus, `状态更新失败: ${error.message}`, 'error');
+                            });
+                    }
+                });
+            });
+                
+                // 渲染分页控件
+                renderPagination();
+            }
+            
+            // 渲染分页控件
+            function renderPagination() {
+                const totalPages = Math.ceil(totalItems / pageSize);
+                
+                if (totalPages <= 1) {
+                    paginationElement.innerHTML = '';
+                    return;
+                }
+                
+                let html = '';
+                
+                // 上一页按钮
+                if (currentPage > 1) {
+                    html += `<button class="pagination-btn" data-page="${currentPage - 1}">上一页</button>`;
+                }
+                
+                // 页码按钮
+                const startPage = Math.max(1, currentPage - 2);
+                const endPage = Math.min(totalPages, currentPage + 2);
+                
+                for (let i = startPage; i <= endPage; i++) {
+                    html += `<button class="pagination-btn ${i === currentPage ? 'active' : ''}" data-page="${i}">${i}</button>`;
+                }
+                
+                // 下一页按钮
+                if (currentPage < totalPages) {
+                    html += `<button class="pagination-btn" data-page="${currentPage + 1}">下一页</button>`;
+                }
+                
+                // 分页信息
+                html += `<span class="pagination-info">共 ${totalItems} 条，${totalPages} 页</span>`;
+                
+                paginationElement.innerHTML = html;
+                
+                // 为分页按钮添加事件监听器
+                const paginationButtons = document.querySelectorAll('.pagination-btn');
+                paginationButtons.forEach(button => {
+                    button.addEventListener('click', function() {
+                        const page = parseInt(this.getAttribute('data-page'));
+                        currentPage = page;
+                        loadKnowledgeList();
+                    });
+                });
+            }
+            
+            // 打开编辑模态框
+            function openEditModal(id) {
+                const knowledge = knowledgeData.find(item => String(item.id) === String(id));
+                
+                if (knowledge) {
+                    editId.value = knowledge.id;
+                    editEnglish.value = knowledge.english;
+                    editChinese.value = knowledge.chinese;
+                    editReviewed.checked = knowledge.reviewed;
+                    
+                    editModal.style.display = 'flex';
+                }
+            }
+            
+            // 关闭模态框
+            function closeModal() {
+                editModal.style.display = 'none';
+            }
+            
+            // 更新已选择数量
+            function updateSelectedCount() {
+                selectedCountElement.textContent = `已选择 ${selectedIds.length} 项知识`;
+            }
+            
+            // 更新全选复选框状态
+            function updateSelectAllCheckbox() {
+                const checkboxes = document.querySelectorAll('.knowledge-item input[type="checkbox"]');
+                const allChecked = checkboxes.length > 0 && Array.from(checkboxes).every(checkbox => checkbox.checked);
+                selectAllCheckbox.checked = allChecked;
+            }
+            
+            // 显示状态消息
+            function showStatus(element, message, type) {
+                element.textContent = message;
+                element.className = 'status-message';
+                element.classList.add(type === 'success' ? 'status-success' : 'status-error');
+                
+                // 5秒后自动隐藏成功消息，错误消息保持显示
+                if (type === 'success') {
+                    setTimeout(() => {
+                        element.className = 'status-message';
+                        element.textContent = '';
+                    }, 5000);
+                }
+            }
+            
+            // API调用函数
+            
+            // 获取知识列表
+            async function getKnowledgeList(page, size) {
+                const response = await fetch(`${baseURL}/list?page=${page}&size=${size}`);
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP错误! 状态码: ${response.status}`);
+                }
+                
+                return await response.json();
+            }
+            
+            // 新增知识记录
+            async function addKnowledge(knowledge) {
+                const response = await fetch(`${baseURL}/add`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        english: knowledge.english,
+                        chinese: knowledge.chinese,
+                        reviewed: knowledge.reviewed
+                    })
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP错误! 状态码: ${response.status}`);
+                }
+                
+                return await response.json();
+            }
+            
+            // 更新知识记录
+            async function updateKnowledge(id, knowledge) {
+                const response = await fetch(`${baseURL}/update`, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        id: id,
+                        english: knowledge.english,
+                        chinese: knowledge.chinese,
+                        reviewed: knowledge.reviewed
+                    })
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP错误! 状态码: ${response.status}`);
+                }
+                
+                return await response.json();
+            }
+            
+            // 删除知识记录
+            async function deleteKnowledge(id) {
+                const response = await fetch(`${baseURL}/delete/${id}`, {
+                    method: 'DELETE'
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP错误! 状态码: ${response.status}`);
+                }
+                
+                return await response.json();
+            }
+            
+            // 批量删除知识记录 - 修复：直接发送数组而不是对象
+            async function batchDeleteKnowledge(ids) {
+                const response = await fetch(`${baseURL}/batchDelete`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(ids)  // 直接发送数组，而不是 {ids: ids}
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP错误! 状态码: ${response.status}`);
+                }
+                
+                return await response.json();
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: EnglishAndWord
+  datasource:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://8.148.209.41:3306/english?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
+      username: austain
+      password: 123456
+
+#  datasource:
+#      driver-class-name: com.mysql.cj.jdbc.Driver
+#      url: jdbc:mysql://localhost:3306/english?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
+#      username: root
+#      password: 1234
+
+
+  ai:
+    openai: # openai模型配置
+      base-url: https://dashscope.aliyuncs.com/compatible-mode
+      api-key: ${OPENAI_API_KEY} # API key配置在电脑环境变量中，使用此符号引用（如何配置看Function Calling笔记）
+      chat:
+        options:
+          model: deepseek-v3.1
+          temperature: 0.7
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
