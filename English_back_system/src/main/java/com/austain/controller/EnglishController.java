@@ -8,6 +8,7 @@ import com.austain.srevice.EnglishService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import jakarta.servlet.http.HttpServletRequest;
 import java.util.List;
 
 @RestController
@@ -34,8 +35,12 @@ public class EnglishController {
     }
 
     @PostMapping("/add")
-    public Result addAgainWord(@RequestBody AddRequest request){
+    public Result addAgainWord(@RequestBody AddRequest request, HttpServletRequest request2){
+        Long currentUserId = (Long) request2.getAttribute("currentUserId");
         System.out.println("插入操作已触发");
+        
+        // 为添加的错词设置用户ID
+        request.setUserId(currentUserId);
         boolean result = englishService.addAgainWord(request);
         return result ? Result.success() : Result.error("添加失败");
     }
@@ -48,8 +53,16 @@ public class EnglishController {
     }
 
     @PostMapping("/remove")
-    public Result removeAgainWord(@RequestBody AddRequest request){
+    public Result removeAgainWord(@RequestBody AddRequest request, HttpServletRequest request2){
+        Long currentUserId = (Long) request2.getAttribute("currentUserId");
+        String currentUserRole = (String) request2.getAttribute("currentUserRole");
         System.out.println("删除操作已触发");
+        
+        // 验证用户权限：只能删除自己的错词或管理员权限
+        if (!"ADMIN".equals(currentUserRole) && !englishService.isWordBelongsToUser(request.getId(), currentUserId)) {
+            return Result.error("无权限删除此单词");
+        }
+        
         boolean result = englishService.removeAgainWord(request);
         return result ? Result.success() : Result.error("删除失败");
     }
@@ -70,31 +83,73 @@ public class EnglishController {
 
     // 错词本相关接口
     @GetMapping("/wrongbook/all")
-    public Result getAllAgainWords(){
-        List<Englishs> wrongWords = englishService.getAllAgainWords();
+    public Result getAllAgainWords(HttpServletRequest request){
+        Long currentUserId = (Long) request.getAttribute("currentUserId");
+        String currentUserRole = (String) request.getAttribute("currentUserRole");
+        
+        List<Englishs> wrongWords;
+        if ("ADMIN".equals(currentUserRole)) {
+            // 管理员可以查看所有错词
+            wrongWords = englishService.getAllAgainWords();
+        } else {
+            // 普通用户只能查看自己的错词
+            wrongWords = englishService.getAgainWordsByUserId(currentUserId);
+        }
         return Result.success(wrongWords);
     }
 
     @GetMapping("/wrongbook/book")
-    public Result getAgainWordsByBook(@RequestParam(value = "bookname") String bookname){
-        List<Englishs> wrongWords = englishService.getAgainWordsByBook(bookname);
+    public Result getAgainWordsByBook(@RequestParam(value = "bookname") String bookname, HttpServletRequest request){
+        Long currentUserId = (Long) request.getAttribute("currentUserId");
+        String currentUserRole = (String) request.getAttribute("currentUserRole");
+        
+        List<Englishs> wrongWords;
+        if ("ADMIN".equals(currentUserRole)) {
+            wrongWords = englishService.getAgainWordsByBook(bookname);
+        } else {
+            wrongWords = englishService.getAgainWordsByBookAndUserId(bookname, currentUserId);
+        }
         return Result.success(wrongWords);
     }
 
     @GetMapping("/wrongbook/frequent")
-    public Result getFrequentWrongWords(@RequestParam(value = "minTimes", defaultValue = "2") int minTimes){
-        List<Englishs> wrongWords = englishService.getAgainWordsByTimes(minTimes);
+    public Result getFrequentWrongWords(@RequestParam(value = "minTimes", defaultValue = "2") int minTimes, HttpServletRequest request){
+        Long currentUserId = (Long) request.getAttribute("currentUserId");
+        String currentUserRole = (String) request.getAttribute("currentUserRole");
+        
+        List<Englishs> wrongWords;
+        if ("ADMIN".equals(currentUserRole)) {
+            wrongWords = englishService.getAgainWordsByTimes(minTimes);
+        } else {
+            wrongWords = englishService.getAgainWordsByTimesAndUserId(minTimes, currentUserId);
+        }
         return Result.success(wrongWords);
     }
 
     @GetMapping("/wrongbook/books")
-    public Result getAgainWordBooks(){
-        List<String> books = englishService.getAgainWordBooks();
+    public Result getAgainWordBooks(HttpServletRequest request){
+        Long currentUserId = (Long) request.getAttribute("currentUserId");
+        String currentUserRole = (String) request.getAttribute("currentUserRole");
+        
+        List<String> books;
+        if ("ADMIN".equals(currentUserRole)) {
+            books = englishService.getAgainWordBooks();
+        } else {
+            books = englishService.getAgainWordBooksByUserId(currentUserId);
+        }
         return Result.success(books);
     }
 
     @PostMapping("/wrongbook/increase")
-    public Result increaseWordTimes(@RequestParam(value = "id") Long id){
+    public Result increaseWordTimes(@RequestParam(value = "id") Long id, HttpServletRequest request){
+        Long currentUserId = (Long) request.getAttribute("currentUserId");
+        String currentUserRole = (String) request.getAttribute("currentUserRole");
+        
+        // 验证用户权限：只能操作自己的错词或管理员权限
+        if (!"ADMIN".equals(currentUserRole) && !englishService.isWordBelongsToUser(id, currentUserId)) {
+            return Result.error("无权限操作此单词");
+        }
+        
         boolean result = englishService.increaseWordTimes(id);
         return result ? Result.success() : Result.error("更新失败");
     }

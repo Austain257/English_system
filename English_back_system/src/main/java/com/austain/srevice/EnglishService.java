@@ -27,4 +27,15 @@ public interface EnglishService {
     boolean increaseWordTimes(Long id);
     
     List<String> getAgainWordBooks();
+
+    // 用户相关的错词接口
+    List<Englishs> getAgainWordsByUserId(Long userId);
+    
+    List<Englishs> getAgainWordsByBookAndUserId(String bookname, Long userId);
+    
+    List<Englishs> getAgainWordsByTimesAndUserId(int minTimes, Long userId);
+    
+    List<String> getAgainWordBooksByUserId(Long userId);
+    
+    boolean isWordBelongsToUser(Long wordId, Long userId);
 }

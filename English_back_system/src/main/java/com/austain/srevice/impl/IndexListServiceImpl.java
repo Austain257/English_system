@@ -1,11 +1,12 @@
 package com.austain.srevice.impl;
 
 import com.austain.domain.dto.Result;
+import com.austain.domain.po.UserBook;
 import com.austain.mapper.IndexListMapper;
 import com.austain.srevice.IndexListService;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import java.util.List;
 
 @Service
 public class IndexListServiceImpl implements IndexListService {
@@ -14,17 +15,16 @@ public class IndexListServiceImpl implements IndexListService {
     private IndexListMapper indexListMapper;
 
     @Override
-    public List<String> getBookNameList() {
-        return indexListMapper.getBookNameList();
+    public List<UserBook> getUserBooks(Long userId, boolean isAdmin) {
+        if (isAdmin) {
+            return indexListMapper.getAllBooks();
+        }
+        return indexListMapper.getBooksByUserId(userId);
     }
 
     @Override
-    public Result checkBookExist(String bookName) {
-        List<String> bookNameList = indexListMapper.getBookNameList();
-        if (bookNameList.contains(bookName)) {
-            return Result.success();
-        } else {
-            return Result.error("不存在该书本");
-        }
+    public Result checkBookExist(Long userId, boolean isAdmin, String bookName) {
+        int count = indexListMapper.countBookByName(bookName, userId, isAdmin);
+        return count > 0 ? Result.success() : Result.error("不存在该书本");
     }
 }

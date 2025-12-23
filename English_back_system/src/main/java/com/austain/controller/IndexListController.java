@@ -1,13 +1,15 @@
 package com.austain.controller;
 
 import com.austain.domain.dto.Result;
+import com.austain.domain.po.UserBook;
 import com.austain.srevice.IndexListService;
+import jakarta.servlet.http.HttpServletRequest;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import java.util.List;
 
 @RestController
 @RequestMapping("/list")
@@ -17,14 +19,20 @@ public class IndexListController {
     private IndexListService indexListService;
 
     @GetMapping
-    public Result getBookNameList() {
-        List<String> bookNameList = indexListService.getBookNameList();
+    public Result getBookNameList(HttpServletRequest request) {
+        Long currentUserId = (Long) request.getAttribute("currentUserId");
+        String role = (String) request.getAttribute("currentUserRole");
+        boolean isAdmin = "ADMIN".equals(role);
+        List<UserBook> bookNameList = indexListService.getUserBooks(currentUserId, isAdmin);
         return Result.success(bookNameList);
     }
 
     @GetMapping("/{bookName}")
-    public Result checkBookExist(@PathVariable String bookName){
-        return indexListService.checkBookExist(bookName);
+    public Result checkBookExist(@PathVariable String bookName, HttpServletRequest request){
+        Long currentUserId = (Long) request.getAttribute("currentUserId");
+        String role = (String) request.getAttribute("currentUserRole");
+        boolean isAdmin = "ADMIN".equals(role);
+        return indexListService.checkBookExist(currentUserId, isAdmin, bookName);
     }
 }
 

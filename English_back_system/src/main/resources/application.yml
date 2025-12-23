@@ -3,25 +3,12 @@ server:
 
 spring:
   application:
-    name: EnglishAndWord
+    name: English_back_system
   datasource:
       driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://localhost:3306/english?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
-      username: austain
+      url: jdbc:mysql://localhost:3306/english_web?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
+      username: Austain
       password: 123456
-
-
-#  datasource:
-#      driver-class-name: com.mysql.cj.jdbc.Driver
-#      url: jdbc:mysql://8.148.209.41:3306/english?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
-#      username: austain
-#      password: 123456
-
-#  datasource:
-#      driver-class-name: com.mysql.cj.jdbc.Driver
-#      url: jdbc:mysql://localhost:3306/english?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
-#      username: root
-#      password: 1234
 
 
   ai:

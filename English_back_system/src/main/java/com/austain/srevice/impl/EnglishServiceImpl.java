@@ -75,4 +75,30 @@ public class EnglishServiceImpl implements EnglishService {
     public List<String> getAgainWordBooks() {
         return englishMapper.getAgainWordBooks();
     }
+
+    // 用户相关的错词方法实现
+    @Override
+    public List<Englishs> getAgainWordsByUserId(Long userId) {
+        return englishMapper.getAgainWordsByUserId(userId);
+    }
+
+    @Override
+    public List<Englishs> getAgainWordsByBookAndUserId(String bookname, Long userId) {
+        return englishMapper.getAgainWordsByBookAndUserId(bookname, userId);
+    }
+
+    @Override
+    public List<Englishs> getAgainWordsByTimesAndUserId(int minTimes, Long userId) {
+        return englishMapper.getAgainWordsByTimesAndUserId(minTimes, userId);
+    }
+
+    @Override
+    public List<String> getAgainWordBooksByUserId(Long userId) {
+        return englishMapper.getAgainWordBooksByUserId(userId);
+    }
+
+    @Override
+    public boolean isWordBelongsToUser(Long wordId, Long userId) {
+        return englishMapper.isWordBelongsToUser(wordId, userId);
+    }
 }

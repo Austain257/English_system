@@ -14,4 +14,5 @@ public class AddRequest {
     private String pronounce;
     private String times;
     private String bookname;
+    private Long userId; // 添加用户ID字段
 }

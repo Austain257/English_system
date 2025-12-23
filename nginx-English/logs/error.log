@@ -25,3 +25,33 @@
 2025/12/23 13:06:57 [notice] 4472#11020: signal process started
 2025/12/23 13:33:42 [notice] 5324#10704: signal process started
 2025/12/23 13:34:07 [notice] 18296#1280: signal process started
+2025/12/23 14:57:50 [notice] 15716#2276: signal process started
+2025/12/23 14:57:51 [notice] 3256#14200: signal process started
+2025/12/23 14:57:51 [error] 3256#14200: CreateFile() "D:\develop\code-file\GitHub\English_system\nginx-English/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2025/12/23 16:01:46 [notice] 23032#19744: signal process started
+2025/12/23 16:01:48 [notice] 26420#12892: signal process started
+2025/12/23 16:01:48 [error] 26420#12892: CreateFile() "D:\develop\code-file\GitHub\English_system\nginx-English/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2025/12/23 16:02:35 [notice] 25020#18696: signal process started
+2025/12/23 16:02:36 [notice] 10300#9100: signal process started
+2025/12/23 16:18:45 [notice] 23892#17088: signal process started
+2025/12/23 16:29:31 [notice] 3528#17076: signal process started
+2025/12/23 16:37:30 [notice] 11036#4528: signal process started
+2025/12/23 16:45:05 [notice] 23976#11272: signal process started
+2025/12/23 18:11:41 [notice] 5320#17480: signal process started
+2025/12/23 18:19:08 [notice] 13260#24112: signal process started
+2025/12/23 19:09:02 [error] 18856#22780: *15 CreateFile() "D:\develop\code-file\GitHub\English_system\nginx-English/html/.html" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /AllBook.html HTTP/1.1", host: "localhost", referrer: "http://localhost/function/?bookname=englishword200"
+2025/12/23 19:09:22 [error] 18856#22780: *15 CreateFile() "D:\develop\code-file\GitHub\English_system\nginx-English/html/.html" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /AllBook.html HTTP/1.1", host: "localhost", referrer: "http://localhost/function/?bookname=englishword200"
+2025/12/23 19:09:40 [error] 18856#22780: *15 CreateFile() "D:\develop\code-file\GitHub\English_system\nginx-English/html/.html" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /AllBook.html HTTP/1.1", host: "localhost", referrer: "http://localhost/function/?bookname=englishword200"
+2025/12/23 19:09:42 [error] 18856#22780: *15 CreateFile() "D:\develop\code-file\GitHub\English_system\nginx-English/html/.html" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /AllBook.html HTTP/1.1", host: "localhost", referrer: "http://localhost/function/?bookname=englishword200"
+2025/12/23 19:10:12 [notice] 20296#17992: signal process started
+2025/12/23 19:23:56 [notice] 11396#7292: signal process started
+2025/12/23 20:02:58 [notice] 27828#692: signal process started
+2025/12/23 20:05:08 [error] 2520#21196: *4 CreateFile() "D:\develop\code-file\GitHub\English_system\nginx-English/html/index" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /index?focus=core HTTP/1.1", host: "localhost", referrer: "http://localhost/allbook/"
+2025/12/23 20:05:22 [error] 2520#21196: *4 CreateFile() "D:\develop\code-file\GitHub\English_system\nginx-English/html/index" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /index?focus=core HTTP/1.1", host: "localhost", referrer: "http://localhost/login/index.html"
+2025/12/23 20:06:53 [error] 2520#21196: *7 CreateFile() "D:\develop\code-file\GitHub\English_system\nginx-English/html/index" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /index?focus=core HTTP/1.1", host: "localhost", referrer: "http://localhost/login/index.html"
+2025/12/23 20:09:27 [error] 2520#21196: *10 CreateFile() "D:\develop\code-file\GitHub\English_system\nginx-English/html//login/index" failed (3: The system cannot find the path specified), client: 127.0.0.1, server: localhost, request: "GET /login/login/index?focus=core HTTP/1.1", host: "localhost", referrer: "http://localhost/login/index.html"
+2025/12/23 20:09:42 [error] 2520#21196: *10 CreateFile() "D:\develop\code-file\GitHub\English_system\nginx-English/html/index" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /index?focus=core HTTP/1.1", host: "localhost", referrer: "http://localhost/login/index.html"
+2025/12/23 20:10:24 [error] 2520#21196: *10 CreateFile() "D:\develop\code-file\GitHub\English_system\nginx-English/html//login/index.html" failed (3: The system cannot find the path specified), client: 127.0.0.1, server: localhost, request: "GET /login/login/index.html?focus=core HTTP/1.1", host: "localhost", referrer: "http://localhost/login/index.html"
+2025/12/23 20:10:48 [error] 2520#21196: *10 CreateFile() "D:\develop\code-file\GitHub\English_system\nginx-English/html//login/index.html" failed (3: The system cannot find the path specified), client: 127.0.0.1, server: localhost, request: "GET /login/login/index.html?focus=core HTTP/1.1", host: "localhost", referrer: "http://localhost/login/index.html"
+2025/12/23 20:35:35 [notice] 23428#11760: signal process started
+2025/12/23 20:35:36 [notice] 20996#18656: signal process started

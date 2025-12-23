@@ -16,11 +16,65 @@
         body {
             background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
             min-height: 100vh;
-            padding: 20px;
+            padding: 0 20px 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
             color: #333;
+        }
+
+        .top-bar {
+            width: 100%;
+            max-width: 1200px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 24px 0 10px;
+            position: relative;
+            z-index: 20;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #fff;
+        }
+
+        .brand-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: rgba(255,255,255,0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+        }
+
+        .brand h1 {
+            font-size: 1.3rem;
+            margin: 0;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: rgba(255,255,255,0.85);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: #fff;
+        }
+
+        .user-info-slot {
+            min-width: 260px;
         }
         
         .header {
@@ -147,6 +201,15 @@
             overflow: hidden;
         }
         
+        .book-cover.has-cover {
+            background: transparent;
+            box-shadow: none;
+        }
+
+        .book-cover.has-cover::before {
+            display: none;
+        }
+
         .book-cover::before {
             content: "";
             position: absolute;
@@ -158,6 +221,24 @@
             animation: bookPulse 6s infinite linear;
         }
         
+        .book-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+            display: block;
+        }
+
+        .book-cover-fallback {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: inherit;
+            font-size: inherit;
+        }
+
         .book-cover i {
             position: relative;
             z-index: 1;
@@ -259,7 +340,23 @@
         }
     </style>
 </head>
-<body>
+<body data-require-auth="true">
+    <header class="top-bar">
+        <div class="brand">
+            <div class="brand-icon"><i class="fas fa-globe-americas"></i></div>
+            <div>
+                <h1>英语智学平台</h1>
+                <small style="color:rgba(255,255,255,0.75)">词库 · 数据 · 个性化</small>
+            </div>
+        </div>
+        <nav class="nav-links">
+            <a href="/function">功能总览</a>
+            <a href="/wrongbook">错词本</a>
+            <a href="/profile">个人中心</a>
+        </nav>
+        <div class="user-info-slot" data-user-info-anchor="true"></div>
+    </header>
+
     <div class="header">
         <h1>英语词汇学习系统</h1>
         <p>选择课本开始您的英语学习之旅</p>
@@ -274,10 +371,22 @@
     </div>
 
     <script>
+        const API_BASE = 'http://localhost:8080';
+
+        function buildAuthHeaders() {
+            const token = localStorage.getItem('auth_token');
+            return token ? { 'Authorization': `Bearer ${token}` } : {};
+        }
+
         document.addEventListener('DOMContentLoaded', function() {
-            // 从后端获取课本列表
-            fetch('http://192.168.43.106:8080/list')
-            // fetch('http://8.148.209.41:8080/list')
+            const headers = buildAuthHeaders();
+            if (!headers.Authorization) {
+                alert('登录状态已失效，请重新登录后查看课本');
+                window.location.href = '/login';
+                return;
+            }
+
+            fetch(`${API_BASE}/list`, { headers })
                 .then(response => {
                     if (!response.ok) {
                         throw new Error(`HTTP错误! 状态: ${response.status}`);
@@ -290,8 +399,7 @@
                         return;
                     }
                     
-                    const books = data.data;
-                    renderBooks(books);
+                    renderBooks(data.data);
                 })
                 .catch(error => {
                     console.error('获取课本数据失败:', error);
@@ -303,27 +411,30 @@
                 container.innerHTML = '';
                 
                 books.forEach(book => {
-                    // 从书名中提取数字作为词汇量
-                    const wordCount = book.match(/\d+/);
-                    const difficulty = wordCount && wordCount[0] > 500 ? '高级' : (wordCount && wordCount[0] > 300 ? '中级' : '初级');
+                    const name = book.bookName || '未命名课本';
+                    const displayWordCount = book.wordCount || (name.match(/\d+/)?.[0] ? parseInt(name.match(/\d+/)[0], 10) : null);
+                    const difficulty = displayWordCount ? (displayWordCount > 500 ? '高级' : displayWordCount > 300 ? '中级' : '初级') : '适中';
                     
                     const bookCard = document.createElement('div');
                     bookCard.className = 'book-card';
                     bookCard.onclick = () => {
-                        // 跳转到课本功能选择页，传递课本名称
-                        window.location.href = `/function?bookname=${encodeURIComponent(book)}`; 
+                        window.location.href = `/function?bookname=${encodeURIComponent(name)}`; 
                     };
                     
+                    const hasCover = !!book.coverUrl;
                     bookCard.innerHTML = `
-                        <div class="book-cover">
-                            <i class="fas fa-book"></i>
+                        <div class="book-cover ${hasCover ? 'has-cover' : ''}">
+                            ${hasCover ? `<img src="${book.coverUrl}" alt="${name} 封面" referrerpolicy="no-referrer" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.remove('has-cover');const fallback=this.nextElementSibling;fallback.style.display='flex';"/>` : ''}
+                            <div class="book-cover-fallback" ${hasCover ? 'style="display:none;"' : ''}>
+                                <i class="fas fa-book"></i>
+                            </div>
                         </div>
-                        <h3 class="book-title">${book}</h3>
-                        <p class="book-desc">全面的英语词汇学习资源，系统化掌握英语核心词汇，提升语言运用能力</p>
+                        <h3 class="book-title">${name}</h3>
+                        <p class="book-desc">${book.description || '全面的英语词汇学习资源，系统化掌握英语核心词汇，提升语言运用能力'}</p>
                         <div class="book-meta">
                             <div class="meta-item">
                                 <span class="meta-label">词汇量</span>
-                                <span class="meta-value">${wordCount ? wordCount[0] + '+' : '500+'}</span>
+                                <span class="meta-value">${displayWordCount ? displayWordCount + '+' : '500+'}</span>
                             </div>
                             <div class="meta-item">
                                 <span class="meta-label">难度</span>
@@ -337,5 +448,9 @@
             }
         });
     </script>
+    
+    <!-- 用户信息组件与鉴权 -->
+    <script src="/assets/js/auth-guard.js"></script>
+    <script src="/assets/js/user-info.js"></script>
 </body>
 </html>

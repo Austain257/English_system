@@ -11,67 +11,231 @@
             padding: 0;
             box-sizing: border-box;
         }
+
+        :root {
+            --bg-gradient: linear-gradient(135deg, #0c1027 0%, #1b2563 55%, #4e1fb8 100%);
+            --card-glass: rgba(255, 255, 255, 0.08);
+            --card-solid: rgba(255, 255, 255, 0.98);
+            --text-muted: rgba(255, 255, 255, 0.75);
+            --accent: #7a5cff;
+        }
         
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            background: var(--bg-gradient);
             min-height: 100vh;
-            padding: 20px;
+            padding: 0 20px 20px;
             overflow-x: hidden;
+            color: #fff;
+        }
+
+        .top-bar {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 28px 0 10px;
+            color: #fff;
+            position: relative;
+            z-index: 30;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 16px;
+            background: rgba(255,255,255,0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+        }
+
+        .brand h1 {
+            font-size: 1.35rem;
+            margin: 0;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 24px;
+        }
+
+        .nav-links a {
+            color: rgba(255,255,255,0.85);
+            text-decoration: none;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+        }
+
+        .nav-links a:hover {
+            color: #fff;
+        }
+
+        .user-info-slot {
+            min-width: 260px;
+            display: flex;
+            justify-content: flex-end;
         }
         
-        .header {
-            background: linear-gradient(135deg, #4a6ee0 0%, #6a11cb 100%);
-            color: white;
-            padding: 30px;
-            text-align: center;
+        .hero-banner {
+            background: rgba(9, 14, 34, 0.6);
+            border-radius: 32px;
+            padding: 40px;
+            margin-bottom: 35px;
+            box-shadow: 0 30px 80px rgba(7, 11, 30, 0.55);
+            border: 1px solid rgba(255, 255, 255, 0.08);
             position: relative;
             overflow: hidden;
-            margin-bottom: 30px;
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
         }
-        
-        .header::before {
-            content: "";
+
+        .hero-banner::after {
+            content: '';
             position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
-            animation: pulse 8s infinite linear;
+            inset: 0;
+            background: radial-gradient(circle at top right, rgba(122, 92, 255, 0.35), transparent 55%);
+            pointer-events: none;
         }
-        
-        @keyframes pulse {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+
+        .hero-grid {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 45px;
+            align-items: center;
         }
-        
-        .header h1 {
-            font-size: 3.2em;
-            margin-bottom: 15px;
+
+        .hero-copy h1 {
+            font-size: clamp(2.6rem, 4vw, 3.5rem);
+            margin: 18px 0;
+        }
+
+        .hero-copy p {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 16px;
+            border-radius: 999px;
+            background: rgba(122, 92, 255, 0.15);
+            color: #c9c6ff;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+        }
+
+        .hero-highlights {
+            list-style: none;
+            margin: 20px 0;
+            display: grid;
+            gap: 12px;
+        }
+
+        .hero-highlights li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        .hero-highlights i {
+            color: #6ee7b7;
+        }
+
+        .hero-cta {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .hero-cta a {
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 18px;
+            padding: 12px 26px;
+            transition: transform 0.2s ease, background 0.2s;
+        }
+
+        .hero-cta .primary {
+            background: linear-gradient(135deg, #5c6fff, #8f64ff);
+            color: #fff;
+            box-shadow: 0 15px 35px rgba(92, 111, 255, 0.45);
+        }
+
+        .hero-cta .ghost {
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: #fff;
+        }
+
+        .hero-cta a:hover {
+            transform: translateY(-2px);
+        }
+
+        .hero-insight {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .insight-card {
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: 24px;
+            padding: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .insight-card.primary {
+            background: linear-gradient(135deg, #5b5eff, #9252ff);
+            box-shadow: 0 25px 60px rgba(91, 94, 255, 0.35);
+        }
+
+        .insight-label {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.75);
+        }
+
+        .insight-value {
+            font-size: 2.8rem;
             font-weight: 700;
-            position: relative;
-            z-index: 1;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            margin: 8px 0;
         }
-        
-        .header .subtitle {
-            font-size: 1.4em;
-            opacity: 0.9;
-            position: relative;
-            z-index: 1;
-            margin-bottom: 10px;
+
+        .mini-metrics {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(120px, 1fr));
+            gap: 12px;
         }
-        
-        .header .description {
-            font-size: 1.1em;
-            opacity: 0.8;
-            position: relative;
-            z-index: 1;
-            max-width: 800px;
-            margin: 0 auto;
+
+        .mini-metric {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 18px;
+            padding: 14px;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.75);
+        }
+
+        .mini-metric strong {
+            display: block;
+            color: #fff;
+            font-size: 1.4rem;
+            margin-top: 4px;
         }
         
         .main-container {
@@ -87,35 +251,35 @@
         }
         
         .stat-card {
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 0.08);
             padding: 25px;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            border-radius: 18px;
+            text-align: left;
+            box-shadow: 0 15px 30px rgba(8, 12, 34, 0.4);
             transition: all 0.3s ease;
-            border-left: 4px solid #4a6ee0;
+            border: 1px solid rgba(255, 255, 255, 0.08);
         }
         
         .stat-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.35);
         }
         
         .stat-icon {
             font-size: 2.5em;
-            color: #4a6ee0;
+            color: #78a6ff;
             margin-bottom: 10px;
         }
         
         .stat-number {
             font-size: 2em;
             font-weight: bold;
-            color: #2c3e50;
+            color: #fff;
             margin-bottom: 5px;
         }
         
         .stat-label {
-            color: #666;
+            color: var(--text-muted);
             font-size: 0.9em;
         }
         
@@ -369,10 +533,10 @@
         }
         
         @media (max-width: 768px) {
-            .header h1 {
-                font-size: 2.5em;
+            .hero-grid {
+                grid-template-columns: 1fr;
             }
-            
+
             .section-title {
                 font-size: 2em;
             }
@@ -451,23 +615,69 @@
         }
     </style>
 </head>
-<body>
-    <!-- 加载页面 -->
-    <div class="loading-overlay" id="loadingOverlay">
-        <div class="loading-content">
-            <div class="loading-spinner"></div>
-            <h2>英语词汇学习系统</h2>
-            <p>正在加载智能学习平台...</p>
+<body data-require-auth="true">
+    <header class="top-bar">
+        <div class="brand">
+            <div class="brand-icon"><i class="fas fa-graduation-cap"></i></div>
+            <div>
+                <h1>英语智学平台</h1>
+                <small style="color:rgba(255,255,255,0.8)">AI驱动 · 多角色协同</small>
+            </div>
         </div>
-    </div>
+        <nav class="nav-links">
+            <a href="/function">功能</a>
+            <a href="/wrongbook">错词本</a>
+            <a href="/profile">个人中心</a>
+        </nav>
+        <div class="user-info-slot" data-user-info-anchor="true"></div>
+    </header>
+
+    <!-- <div class="header">
+        <h1>英语词汇学习系统</h1>
+        <p>选择您需要的学习功能</p>
+    </div> -->
 
     <div class="main-container">
-        <!-- 头部标题 -->
-        <div class="header">
-            <h1><i class="fas fa-graduation-cap"></i> 英语词汇学习系统</h1>
-            <p class="subtitle">AI驱动的智能英语学习平台</p>
-            <p class="description">集词汇学习、智能测试、游戏化练习、学习记录于一体的现代化英语学习解决方案</p>
-        </div>
+        <!-- 英雄区 -->
+        <section class="hero-banner">
+            <div class="hero-grid">
+                <div class="hero-copy">
+                    <span class="hero-badge"><i class="fas fa-sparkles"></i> AI 导航式学习</span>
+                    <h1>英语智能学习系统</h1>
+                    <p>集词汇学习、智能测试、游戏化练习、学习记录于一体，结合 AI 分析与数据驱动的复习策略，让每一次学习都更高效、更沉浸。</p>
+                    <ul class="hero-highlights">
+                        <li><i class="fas fa-check-circle"></i> 个性化词库与错词追踪，全程云端同步</li>
+                        <li><i class="fas fa-check-circle"></i> AI 学习顾问动态推送任务，打造自律闭环</li>
+                        <li><i class="fas fa-check-circle"></i> 多终端响应式界面，随时随地继续练习</li>
+                    </ul>
+                    <div class="hero-cta">
+                        <a class="primary" href="/function"><i class="fas fa-play"></i> 立即进入功能面板</a>
+                        <a class="ghost" href="/landing#feature">了解平台特色</a>
+                    </div>
+                </div>
+                <div class="hero-insight">
+                    <div class="insight-card primary">
+                        <span class="insight-label">今日累计完成任务</span>
+                        <div class="insight-value">128</div>
+                        <span class="insight-label">学习者正在坚持每日打卡</span>
+                    </div>
+                    <div class="insight-card">
+                        <span class="insight-label">学习效率指数</span>
+                        <div class="insight-value" style="font-size:2.2rem;">92%</div>
+                        <div class="mini-metrics">
+                            <div class="mini-metric">
+                                连续学习
+                                <strong>14天</strong>
+                            </div>
+                            <div class="mini-metric">
+                                AI推荐命中率
+                                <strong>87%</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- 数据统计 -->
         <div class="stats-section">
@@ -563,14 +773,14 @@
                     </div>
                 </div>
 
-                <div class="function-card" onclick="navigateTo('/article')">
+                <div class="function-card" onclick="navigateTo('/wrongbook')">
                     <div class="function-icon"><i class="fas fa-file-alt"></i></div>
-                    <h3 class="function-title">高级文章生成</h3>
-                    <p class="function-description">更强大的AI文章生成工具，支持多种文体和复杂度调节</p>
+                    <h3 class="function-title">错词本常练</h3>
+                    <p class="function-description">错词要多看，而不是一直盯着会的词</p>
                     <div class="function-tags">
-                        <span class="tag">高级AI</span>
-                        <span class="tag">多文体</span>
-                        <span class="tag">可定制</span>
+                        <span class="tag">全面</span>
+                        <span class="tag">深化</span>
+                        <span class="tag">定制</span>
                     </div>
                 </div>
             </div>
@@ -609,6 +819,8 @@
         </p>
     </div>
 
+    <!-- <script src="/assets/js/auth-guard.js"></script>
+    <script src="/assets/js/user-info.js"></script> -->
     <script>
         // 页面加载完成后隐藏加载页面
         window.addEventListener('load', function() {
@@ -619,6 +831,14 @@
                     loadingOverlay.style.display = 'none';
                 }, 500);
             }, 1000);
+
+            const params = new URLSearchParams(window.location.search);
+            if (params.get('focus') === 'core') {
+                const target = document.querySelector('.section-title');
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }
         });
 
         // 导航函数 - 使用nginx路径转发
@@ -759,5 +979,9 @@
         `;
         document.head.appendChild(style);
     </script>
+    
+    <!-- 用户信息组件 -->
+    <script src="/assets/js/user-info.js"></script>
+    <script src="/assets/js/auth-guard.js"></script>
 </body>
 </html>

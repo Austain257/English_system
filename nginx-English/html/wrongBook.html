@@ -367,9 +367,186 @@
                 padding: 20px;
             }
         }
+
+        .study-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(13, 15, 36, 0.75);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            padding: 20px;
+        }
+
+        .study-panel {
+            background: #fff;
+            border-radius: 24px;
+            max-width: 640px;
+            width: 100%;
+            padding: 30px;
+            position: relative;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+            overflow: hidden;
+        }
+
+        .study-panel::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(74,110,224,0.1), rgba(106,17,203,0.06));
+            pointer-events: none;
+        }
+
+        .study-close {
+            position: absolute;
+            top: 18px;
+            right: 18px;
+            background: rgba(0,0,0,0.05);
+            border: none;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #555;
+            transition: all 0.2s;
+        }
+
+        .study-close:hover {
+            background: rgba(0,0,0,0.12);
+            color: #000;
+        }
+
+        .study-progress {
+            font-size: 0.95rem;
+            color: #6c63ff;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .study-word-block {
+            text-align: center;
+            padding: 30px 10px 10px;
+        }
+
+        .study-word {
+            font-size: 2.6rem;
+            font-weight: 700;
+            color: #222;
+        }
+
+        .study-pronounce {
+            margin-top: 10px;
+            color: #6c757d;
+            font-size: 1.1rem;
+        }
+
+        .reveal-btn {
+            margin-top: 20px;
+            padding: 10px 24px;
+            border-radius: 999px;
+            border: none;
+            background: linear-gradient(135deg, #ffb347, #ffcc33);
+            color: #fff;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .reveal-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .study-meaning {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            color: #2c3e50;
+            background: rgba(74, 110, 224, 0.08);
+            padding: 18px;
+            border-radius: 16px;
+            line-height: 1.6;
+            display: none;
+        }
+
+        .study-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 25px;
+            color: #6c757d;
+            font-size: 0.95rem;
+        }
+
+        .study-meta span {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .study-actions {
+            margin-top: 28px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .study-btn {
+            flex: 1;
+            padding: 14px;
+            border: none;
+            border-radius: 12px;
+            color: #fff;
+            font-size: 1.05rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .study-btn.known {
+            background: linear-gradient(135deg, #28a745, #48db71);
+        }
+
+        .study-btn.unknown {
+            background: linear-gradient(135deg, #ff5f6d, #ffc371);
+        }
+
+        .study-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.18);
+        }
+
+        .study-summary {
+            margin-top: 25px;
+            text-align: center;
+            color: #4a6ee0;
+            font-size: 1.05rem;
+            display: none;
+        }
+
+        .study-summary strong {
+            font-size: 1.3rem;
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .study-empty {
+            text-align: center;
+            color: #dee2e6;
+            font-size: 1rem;
+            margin-top: 30px;
+        }
+
+        body.study-lock {
+            overflow: hidden;
+        }
     </style>
 </head>
-<body>
+<body data-require-auth="true">
     <div class="container">
         <div class="header">
             <h1><i class="fas fa-book-open"></i> 智能错词本</h1>
@@ -415,7 +592,7 @@
                 <button class="btn btn-success" onclick="startPractice()">
                     <i class="fas fa-play"></i> 开始练习
                 </button>
-                <a href="/function" class="btn btn-danger">
+                <a href="/allbook" class="btn btn-danger">
                     <i class="fas fa-arrow-left"></i> 返回
                 </a>
             </div>
@@ -436,9 +613,50 @@
         </div>
     </div>
 
+    <div class="study-overlay" id="studyOverlay">
+        <div class="study-panel">
+            <button class="study-close" onclick="closeStudySession()"><i class="fas fa-times"></i></button>
+            <div class="study-progress" id="studyProgressText">错词学习</div>
+            <div class="study-word-block" id="studyWordBlock">
+                <div class="study-word" id="studyWord">apple</div>
+                <div class="study-pronounce" id="studyPronounce">/ˈæpl/</div>
+                <button class="reveal-btn" id="revealButton" onclick="revealMeaning()">
+                    <i class="fas fa-eye"></i> 显示释义
+                </button>
+                <div class="study-meaning" id="studyMeaning">示例释义</div>
+            </div>
+            <div class="study-meta">
+                <span><i class="fas fa-book"></i> <span id="studyBook">默认课本</span></span>
+                <span><i class="fas fa-redo"></i> <span id="studyTimes">错误 1 次</span></span>
+            </div>
+            <div class="study-actions" id="studyActions">
+                <button class="study-btn known" onclick="handleStudyResult(true)">
+                    <i class="fas fa-check"></i> 记住了
+                </button>
+                <button class="study-btn unknown" onclick="handleStudyResult(false)">
+                    <i class="fas fa-sync"></i> 还不会
+                </button>
+            </div>
+            <div class="study-summary" id="studySummary">
+                <strong>本轮学习完成</strong>
+                <p>继续保持，下次将自动为你挑选新的错词</p>
+                <button class="btn btn-primary" style="margin-top:15px;" onclick="startStudySession()">再来一轮</button>
+            </div>
+            <div class="study-empty" id="studyEmpty" style="display:none;">
+                当前筛选下已没有错词需要学习
+            </div>
+        </div>
+    </div>
+
     <script>
+        const API_BASE = 'http://localhost:8080';
+        const STUDY_BATCH_SIZE = 8;
         let allWords = [];
         let currentFilter = { book: 'all', times: 0 };
+        let studyWords = [];
+        let studyIndex = 0;
+        let studyStats = { completed: 0, known: 0, unknown: 0 };
+        let meaningRevealed = false;
         
         // 页面加载时初始化
         document.addEventListener('DOMContentLoaded', function() {
@@ -446,6 +664,14 @@
             loadWords();
             setupEventListeners();
         });
+        
+        function getToken() {
+            const token = localStorage.getItem('auth_token');
+            if (!token) {
+                window.location.href = '/login?return=wrongbook';
+            }
+            return token;
+        }
         
         // 设置事件监听器
         function setupEventListeners() {
@@ -462,8 +688,15 @@
         
         // 加载课本列表
         async function loadBooks() {
+            const token = getToken();
+            if (!token) return;
             try {
-                const response = await fetch('http://192.168.43.106:8080/english/wrongbook/books');
+                const response = await fetch(`${API_BASE}/english/wrongbook/books`, {
+                    headers: {
+                        'Authorization': `Bearer ${token}`,
+                        'Content-Type': 'application/json'
+                    }
+                });
                 const result = await response.json();
                 
                 if (result.code === 1) {
@@ -486,10 +719,17 @@
         
         // 加载错词数据
         async function loadWords() {
+            const token = getToken();
+            if (!token) return;
             showLoading(true);
             
             try {
-                const response = await fetch('http://192.168.43.106:8080/english/wrongbook/all');
+                const response = await fetch(`${API_BASE}/english/wrongbook/all`, {
+                    headers: {
+                        'Authorization': `Bearer ${token}`,
+                        'Content-Type': 'application/json'
+                    }
+                });
                 const result = await response.json();
                 
                 if (result.code === 1) {
@@ -507,20 +747,20 @@
             }
         }
         
-        // 过滤单词
-        function filterWords() {
+        function getFilteredWords() {
             let filteredWords = allWords;
-            
-            // 按课本过滤
             if (currentFilter.book !== 'all') {
                 filteredWords = filteredWords.filter(word => word.bookname === currentFilter.book);
             }
-            
-            // 按错误次数过滤
             if (currentFilter.times > 0) {
                 filteredWords = filteredWords.filter(word => (word.times || 0) >= currentFilter.times);
             }
-            
+            return filteredWords;
+        }
+        
+        // 过滤单词
+        function filterWords() {
+            const filteredWords = getFilteredWords();
             displayWords(filteredWords);
         }
         
@@ -591,10 +831,13 @@
                 return;
             }
             
+            const token = getToken();
+            if (!token) return;
             try {
-                const response = await fetch('http://192.168.43.106:8080/english/remove', {
+                const response = await fetch(`${API_BASE}/english/remove`, {
                     method: 'POST',
                     headers: {
+                        'Authorization': `Bearer ${token}`,
                         'Content-Type': 'application/json'
                     },
                     body: JSON.stringify({ id: id, word: word })
@@ -620,40 +863,172 @@
         // 单词练习（增加错误次数）
         async function practiceWord(id, word) {
             try {
-                const response = await fetch(`http://192.168.43.106:8080/english/wrongbook/increase?id=${id}`, {
-                    method: 'POST'
-                });
-                
-                const result = await response.json();
-                
-                if (result.code === 1) {
-                    // 更新本地数据
-                    const wordObj = allWords.find(w => w.id === id);
-                    if (wordObj) {
-                        wordObj.times = (wordObj.times || 1) + 1;
-                        filterWords();
-                        updateStats();
-                    }
-                    
-                    alert(`单词 "${word}" 练习次数已记录`);
-                } else {
-                    alert('记录失败：' + result.message);
+                await increaseWordTimesRequest(id);
+                const wordObj = allWords.find(w => w.id === id);
+                if (wordObj) {
+                    wordObj.times = (wordObj.times || 1) + 1;
+                    filterWords();
+                    updateStats();
                 }
+                alert(`单词 "${word}" 练习次数已记录`);
             } catch (error) {
                 console.error('练习记录失败:', error);
                 alert('记录失败，请重试');
             }
         }
         
-        // 开始练习模式
+        async function increaseWordTimesRequest(id) {
+            const token = getToken();
+            if (!token) throw new Error('未登录');
+            const response = await fetch(`${API_BASE}/english/wrongbook/increase?id=${id}`, {
+                method: 'POST',
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'application/json'
+                }
+            });
+            const result = await response.json();
+            if (result.code !== 1) {
+                throw new Error(result.message || '更新失败');
+            }
+        }
+        
+        // 开始学习模式
         function startPractice() {
-            if (allWords.length === 0) {
-                alert('暂无错词可以练习');
+            startStudySession();
+        }
+        
+        function startStudySession() {
+            const pool = getFilteredWords();
+            if (!pool || pool.length === 0) {
+                alert('当前筛选下暂无需要复习的错词');
                 return;
             }
-            
-            // 可以跳转到练习页面或者弹出练习模态框
-            alert('练习功能即将开放，敬请期待！');
+            studyWords = shuffleArray(pool).slice(0, Math.min(STUDY_BATCH_SIZE, pool.length));
+            studyIndex = 0;
+            studyStats = { completed: 0, known: 0, unknown: 0 };
+            meaningRevealed = false;
+            document.body.classList.add('study-lock');
+            document.getElementById('studySummary').style.display = 'none';
+            document.getElementById('studyActions').style.display = 'flex';
+            document.getElementById('revealButton').style.display = 'inline-flex';
+            document.getElementById('studyEmpty').style.display = 'none';
+            document.getElementById('studyOverlay').style.display = 'flex';
+            showStudyWord();
+        }
+        
+        function showStudyWord() {
+            if (!studyWords.length) {
+                showStudyEmptyState();
+                return;
+            }
+            if (studyIndex >= studyWords.length) {
+                showStudySummary();
+                return;
+            }
+            const current = studyWords[studyIndex];
+            const wordEl = document.getElementById('studyWord');
+            const pronounceEl = document.getElementById('studyPronounce');
+            const meaningEl = document.getElementById('studyMeaning');
+            const revealBtn = document.getElementById('revealButton');
+            document.getElementById('studyBook').textContent = current.bookname || '自定义课本';
+            document.getElementById('studyTimes').textContent = `错误 ${current.times || 1} 次`;
+            document.getElementById('studyProgressText').textContent = `本轮第 ${studyIndex + 1} / ${studyWords.length} 个`;
+            wordEl.textContent = current.word;
+            pronounceEl.textContent = current.pronounce || '暂无音标';
+            meaningEl.textContent = current.chinese || '暂无释义';
+            meaningEl.style.display = 'none';
+            meaningRevealed = false;
+            revealBtn.style.display = 'inline-flex';
+        }
+        
+        function revealMeaning() {
+            document.getElementById('studyMeaning').style.display = 'block';
+            meaningRevealed = true;
+            document.getElementById('revealButton').style.display = 'none';
+        }
+        
+        async function handleStudyResult(isKnown) {
+            if (studyIndex >= studyWords.length) {
+                showStudySummary();
+                return;
+            }
+            const current = studyWords[studyIndex];
+            if (!meaningRevealed) {
+                revealMeaning();
+                return;
+            }
+            studyStats.completed += 1;
+            if (isKnown) {
+                studyStats.known += 1;
+            } else {
+                studyStats.unknown += 1;
+                try {
+                    await increaseWordTimesRequest(current.id);
+                    const wordObj = allWords.find(w => w.id === current.id);
+                    if (wordObj) {
+                        wordObj.times = (wordObj.times || 1) + 1;
+                    }
+                } catch (error) {
+                    console.error(error);
+                    alert('记录失败，请稍后再试');
+                }
+            }
+            studyIndex += 1;
+            meaningRevealed = false;
+            if (studyIndex >= studyWords.length) {
+                filterWords();
+                updateStats();
+                showStudySummary();
+            } else {
+                showStudyWord();
+            }
+        }
+        
+        function showStudySummary() {
+            document.getElementById('studyActions').style.display = 'none';
+            document.getElementById('revealButton').style.display = 'none';
+            document.getElementById('studyMeaning').style.display = 'none';
+            const summary = document.getElementById('studySummary');
+            const completed = studyStats.completed;
+            summary.innerHTML = `
+                <strong>本轮已完成 ${completed} 个错词</strong>
+                <p>记住 ${studyStats.known} 个 · 待加强 ${studyStats.unknown} 个</p>
+                <button class="btn btn-success" style="margin-top:15px;" onclick="startStudySession()">
+                    <i class="fas fa-redo"></i> 继续下一轮
+                </button>
+                <button class="btn btn-danger" style="margin-top:10px;" onclick="closeStudySession()">
+                    <i class="fas fa-door-open"></i> 返回列表
+                </button>
+            `;
+            summary.style.display = 'block';
+        }
+        
+        function showStudyEmptyState() {
+            document.getElementById('studyWordBlock').style.display = 'none';
+            document.getElementById('studyActions').style.display = 'none';
+            document.getElementById('studySummary').style.display = 'none';
+            document.getElementById('studyEmpty').style.display = 'block';
+        }
+        
+        function closeStudySession() {
+            document.getElementById('studyOverlay').style.display = 'none';
+            document.body.classList.remove('study-lock');
+            document.getElementById('studyWordBlock').style.display = 'block';
+            document.getElementById('studyActions').style.display = 'flex';
+            document.getElementById('studySummary').style.display = 'none';
+            document.getElementById('studyEmpty').style.display = 'none';
+            document.getElementById('revealButton').style.display = 'inline-flex';
+            document.getElementById('studyMeaning').style.display = 'none';
+        }
+        
+        function shuffleArray(arr) {
+            const clone = [...arr];
+            for (let i = clone.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [clone[i], clone[j]] = [clone[j], clone[i]];
+            }
+            return clone;
         }
         
         // 刷新数据
@@ -689,5 +1064,9 @@
             return date.toLocaleDateString('zh-CN');
         }
     </script>
+    
+    <!-- 鉴权与用户信息组件 -->
+    <script src="/assets/js/auth-guard.js"></script>
+    <!-- <script src="/assets/js/user-info.js"></script> -->
 </body>
 </html>

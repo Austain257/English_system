@@ -20,7 +20,7 @@ public interface EnglishMapper {
 //    @Update("update ${bookName} set pronounce = #{pronounce} where word = #{word}")
     void updatePronounce(String word, String pronounce);
 
-    @Insert("insert into againenglishword(word,chinese,pronounce,times,bookname) values(#{word},#{chinese},#{pronounce},#{times},#{bookname})")
+    @Insert("insert into againenglishword(word,chinese,pronounce,times,bookname,user_id) values(#{word},#{chinese},#{pronounce},#{times},#{bookname},#{userId})")
     int addAgainWord(AddRequest request);
 
     @Delete("delete from againenglishword where word = #{word} and id = #{id}")
@@ -33,18 +33,34 @@ public interface EnglishMapper {
     int finalAddAgainWord(AddRequest request);
 
     // 错词本相关接口
-    @Select("select * from againenglishword order by create_time desc")
+    @Select("select * from finally_again_word order by create_time desc")
     List<Englishs> getAllAgainWords();
 
-    @Select("select * from againenglishword where bookname = #{bookname} order by create_time desc")
+    @Select("select * from finally_again_word where bookname = #{bookname} order by create_time desc")
     List<Englishs> getAgainWordsByBook(@Param("bookname") String bookname);
 
-    @Select("select * from againenglishword where times >= #{minTimes} order by times desc, create_time desc")
+    @Select("select * from finally_again_word where times >= #{minTimes} order by times desc, create_time desc")
     List<Englishs> getAgainWordsByTimes(@Param("minTimes") int minTimes);
 
-    @Update("update againenglishword set times = times + 1 where id = #{id}")
+    @Update("update finally_again_word set times = times + 1 where id = #{id}")
     int increaseWordTimes(@Param("id") Long id);
 
     @Select("select distinct bookname from againenglishword order by bookname")
     List<String> getAgainWordBooks();
+
+    // 用户相关的错词查询方法
+    @Select("select * from finally_again_word where user_id = #{userId} order by create_time desc")
+    List<Englishs> getAgainWordsByUserId(@Param("userId") Long userId);
+
+    @Select("select * from finally_again_word where bookname = #{bookname} and user_id = #{userId} order by create_time desc")
+    List<Englishs> getAgainWordsByBookAndUserId(@Param("bookname") String bookname, @Param("userId") Long userId);
+
+    @Select("select * from finally_again_word where times >= #{minTimes} and user_id = #{userId} order by times desc, create_time desc")
+    List<Englishs> getAgainWordsByTimesAndUserId(@Param("minTimes") int minTimes, @Param("userId") Long userId);
+
+    @Select("select distinct book_name from user_books where user_id in (#{userId},2) order by book_name")
+    List<String> getAgainWordBooksByUserId(@Param("userId") Long userId);
+
+    @Select("select count(*) > 0 from finally_again_word where id = #{wordId} and user_id = #{userId}")
+    boolean isWordBelongsToUser(@Param("wordId") Long wordId, @Param("userId") Long userId);
 }
