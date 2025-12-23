@@ -665,7 +665,7 @@
                 showStatus('正在连接AI服务...', 'success');
                 
                 // 建立SSE连接
-                const url = `http://localhost:8080/article/generation?beginIndex=${startIndex}&endIndex=${endIndex}`;
+                const url = `http://192.168.43.106:8080/article/generation?beginIndex=${startIndex}&endIndex=${endIndex}`;
                 
                 eventSource = new EventSource(url);
                 

@@ -591,7 +591,8 @@
             // 提交学习内容到后端
             async function submitStudyContent(content) {
                 // 将表名作为参数传递
-                const response = await fetch(`http://8.148.209.41:8080/study/record?table=${currentTable}`, {
+                // const response = await fetch(`http://8.148.209.41:8080/study/record?table=${currentTable}`, {
+                const response = await fetch(`http://192.168.43.106:8080/study/record?table=${currentTable}`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -614,8 +615,8 @@
                 
                 try {
                     // 将表名作为参数传递
-                    const response = await fetch(`http://8.148.209.41:8080/study/list?table=${currentTable}`);
-                    // const response = await fetch(`http://localhost:8080/study/list?table=${currentTable}`);
+                    // const response = await fetch(`http://8.148.209.41:8080/study/list?table=${currentTable}`);
+                    const response = await fetch(`http://192.168.43.106:8080/study/list?table=${currentTable}`);
                     
                     if (!response.ok) {
                         throw new Error(`HTTP错误! 状态码: ${response.status}`);
@@ -637,7 +638,8 @@
             // 标记为已复习
             async function markAsReviewed(ids) {
                 // 将表名作为参数传递
-                const response = await fetch(`http://8.148.209.41:8080/study/mark?table=${currentTable}`, {
+                // const response = await fetch(`http://8.148.209.41:8080/study/mark?table=${currentTable}`, {
+                const response = await fetch(`http://192.168.43.106:8080/study/mark?table=${currentTable}`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

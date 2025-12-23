@@ -514,8 +514,8 @@
             const bookname = urlParams.get('bookname');
             
             // 构建带参数的URL
-            // let url = `http://localhost:8080/english/list?start=${startIndex}&end=${endIndex}`;
-            let url = `http://8.148.209.41:8080/english/list?start=${startIndex}&end=${endIndex}`;
+            let url = `http://192.168.43.106:8080/english/list?start=${startIndex}&end=${endIndex}`;
+            // let url = `http://8.148.209.41:8080/english/list?start=${startIndex}&end=${endIndex}`;
             if (bookname) {
                 url += `&bookname=${encodeURIComponent(bookname)}`;
             }

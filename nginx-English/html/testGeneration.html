@@ -381,7 +381,7 @@
                     controller = new AbortController();
                     const signal = controller.signal;
                     
-                    const url = `http://localhost:8080/article/generation?beginIndex=${startIndex}&endIndex=${endIndex}`;
+                    const url = `http://192.168.43.106:8080/article/generation?beginIndex=${startIndex}&endIndex=${endIndex}`;
                     
                     const response = await fetch(url, {
                         signal,

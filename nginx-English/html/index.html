@@ -171,8 +171,8 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // 从后端获取课本列表
-            // fetch('http://localhost:8080/list')
-            fetch('http://8.148.209.41:8080/list')
+            fetch('http://192.168.43.106:8080/list')
+            // fetch('http://8.148.209.41:8080/list')
                 .then(response => {
                     if (!response.ok) {
                         throw new Error(`HTTP错误! 状态: ${response.status}`);

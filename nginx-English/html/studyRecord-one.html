@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习记录与清单</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 1.8em;
+            margin-bottom: 5px;
+        }
+        
+        .header p {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+        
+        .content-section {
+            padding: 30px;
+        }
+        
+        .section-title {
+            font-size: 1.4em;
+            color: #4facfe;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        .input-group {
+            margin-bottom: 20px;
+        }
+        
+        .text-input {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #4facfe;
+            border-radius: 8px;
+            font-size: 1em;
+            outline: none;
+            resize: vertical;
+            min-height: 120px;
+            margin-bottom: 15px;
+        }
+        
+        .text-input:focus {
+            border-color: #00f2fe;
+            box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.2);
+        }
+        
+        .btn {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary {
+            background: #4facfe;
+            color: white;
+        }
+        
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+        
+        .btn-success {
+            background: #28a745;
+            color: white;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .study-list-container {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 30px;
+            min-height: 200px;
+        }
+        
+        .study-list-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .study-list-content {
+            min-height: 150px;
+            border: 1px dashed #ddd;
+            border-radius: 8px;
+            padding: 15px;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 50px;
+            font-size: 1.2em;
+            color: #666;
+        }
+        
+        .error {
+            text-align: center;
+            padding: 50px;
+            color: #e74c3c;
+            font-size: 1.2em;
+        }
+        
+        .status-message {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            display: none;
+        }
+        
+        .status-success {
+            background-color: #d4edda;
+            color: #155724;
+            display: block;
+        }
+        
+        .status-error {
+            background-color: #f8d7da;
+            color: #721c24;
+            display: block;
+        }
+        
+        /* 新增样式 - 匹配test页面 */
+        .study-content {
+            padding: 15px;
+        }
+        
+        .study-list {
+            margin: 15px 0;
+        }
+        
+        .study-list ul {
+            list-style-type: none;
+        }
+        
+        .study-list li {
+            padding: 12px 15px;
+            margin-bottom: 10px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #4facfe;
+            transition: all 0.3s ease;
+        }
+        
+        .study-list li:hover {
+            background-color: #e9ecef;
+            transform: translateX(5px);
+        }
+        
+        .study-list strong {
+            color: #343a40;
+            font-weight: 600;
+        }
+        
+        .study-time {
+            color: #6c757d;
+            font-size: 14px;
+            margin-top: 3px;
+            display: block;
+        }
+        
+        .duration {
+            background-color: #d1ecf1;
+            color: #0c5460;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 600;
+            border-left: 4px solid #0c5460;
+            margin-top: 15px;
+        }
+        
+        .current-date-display {
+            font-size: 16px;
+            color: #6c757d;
+            margin-top: 5px;
+        }
+
+        .study-content .study-list ul li {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .study-content .study-list ul li input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            margin: 0;
+            flex-shrink: 0;
+        }
+        
+        .no-data {
+            text-align: center;
+            padding: 30px;
+            color: #6c757d;
+            font-style: italic;
+        }
+        
+        /* 新增样式 - 已复习按钮区域 */
+        .reviewed-section {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #dee2e6;
+            text-align: center;
+        }
+        
+        .reviewed-info {
+            margin-bottom: 15px;
+            color: #6c757d;
+            font-size: 14px;
+        }
+        
+        .btn-reviewed {
+            background: #28a745;
+            color: white;
+            padding: 10px 25px;
+            font-size: 1em;
+        }
+        
+        .btn-reviewed:disabled {
+            background: #6c757d;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+        
+        .btn-reviewed:disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📝📝📝📝 学习记录与清单</h1>
+            <p>记录每日学习内容，查看学习进度</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title">记录学习内容</h2>
+            <div class="input-group">
+                <textarea 
+                    id="studyContentInput" 
+                    class="text-input" 
+                    placeholder="请输入今天完成的学习内容..."
+                ></textarea>
+                <button id="submitContentBtn" class="btn btn-primary">提交学习记录</button>
+            </div>
+            
+            <div id="submitStatus" class="status-message"></div>
+            
+            <div class="study-list-container">
+                <div class="study-list-header">
+                    <div>
+                        <h2 class="section-title" style="margin: 0;">今日学习清单</h2>
+                        <div class="current-date-display" id="current-date"></div>
+                    </div>
+                    <button id="refreshListBtn" class="btn btn-secondary">刷新清单</button>
+                </div>
+                
+                <div id="studyListContent" class="study-list-content">
+                    <div class="loading">点击"刷新清单"获取今日学习内容</div>
+                </div>
+                
+                <!-- 新增已复习按钮区域 -->
+                <div class="reviewed-section">
+                    <div class="reviewed-info" id="selectedCount">已选择 0 项学习记录</div>
+                    <button id="markReviewedBtn" class="btn btn-reviewed" disabled>标记为已复习</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const studyContentInput = document.getElementById('studyContentInput');
+            const submitContentBtn = document.getElementById('submitContentBtn');
+            const refreshListBtn = document.getElementById('refreshListBtn');
+            const studyListContent = document.getElementById('studyListContent');
+            const submitStatus = document.getElementById('submitStatus');
+            const currentDateElement = document.getElementById('current-date');
+            const markReviewedBtn = document.getElementById('markReviewedBtn');
+            const selectedCountElement = document.getElementById('selectedCount');
+            
+            // 存储选中的学习记录ID
+            let selectedIds = [];
+            
+            // 更新当前日期
+            function updateCurrentDate() {
+                const now = new Date();
+                const options = { 
+                    year: 'numeric', 
+                    month: 'long', 
+                    day: 'numeric',
+                    hour: 'numeric',
+                    minute: 'numeric',
+                    hour12: false
+                };
+                currentDateElement.textContent = now.toLocaleDateString('zh-CN', options);
+            }
+            
+            // 初始化日期显示
+            updateCurrentDate();
+            
+            // 提交学习内容
+            submitContentBtn.addEventListener('click', function() {
+                const content = studyContentInput.value.trim();
+                
+                if (!content) {
+                    showStatus(submitStatus, '请输入学习内容', 'error');
+                    return;
+                }
+                
+                // 显示加载状态
+                showStatus(submitStatus, '提交中...', 'success');
+                
+                // 调用后端接口提交学习内容
+                submitStudyContent(content)
+                    .then(result => {
+                        if (result.code === 1) {
+                            showStatus(submitStatus, '学习记录提交成功！', 'success');
+                            studyContentInput.value = '';
+                            
+                            // 自动刷新学习清单
+                            refreshStudyList();
+                        } else {
+                            showStatus(submitStatus, `提交失败: ${result.msg || '未知错误'}`, 'error');
+                        }
+                    })
+                    .catch(error => {
+                        showStatus(submitStatus, `提交失败: ${error.message}`, 'error');
+                    });
+            });
+            
+            // 刷新学习清单
+            refreshListBtn.addEventListener('click', function() {
+                refreshStudyList();
+            });
+            
+            // 标记为已复习按钮点击事件
+            markReviewedBtn.addEventListener('click', function() {
+                // 加上这个数组就必须有参数，不能为空，但是业务需要数组可以为空，所以此处不做校验
+                /* if (selectedIds.length === 0) {
+                    showStatus(submitStatus, '请先选择要标记为已复习的学习记录', 'error');
+                    return;
+                } */
+                
+                markAsReviewed(selectedIds)
+                    .then(result => {
+                        if (result.code === 1) {
+                            showStatus(submitStatus, '已成功标记为已复习！', 'success');
+                            // 刷新学习清单
+                            refreshStudyList();
+                        } else {
+                            showStatus(submitStatus, `标记失败: ${result.msg || '未知错误'}`, 'error');
+                        }
+                    })
+                    .catch(error => {
+                        showStatus(submitStatus, `标记失败: ${error.message}`, 'error');
+                    });
+            });
+            
+            // 提交学习内容到后端
+            async function submitStudyContent(content) {
+                // const response = await fetch('http://8.148.209.41:8080/study/record?table=study_record', {
+                const response = await fetch('http://192.168.43.106:8080/study/record?table=study_record', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        record: content
+                    })
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP错误! 状态码: ${response.status}`);
+                }
+                
+                return await response.json();
+            }
+            
+            // 获取学习清单
+            async function refreshStudyList() {
+                studyListContent.innerHTML = '<div class="loading">正在获取学习清单...</div>';
+                
+                try {
+                    // const response = await fetch('http://8.148.209.41:8080/study/list?table=study_record');
+                    const response = await fetch('http://192.168.43.106:8080/study/list?table=study_record');
+                    
+                    if (!response.ok) {
+                        throw new Error(`HTTP错误! 状态码: ${response.status}`);
+                    }
+                    
+                    const result = await response.json();
+                    
+                    if (result.code === 1) {
+                        // 使用后端返回的JSON数据生成学习清单
+                        renderStudyList(result.data);
+                    } else {
+                        studyListContent.innerHTML = `<div class="error">获取失败: ${result.msg || '未知错误'}</div>`;
+                    }
+                } catch (error) {
+                    studyListContent.innerHTML = `<div class="error">获取失败: ${error.message}</div>`;
+                }
+            }
+            
+            // 标记为已复习
+            async function markAsReviewed(ids) {
+                // const response = await fetch('http://8.148.209.41:8080/study/mark?table=study_record', {
+                const response = await fetch('http://192.168.43.106:8080/study/mark?table=study_record', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        ids: ids
+                    })
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP错误! 状态码: ${response.status}`);
+                }
+                
+                return await response.json();
+            }
+            
+            // 渲染学习清单
+            function renderStudyList(data) {
+                if (!data || data.length === 0) {
+                    studyListContent.innerHTML = '<div class="no-data">今日暂无学习内容</div>';
+                    // 清空已选择记录
+                    selectedIds = [];
+                    updateSelectedCount();
+                    return;
+                }
+                
+                // 重置选中的ID数组
+                selectedIds = [];
+                
+                // 格式化日期时间
+                function formatDateTime(dateTimeStr) {
+                    const date = new Date(dateTimeStr);
+                    return date.toLocaleString('zh-CN', {
+                        year: 'numeric',
+                        month: '2-digit',
+                        day: '2-digit',
+                        hour: '2-digit',
+                        minute: '2-digit'
+                    });
+                }
+                
+                // 计算总学习天数
+                const totalDays = Math.max(...data.map(item => item.toDate));
+                
+                let html = `
+                    <div class="study-content">
+                        <div class="study-list">
+                            <ul>
+                `;
+                
+                // 生成每个学习项目的HTML
+                data.forEach(item => {
+                    const isChecked = item.alreadyReviewed === 1;
+                    if (isChecked) {
+                        selectedIds.push(item.id);
+                    }
+                    
+                    html += `
+                        <li>
+                            <input type="checkbox" data-id="${item.id}" ${isChecked ? 'checked' : ''}>
+                            <div>
+                                <strong>${item.record}</strong>
+                                <span class="study-time">学习时间：${formatDateTime(item.createTime)} | 距今${item.toDate}天</span>
+                            </div>
+                        </li>
+                    `;
+                });
+                
+                html += `
+                            </ul>
+                        </div>
+                        <div class="duration">今日需学习${data.length}项内容</div>
+                    </div>
+                `;
+                
+                studyListContent.innerHTML = html;
+                
+                // 更新已选择数量
+                updateSelectedCount();
+                
+                // 为所有复选框添加事件监听器
+                const checkboxes = document.querySelectorAll('.study-list input[type="checkbox"]');
+                checkboxes.forEach(checkbox => {
+                    checkbox.addEventListener('change', function() {
+                        const id = this.getAttribute('data-id');
+                        
+                        if (this.checked) {
+                            // 如果选中，添加到数组
+                            if (!selectedIds.includes(id)) {
+                                selectedIds.push(id);
+                            }
+                        } else {
+                            // 如果取消选中，从数组中移除
+                            const index = selectedIds.indexOf(id);
+                            if (index > -1) {
+                                selectedIds.splice(index, 1);
+                            }
+                        }
+                        
+                        // 更新已选择数量
+                        updateSelectedCount();
+                    });
+                });
+            }
+            
+            // 更新已选择数量
+            function updateSelectedCount() {
+                selectedCountElement.textContent = `已选择 ${selectedIds.length} 项学习记录`;
+                
+                // 注释掉的内容是判断是否启动按钮，但是业务需要数组为空的时候也启动按钮，所以此处关闭
+/*                 // 根据选择数量启用/禁用按钮
+                if (selectedIds.length > 0) {
+                    markReviewedBtn.disabled = false;
+                } else {
+                    markReviewedBtn.disabled = true;
+            } */
+               markReviewedBtn.disabled = false;
+            }
+            
+            // 显示状态消息
+            function showStatus(element, message, type) {
+                element.textContent = message;
+                element.className = 'status-message';
+                element.classList.add(type === 'success' ? 'status-success' : 'status-error');
+                
+                // 5秒后自动隐藏成功消息，错误消息保持显示
+                if (type === 'success') {
+                    setTimeout(() => {
+                        element.className = 'status-message';
+                        element.textContent = '';
+                    }, 5000);
+                }
+            }
+        });
+    </script>
+</body>
+</html>
