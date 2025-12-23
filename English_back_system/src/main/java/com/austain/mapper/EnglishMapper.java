@@ -31,4 +31,20 @@ public interface EnglishMapper {
 
     @Insert("insert into finally_again_word(word,chinese,pronounce,times,bookname) values(#{word},#{chinese},#{pronounce},#{times},#{bookname})")
     int finalAddAgainWord(AddRequest request);
+
+    // 错词本相关接口
+    @Select("select * from againenglishword order by create_time desc")
+    List<Englishs> getAllAgainWords();
+
+    @Select("select * from againenglishword where bookname = #{bookname} order by create_time desc")
+    List<Englishs> getAgainWordsByBook(@Param("bookname") String bookname);
+
+    @Select("select * from againenglishword where times >= #{minTimes} order by times desc, create_time desc")
+    List<Englishs> getAgainWordsByTimes(@Param("minTimes") int minTimes);
+
+    @Update("update againenglishword set times = times + 1 where id = #{id}")
+    int increaseWordTimes(@Param("id") Long id);
+
+    @Select("select distinct bookname from againenglishword order by bookname")
+    List<String> getAgainWordBooks();
 }

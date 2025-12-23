@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>英语词汇学习系统</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #333;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #4a6ee0 0%, #6a11cb 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+            max-width: 1200px;
+            width: 100%;
+        }
+        
+        .header::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: pulse 8s infinite linear;
+        }
+        
+        @keyframes pulse {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            position: relative;
+            z-index: 1;
+            margin: 0 auto;
+        }
+        
+        .container {
+            max-width: 1400px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 20px 0;
+            padding: 0 20px;
+        }
+        
+        @media (min-width: 1200px) {
+            .container {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        
+        @media (min-width: 1600px) {
+            .container {
+                grid-template-columns: repeat(5, 1fr);
+            }
+        }
+        
+        .book-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            width: 100%;
+            padding: 30px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+            transition: all 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+        }
+        
+        .book-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #4a6ee0, #6a11cb);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .book-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .book-card:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+            background: rgba(255, 255, 255, 0.98);
+        }
+        
+        .book-cover {
+            width: 140px;
+            height: 180px;
+            background: linear-gradient(135deg, #4a6ee0 0%, #6a11cb 100%);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+            color: white;
+            font-size: 3rem;
+            box-shadow: 0 10px 25px rgba(74, 110, 224, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .book-cover::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 60%);
+            animation: bookPulse 6s infinite linear;
+        }
+        
+        .book-cover i {
+            position: relative;
+            z-index: 1;
+        }
+        
+        @keyframes bookPulse {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .book-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+        
+        .book-desc {
+            color: #6c757d;
+            font-size: 0.95rem;
+            margin-bottom: 25px;
+            flex-grow: 1;
+            line-height: 1.5;
+        }
+        
+        .book-meta {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+            padding-top: 20px;
+            border-top: 1px solid #e9ecef;
+        }
+        
+        .meta-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .meta-label {
+            font-size: 0.8rem;
+            color: #8e9aaf;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+        
+        .meta-value {
+            font-size: 0.95rem;
+            color: #4a6ee0;
+            font-weight: 600;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 50px;
+            font-size: 1.2rem;
+            color: white;
+        }
+        
+        .footer {
+            margin-top: 40px;
+            color: white;
+            text-align: center;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                gap: 20px;
+            }
+            
+            .book-card {
+                width: 250px;
+            }
+            
+            .header h1 {
+                font-size: 2.2rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .book-card {
+                width: 100%;
+                max-width: 320px;
+            }
+            
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .header p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>英语词汇学习系统</h1>
+        <p>选择课本开始您的英语学习之旅</p>
+    </div>
+    
+    <div class="container" id="booksContainer">
+        <div class="loading">正在加载课本信息...</div>
+    </div>
+    
+    <div class="footer">
+        <p>© 2023 英语词汇学习系统 | 提供全面的英语学习资源</p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 从后端获取课本列表
+            fetch('http://192.168.43.106:8080/list')
+            // fetch('http://8.148.209.41:8080/list')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP错误! 状态: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    if (data.code !== 1 || !data.data || data.data.length === 0) {
+                        document.getElementById('booksContainer').innerHTML = '<div class="loading">暂无课本数据</div>';
+                        return;
+                    }
+                    
+                    const books = data.data;
+                    renderBooks(books);
+                })
+                .catch(error => {
+                    console.error('获取课本数据失败:', error);
+                    document.getElementById('booksContainer').innerHTML = '<div class="loading">数据加载失败，请检查网络连接</div>';
+                });
+                
+            function renderBooks(books) {
+                const container = document.getElementById('booksContainer');
+                container.innerHTML = '';
+                
+                books.forEach(book => {
+                    // 从书名中提取数字作为词汇量
+                    const wordCount = book.match(/\d+/);
+                    const difficulty = wordCount && wordCount[0] > 500 ? '高级' : (wordCount && wordCount[0] > 300 ? '中级' : '初级');
+                    
+                    const bookCard = document.createElement('div');
+                    bookCard.className = 'book-card';
+                    bookCard.onclick = () => {
+                        // 跳转到课本功能选择页，传递课本名称
+                        window.location.href = `/function?bookname=${encodeURIComponent(book)}`; 
+                    };
+                    
+                    bookCard.innerHTML = `
+                        <div class="book-cover">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h3 class="book-title">${book}</h3>
+                        <p class="book-desc">全面的英语词汇学习资源，系统化掌握英语核心词汇，提升语言运用能力</p>
+                        <div class="book-meta">
+                            <div class="meta-item">
+                                <span class="meta-label">词汇量</span>
+                                <span class="meta-value">${wordCount ? wordCount[0] + '+' : '500+'}</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">难度</span>
+                                <span class="meta-value">${difficulty}</span>
+                            </div>
+                        </div>
+                    `;
+                    
+                    container.appendChild(bookCard);
+                });
+            }
+        });
+    </script>
+</body>
+</html>

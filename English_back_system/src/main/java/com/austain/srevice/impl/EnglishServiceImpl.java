@@ -48,4 +48,31 @@ public class EnglishServiceImpl implements EnglishService {
         int result = englishMapper.addAgainWord(request);
         return result > 0;
     }
+
+    // 错词本相关方法实现
+    @Override
+    public List<Englishs> getAllAgainWords() {
+        return englishMapper.getAllAgainWords();
+    }
+
+    @Override
+    public List<Englishs> getAgainWordsByBook(String bookname) {
+        return englishMapper.getAgainWordsByBook(bookname);
+    }
+
+    @Override
+    public List<Englishs> getAgainWordsByTimes(int minTimes) {
+        return englishMapper.getAgainWordsByTimes(minTimes);
+    }
+
+    @Override
+    public boolean increaseWordTimes(Long id) {
+        int result = englishMapper.increaseWordTimes(id);
+        return result > 0;
+    }
+
+    @Override
+    public List<String> getAgainWordBooks() {
+        return englishMapper.getAgainWordBooks();
+    }
 }

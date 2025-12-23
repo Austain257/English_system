@@ -67,4 +67,35 @@ public class EnglishController {
         List<Englishs> dactationList = englishService.getEnglishList(start,end,"englishword575");
         return Result.success(dactationList);
     }
+
+    // 错词本相关接口
+    @GetMapping("/wrongbook/all")
+    public Result getAllAgainWords(){
+        List<Englishs> wrongWords = englishService.getAllAgainWords();
+        return Result.success(wrongWords);
+    }
+
+    @GetMapping("/wrongbook/book")
+    public Result getAgainWordsByBook(@RequestParam(value = "bookname") String bookname){
+        List<Englishs> wrongWords = englishService.getAgainWordsByBook(bookname);
+        return Result.success(wrongWords);
+    }
+
+    @GetMapping("/wrongbook/frequent")
+    public Result getFrequentWrongWords(@RequestParam(value = "minTimes", defaultValue = "2") int minTimes){
+        List<Englishs> wrongWords = englishService.getAgainWordsByTimes(minTimes);
+        return Result.success(wrongWords);
+    }
+
+    @GetMapping("/wrongbook/books")
+    public Result getAgainWordBooks(){
+        List<String> books = englishService.getAgainWordBooks();
+        return Result.success(books);
+    }
+
+    @PostMapping("/wrongbook/increase")
+    public Result increaseWordTimes(@RequestParam(value = "id") Long id){
+        boolean result = englishService.increaseWordTimes(id);
+        return result ? Result.success() : Result.error("更新失败");
+    }
 }

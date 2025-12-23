@@ -3,228 +3,761 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>英语词汇学习系统</title>
+    <title>英语词汇学习系统 - 智能英语学习平台</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         
         body {
-            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
             min-height: 100vh;
             padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            color: #333;
+            overflow-x: hidden;
         }
         
         .header {
-            text-align: center;
-            margin: 30px 0;
+            background: linear-gradient(135deg, #4a6ee0 0%, #6a11cb 100%);
             color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            padding: 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 30px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+        }
+        
+        .header::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: pulse 8s infinite linear;
+        }
+        
+        @keyframes pulse {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
         
         .header h1 {
-            font-size: 2.8rem;
+            font-size: 3.2em;
+            margin-bottom: 15px;
+            font-weight: 700;
+            position: relative;
+            z-index: 1;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .header .subtitle {
+            font-size: 1.4em;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
             margin-bottom: 10px;
         }
         
-        .header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            max-width: 600px;
+        .header .description {
+            font-size: 1.1em;
+            opacity: 0.8;
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
         }
         
-        .container {
-            max-width: 1200px;
+        .main-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .stats-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .stat-card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+            border-left: 4px solid #4a6ee0;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+        
+        .stat-icon {
+            font-size: 2.5em;
+            color: #4a6ee0;
+            margin-bottom: 10px;
+        }
+        
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5em;
+            color: white;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .function-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        
+        .core-function-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .function-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+            transition: all 0.4s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .function-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #4a6ee0, #6a11cb);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .function-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .function-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.2);
+        }
+        
+        .function-icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #4a6ee0, #6a11cb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .function-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .function-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .function-tags {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
-            margin: 20px 0;
+            gap: 8px;
         }
         
-        .book-card {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 15px;
-            width: 280px;
-            padding: 25px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            transition: all 0.3s ease;
+        .tag {
+            background: rgba(74, 110, 224, 0.1);
+            color: #4a6ee0;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: 500;
+        }
+        
+        .ai-section {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 40px 0;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .ai-title {
+            text-align: center;
+            font-size: 2.2em;
+            color: white;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .ai-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .floating-actions {
+            position: fixed;
+            right: 30px;
+            bottom: 30px;
+            z-index: 1000;
+        }
+        
+        .fab-container {
+            position: relative;
             display: flex;
             flex-direction: column;
             align-items: center;
-            text-align: center;
+        }
+        
+        .fab {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #4a6ee0, #6a11cb);
+            color: white;
+            border: none;
             cursor: pointer;
-        }
-        
-        .book-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-        }
-        
-        .book-cover {
-            width: 120px;
-            height: 160px;
-            background: linear-gradient(135deg, #4facfe, #00f2fe);
-            border-radius: 10px;
+            font-size: 1.5em;
+            box-shadow: 0 8px 25px rgba(74, 110, 224, 0.4);
+            transition: all 0.3s ease;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 20px;
-            color: white;
-            font-size: 2.5rem;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
         }
         
-        .book-title {
-            font-size: 1.4rem;
-            font-weight: bold;
-            color: #2c3e50;
-            margin-bottom: 10px;
+        .fab:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 35px rgba(74, 110, 224, 0.6);
         }
         
-        .book-desc {
-            color: #7f8c8d;
-            font-size: 0.95rem;
-            margin-bottom: 20px;
-            flex-grow: 1;
+        .fab-main {
+            position: relative;
+            z-index: 10;
         }
         
-        .book-meta {
+        .fab-main.active {
+            background: linear-gradient(135deg, #4a6ee0, #6a11cb);
+            transform: rotate(135deg);
+        }
+        
+        .fab-sub {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            transform: translateY(0) translateX(0) scale(0);
+            opacity: 0;
+            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            z-index: 5;
+        }
+        
+        .fab-sub.show {
+            opacity: 1;
+            transform: translateY(0) translateX(0) scale(1);
+        }
+        
+        .fab-sub:nth-child(1).show {
+            transform: translateY(-80px) translateX(0) scale(1);
+            transition-delay: 0.1s;
+        }
+        
+        .fab-sub:nth-child(2).show {
+            transform: translateY(-150px) translateX(0) scale(1);
+            transition-delay: 0.2s;
+        }
+        
+        .fab-sub:nth-child(3).show {
+            transform: translateY(-220px) translateX(0) scale(1);
+            transition-delay: 0.3s;
+        }
+        
+        .fab-sub:hover {
+            transform: translateY(-80px) translateX(0) scale(1.1);
+        }
+        
+        .fab-sub:nth-child(2):hover {
+            transform: translateY(-150px) translateX(0) scale(1.1);
+        }
+        
+        .fab-sub:nth-child(3):hover {
+            transform: translateY(-220px) translateX(0) scale(1.1);
+        }
+        
+        .fab-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
             width: 100%;
-            display: flex;
-            justify-content: space-between;
-            color: #7f8c8d;
-            font-size: 0.9rem;
-            margin-top: 15px;
-            padding-top: 15px;
-            border-top: 1px solid #eee;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1;
         }
         
-        .loading {
-            text-align: center;
-            padding: 50px;
-            font-size: 1.2rem;
-            color: white;
+        .fab-overlay.show {
+            opacity: 1;
+            visibility: visible;
         }
         
         .footer {
-            margin-top: 40px;
-            color: white;
             text-align: center;
-            font-size: 0.9rem;
-            opacity: 0.8;
+            color: rgba(255, 255, 255, 0.8);
+            padding: 30px;
+            margin-top: 50px;
+        }
+        
+        .footer p {
+            margin-bottom: 10px;
+        }
+        
+        .footer a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        
+        .footer a:hover {
+            color: white;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 1200px) {
+            .core-function-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 15px;
+            }
         }
         
         @media (max-width: 768px) {
-            .container {
-                gap: 20px;
-            }
-            
-            .book-card {
-                width: 250px;
-            }
-            
             .header h1 {
-                font-size: 2.2rem;
+                font-size: 2.5em;
+            }
+            
+            .section-title {
+                font-size: 2em;
+            }
+            
+            .function-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .core-function-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+            
+            .stats-section {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .quick-actions {
+                right: 20px;
+                bottom: 20px;
+            }
+            
+            body {
+                padding: 10px;
             }
         }
         
-        @media (max-width: 576px) {
-            .book-card {
-                width: 100%;
-                max-width: 320px;
+        @media (max-width: 480px) {
+            .core-function-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
             }
             
-            .header h1 {
-                font-size: 1.8rem;
+            .function-card {
+                padding: 20px;
             }
             
-            .header p {
-                font-size: 1rem;
+            .function-icon {
+                font-size: 2.5em;
             }
+        }
+        
+        /* 加载动画 */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+        
+        .loading-content {
+            text-align: center;
+            color: white;
+        }
+        
+        .loading-spinner {
+            width: 60px;
+            height: 60px;
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-top: 4px solid white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 20px;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>英语词汇学习系统</h1>
-        <p>选择课本开始您的英语学习之旅</p>
+    <!-- 加载页面 -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <h2>英语词汇学习系统</h2>
+            <p>正在加载智能学习平台...</p>
+        </div>
     </div>
-    
-    <div class="container" id="booksContainer">
-        <div class="loading">正在加载课本信息...</div>
+
+    <div class="main-container">
+        <!-- 头部标题 -->
+        <div class="header">
+            <h1><i class="fas fa-graduation-cap"></i> 英语词汇学习系统</h1>
+            <p class="subtitle">AI驱动的智能英语学习平台</p>
+            <p class="description">集词汇学习、智能测试、游戏化练习、学习记录于一体的现代化英语学习解决方案</p>
+        </div>
+
+        <!-- 数据统计 -->
+        <div class="stats-section">
+            <div class="stat-card">
+                <div class="stat-icon"><i class="fas fa-book"></i></div>
+                <div class="stat-number">15+</div>
+                <div class="stat-label">学习功能</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon"><i class="fas fa-brain"></i></div>
+                <div class="stat-number">AI</div>
+                <div class="stat-label">智能驱动</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon"><i class="fas fa-chart-line"></i></div>
+                <div class="stat-number">100%</div>
+                <div class="stat-label">个性化</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon"><i class="fas fa-mobile-alt"></i></div>
+                <div class="stat-number">响应式</div>
+                <div class="stat-label">移动优化</div>
+            </div>
+        </div>
+
+        <!-- 主要功能区 -->
+        <h2 class="section-title"><i class="fas fa-rocket"></i> 核心学习功能</h2>
+        <div class="core-function-grid">
+            <div class="function-card" onclick="navigateTo('/allbook')">
+                <div class="function-icon"><i class="fas fa-book-open"></i></div>
+                <h3 class="function-title">课本选择</h3>
+                <p class="function-description">选择适合的英语教材，支持多种主流教材和自定义词汇库，包含词汇学习、背诵、测试等功能</p>
+                <div class="function-tags">
+                    <span class="tag">多教材</span>
+                    <span class="tag">词汇学习</span>
+                    <span class="tag">背诵测试</span>
+                </div>
+            </div>
+
+            <div class="function-card" onclick="navigateTo('/allrecord')">
+                <div class="function-icon"><i class="fas fa-chart-bar"></i></div>
+                <h3 class="function-title">学习清单</h3>
+                <p class="function-description">详细的学习进度追踪，基于艾宾浩斯曲线的复习计划</p>
+                <div class="function-tags">
+                    <span class="tag">进度跟踪</span>
+                    <span class="tag">复习计划</span>
+                </div>
+            </div>
+
+            <div class="function-card" onclick="navigateTo('/dictation')">
+                <div class="function-icon"><i class="fas fa-pen-fancy"></i></div>
+                <h3 class="function-title">单词听写</h3>
+                <p class="function-description">英语听写练习功能，提升单词拼写能力和听力理解</p>
+                <div class="function-tags">
+                    <span class="tag">听写</span>
+                    <span class="tag">拼写</span>
+                </div>
+            </div>
+
+            <div class="function-card" onclick="navigateTo('/sentence')">
+                <div class="function-icon"><i class="fas fa-quote-left"></i></div>
+                <h3 class="function-title">句子学习</h3>
+                <p class="function-description">英语句子结构学习，通过实例掌握语法和表达技巧</p>
+                <div class="function-tags">
+                    <span class="tag">语法</span>
+                    <span class="tag">句型</span>
+                </div>
+            </div>
+
+            <div class="function-card" onclick="navigateTo('/jotting')">
+                <div class="function-icon"><i class="fas fa-book-open"></i></div>
+                <h3 class="function-title">知识积累本</h3>
+                <p class="function-description">个人英语知识库，收集整理重要语言点和学习心得</p>
+                <div class="function-tags">
+                    <span class="tag">笔记</span>
+                    <span class="tag">知识库</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- AI功能区 -->
+        <div class="ai-section">
+            <h2 class="ai-title"><i class="fas fa-robot"></i> AI智能功能</h2>
+            <div class="ai-grid">
+                <div class="function-card" onclick="navigateTo('/article')">
+                    <div class="function-icon"><i class="fas fa-magic"></i></div>
+                    <h3 class="function-title">AI文章生成</h3>
+                    <p class="function-description">基于选定词汇智能生成连贯文章，帮助理解词汇在语境中的应用</p>
+                    <div class="function-tags">
+                        <span class="tag">AI生成</span>
+                        <span class="tag">语境学习</span>
+                        <span class="tag">流式输出</span>
+                    </div>
+                </div>
+
+                <div class="function-card" onclick="navigateTo('/article')">
+                    <div class="function-icon"><i class="fas fa-file-alt"></i></div>
+                    <h3 class="function-title">高级文章生成</h3>
+                    <p class="function-description">更强大的AI文章生成工具，支持多种文体和复杂度调节</p>
+                    <div class="function-tags">
+                        <span class="tag">高级AI</span>
+                        <span class="tag">多文体</span>
+                        <span class="tag">可定制</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    <!-- 可收起的浮动按钮组件 -->
+    <div class="fab-overlay" id="fabOverlay" onclick="closeFab()"></div>
+    <div class="floating-actions" id="floatingActions">
+        <div class="fab-container">
+            <!-- 子按钮 -->
+            <button class="fab fab-sub" onclick="navigateTo('/allrecord')" title="学习记录">
+                <i class="fas fa-chart-line"></i>
+            </button>
+            <button class="fab fab-sub" onclick="navigateTo('/jotting')" title="知识积累">
+                <i class="fas fa-book-open"></i>
+            </button>
+            <button class="fab fab-sub" onclick="scrollToTop()" title="返回顶部">
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            <!-- 主按钮 -->
+            <button class="fab fab-main" id="fabMain" onclick="toggleFab()" title="快捷功能">
+                <i class="fas fa-plus"></i>
+            </button>
+        </div>
     </div>
-    
+
+    <!-- 页脚 -->
     <div class="footer">
-        <p>© 2023 英语词汇学习系统 | 提供全面的英语学习资源</p>
+        <p>&copy; 2024 英语词汇学习系统. 智能学习，成就未来.</p>
+        <p>
+            <a href="#"><i class="fas fa-info-circle"></i> 关于我们</a>
+            <a href="#"><i class="fas fa-envelope"></i> 联系我们</a>
+            <a href="#"><i class="fas fa-question-circle"></i> 帮助中心</a>
+        </p>
     </div>
 
     <script>
+        // 页面加载完成后隐藏加载页面
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                const loadingOverlay = document.getElementById('loadingOverlay');
+                loadingOverlay.style.opacity = '0';
+                setTimeout(function() {
+                    loadingOverlay.style.display = 'none';
+                }, 500);
+            }, 1000);
+        });
+
+        // 导航函数 - 使用nginx路径转发
+        function navigateTo(path) {
+            // 添加轻微的点击反馈，不使用遮罩
+            window.location.href = path;
+        }
+
+        // 返回顶部
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // 添加页面交互效果
         document.addEventListener('DOMContentLoaded', function() {
-            // 从后端获取课本列表
-            fetch('http://192.168.43.106:8080/list')
-            // fetch('http://8.148.209.41:8080/list')
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error(`HTTP错误! 状态: ${response.status}`);
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    if (data.code !== 1 || !data.data || data.data.length === 0) {
-                        document.getElementById('booksContainer').innerHTML = '<div class="loading">暂无课本数据</div>';
-                        return;
-                    }
-                    
-                    const books = data.data;
-                    renderBooks(books);
-                })
-                .catch(error => {
-                    console.error('获取课本数据失败:', error);
-                    document.getElementById('booksContainer').innerHTML = '<div class="loading">数据加载失败，请检查网络连接</div>';
+            // 为功能卡片添加点击效果
+            const functionCards = document.querySelectorAll('.function-card');
+            functionCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-8px) scale(1.02)';
                 });
                 
-            function renderBooks(books) {
-                const container = document.getElementById('booksContainer');
-                container.innerHTML = '';
-                
-                books.forEach(book => {
-                    // 从书名中提取数字作为词汇量
-                    const wordCount = book.match(/\d+/);
-                    const difficulty = wordCount && wordCount[0] > 500 ? '高级' : (wordCount && wordCount[0] > 300 ? '中级' : '初级');
-                    
-                    const bookCard = document.createElement('div');
-                    bookCard.className = 'book-card';
-                    bookCard.onclick = () => {
-                        // 跳转到课本功能选择页，传递课本名称
-                        window.location.href = `function?bookname=${encodeURIComponent(book)}`; 
-                    };
-                    
-                    bookCard.innerHTML = `
-                        <div class="book-cover">
-                            <i class="fas fa-book"></i>
-                        </div>
-                        <h3 class="book-title">${book}</h3>
-                        <p class="book-desc">全面的英语词汇学习资源，帮助您掌握${wordCount ? wordCount[0] : '500+'}个核心词汇</p>
-                        <div class="book-meta">
-                            <span>词汇量: ${wordCount ? wordCount[0] + '+' : '500+'}</span>
-                            <span>难度: ${difficulty}</span>
-                        </div>
-                    `;
-                    
-                    container.appendChild(bookCard);
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
                 });
+            });
+
+            // 添加滚动效果
+            window.addEventListener('scroll', function() {
+                const quickActions = document.querySelector('.quick-actions');
+                if (window.scrollY > 500) {
+                    quickActions.style.opacity = '1';
+                } else {
+                    quickActions.style.opacity = '0.7';
+                }
+            });
+
+            // 统计数字动画
+            const statNumbers = document.querySelectorAll('.stat-number');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animation = 'fadeInUp 0.6s ease-out';
+                    }
+                });
+            });
+
+            statNumbers.forEach(stat => {
+                observer.observe(stat);
+            });
+        });
+
+        // 浮动按钮功能
+        let isFabOpen = false;
+        
+        function toggleFab() {
+            const fabMain = document.getElementById('fabMain');
+            const fabSubs = document.querySelectorAll('.fab-sub');
+            const fabOverlay = document.getElementById('fabOverlay');
+            
+            if (!isFabOpen) {
+                // 打开浮动按钮
+                fabMain.classList.add('active');
+                fabOverlay.classList.add('show');
+                
+                fabSubs.forEach((sub, index) => {
+                    setTimeout(() => {
+                        sub.style.display = 'flex';
+                        setTimeout(() => {
+                            sub.classList.add('show');
+                        }, 10);
+                    }, index * 100);
+                });
+                
+                isFabOpen = true;
+            } else {
+                closeFab();
+            }
+        }
+        
+        function closeFab() {
+            if (!isFabOpen) return;
+            
+            const fabMain = document.getElementById('fabMain');
+            const fabSubs = document.querySelectorAll('.fab-sub');
+            const fabOverlay = document.getElementById('fabOverlay');
+            
+            // 关闭浮动按钮
+            fabMain.classList.remove('active');
+            fabOverlay.classList.remove('show');
+            
+            fabSubs.forEach((sub) => {
+                sub.classList.remove('show');
+                setTimeout(() => {
+                    sub.style.display = 'none';
+                }, 300);
+            });
+            
+            isFabOpen = false;
+        }
+
+        // 添加键盘快捷键
+        document.addEventListener('keydown', function(e) {
+            // Alt + H: 返回首页
+            if (e.altKey && e.key === 'h') {
+                location.reload();
+            }
+            // Alt + S: 学习记录
+            if (e.altKey && e.key === 's') {
+                navigateTo('/allrecord');
+            }
+            // Alt + W: 词汇学习
+            if (e.altKey && e.key === 'w') {
+                navigateTo('/allbook');
+            }
+            // ESC: 关闭浮动按钮
+            if (e.key === 'Escape') {
+                closeFab();
             }
         });
+
+        // 添加CSS动画
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        `;
+        document.head.appendChild(style);
     </script>
 </body>
 </html>

@@ -16,4 +16,15 @@ public interface EnglishService {
     List<Sentence> getSentenceList(String start, String end);
 
     boolean FinalAddAgainWord(AddRequest request);
+
+    // 错词本相关接口
+    List<Englishs> getAllAgainWords();
+    
+    List<Englishs> getAgainWordsByBook(String bookname);
+    
+    List<Englishs> getAgainWordsByTimes(int minTimes);
+    
+    boolean increaseWordTimes(Long id);
+    
+    List<String> getAgainWordBooks();
 }
