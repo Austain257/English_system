@@ -5,7 +5,7 @@
 
 
     <select id="page" resultType="com.austain.domain.po.Jotting">
-        select * from jottings order by create_time desc  -- sort -- 升序，创建时间 -- 倒序
+        select * from jottings where user_id = #{currentUserId} order by create_time desc  -- sort -- 升序，创建时间 -- 倒序
     </select>
 
 

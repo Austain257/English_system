@@ -39,6 +39,11 @@ public interface UserService {
     String uploadAvatar(Long userId, MultipartFile file);
     
     /**
+     * 通过URL更新头像
+     */
+    String updateAvatarByUrl(Long userId, String avatarUrl);
+    
+    /**
      * 修改密码
      */
     boolean changePassword(Long userId, String oldPassword, String newPassword);

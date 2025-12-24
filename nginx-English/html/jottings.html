@@ -533,6 +533,14 @@
     </div>
 
     <script>
+        const API_BASE = 'http://localhost:8080';
+        const baseURL = `${API_BASE}/jotting`;
+
+        function buildAuthHeaders() {
+            const token = localStorage.getItem('auth_token');
+            return token ? { 'Authorization': `Bearer ${token}` } : {};
+        }
+
         document.addEventListener('DOMContentLoaded', function() {
             // 元素引用
             const englishInput = document.getElementById('englishInput');
@@ -562,8 +570,6 @@
             let pageSize = 10;
             let totalItems = 0;
             let knowledgeData = [];
-            // const baseURL = 'http://8.148.209.41:8080/jotting';
-            const baseURL = 'http://192.168.43.106:8080/jotting';
             
             // 初始化页面
             loadKnowledgeList();
@@ -964,7 +970,11 @@
             
             // 获取知识列表
             async function getKnowledgeList(page, size) {
-                const response = await fetch(`${baseURL}/list?page=${page}&size=${size}`);
+                const response = await fetch(`${baseURL}/list?page=${page}&size=${size}`, {
+                    headers: {
+                        ...buildAuthHeaders()
+                    }
+                });
                 
                 if (!response.ok) {
                     throw new Error(`HTTP错误! 状态码: ${response.status}`);
@@ -979,6 +989,7 @@
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
+                        ...buildAuthHeaders()
                     },
                     body: JSON.stringify({
                         english: knowledge.english,
@@ -1000,6 +1011,7 @@
                     method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json',
+                        ...buildAuthHeaders()
                     },
                     body: JSON.stringify({
                         id: id,
@@ -1019,7 +1031,10 @@
             // 删除知识记录
             async function deleteKnowledge(id) {
                 const response = await fetch(`${baseURL}/delete/${id}`, {
-                    method: 'DELETE'
+                    method: 'DELETE',
+                    headers: {
+                        ...buildAuthHeaders()
+                    }
                 });
                 
                 if (!response.ok) {
@@ -1035,6 +1050,7 @@
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
+                        ...buildAuthHeaders()
                     },
                     body: JSON.stringify(ids)  // 直接发送数组，而不是 {ids: ids}
                 });

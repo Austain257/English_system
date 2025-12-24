@@ -29,7 +29,7 @@ public interface IndexListMapper {
             SELECT COUNT(1) FROM user_books
             WHERE status = 1
               AND book_name = #{bookName}
-              AND (user_id = #{userId} OR #{isAdmin})
+              AND (user_id = #{userId} OR #{isAdmin} OR 2)
             """)
     int countBookByName(@Param("bookName") String bookName,
                         @Param("userId") Long userId,

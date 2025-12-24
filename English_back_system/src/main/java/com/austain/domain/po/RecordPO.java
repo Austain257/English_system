@@ -12,6 +12,7 @@ import java.time.LocalDateTime;
 public class RecordPO {
 
     private String id;  // 记录的 ID
+    private int userId;  // 记录的 ID
     private String record;  // 记录内容
     private LocalDateTime createTime;  // 创建时间
     private int selected;  // 是否已选择

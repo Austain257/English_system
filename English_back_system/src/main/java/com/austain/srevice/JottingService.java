@@ -6,7 +6,7 @@ import com.austain.domain.po.Jotting;
 import java.util.List;
 
 public interface JottingService {
-    PageResult<Jotting> getList(Integer page, Integer size);
+    PageResult<Jotting> getList(Integer page, Integer size, Long currentUserId);
 
     int addJotting(Jotting jotting);
 

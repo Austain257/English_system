@@ -3,317 +3,536 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>功能选择 - 英语词汇学习系统</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>功能工作台 - 英语词汇学习系统</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600&display=swap');
+
+        :root {
+            --bg-deep: #05070f;
+            --bg-panel: rgba(255, 255, 255, 0.03);
+            --border-panel: rgba(255, 255, 255, 0.07);
+            --text-main: #f8fbff;
+            --text-sub: rgba(226, 232, 255, 0.75);
+            --accent-1: #63b3ff;
+            --accent-2: #a855f7;
+            --accent-3: #f472b6;
+            --accent-blue: #60a5fa;
+            --accent-green: #34d399;
+            --accent-orange: #fbbf24;
+            --card-shadow: 0 25px 55px rgba(5, 8, 16, 0.65);
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Poppins', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
         }
-        
+
         body {
-            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
             min-height: 100vh;
-            padding: 0 20px 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            color: #333;
+            background: radial-gradient(circle at -10% -10%, rgba(61, 86, 255, 0.18), transparent 40%),
+                        radial-gradient(circle at 110% 0%, rgba(147, 51, 234, 0.18), transparent 45%),
+                        var(--bg-deep);
+            color: var(--text-main);
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background:
+                radial-gradient(700px circle at 20% 10%, rgba(14, 165, 233, 0.2), transparent 40%),
+                radial-gradient(600px circle at 80% 0%, rgba(236, 72, 153, 0.18), transparent 35%);
+            pointer-events: none;
+        }
+
+        .page {
+            width: min(1200px, 100%);
+            margin: 0 auto;
+            padding: 28px 20px 80px;
+            position: relative;
+            z-index: 1;
         }
 
         .top-bar {
-            width: 100%;
-            max-width: 1200px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 20px 0 10px;
-            position: relative;
-            z-index: 20;
+            padding: 16px 20px;
+            border-radius: 22px;
+            background: rgba(10, 16, 38, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(16px);
         }
 
         .brand {
             display: flex;
             align-items: center;
-            gap: 12px;
-            color: #fff;
+            gap: 16px;
         }
 
         .brand-icon {
-            width: 44px;
-            height: 44px;
-            border-radius: 12px;
-            background: rgba(255,255,255,0.15);
+            width: 52px;
+            height: 52px;
+            border-radius: 16px;
+            background: linear-gradient(135deg, #fed7aa, #f97316);
             display: flex;
             align-items: center;
             justify-content: center;
+            color: #1f1306;
             font-size: 1.4rem;
         }
 
         .brand h1 {
-            font-size: 1.35rem;
-            margin: 0;
+            font-size: 1.25rem;
+            line-height: 1.4;
+        }
+
+        .brand small {
+            display: block;
+            font-size: 0.8rem;
+            color: var(--text-sub);
         }
 
         .nav-links {
             display: flex;
-            gap: 24px;
+            gap: 20px;
         }
 
         .nav-links a {
-            color: rgba(255,255,255,0.85);
+            color: rgba(255, 255, 255, 0.78);
             text-decoration: none;
+            font-size: 0.95rem;
             font-weight: 500;
             transition: color 0.2s ease;
         }
 
         .nav-links a:hover {
-            color: #fff;
+            color: var(--text-main);
         }
 
         .user-info-slot {
-            min-width: 260px;
+            min-width: 240px;
         }
-        
-        .header {
-            background: linear-gradient(135deg, #4a6ee0 0%, #6a11cb 100%);
-            color: white;
-            padding: 25px 30px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            margin: 30px 0;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-        }
-        
-        .header::before {
-            content: "";
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
-            animation: pulse 8s infinite linear;
-        }
-        
-        @keyframes pulse {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        
-        .header h1 {
-            font-size: 2.8rem;
-            margin-bottom: 10px;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            max-width: 600px;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .book-info {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 15px;
-            padding: 20px 30px;
-            margin-bottom: 30px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            text-align: center;
-            max-width: 800px;
-            width: 100%;
-        }
-        
-        .book-name {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: #2c3e50;
-            margin-bottom: 10px;
-        }
-        
-        .container {
-            max-width: 1200px;
-            width: 100%;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
-            margin: 20px 0;
-        }
-        
-        .function-card {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 15px;
-            width: 280px;
-            padding: 25px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            transition: all 0.3s ease;
+
+        .dashboard {
+            margin-top: 36px;
             display: flex;
             flex-direction: column;
+            gap: 32px;
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+        }
+
+        .hero-card,
+        .book-card {
+            padding: 32px;
+            border-radius: 28px;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: rgba(12, 20, 43, 0.9);
+            box-shadow: var(--card-shadow);
+        }
+
+        .hero-card::after {
+            content: '';
+            position: absolute;
+            inset: 1px;
+            border-radius: 27px;
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            pointer-events: none;
+        }
+
+        .hero-eyebrow {
+            display: inline-flex;
             align-items: center;
-            text-align: center;
+            gap: 8px;
+            padding: 6px 14px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.08);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-sub);
+            margin-bottom: 18px;
+        }
+
+        .hero-card h1 {
+            font-size: clamp(2.2rem, 3vw, 2.9rem);
+            margin-bottom: 16px;
+            color: var(--text-main);
+        }
+
+        .hero-card p {
+            color: var(--text-sub);
+            margin-bottom: 24px;
+            line-height: 1.7;
+        }
+
+        .hero-tags {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .hero-tags span {
+            padding: 7px 13px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.12);
+            font-size: 0.85rem;
+        }
+
+        .book-card {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .book-label {
+            font-size: 0.85rem;
+            color: var(--text-sub);
+            letter-spacing: 0.08em;
+        }
+
+        .book-name {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .book-meta {
+            color: var(--text-sub);
+            font-size: 0.95rem;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .book-cta {
+            margin-top: auto;
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn-primary,
+        .btn-ghost {
+            flex: 1;
+            border-radius: 14px;
+            padding: 12px 0;
+            border: none;
             cursor: pointer;
+            font-weight: 600;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
-        
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+            color: #0b1229;
+            box-shadow: 0 18px 30px rgba(76, 145, 255, 0.3);
+        }
+
+        .btn-ghost {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: var(--text-main);
+        }
+
+        .btn-primary:hover,
+        .btn-ghost:hover {
+            transform: translateY(-2px);
+        }
+
+        .insight-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
+        }
+
+        .insight-card {
+            padding: 20px;
+            border-radius: 18px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            background: rgba(5, 8, 16, 0.9);
+        }
+
+        .insight-card span {
+            font-size: 0.8rem;
+            letter-spacing: 0.08em;
+            color: var(--text-sub);
+        }
+
+        .insight-card strong {
+            display: block;
+            margin-top: 12px;
+            font-size: 1.6rem;
+        }
+
+        .function-section {
+            border-radius: 28px;
+            padding: 32px;
+            background: var(--bg-panel);
+            border: 1px solid var(--border-panel);
+        }
+
+        .section-head {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 24px;
+        }
+
+        .section-head h2 {
+            font-size: 1.6rem;
+        }
+
+        .chip-group {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .chip {
+            padding: 6px 14px;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: var(--text-sub);
+            font-size: 0.85rem;
+        }
+
+        .function-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 20px;
+        }
+
+        .function-card {
+            border-radius: 22px;
+            padding: 22px;
+            background: rgba(9, 11, 22, 0.92);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .function-card::after {
+            content: '';
+            position: absolute;
+            inset: 1px;
+            border-radius: 21px;
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            pointer-events: none;
+        }
+
         .function-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.55);
         }
-        
+
         .function-icon {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
+            width: 56px;
+            height: 56px;
+            border-radius: 16px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 20px;
-            color: white;
-            font-size: 3rem;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-        
-        .icon-1 {
-            background: linear-gradient(135deg, #4facfe, #00f2fe);
-        }
-        
-        .icon-2 {
-            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-        }
-        
-        .icon-3 {
-            background: linear-gradient(135deg, #43e97b, #38f9d7);
-        }
-        
-        .icon-4 {
-            background: linear-gradient(135deg, #ff758c, #ff7eb3);
-        }
-        
-        .icon-5 {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-        }
-        
-        .function-title {
             font-size: 1.4rem;
-            font-weight: bold;
-            color: #2c3e50;
-            margin-bottom: 10px;
+            color: #0b1229;
         }
-        
+
+        .icon-1 { background: linear-gradient(135deg, #fce7f3, #fba1eb); }
+        .icon-2 { background: linear-gradient(135deg, #bfdbfe, #93c5fd); }
+        .icon-3 { background: linear-gradient(135deg, #c7d2fe, #a5b4fc); }
+        .icon-4 { background: linear-gradient(135deg, #bbf7d0, #86efac); }
+
+        .function-title {
+            font-size: 1.2rem;
+        }
+
         .function-desc {
-            color: #7f8c8d;
-            font-size: 0.95rem;
-            margin-bottom: 20px;
-            flex-grow: 1;
+            color: var(--text-sub);
+            font-size: 0.9rem;
+            flex: 1;
         }
-        
+
+        .card-meta {
+            font-size: 0.8rem;
+            color: rgba(148, 163, 184, 0.95);
+        }
+
+        .roadmap {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+        }
+
+        .roadmap-card {
+            border-radius: 18px;
+            padding: 18px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .roadmap-card h4 {
+            margin-bottom: 6px;
+            font-size: 1rem;
+        }
+
+        .roadmap-card p {
+            font-size: 0.85rem;
+            color: var(--text-sub);
+        }
+
+        .back-floating {
+            position: fixed;
+            right: 32px;
+            bottom: 32px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 22px;
+            border-radius: 999px;
+            background: rgba(5, 8, 16, 0.92);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-main);
+            cursor: pointer;
+            box-shadow: var(--card-shadow);
+        }
+
         .loading {
             text-align: center;
-            padding: 50px;
-            font-size: 1.2rem;
-            color: white;
+            padding: 40px;
+            color: var(--text-sub);
         }
-        
+
         .error {
+            padding: 24px;
+            border-radius: 18px;
+            background: rgba(244, 63, 94, 0.08);
+            border: 1px solid rgba(244, 63, 94, 0.35);
+            color: #fecdd3;
             text-align: center;
-            padding: 30px;
-            font-size: 1.2rem;
-            color: #ff6b6b;
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 15px;
-            margin: 20px 0;
-            max-width: 600px;
         }
-        
-        .back-btn {
-            padding: 12px 25px;
-            background: rgba(255, 255, 255, 0.95);
-            border: none;
-            border-radius: 30px;
-            font-size: 1rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            margin-top: 20px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-        
-        .back-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-        }
-        
+
         @media (max-width: 768px) {
-            .container {
-                gap: 20px;
+            .top-bar {
+                flex-direction: column;
+                gap: 16px;
             }
-            
-            .function-card {
-                width: 250px;
+            .book-card {
+                padding: 24px;
             }
-            
-            .header h1 {
-                font-size: 2.2rem;
-            }
-        }
-        
-        @media (max-width: 576px) {
-            .function-card {
-                width: 100%;
-                max-width: 320px;
-            }
-            
-            .header h1 {
-                font-size: 1.8rem;
-            }
-            
-            .header p {
-                font-size: 1rem;
+            .function-section {
+                padding: 24px;
             }
         }
     </style>
 </head>
 <body data-require-auth="true">
-    <header class="top-bar">
-        <div class="brand">
-            <div class="brand-icon">
-                <i class="fas fa-graduation-cap"></i>
+    <div class="page">
+        <header class="top-bar">
+            <div class="brand">
+                <div class="brand-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div>
+                    <h1>英语智学平台</h1>
+                    <small>AI 驱动 · 个性化学习</small>
+                </div>
             </div>
-            <div>
-                <h1>英语智学平台</h1>
-                <small style="color:rgba(255,255,255,0.7)">AI驱动 · 个性化学习</small>
-            </div>
-        </div>
-        <nav class="nav-links">
-            <a href="/function">功能总览</a>
-            <a href="/wrongbook">错词本</a>
-            <a href="/profile">个人中心</a>
-        </nav>
-        <div class="user-info-slot" data-user-info-anchor="true"></div>
-    </header>
+            <nav class="nav-links">
+                <a href="/function">功能总览</a>
+                <a href="/wrongbook">错词本</a>
+                <a href="/profile">个人中心</a>
+            </nav>
+            <div class="user-info-slot" data-user-info-anchor="true"></div>
+        </header>
 
-    <div class="header">
-        <h1>英语词汇学习系统</h1>
-        <p>选择您需要的学习功能</p>
+        <section class="dashboard">
+            <div class="hero">
+                <div class="hero-card">
+                    <div class="hero-eyebrow">
+                        <i class="fas fa-sparkles"></i> 学习工作台
+                    </div>
+                    <h1>沉浸式词汇体验</h1>
+                    <p>系统化的任务卡、专项训练与游戏化交互，帮助你在不同场景中巩固词汇记忆。</p>
+                    <div class="hero-tags">
+                        <span>智能排课</span>
+                        <span>记忆引擎</span>
+                        <span>多模态输入</span>
+                    </div>
+                </div>
+                <div class="book-card">
+                    <span class="book-label">当前课本</span>
+                    <div class="book-name" id="bookName">加载中...</div>
+                    <div class="book-meta">
+                        <span id="bookSummary">系统正在检查课本信息</span>
+                        <span id="bookProgress">——</span>
+                    </div>
+                    <div class="book-cta">
+                        <button class="btn-primary" onclick="startLearning()">
+                            <i class="fas fa-rocket"></i> 开始学习
+                        </button>
+                        <button class="btn-ghost" onclick="goBack()">
+                            返回选书
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <section class="function-section">
+                <div class="section-head">
+                    <div>
+                        <h2>核心功能导航</h2>
+                        <p style="color:var(--text-sub);font-size:0.95rem;">选择合适的练习模式，匹配当前学习节奏</p>
+                    </div>
+                    <div class="chip-group">
+                        <span class="chip">词汇训练</span>
+                        <span class="chip">记忆巩固</span>
+                        <span class="chip">趣味交互</span>
+                    </div>
+                </div>
+                <div class="function-grid" id="functionsContainer">
+                    <div class="loading">正在加载功能列表...</div>
+                </div>
+            </section>
+
+            <section class="function-section">
+                <div class="section-head">
+                    <h2>学习路线推荐</h2>
+                    <span style="color:var(--text-sub);font-size:0.9rem;">为不同目标匹配合适的训练节奏</span>
+                </div>
+                <div class="roadmap">
+                    <div class="roadmap-card">
+                        <h4>快速熟悉</h4>
+                        <p>词汇背诵 → 单词选项 → 错词本巩固</p>
+                    </div>
+                    <div class="roadmap-card">
+                        <h4>深度理解</h4>
+                        <p>词汇学习 → 例句联想 → 游戏化训练</p>
+                    </div>
+                    <div class="roadmap-card">
+                        <h4>考试冲刺</h4>
+                        <p>词汇背诵 → 专项测试 → 高频错词练习</p>
+                    </div>
+                </div>
+            </section>
+        </section>
     </div>
-    
-    <div class="book-info">
-        <div class="book-name" id="bookName">加载中...</div>
-        <p>请选择以下功能开始学习</p>
-    </div>
-    
-    <div class="container" id="functionsContainer">
-        <div class="loading">正在加载功能列表...</div>
-    </div>
-    
-    <button class="back-btn" onclick="goBack()">
+
+    <button class="back-floating" onclick="goBack()">
         <i class="fas fa-arrow-left"></i> 返回课本选择
     </button>
 
@@ -325,39 +544,48 @@
             return token ? { 'Authorization': `Bearer ${token}` } : {};
         }
 
-        // 获取URL参数
         function getQueryParam(name) {
             const urlParams = new URLSearchParams(window.location.search);
             return urlParams.get(name);
         }
         
-        // 返回课本选择页面
         function goBack() {
             window.location.href = '/allbook';
+        }
+
+        function startLearning() {
+            const firstCard = document.querySelector('[data-function-target]');
+            if (firstCard) {
+                firstCard.click();
+            }
         }
         
         document.addEventListener('DOMContentLoaded', function() {
             const bookName = decodeURIComponent(getQueryParam('bookname'));
             const bookNameElement = document.getElementById('bookName');
+            const summaryEl = document.getElementById('bookSummary');
+            const progressEl = document.getElementById('bookProgress');
             const functionsContainer = document.getElementById('functionsContainer');
             
             if (!bookName || bookName === 'null') {
                 bookNameElement.textContent = '未指定课本';
+                summaryEl.textContent = '请先返回课本列表选择目标词书';
                 functionsContainer.innerHTML = '<div class="error">错误：未指定课本名称</div>';
                 return;
             }
             
             bookNameElement.textContent = bookName;
+            summaryEl.textContent = '系统正在验证课本可用性...';
             
             const headers = buildAuthHeaders();
             if (!headers.Authorization) {
                 bookNameElement.textContent = '登录已失效';
+                summaryEl.textContent = '请重新登录后继续';
                 functionsContainer.innerHTML = '<div class="error">请重新登录后再访问学习工作台</div>';
                 window.location.href = '/login';
                 return;
             }
 
-            // 检查课本是否存在
             fetch(`${API_BASE}/list/${encodeURIComponent(bookName)}`, { headers })
                 .then(response => {
                     if (!response.ok) {
@@ -368,14 +596,17 @@
                 .then(data => {
                     if (data.code !== 1) {
                         functionsContainer.innerHTML = '<div class="error">错误：课本不存在或无法访问</div>';
+                        summaryEl.textContent = '无法读取该课本，请重试';
                         return;
                     }
                     
-                    // 渲染功能卡片
+                    summaryEl.textContent = '课本验证成功，推荐完成 1~2 轮基础练习后进入挑战模式';
+                    progressEl.textContent = '建议流程：背诵 → 练习 → 错词巩固';
                     renderFunctionCards(bookName);
                 })
                 .catch(error => {
                     console.error('检查课本失败:', error);
+                    summaryEl.textContent = '网络波动，暂时无法获取课本信息';
                     functionsContainer.innerHTML = '<div class="error">错误：无法验证课本，请检查网络连接或重新登录</div>';
                 });
         });
@@ -383,67 +614,83 @@
         function renderFunctionCards(bookName) {
             const functionsContainer = document.getElementById('functionsContainer');
             
-            // 功能列表
             const functions = [
                 {
                     id: 1,
-                    title: '词汇背诵',
-                    description: '通过卡片形式背诵单词，支持发音功能',
-                    icon: '📚',
-                    iconClass: 'icon-1',
-                    page: 'recite'
-                },
-                {
-                    id: 2,
                     title: '词汇学习',
                     description: '系统学习单词，包含音标和释义',
-                    icon: '📖',
+                    icon: '<i class="fas fa-graduation-cap"></i>',
                     iconClass: 'icon-2',
-                    page: 'english'
+                    page: 'recite',
+                    meta: '含例句与音频'
+                },    
+                {
+                    id: 2,
+                    title: '词汇背诵',
+                    description: '通过卡片形式背诵单词，支持发音功能',
+                    icon: '<i class="fas fa-book-open"></i>',
+                    iconClass: 'icon-1',
+                    page: 'english',
+                    meta: '推荐：每日 20 词'
                 },
                 {
                     id: 3,
-                    title: '单词选项',
+                    title: '单词大冒险',
                     description: '通过选择题形式巩固单词记忆',
-                    icon: '❓',
+                    icon: '<i class="fas fa-list-check"></i>',
                     iconClass: 'icon-3',
-                    page: 'option'
+                    page: 'option',
+                    meta: '适合查漏补缺'
                 },
                 {
                     id: 4,
                     title: '单词游戏',
                     description: '在趣味游戏中快速掌握单词',
-                    icon: '🎮',
+                    icon: '<i class="fas fa-gamepad"></i>',
                     iconClass: 'icon-4',
-                    page: 'game'
+                    page: 'game',
+                    meta: '快速反应训练'
                 },
                 {
                     id: 5,
-                    title: '智能错词本',
-                    description: '管理错题单词，智能复习巩固',
-                    icon: '📋',
-                    iconClass: 'icon-5',
-                    page: 'wrongbook'
+                    title: '错词本',
+                    description: '回顾高频错词，打造专属复习计划',
+                    icon: '<i class="fas fa-repeat"></i>',
+                    iconClass: 'icon-1',
+                    page: 'wrongbook',
+                    meta: '智能复习'
+                },
+                {
+                    id: 6,
+                    title: '学习洞察',
+                    description: '查看学习数据和成就，持续激励',
+                    icon: '<i class="fas fa-chart-line"></i>',
+                    iconClass: 'icon-2',
+                    page: 'profile',
+                    meta: '成就看板'
                 }
             ];
             
             functionsContainer.innerHTML = '';
             
-            functions.forEach(func => {
+            functions.forEach((func, index) => {
                 const functionCard = document.createElement('div');
                 functionCard.className = 'function-card';
+                functionCard.setAttribute('data-function-target', index === 0 ? 'true' : 'false');
                 functionCard.onclick = () => {
-                    // 跳转到对应功能页面，传递课本名称
-                    window.location.href = `/${func.page}?bookname=${encodeURIComponent(bookName)}`;
-                    // window.location.href = `${func.page}`;
+                    const url = func.page === 'wrongbook' || func.page === 'profile'
+                        ? `/${func.page}`
+                        : `/${func.page}?bookname=${encodeURIComponent(bookName)}`;
+                    window.location.href = url;
                 };
                 
                 functionCard.innerHTML = `
                     <div class="function-icon ${func.iconClass}">
-                        <i class="fas">${func.icon}</i>
+                        ${func.icon}
                     </div>
                     <h3 class="function-title">${func.title}</h3>
                     <p class="function-desc">${func.description}</p>
+                    <span class="card-meta">${func.meta}</span>
                 `;
                 
                 functionsContainer.appendChild(functionCard);
@@ -451,7 +698,6 @@
         }
     </script>
     
-    <!-- 用户信息组件与鉴权 -->
     <script src="/assets/js/auth-guard.js"></script>
     <script src="/assets/js/user-info.js"></script>
 </body>

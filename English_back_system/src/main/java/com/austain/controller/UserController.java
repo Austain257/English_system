@@ -4,6 +4,7 @@ import com.austain.domain.dto.*;
 import com.austain.srevice.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import jakarta.servlet.http.HttpServletRequest;
 
@@ -22,6 +23,60 @@ public class UserController {
         try {
             String message = userService.register(request);
             return Result.success(message);
+        } catch (Exception e) {
+            return Result.error(e.getMessage());
+        }
+    }
+    
+    /**
+     * 上传头像
+     */
+    @PostMapping("/avatar")
+    public Result uploadAvatar(@RequestParam("avatar") MultipartFile avatar, HttpServletRequest request) {
+        try {
+            if (avatar == null || avatar.isEmpty()) {
+                return Result.error("请上传有效的头像文件");
+            }
+            
+            String token = extractToken(request);
+            if (token == null) {
+                return Result.error("未登录");
+            }
+            
+            Long userId = userService.getUserIdByToken(token);
+            if (userId == null) {
+                return Result.error("登录已过期");
+            }
+            
+            String avatarUrl = userService.uploadAvatar(userId, avatar);
+            return Result.success(avatarUrl);
+        } catch (Exception e) {
+            return Result.error(e.getMessage());
+        }
+    }
+    
+    /**
+     * 通过URL更新头像
+     */
+    @PostMapping("/avatar/url")
+    public Result updateAvatarByUrl(@RequestBody AvatarUrlRequest avatarUrlRequest, HttpServletRequest request) {
+        try {
+            if (avatarUrlRequest == null || avatarUrlRequest.getUrl() == null || avatarUrlRequest.getUrl().isBlank()) {
+                return Result.error("请输入有效的头像链接");
+            }
+            
+            String token = extractToken(request);
+            if (token == null) {
+                return Result.error("未登录");
+            }
+            
+            Long userId = userService.getUserIdByToken(token);
+            if (userId == null) {
+                return Result.error("登录已过期");
+            }
+            
+            String avatarUrl = userService.updateAvatarByUrl(userId, avatarUrlRequest.getUrl());
+            return Result.success(avatarUrl);
         } catch (Exception e) {
             return Result.error(e.getMessage());
         }

@@ -10,289 +10,685 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+        }
+        
+        :root {
+            --bg-gradient: linear-gradient(135deg, #0c1027 0%, #1b2563 55%, #4e1fb8 100%);
+            --card-glass: rgba(255, 255, 255, 0.08);
+            --card-solid: rgba(255, 255, 255, 0.96);
+            --text-muted: rgba(255, 255, 255, 0.75);
+            --accent: #7a5cff;
+            --success: #35d39d;
+            --danger: #ff6b6b;
         }
         
         body {
-            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
             min-height: 100vh;
-            padding: 20px;
-            color: #333;
+            background: var(--bg-gradient);
+            color: #fff;
+            padding: 35px 20px 60px;
+            position: relative;
+            overflow-x: hidden;
         }
         
-        .container {
-            max-width: 1000px;
+        .background-aurora {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            background: radial-gradient(circle at 20% 20%, rgba(122, 92, 255, 0.3), transparent 45%),
+                        radial-gradient(circle at 80% 0%, rgba(46, 212, 255, 0.25), transparent 50%),
+                        radial-gradient(circle at 50% 80%, rgba(255, 153, 102, 0.2), transparent 45%);
+            filter: blur(50px);
+            opacity: 0.8;
+        }
+        
+        .profile-page {
+            position: relative;
+            max-width: 1280px;
             margin: 0 auto;
+            z-index: 1;
         }
         
-        .header {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 25px;
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-            margin-bottom: 30px;
+        .glass-panel {
+            background: rgba(18, 25, 74, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 28px;
+            padding: 32px;
+            box-shadow: 0 30px 60px rgba(5, 9, 38, 0.45);
+            backdrop-filter: blur(18px);
+        }
+        
+        .profile-hero {
+            margin-bottom: 32px;
             position: relative;
             overflow: hidden;
         }
         
-        .header::before {
-            content: "";
+        .hero-hero::after {
+            content: '';
             position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(106, 17, 203, 0.1) 0%, transparent 70%);
-            animation: pulse 8s infinite linear;
+            inset: 0;
+            background: radial-gradient(circle at 80% 20%, rgba(122, 92, 255, 0.25), transparent 60%);
+            pointer-events: none;
         }
         
-        @keyframes pulse {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        
-        .header-content {
+        .hero-header {
             display: flex;
+            gap: 32px;
             align-items: center;
-            gap: 25px;
             position: relative;
             z-index: 1;
         }
         
-        .user-avatar {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid #6a11cb;
-            cursor: pointer;
-            transition: transform 0.3s ease;
+        .hero-avatar-wrap {
+            position: relative;
+            width: 120px;
+            height: 120px;
         }
         
-        .user-avatar:hover {
-            transform: scale(1.1);
-        }
-        
-        .user-info h1 {
-            font-size: 2rem;
-            color: #2c3e50;
-            margin-bottom: 5px;
-        }
-        
-        .user-info .user-role {
-            background: linear-gradient(135deg, #6a11cb, #2575fc);
-            color: white;
-            padding: 4px 12px;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            display: inline-block;
-            margin-bottom: 10px;
-        }
-        
-        .user-meta {
-            color: #7f8c8d;
-            font-size: 0.9rem;
-        }
-        
-        .nav-tabs {
-            display: flex;
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 15px;
-            padding: 5px;
-            margin-bottom: 30px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-        }
-        
-        .nav-tab {
-            flex: 1;
-            text-align: center;
-            padding: 15px;
-            border-radius: 12px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-weight: 600;
-            color: #7f8c8d;
-        }
-        
-        .nav-tab.active {
-            background: linear-gradient(135deg, #6a11cb, #2575fc);
-            color: white;
-            box-shadow: 0 5px 15px rgba(106, 17, 203, 0.3);
-        }
-        
-        .tab-content {
-            display: none;
-        }
-        
-        .tab-content.active {
-            display: block;
-        }
-        
-        .profile-card, .security-card, .stats-card {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 30px;
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-            margin-bottom: 30px;
-        }
-        
-        .card-title {
-            font-size: 1.5rem;
-            color: #2c3e50;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .form-group {
-            margin-bottom: 25px;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            color: #2c3e50;
-            font-weight: 600;
-        }
-        
-        .form-group input {
+        .hero-avatar-wrap img {
             width: 100%;
-            padding: 15px;
-            border: 2px solid #e0e6ed;
-            border-radius: 12px;
-            font-size: 1rem;
-            transition: all 0.3s ease;
+            height: 100%;
+            border-radius: 36px;
+            object-fit: cover;
+            border: 3px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.5);
         }
         
-        .form-group input:focus {
-            outline: none;
-            border-color: #6a11cb;
-            box-shadow: 0 0 0 3px rgba(106, 17, 203, 0.1);
+        .status-badge {
+            position: absolute;
+            bottom: 8px;
+            right: -6px;
+            background: linear-gradient(135deg, #39d98a, #17b26a);
+            color: #0e1a2b;
+            padding: 6px 14px;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            box-shadow: 0 10px 20px rgba(23, 178, 106, 0.45);
         }
         
-        .form-group input:disabled {
-            background: #f8f9fa;
-            cursor: not-allowed;
+        .hero-text {
+            flex: 1;
+        }
+        
+        .hero-kicker {
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+        
+        .hero-text h1 {
+            font-size: clamp(2.4rem, 3vw, 2.9rem);
+            margin: 10px 0;
+        }
+        
+        .hero-meta {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            color: var(--text-muted);
+        }
+        
+        .hero-meta .dot {
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.35);
+        }
+        
+        .hero-actions {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
         }
         
         .btn {
-            padding: 12px 25px;
             border: none;
-            border-radius: 10px;
-            font-size: 1rem;
+            border-radius: 18px;
+            padding: 12px 28px;
             font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
             display: inline-flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
         
-        .btn-primary {
-            background: linear-gradient(135deg, #6a11cb, #2575fc);
-            color: white;
+        .btn.primary {
+            background: linear-gradient(135deg, #5c6fff, #8f64ff);
+            color: #fff;
+            box-shadow: 0 20px 35px rgba(116, 143, 255, 0.35);
         }
         
-        .btn-secondary {
-            background: #6c757d;
-            color: white;
+        .btn.ghost {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #fff;
         }
         
-        .btn-danger {
-            background: #dc3545;
-            color: white;
+        .btn.danger {
+            background: linear-gradient(135deg, #ff8ba7, #ff5a5f);
+            color: #fff;
+            box-shadow: 0 15px 30px rgba(255, 90, 95, 0.35);
+        }
+        
+        .btn.small {
+            padding: 8px 18px;
+            border-radius: 14px;
+            font-size: 0.9rem;
         }
         
         .btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
         
-        .btn:disabled {
-            opacity: 0.6;
-            cursor: not-allowed;
-            transform: none;
-        }
-        
-        .stats-grid {
+        .hero-stats {
+            margin-top: 32px;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
             gap: 20px;
-            margin-top: 20px;
+            position: relative;
+            z-index: 1;
         }
         
-        .stat-item {
-            text-align: center;
-            padding: 20px;
-            background: linear-gradient(135deg, rgba(106, 17, 203, 0.1), rgba(37, 117, 252, 0.1));
-            border-radius: 15px;
-            border: 1px solid rgba(106, 17, 203, 0.2);
-        }
-        
-        .stat-value {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #6a11cb;
-            margin-bottom: 5px;
-        }
-        
-        .stat-label {
-            color: #7f8c8d;
-            font-size: 0.9rem;
-        }
-        
-        .alert {
-            padding: 15px;
-            border-radius: 10px;
-            margin-bottom: 20px;
+        #adminHeroStats {
             display: none;
         }
         
+        .admin-hero-stats {
+            margin-top: 32px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-stat {
+            padding: 18px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        
+        .hero-stat span {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+        
+        .hero-stat strong {
+            display: block;
+            font-size: 1.9rem;
+            margin-top: 6px;
+        }
+        
+        .hero-stat small {
+            display: block;
+            margin-top: 6px;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.85rem;
+        }
+        
+        .content-grid {
+            position: relative;
+        }
+        
+        .tab-panel {
+            display: none;
+            width: 100%;
+            animation: fadeSlide 0.4s ease both;
+        }
+        
+        .tab-panel.active {
+            display: block;
+        }
+        
+        @keyframes fadeSlide {
+            from {
+                opacity: 0;
+                transform: translateY(12px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        #adminDashboard {
+            display: none;
+        }
+        
+        .admin-dashboard-card {
+            margin-top: 0;
+            border-radius: 28px;
+            background: rgba(7, 11, 35, 0.65);
+        }
+        
+        .admin-panel-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+            margin-bottom: 24px;
+        }
+        
+        .admin-panel-header .badge {
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .admin-overview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
+        }
+        
+        .admin-metric-card {
+            padding: 20px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        
+        .admin-metric-card strong {
+            font-size: 1.6rem;
+        }
+        
+        .admin-metric-meta {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.65);
+        }
+        
+        .admin-secondary-grid {
+            margin-top: 26px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 18px;
+        }
+        
+        .admin-card {
+            padding: 20px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        
+        .admin-card h4 {
+            margin-bottom: 12px;
+        }
+        
+        .admin-alert-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .admin-alert {
+            padding: 12px 14px;
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        
+        .admin-alert .meta {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.6);
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .severity-high {
+            color: #ff9fa6;
+        }
+        
+        .severity-medium {
+            color: #ffd48c;
+        }
+        
+        .severity-low {
+            color: #9fe3ff;
+        }
+        
+        .admin-action-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        
+        .admin-action-btn {
+            flex: 1;
+            min-width: 120px;
+            padding: 10px 16px;
+            border-radius: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            background: rgba(255, 255, 255, 0.06);
+            color: #fff;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-flex;
+            gap: 8px;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .admin-action-btn i {
+            font-size: 0.9rem;
+        }
+        
+        .admin-action-btn:hover {
+            border-color: rgba(122, 92, 255, 0.6);
+        }
+        
+        .health-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .health-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        
+        .health-item:last-child {
+            border-bottom: none;
+        }
+        
+        .health-item span {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.75);
+        }
+        
+        .admin-chip {
+            display: none;
+        }
+        
+        .admin-panel {
+            display: none;
+        }
+        
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            gap: 18px;
+            margin-bottom: 18px;
+            align-items: flex-start;
+        }
+        
+        .section-kicker {
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+        
+        .section-header h2 {
+            margin: 6px 0;
+            font-size: 1.8rem;
+        }
+        
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+        
+        .badge {
+            padding: 6px 14px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            font-size: 0.85rem;
+        }
+        
+        .section-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+        
+        .chip {
+            min-width: 160px;
+            padding: 12px 18px;
+            border-radius: 18px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            background: rgba(7, 11, 35, 0.55);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+        
+        .chip i {
+            width: 36px;
+            height: 36px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+        }
+        
+        .chip strong {
+            display: block;
+            font-size: 0.95rem;
+        }
+        
+        .chip span {
+            display: block;
+            font-size: 0.78rem;
+            color: rgba(255, 255, 255, 0.65);
+        }
+        
+        .chip:hover,
+        .chip.active {
+            transform: translateY(-2px);
+            border-color: rgba(122, 92, 255, 0.8);
+        }
+        
+        .alert {
+            padding: 14px 18px;
+            border-radius: 16px;
+            margin-bottom: 16px;
+            display: none;
+            font-weight: 500;
+        }
+        
         .alert-success {
-            background: rgba(40, 167, 69, 0.1);
-            color: #28a745;
-            border: 1px solid rgba(40, 167, 69, 0.2);
+            background: rgba(53, 211, 157, 0.15);
+            color: #8ff2cb;
+            border: 1px solid rgba(53, 211, 157, 0.4);
         }
         
         .alert-error {
-            background: rgba(220, 53, 69, 0.1);
-            color: #dc3545;
-            border: 1px solid rgba(220, 53, 69, 0.2);
+            background: rgba(255, 107, 107, 0.15);
+            color: #ffb2b2;
+            border: 1px solid rgba(255, 107, 107, 0.35);
         }
         
         .avatar-upload {
             position: relative;
             display: inline-block;
-            margin-bottom: 20px;
+            margin-bottom: 24px;
+        }
+        
+        .avatar-upload img {
+            width: 110px;
+            height: 110px;
+            border-radius: 34px;
+            object-fit: cover;
+            border: 3px solid rgba(255, 255, 255, 0.25);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
         }
         
         .avatar-upload input {
             position: absolute;
+            inset: 0;
             opacity: 0;
-            width: 100%;
-            height: 100%;
             cursor: pointer;
+            z-index: 2;
         }
         
         .avatar-upload-overlay {
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.7);
-            color: white;
+            inset: 0;
+            border-radius: 34px;
+            background: rgba(12, 16, 39, 0.75);
+            color: #fff;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            border-radius: 50%;
             opacity: 0;
             transition: opacity 0.3s ease;
+            pointer-events: none;
         }
         
         .avatar-upload:hover .avatar-upload-overlay {
             opacity: 1;
+        }
+        
+        .avatar-upload-status {
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translate(-50%, 100%);
+            background: rgba(12, 16, 39, 0.8);
+            padding: 6px 12px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            display: none;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .avatar-upload-status.show {
+            display: inline-flex;
+        }
+        
+        .avatar-tools {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 12px;
+        }
+        
+        .avatar-url-form {
+            display: none;
+            padding: 14px;
+            border-radius: 16px;
+            background: rgba(4, 9, 32, 0.45);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            margin-bottom: 18px;
+            backdrop-filter: blur(6px);
+        }
+        
+        .avatar-url-form.active {
+            display: block;
+        }
+        
+        .avatar-url-form label {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.75);
+            display: block;
+            margin-bottom: 6px;
+        }
+        
+        .avatar-url-form input {
+            width: 100%;
+            padding: 10px 14px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            background: rgba(3, 6, 20, 0.6);
+            color: #fff;
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+        }
+        
+        .avatar-url-form input:focus {
+            outline: none;
+            border-color: rgba(122, 92, 255, 0.85);
+        }
+        
+        .avatar-url-actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 18px;
+        }
+        
+        .form-row.full {
+            grid-column: 1 / -1;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            background: rgba(4, 9, 32, 0.45);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 16px;
+            padding: 14px 16px;
+            box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.02);
+        }
+        
+        .form-group label {
+            font-size: 0.9rem;
+            letter-spacing: 0.01em;
+            color: rgba(255, 255, 255, 0.8);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .field-note {
+            font-size: 0.78rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 10px 0 4px;
+            border: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+            background: transparent;
+            color: #fff;
+            font-size: 1rem;
+            transition: border-color 0.2s ease;
+        }
+        
+        .form-group input:focus {
+            outline: none;
+            border-bottom-color: rgba(122, 92, 255, 0.85);
+        }
+        
+        .form-actions {
+            margin-top: 10px;
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
         }
         
         .loading {
@@ -309,215 +705,471 @@
             100% { transform: rotate(360deg); }
         }
         
+        .stats-card .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .stat-item {
+            padding: 18px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        
+        .stat-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+        
+        .stat-label {
+            color: var(--text-muted);
+            margin-top: 6px;
+        }
+        
+        .recent-records {
+            margin-top: 16px;
+            border-radius: 18px;
+            border: 1px dashed rgba(255, 255, 255, 0.2);
+            padding: 24px;
+            text-align: center;
+            color: var(--text-muted);
+        }
+        
+        .logout-block {
+            margin-top: 28px;
+            padding: 22px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+        }
+        
         @media (max-width: 768px) {
-            .container {
-                padding: 0 10px;
+            body {
+                padding: 20px 16px 40px;
             }
             
-            .header-content {
+            .hero-header {
                 flex-direction: column;
                 text-align: center;
-                gap: 15px;
             }
             
-            .nav-tabs {
-                flex-direction: column;
-                gap: 5px;
+            .hero-meta {
+                justify-content: center;
+                flex-wrap: wrap;
             }
             
-            .stats-grid {
-                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            .hero-actions {
+                justify-content: center;
+            }
+            
+            .content-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body data-require-auth="true">
-    <div class="container">
-        <div class="header">
-            <div class="header-content">
-                <img src="/assets/images/default-avatar.png" alt="用户头像" class="user-avatar" id="headerAvatar">
-                <div class="user-info">
+    <div class="background-aurora"></div>
+    <main class="profile-page">
+        <section class="profile-hero glass-panel">
+            <div class="hero-header">
+                <div class="hero-avatar-wrap">
+                    <img src="/assets/images/default-avatar1.jpg" alt="用户头像" id="headerAvatar">
+                    <span class="status-badge">在线</span>
+                </div>
+                <div class="hero-text">
+                    <p class="hero-kicker">Personal Hub</p>
                     <h1 id="headerNickname">加载中...</h1>
-                    <span class="user-role" id="headerRole">USER</span>
-                    <div class="user-meta">
-                        <span id="headerUsername">@username</span> • 
+                    <div class="hero-meta">
+                        <span id="headerUsername">@username</span>
+                        <span class="dot"></span>
+                        <span id="headerRole">学员</span>
+                        <span class="dot"></span>
                         <span id="headerJoinDate">加入于 2024年</span>
                     </div>
-                </div>
-                <div style="margin-left: auto;">
-                    <button class="btn btn-secondary" onclick="location.href='function.html'">
-                        <i class="fas fa-arrow-left"></i> 返回主页
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <div class="nav-tabs">
-            <div class="nav-tab active" onclick="switchTab('profile')">
-                <i class="fas fa-user"></i> 个人信息
-            </div>
-            <div class="nav-tab" onclick="switchTab('security')">
-                <i class="fas fa-shield-alt"></i> 安全设置
-            </div>
-            <div class="nav-tab" onclick="switchTab('stats')">
-                <i class="fas fa-chart-bar"></i> 学习统计
-            </div>
-        </div>
-
-        <div class="tab-content active" id="profile">
-            <div class="profile-card">
-                <h2 class="card-title">
-                    <i class="fas fa-user-edit"></i> 编辑个人信息
-                </h2>
-                
-                <div class="alert alert-success" id="profileSuccessAlert"></div>
-                <div class="alert alert-error" id="profileErrorAlert"></div>
-                
-                <div class="avatar-upload">
-                    <img src="/assets/images/default-avatar.png" alt="用户头像" class="user-avatar" id="profileAvatar">
-                    <input type="file" id="avatarInput" accept="image/*">
-                    <div class="avatar-upload-overlay">
-                        <i class="fas fa-camera"></i>
+                    <div class="hero-actions">
+                        <button class="btn ghost" onclick="window.location.href='/index.html'">
+                            <i class="fas fa-layer-group"></i> 返回功能面板
+                        </button>
+                        <button class="btn primary" onclick="window.location.href='/wrongbook'">
+                            <i class="fas fa-book-open"></i> 前往错词本
+                        </button>
                     </div>
                 </div>
-                
-                <form id="profileForm">
-                    <div class="form-group">
-                        <label for="username">用户名</label>
-                        <input type="text" id="username" name="username" disabled>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="nickname">昵称</label>
-                        <input type="text" id="nickname" name="nickname" placeholder="输入您的昵称">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">邮箱</label>
-                        <input type="email" id="email" name="email" placeholder="输入您的邮箱">
-                    </div>
-                    
-                    <button type="submit" class="btn btn-primary" id="profileSaveBtn">
-                        <i class="fas fa-save"></i> 保存更改
-                        <span class="loading" id="profileLoading">
-                            <i class="fas fa-spinner"></i>
-                        </span>
-                    </button>
-                </form>
             </div>
+            <div class="hero-stats" id="normalHeroStats">
+                <div class="hero-stat">
+                    <span>学习单词</span>
+                    <strong id="totalWordsLearned">0</strong>
+                </div>
+                <div class="hero-stat">
+                    <span>错词数量</span>
+                    <strong id="wrongWordsCount">0</strong>
+                </div>
+                <div class="hero-stat">
+                    <span>坚持天数</span>
+                    <strong id="studyDays">0</strong>
+                </div>
+                <div class="hero-stat">
+                    <span>累计学习</span>
+                    <strong id="totalSessions">0</strong>
+                </div>
+            </div>
+            <div class="admin-hero-stats" id="adminHeroStats">
+                <div class="hero-stat">
+                    <span>活跃学员</span>
+                    <strong id="adminActiveStudents">0</strong>
+                    <small>今日在线学员</small>
+                </div>
+                <div class="hero-stat">
+                    <span>待审核事项</span>
+                    <strong id="adminPendingApprovals">0</strong>
+                    <small>举报 · 内容 · 注册</small>
+                </div>
+                <div class="hero-stat">
+                    <span>系统告警</span>
+                    <strong id="adminAlerts">0</strong>
+                    <small>需立即关注</small>
+                </div>
+                <div class="hero-stat">
+                    <span>完成率</span>
+                    <strong id="adminCompletionRate">0%</strong>
+                    <small>全站学习任务</small>
+                </div>
+            </div>
+            <div class="glass-panel admin-dashboard-card" id="adminDashboard">
+                <div class="admin-panel-header">
+                    <div>
+                        <p class="section-kicker">Operations</p>
+                        <h2>平台运营总览</h2>
+                        <p>掌握学员活跃度、内容生产与系统健康情况</p>
+                    </div>
+                    <span class="badge"><i class="fas fa-shield-alt"></i> 管理员视图</span>
+                </div>
+                <div class="admin-overview-grid">
+                    <div class="admin-metric-card">
+                        <span>今日活跃</span>
+                        <strong id="adminMetricDailyActive">0</strong>
+                        <span class="admin-metric-meta">较昨日 <span id="adminMetricDailyTrend">+0%</span></span>
+                    </div>
+                    <div class="admin-metric-card">
+                        <span>新增注册</span>
+                        <strong id="adminMetricNewUsers">0</strong>
+                        <span class="admin-metric-meta">今天新增学员</span>
+                    </div>
+                    <div class="admin-metric-card">
+                        <span>内容更新</span>
+                        <strong id="adminMetricContent">0</strong>
+                        <span class="admin-metric-meta">AI生词本、题库等</span>
+                    </div>
+                    <div class="admin-metric-card">
+                        <span>任务完成率</span>
+                        <strong id="adminMetricTaskCompletion">0%</strong>
+                        <span class="admin-metric-meta">今日全站学习任务</span>
+                    </div>
+                </div>
+                <div class="admin-secondary-grid">
+                    <div class="admin-card">
+                        <h4>待处理事项</h4>
+                        <ul class="admin-alert-list" id="adminTodoList"></ul>
+                    </div>
+                    <div class="admin-card">
+                        <h4>系统健康</h4>
+                        <div class="health-list" id="adminHealthList"></div>
+                    </div>
+                    <div class="admin-card">
+                        <h4>快捷操作</h4>
+                        <div class="admin-action-group">
+                            <button class="admin-action-btn" data-admin-action="users">
+                                <i class="fas fa-users-cog"></i> 用户管理
+                            </button>
+                            <button class="admin-action-btn" data-admin-action="content">
+                                <i class="fas fa-book-medical"></i> 词库维护
+                            </button>
+                            <button class="admin-action-btn" data-admin-action="report">
+                                <i class="fas fa-chart-pie"></i> 分析报表
+                            </button>
+                            <button class="admin-action-btn" data-admin-action="broadcast">
+                                <i class="fas fa-bullhorn"></i> 发布公告
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <div class="section-chips">
+            <button class="chip active" type="button" data-tab-target="profile">
+                <i class="fas fa-user-circle"></i>
+                <div>
+                    <strong>个人信息</strong>
+                    <span>头像 · 昵称 · 联系方式</span>
+                </div>
+            </button>
+            <button class="chip" type="button" data-tab-target="security">
+                <i class="fas fa-shield-alt"></i>
+                <div>
+                    <strong>账号安全</strong>
+                    <span>修改 · 密码</span>
+                </div>
+            </button>
+            <button class="chip" type="button" data-tab-target="insight">
+                <i class="fas fa-chart-line"></i>
+                <div>
+                    <strong>学习洞察</strong>
+                    <span>统计 · 记录</span>
+                </div>
+            </button>
+            <button class="chip admin-chip" type="button" data-tab-target="admin-panel">
+                <i class="fas fa-crown"></i>
+                <div>
+                    <strong>管理面板</strong>
+                    <span>运营 · 告警 · 审批</span>
+                </div>
+            </button>
         </div>
-
-        <div class="tab-content" id="security">
-            <div class="security-card">
-                <h2 class="card-title">
-                    <i class="fas fa-key"></i> 修改密码
-                </h2>
-                
-                <div class="alert alert-success" id="passwordSuccessAlert"></div>
-                <div class="alert alert-error" id="passwordErrorAlert"></div>
-                
-                <form id="passwordForm">
-                    <div class="form-group">
-                        <label for="oldPassword">当前密码</label>
-                        <input type="password" id="oldPassword" name="oldPassword" required>
+        
+        <section class="content-grid">
+            <div class="tab-panel active" data-tab="profile">
+                <div class="glass-panel profile-card" id="profileCard">
+                    <div class="section-header">
+                        <div>
+                            <p class="section-kicker">Profile</p>
+                            <h2>编辑个人资料</h2>
+                            <p>同步头像、昵称与联系方式</p>
+                        </div>
+                        <span class="badge"><i class="fas fa-shield-alt"></i> 安全校验</span>
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="newPassword">新密码</label>
-                        <input type="password" id="newPassword" name="newPassword" required>
+                    <div class="alert alert-success" id="profileSuccessAlert"></div>
+                    <div class="alert alert-error" id="profileErrorAlert"></div>
+                    <div class="avatar-upload">
+                        <img src="/assets/images/default-avatar1.jpg" alt="用户头像" id="profileAvatar">
+                        <input type="file" id="avatarInput" accept="image/*">
+                        <div class="avatar-upload-overlay">
+                            <i class="fas fa-camera"></i>
+                            <span>更换头像</span>
+                        </div>
+                        <div class="avatar-upload-status" id="avatarUploadStatus">
+                            <i class="fas fa-spinner"></i> 上传中...
+                        </div>
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="confirmNewPassword">确认新密码</label>
-                        <input type="password" id="confirmNewPassword" name="confirmNewPassword" required>
+                    <div class="avatar-tools">
+                        <button type="button" class="btn ghost small" id="avatarUploadTrigger">
+                            <i class="fas fa-upload"></i> 本地上传
+                        </button>
+                        <button type="button" class="btn ghost small" id="avatarUrlToggle">
+                            <i class="fas fa-link"></i> 使用链接
+                        </button>
                     </div>
-                    
-                    <button type="submit" class="btn btn-primary" id="passwordSaveBtn">
-                        <i class="fas fa-shield-alt"></i> 修改密码
-                        <span class="loading" id="passwordLoading">
-                            <i class="fas fa-spinner"></i>
-                        </span>
-                    </button>
-                </form>
+                    <div class="avatar-url-form" id="avatarUrlForm">
+                        <label for="avatarUrlInput">头像链接（支持 http / https 图片地址）</label>
+                        <input type="url" id="avatarUrlInput" placeholder="例如：https://example.com/avatar.png">
+                        <div class="avatar-url-actions">
+                            <button type="button" class="btn primary small" id="avatarUrlSubmit">
+                                <i class="fas fa-check"></i> 应用头像
+                            </button>
+                            <button type="button" class="btn ghost small" id="avatarUrlCancel">
+                                取消
+                            </button>
+                        </div>
+                    </div>
+                    <form id="profileForm" class="form-grid">
+                        <div class="form-group">
+                            <label for="username">用户名</label>
+                            <input type="text" id="username" name="username" disabled>
+                        </div>
+                        <div class="form-group">
+                            <label for="nickname">昵称</label>
+                            <input type="text" id="nickname" name="nickname" placeholder="输入您的昵称">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">邮箱 <small>用于接收学习通知</small></label>
+                            <input type="email" id="email" name="email" placeholder="输入您的邮箱">
+                        </div>
+                        <div class="form-group">
+                            <label for="verifyPassword">当前密码 <small>身份验证</small></label>
+                            <input type="password" id="verifyPassword" name="verifyPassword" placeholder="请输入当前密码完成验证">
+                        </div>
+                        <button type="submit" class="btn primary" id="profileSaveBtn">
+                            <i class="fas fa-save"></i> 保存更改
+                            <span class="loading" id="profileLoading">
+                                <i class="fas fa-spinner"></i>
+                            </span>
+                        </button>
+                    </form>
+                </div>
             </div>
             
-            <div class="security-card">
-                <h2 class="card-title">
-                    <i class="fas fa-sign-out-alt"></i> 退出登录
-                </h2>
-                <p style="color: #7f8c8d; margin-bottom: 20px;">
-                    退出当前账户，您需要重新登录才能使用系统功能。
-                </p>
-                <button class="btn btn-danger" onclick="logout()">
-                    <i class="fas fa-power-off"></i> 退出登录
-                </button>
-            </div>
-        </div>
-
-        <div class="tab-content" id="stats">
-            <div class="stats-card">
-                <h2 class="card-title">
-                    <i class="fas fa-chart-line"></i> 学习统计
-                </h2>
-                
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <div class="stat-value" id="totalWordsLearned">0</div>
-                        <div class="stat-label">学习单词数</div>
+            <div class="tab-panel" data-tab="security">
+                <div class="glass-panel security-card" id="securityCard">
+                    <div class="section-header">
+                        <div>
+                            <p class="section-kicker">Security</p>
+                            <h2>安全设置</h2>
+                            <p>增强账号安全，防止异常登录</p>
+                        </div>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-value" id="wrongWordsCount">0</div>
-                        <div class="stat-label">错词总数</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-value" id="studyDays">0</div>
-                        <div class="stat-label">学习天数</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-value" id="totalSessions">0</div>
-                        <div class="stat-label">学习次数</div>
-                    </div>
-                </div>
-                
-                <div style="margin-top: 30px;">
-                    <h3 style="margin-bottom: 15px; color: #2c3e50;">最近学习记录</h3>
-                    <div id="recentStudyRecords">
-                        <p style="text-align: center; color: #7f8c8d; padding: 40px;">
-                            <i class="fas fa-book-open" style="font-size: 2rem; margin-bottom: 10px; display: block;"></i>
-                            暂无学习记录
-                        </p>
+                    <div class="alert alert-success" id="passwordSuccessAlert"></div>
+                    <div class="alert alert-error" id="passwordErrorAlert"></div>
+                    <form id="passwordForm" class="form-grid">
+                        <div class="form-group">
+                            <label for="oldPassword">当前密码</label>
+                            <input type="password" id="oldPassword" name="oldPassword" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="newPassword">新密码</label>
+                            <input type="password" id="newPassword" name="newPassword" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmNewPassword">确认新密码</label>
+                            <input type="password" id="confirmNewPassword" name="confirmNewPassword" required>
+                        </div>
+                        <button type="submit" class="btn primary" id="passwordSaveBtn">
+                            <i class="fas fa-shield-alt"></i> 修改密码
+                            <span class="loading" id="passwordLoading">
+                                <i class="fas fa-spinner"></i>
+                            </span>
+                        </button>
+                    </form>
+                    <div class="logout-block">
+                        <div>
+                            <h3 style="margin-bottom:6px;">退出登录</h3>
+                            <p style="color:var(--text-muted); font-size:0.9rem;">
+                                清除当前设备的登录状态，保障账号安全。
+                            </p>
+                        </div>
+                        <button class="btn danger" onclick="logout()">
+                            <i class="fas fa-power-off"></i> 退出
+                        </button>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+            
+            <div class="tab-panel" data-tab="insight">
+                <div class="glass-panel stats-card" id="insightCard">
+                    <div class="section-header">
+                        <div>
+                            <p class="section-kicker">Insight</p>
+                            <h2>学习洞察</h2>
+                            <p>实时掌握学习进度与错词情况</p>
+                        </div>
+                        <button class="btn ghost small" type="button" onclick="loadUserStats()">
+                            <i class="fas fa-sync"></i> 刷新
+                        </button>
+                    </div>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-value" id="totalWordsLearnedDisplay">0</div>
+                            <div class="stat-label">学习单词数</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value" id="wrongWordsCountDisplay">0</div>
+                            <div class="stat-label">错词总数</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value" id="studyDaysDisplay">0</div>
+                            <div class="stat-label">学习天数</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value" id="totalSessionsDisplay">0</div>
+                            <div class="stat-label">学习次数</div>
+                        </div>
+                    </div>
+                    <div class="recent-records" id="recentStudyRecords">
+                        <i class="fas fa-book-open" style="font-size:2rem;margin-bottom:10px;display:block;"></i>
+                        暂无学习记录
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-panel admin-panel" data-tab="admin-panel">
+                <div class="glass-panel admin-dashboard-card">
+                    <div class="section-header">
+                        <div>
+                            <p class="section-kicker">Admin Console</p>
+                            <h2>运营指挥台</h2>
+                            <p>汇总全站核心指标与待办事项，支持快速响应</p>
+                        </div>
+                        <span class="badge"><i class="fas fa-user-shield"></i> ADMIN ONLY</span>
+                    </div>
+                    <div class="admin-overview-grid">
+                        <div class="admin-metric-card">
+                            <span>近7日活跃</span>
+                            <strong id="adminPanelWeeklyActive">0</strong>
+                            <span class="admin-metric-meta">环比 <span id="adminPanelWeeklyTrend">+0%</span></span>
+                        </div>
+                        <div class="admin-metric-card">
+                            <span>教师提交</span>
+                            <strong id="adminPanelTeacherSubmissions">0</strong>
+                            <span class="admin-metric-meta">待审核课程</span>
+                        </div>
+                        <div class="admin-metric-card">
+                            <span>AI生词入库</span>
+                            <strong id="adminPanelAiEntries">0</strong>
+                            <span class="admin-metric-meta">今日新增</span>
+                        </div>
+                        <div class="admin-metric-card">
+                            <span>异常登录</span>
+                            <strong id="adminPanelAnomalies">0</strong>
+                            <span class="admin-metric-meta">需要复核</span>
+                        </div>
+                    </div>
+                    <div class="admin-secondary-grid">
+                        <div class="admin-card">
+                            <h4>分群活跃度</h4>
+                            <div class="health-list" id="adminUserSegments"></div>
+                        </div>
+                        <div class="admin-card">
+                            <h4>系统告警</h4>
+                            <ul class="admin-alert-list" id="adminSystemAlerts"></ul>
+                        </div>
+                        <div class="admin-card">
+                            <h4>操作日志</h4>
+                            <ul class="admin-alert-list" id="adminAuditTrail"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
+    <script src="/assets/js/logout-modal.js"></script>
     <script>
+        const API_BASE = 'http://localhost:8080';
         let currentUser = null;
         let authToken = null;
+        let isAdminUser = false;
+        let adminOverviewLoaded = false;
+        let adminActionsBound = false;
         
         // 页面加载时初始化
         document.addEventListener('DOMContentLoaded', function() {
             checkAuth();
             setupForms();
             setupAvatarUpload();
+            setupAvatarTools();
+            setupSectionChips();
         });
         
         // 检查用户认证状态
         async function checkAuth() {
             authToken = localStorage.getItem('auth_token');
             if (!authToken) {
-                window.location.href = 'login.html?return=profile.html';
+                window.location.href = '/login?return=profile';
                 return;
             }
             
             try {
-                const response = await fetch('http://192.168.43.106:8080/user/info', {
+                const response = await fetch(`${API_BASE}/user/info`, {
                     method: 'GET',
-                    headers: {
-                        'Authorization': `Bearer ${authToken}`,
-                        'Content-Type': 'application/json',
-                    }
+                    headers: buildAuthHeaders()
                 });
                 
                 const result = await response.json();
@@ -528,12 +1180,21 @@
                 } else {
                     localStorage.removeItem('auth_token');
                     localStorage.removeItem('user_info');
-                    window.location.href = 'login.html?return=profile.html';
+                    window.location.href = '/login?return=profile';
                 }
             } catch (error) {
                 console.error('获取用户信息失败:', error);
-                window.location.href = 'login.html?return=profile.html';
+                window.location.href = '/login?return=profile';
             }
+        }
+        
+        function buildAuthHeaders(contentType = 'application/json') {
+            if (!authToken) return {};
+            const headers = { 'Authorization': `Bearer ${authToken}` };
+            if (contentType) {
+                headers['Content-Type'] = contentType;
+            }
+            return headers;
         }
         
         // 更新用户显示信息
@@ -556,6 +1217,9 @@
             document.getElementById('username').value = currentUser.username || '';
             document.getElementById('nickname').value = currentUser.nickname || '';
             document.getElementById('email').value = currentUser.email || '';
+            
+            isAdminUser = currentUser.role === 'ADMIN';
+            configureAdminExperience();
         }
         
         // 设置表单事件
@@ -573,41 +1237,175 @@
             avatarInput.addEventListener('change', handleAvatarUpload);
         }
         
+        function setupAvatarTools() {
+            const avatarInput = document.getElementById('avatarInput');
+            const uploadTrigger = document.getElementById('avatarUploadTrigger');
+            const urlToggle = document.getElementById('avatarUrlToggle');
+            const urlForm = document.getElementById('avatarUrlForm');
+            const urlCancel = document.getElementById('avatarUrlCancel');
+            const urlSubmit = document.getElementById('avatarUrlSubmit');
+            const urlInput = document.getElementById('avatarUrlInput');
+            
+            if (uploadTrigger && avatarInput) {
+                uploadTrigger.addEventListener('click', () => avatarInput.click());
+            }
+            
+            const toggleUrlForm = (show) => {
+                if (!urlForm) return;
+                urlForm.classList.toggle('active', show);
+                if (show && urlInput) {
+                    urlInput.focus();
+                }
+            };
+            
+            if (urlToggle) {
+                urlToggle.addEventListener('click', () => {
+                    const shouldShow = !urlForm.classList.contains('active');
+                    toggleUrlForm(shouldShow);
+                });
+            }
+            
+            if (urlCancel) {
+                urlCancel.addEventListener('click', () => {
+                    if (urlInput) urlInput.value = '';
+                    toggleUrlForm(false);
+                });
+            }
+            
+            if (urlSubmit) {
+                urlSubmit.addEventListener('click', handleAvatarUrlSubmit);
+            }
+        }
+        
         // 处理头像上传
         async function handleAvatarUpload(event) {
             const file = event.target.files[0];
             if (!file) return;
             
-            // 验证文件类型
             if (!file.type.startsWith('image/')) {
                 showAlert('请选择图片文件', 'error', 'profile');
                 return;
             }
             
-            // 验证文件大小 (2MB)
             if (file.size > 2 * 1024 * 1024) {
                 showAlert('图片大小不能超过2MB', 'error', 'profile');
                 return;
             }
             
+            const status = document.getElementById('avatarUploadStatus');
+            status.classList.add('show');
+            
             try {
-                // 这里可以实现图片上传到服务器的逻辑
-                // 现在暂时使用base64编码作为演示
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    const newAvatar = e.target.result;
-                    document.getElementById('headerAvatar').src = newAvatar;
-                    document.getElementById('profileAvatar').src = newAvatar;
-                    
-                    // 这里应该发送到服务器保存
-                    // updateUserAvatar(newAvatar);
-                    
-                    showAlert('头像上传成功！请点击保存更改以保存', 'success', 'profile');
-                };
-                reader.readAsDataURL(file);
+                const avatarUrl = await uploadAvatarFile(file);
+                document.getElementById('headerAvatar').src = avatarUrl;
+                document.getElementById('profileAvatar').src = avatarUrl;
+                currentUser = { ...currentUser, avatar: avatarUrl };
+                localStorage.setItem('user_info', JSON.stringify(currentUser));
+                showAlert('头像已更新', 'success', 'profile');
             } catch (error) {
                 console.error('头像上传失败:', error);
-                showAlert('头像上传失败，请重试', 'error', 'profile');
+                showAlert(error.message || '头像上传失败，请重试', 'error', 'profile');
+            } finally {
+                status.classList.remove('show');
+            }
+        }
+        
+        async function uploadAvatarFile(file) {
+            const formData = new FormData();
+            formData.append('avatar', file);
+            
+            const response = await fetch(`${API_BASE}/user/avatar`, {
+                method: 'POST',
+                headers: buildAuthHeaders(null),
+                body: formData
+            });
+            const result = await response.json();
+            if (result.code === 1) {
+                return result.data;
+            }
+            throw new Error(result.message || '头像上传失败');
+        }
+        
+        async function handleAvatarUrlSubmit() {
+            const urlInput = document.getElementById('avatarUrlInput');
+            const urlForm = document.getElementById('avatarUrlForm');
+            const submitBtn = document.getElementById('avatarUrlSubmit');
+            const cancelBtn = document.getElementById('avatarUrlCancel');
+            const status = document.getElementById('avatarUploadStatus');
+            
+            if (!urlInput) return;
+            const avatarUrl = urlInput.value.trim();
+            if (!avatarUrl) {
+                showAlert('请输入头像链接', 'error', 'profile');
+                return;
+            }
+            
+            submitBtn && (submitBtn.disabled = true);
+            cancelBtn && (cancelBtn.disabled = true);
+            if (status) status.classList.add('show');
+            
+            try {
+                const response = await fetch(`${API_BASE}/user/avatar/url`, {
+                    method: 'POST',
+                    headers: buildAuthHeaders(),
+                    body: JSON.stringify({ url: avatarUrl })
+                });
+                const result = await response.json();
+                if (result.code === 1) {
+                    document.getElementById('headerAvatar').src = result.data;
+                    document.getElementById('profileAvatar').src = result.data;
+                    currentUser = { ...currentUser, avatar: result.data };
+                    localStorage.setItem('user_info', JSON.stringify(currentUser));
+                    showAlert('头像已更新', 'success', 'profile');
+                    urlInput.value = '';
+                    urlForm && urlForm.classList.remove('active');
+                } else {
+                    showAlert(result.message || '更新失败，请检查链接是否有效', 'error', 'profile');
+                }
+            } catch (error) {
+                console.error('通过URL更新头像失败:', error);
+                showAlert('头像链接更新失败，请稍后重试', 'error', 'profile');
+            } finally {
+                submitBtn && (submitBtn.disabled = false);
+                cancelBtn && (cancelBtn.disabled = false);
+                if (status) status.classList.remove('show');
+            }
+        }
+
+        function setupSectionChips() {
+            const chips = document.querySelectorAll('.section-chips .chip');
+            const panels = document.querySelectorAll('.tab-panel');
+            const contentSection = document.querySelector('.content-grid');
+            
+            if (!chips.length || !panels.length) return;
+            
+            const activateTab = (tabName, shouldScroll = true) => {
+                if (!tabName) return;
+                
+                chips.forEach(chip => {
+                    chip.classList.toggle('active', chip.dataset.tabTarget === tabName);
+                });
+                
+                panels.forEach(panel => {
+                    panel.classList.toggle('active', panel.dataset.tab === tabName);
+                });
+                
+                if (shouldScroll && contentSection) {
+                    contentSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            };
+            
+            chips.forEach(chip => {
+                chip.addEventListener('click', () => {
+                    const tabName = chip.dataset.tabTarget;
+                    if (!tabName || chip.classList.contains('active')) return;
+                    activateTab(tabName);
+                });
+            });
+            
+            const defaultChip = document.querySelector('.section-chips .chip.active') || chips[0];
+            if (defaultChip) {
+                activateTab(defaultChip.dataset.tabTarget, false);
             }
         }
         
@@ -617,6 +1415,7 @@
             
             const btn = document.getElementById('profileSaveBtn');
             const loading = document.getElementById('profileLoading');
+            const verifyPasswordInput = document.getElementById('verifyPassword');
             
             btn.disabled = true;
             loading.style.display = 'inline';
@@ -625,22 +1424,36 @@
             const formData = {
                 nickname: document.getElementById('nickname').value.trim(),
                 email: document.getElementById('email').value.trim() || null,
-                avatar: document.getElementById('profileAvatar').src
+                avatar: document.getElementById('profileAvatar').src,
+                verifyPassword: verifyPasswordInput.value.trim()
             };
             
+            if (!formData.nickname) {
+                showAlert('昵称不能为空', 'error', 'profile');
+                btn.disabled = false;
+                loading.style.display = 'none';
+                return;
+            }
+            
+            if (!formData.verifyPassword) {
+                showAlert('请输入当前密码以完成验证', 'error', 'profile');
+                btn.disabled = false;
+                loading.style.display = 'none';
+                return;
+            }
+            
             try {
-                const response = await fetch('http://192.168.43.106:8080/user/info', {
+                const response = await fetch(`${API_BASE}/user/info`, {
                     method: 'PUT',
-                    headers: {
-                        'Authorization': `Bearer ${authToken}`,
-                        'Content-Type': 'application/json',
-                    },
+                    headers: buildAuthHeaders(),
                     body: JSON.stringify(formData)
                 });
                 
                 const result = await response.json();
                 if (result.code === 1) {
-                    currentUser = { ...currentUser, ...formData };
+                    verifyPasswordInput.value = '';
+                    const { verifyPassword, ...profileData } = formData;
+                    currentUser = { ...currentUser, ...profileData };
                     localStorage.setItem('user_info', JSON.stringify(currentUser));
                     updateUserDisplay();
                     showAlert('个人信息更新成功！', 'success', 'profile');
@@ -682,12 +1495,9 @@
             hideAlerts('password');
             
             try {
-                const response = await fetch('http://192.168.43.106:8080/user/password', {
+                const response = await fetch(`${API_BASE}/user/password`, {
                     method: 'PUT',
-                    headers: {
-                        'Authorization': `Bearer ${authToken}`,
-                        'Content-Type': 'application/json',
-                    },
+                    headers: buildAuthHeaders(),
                     body: JSON.stringify({
                         oldPassword: oldPassword,
                         newPassword: newPassword,
@@ -715,8 +1525,8 @@
         async function loadUserStats() {
             try {
                 // 获取错词统计
-                const wrongWordsResponse = await fetch('http://192.168.43.106:8080/english/wrongbook/all', {
-                    headers: { 'Authorization': `Bearer ${authToken}` }
+                const wrongWordsResponse = await fetch(`${API_BASE}/english/wrongbook/all`, {
+                    headers: buildAuthHeaders()
                 });
                 
                 if (wrongWordsResponse.ok) {
@@ -731,47 +1541,305 @@
                 document.getElementById('studyDays').textContent = '28';
                 document.getElementById('totalSessions').textContent = '42';
                 
+                document.getElementById('totalWordsLearnedDisplay').textContent = document.getElementById('totalWordsLearned').textContent;
+                document.getElementById('wrongWordsCountDisplay').textContent = document.getElementById('wrongWordsCount').textContent;
+                document.getElementById('studyDaysDisplay').textContent = document.getElementById('studyDays').textContent;
+                document.getElementById('totalSessionsDisplay').textContent = document.getElementById('totalSessions').textContent;
+                
             } catch (error) {
                 console.error('加载统计数据失败:', error);
             }
         }
         
-        // 切换标签页
-        function switchTab(tabName) {
-            // 隐藏所有标签内容
-            document.querySelectorAll('.tab-content').forEach(content => {
-                content.classList.remove('active');
-            });
+        function configureAdminExperience() {
+            const adminHero = document.getElementById('adminHeroStats');
+            const normalHero = document.getElementById('normalHeroStats');
+            const adminDashboard = document.getElementById('adminDashboard');
+            const adminPanel = document.querySelector('.tab-panel.admin-panel');
+            const adminChips = document.querySelectorAll('.admin-chip');
             
-            // 移除所有标签的激活状态
-            document.querySelectorAll('.nav-tab').forEach(tab => {
-                tab.classList.remove('active');
-            });
-            
-            // 显示选中的标签内容
-            document.getElementById(tabName).classList.add('active');
-            event.target.classList.add('active');
-            
-            // 如果切换到统计页面，重新加载数据
-            if (tabName === 'stats') {
-                loadUserStats();
+            if (isAdminUser) {
+                adminHero && (adminHero.style.display = 'grid');
+                normalHero && (normalHero.style.display = 'none');
+                adminDashboard && (adminDashboard.style.display = 'block');
+                adminPanel && (adminPanel.style.display = 'block');
+                adminChips.forEach(chip => chip.style.display = 'flex');
+                loadAdminOverview();
+                setupAdminQuickActions();
+            } else {
+                adminHero && (adminHero.style.display = 'none');
+                normalHero && (normalHero.style.display = 'grid');
+                adminDashboard && (adminDashboard.style.display = 'none');
+                adminPanel && (adminPanel.style.display = 'none');
+                adminChips.forEach(chip => chip.style.display = 'none');
+                adminOverviewLoaded = false;
+                
+                const activePanel = document.querySelector('.tab-panel.active');
+                if (activePanel && activePanel.dataset.tab === 'admin-panel') {
+                    const profileChip = document.querySelector('.section-chips .chip[data-tab-target="profile"]');
+                    profileChip && profileChip.click();
+                }
             }
         }
         
-        // 退出登录
-        async function logout() {
-            if (!confirm('确定要退出登录吗？')) {
+        async function loadAdminOverview(force = false) {
+            if (!isAdminUser) return;
+            if (adminOverviewLoaded && !force) return;
+            
+            const fallbackData = {
+                heroStats: {
+                    activeStudents: 286,
+                    pendingApprovals: 8,
+                    alerts: 2,
+                    completionRate: 91
+                },
+                metrics: {
+                    dailyActive: 412,
+                    dailyTrend: '+6%',
+                    newUsers: 32,
+                    contentUpdates: 19,
+                    taskCompletion: 87
+                },
+                todos: [
+                    { title: '3 条举报待核查', description: '来自错词本与学习计划', severity: 'high', time: '5 分钟前' },
+                    { title: '2 篇教材待审核', description: '教师提交的新课程', severity: 'medium', time: '1 小时前' }
+                ],
+                health: [
+                    { label: 'API 响应', value: '128ms', status: 'normal' },
+                    { label: '存储使用', value: '72%', status: 'watch' },
+                    { label: '任务队列', value: '正常', status: 'normal' }
+                ],
+                panelDetails: {
+                    weeklyActive: 1560,
+                    weeklyTrend: '+4%',
+                    teacherSubmissions: 5,
+                    aiEntries: 48,
+                    anomalies: 1
+                },
+                segments: [
+                    { label: '基础班', value: '78% 活跃' },
+                    { label: '进阶班', value: '64% 活跃' },
+                    { label: '冲刺班', value: '71% 活跃' }
+                ],
+                alerts: [
+                    { title: 'OSS 存储告警', description: '空间使用率 92%', severity: 'high', time: '15:24' },
+                    { title: '任务队列延迟', description: 'AI 生词生成耗时偏高', severity: 'medium', time: '14:55' }
+                ],
+                audit: [
+                    { title: '@mentor1 发布「高频短语」课程', time: '今天 10:35' },
+                    { title: '@editor2 调整错词本标签', time: '昨天 21:12' }
+                ]
+            };
+            
+            try {
+                const response = await fetch(`${API_BASE}/admin/overview`, {
+                    method: 'GET',
+                    headers: buildAuthHeaders()
+                });
+                
+                if (!response.ok) throw new Error('接口响应异常');
+                
+                const result = await response.json();
+                if (result.code === 1 && result.data) {
+                    renderAdminOverview(result.data);
+                    adminOverviewLoaded = true;
+                    return;
+                }
+                
+                throw new Error(result.message || '获取管理员数据失败');
+            } catch (error) {
+                console.warn('加载管理员概览失败，已启用占位数据：', error);
+                renderAdminOverview(fallbackData);
+                adminOverviewLoaded = true;
+            }
+        }
+        
+        function renderAdminOverview(data = {}) {
+            renderAdminHeroStats(data.heroStats || {});
+            renderAdminPrimaryMetrics(data.metrics || {});
+            renderAdminTodoList(data.todos);
+            renderAdminHealthList('adminHealthList', data.health);
+            renderAdminPanelMetrics(data.panelDetails || {});
+            renderAdminSegments(data.segments);
+            renderAdminSystemAlerts(data.alerts);
+            renderAdminAuditTrail(data.audit);
+        }
+        
+        function renderAdminHeroStats(stats) {
+            setElementText('adminActiveStudents', formatNumber(stats.activeStudents));
+            setElementText('adminPendingApprovals', formatNumber(stats.pendingApprovals));
+            setElementText('adminAlerts', formatNumber(stats.alerts));
+            setElementText('adminCompletionRate', stats.completionRate != null ? `${stats.completionRate}%` : '--');
+        }
+        
+        function renderAdminPrimaryMetrics(metrics) {
+            setElementText('adminMetricDailyActive', formatNumber(metrics.dailyActive));
+            setElementText('adminMetricDailyTrend', metrics.dailyTrend || '0%');
+            setElementText('adminMetricNewUsers', formatNumber(metrics.newUsers));
+            setElementText('adminMetricContent', formatNumber(metrics.contentUpdates));
+            setElementText('adminMetricTaskCompletion', metrics.taskCompletion != null ? `${metrics.taskCompletion}%` : '--');
+        }
+        
+        function renderAdminPanelMetrics(panel) {
+            setElementText('adminPanelWeeklyActive', formatNumber(panel.weeklyActive));
+            setElementText('adminPanelWeeklyTrend', panel.weeklyTrend || '0%');
+            setElementText('adminPanelTeacherSubmissions', formatNumber(panel.teacherSubmissions));
+            setElementText('adminPanelAiEntries', formatNumber(panel.aiEntries));
+            setElementText('adminPanelAnomalies', formatNumber(panel.anomalies));
+        }
+        
+        function renderAdminTodoList(list) {
+            const container = document.getElementById('adminTodoList');
+            if (!container) return;
+            
+            if (!list || !list.length) {
+                container.innerHTML = `<li class="admin-alert"><strong>暂无待处理事项</strong><div class="meta"><span>--</span><span></span></div></li>`;
                 return;
             }
             
-            try {
-                // 调用后端登出接口
-                await fetch('http://192.168.43.106:8080/user/logout', {
-                    method: 'POST',
-                    headers: {
-                        'Authorization': `Bearer ${authToken}`,
-                        'Content-Type': 'application/json',
+            container.innerHTML = list.map(item => `
+                <li class="admin-alert">
+                    <strong>${escapeHtml(item.title || '未命名事项')}</strong>
+                    ${item.description ? `<p>${escapeHtml(item.description)}</p>` : ''}
+                    <div class="meta">
+                        <span class="${item.severity ? `severity-${item.severity}` : ''}">${formatSeverity(item.severity)}</span>
+                        <span>${item.time || ''}</span>
+                    </div>
+                </li>
+            `).join('');
+        }
+        
+        function renderAdminHealthList(containerId, list) {
+            const container = document.getElementById(containerId);
+            if (!container) return;
+            
+            if (!list || !list.length) {
+                container.innerHTML = `<div class="health-item"><span>暂无监控数据</span></div>`;
+                return;
+            }
+            
+            container.innerHTML = list.map(item => `
+                <div class="health-item">
+                    <strong>${escapeHtml(item.label || item.name || '未命名')}</strong>
+                    <span>${escapeHtml(item.value || item.status || '-')}</span>
+                </div>
+            `).join('');
+        }
+        
+        function renderAdminSegments(segments) {
+            renderAdminHealthList('adminUserSegments', segments);
+        }
+        
+        function renderAdminSystemAlerts(alerts) {
+            const container = document.getElementById('adminSystemAlerts');
+            if (!container) return;
+            
+            if (!alerts || !alerts.length) {
+                container.innerHTML = `<li class="admin-alert"><strong>暂无系统告警</strong></li>`;
+                return;
+            }
+            
+            container.innerHTML = alerts.map(item => `
+                <li class="admin-alert">
+                    <strong>${escapeHtml(item.title || '系统告警')}</strong>
+                    ${item.description ? `<p>${escapeHtml(item.description)}</p>` : ''}
+                    <div class="meta">
+                        <span class="${item.severity ? `severity-${item.severity}` : ''}">${formatSeverity(item.severity)}</span>
+                        <span>${item.time || ''}</span>
+                    </div>
+                </li>
+            `).join('');
+        }
+        
+        function renderAdminAuditTrail(auditList) {
+            const container = document.getElementById('adminAuditTrail');
+            if (!container) return;
+            
+            if (!auditList || !auditList.length) {
+                container.innerHTML = `<li class="admin-alert"><strong>暂无操作记录</strong></li>`;
+                return;
+            }
+            
+            container.innerHTML = auditList.map(item => `
+                <li class="admin-alert">
+                    <strong>${escapeHtml(item.title || '操作记录')}</strong>
+                    <div class="meta">
+                        <span>${item.time || ''}</span>
+                    </div>
+                </li>
+            `).join('');
+        }
+        
+        function setupAdminQuickActions() {
+            if (adminActionsBound) return;
+            const actionMap = {
+                users: '/admin/users',
+                content: '/admin/content',
+                report: '/admin/analytics',
+                broadcast: '/admin/announcement'
+            };
+            
+            document.querySelectorAll('.admin-action-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const action = btn.dataset.adminAction;
+                    const target = actionMap[action];
+                    if (target) {
+                        window.location.href = target;
+                    } else {
+                        alert('该功能暂未开放，敬请期待。');
                     }
+                });
+            });
+            
+            adminActionsBound = true;
+        }
+        
+        function setElementText(id, value) {
+            const el = document.getElementById(id);
+            if (el) {
+                el.textContent = value != null && value !== '' ? value : '--';
+            }
+        }
+        
+        function formatNumber(value) {
+            if (value == null || value === '') return '--';
+            if (typeof value !== 'number') return value;
+            return value.toLocaleString();
+        }
+        
+        function formatSeverity(severity) {
+            switch (severity) {
+                case 'high': return '高优';
+                case 'medium': return '关注';
+                case 'low': return '提示';
+                default: return '普通';
+            }
+        }
+        
+        function escapeHtml(input) {
+            if (typeof input !== 'string') return input || '';
+            return input
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#39;');
+        }
+        
+        // 退出登录
+        function logout() {
+            if (typeof showLogoutConfirm === 'function') {
+                showLogoutConfirm(executeLogout);
+            } else {
+                executeLogout();
+            }
+        }
+
+        async function executeLogout() {
+            try {
+                await fetch(`${API_BASE}/user/logout`, {
+                    method: 'POST',
+                    headers: buildAuthHeaders()
                 });
             } catch (error) {
                 console.error('退出登录接口调用失败:', error);
@@ -782,7 +1850,7 @@
             localStorage.removeItem('user_info');
             
             // 跳转到登录页面
-            window.location.href = 'login.html';
+            window.location.href = '/login';
         }
         
         // 显示提示信息

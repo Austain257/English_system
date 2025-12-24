@@ -17,7 +17,7 @@ public interface StudyRecordService {
      * 获取今日需要复习的记录
      * @return 今日需要复习的记录列表
      */
-    List<RecordPO> getTodayList(String table);
+    List<RecordPO> getTodayList(String table,Long currentUserId);
 
     /**
      * 标记已复习的记录

@@ -826,10 +826,12 @@
         window.addEventListener('load', function() {
             setTimeout(function() {
                 const loadingOverlay = document.getElementById('loadingOverlay');
-                loadingOverlay.style.opacity = '0';
-                setTimeout(function() {
-                    loadingOverlay.style.display = 'none';
-                }, 500);
+                if (loadingOverlay) {
+                    loadingOverlay.style.opacity = '0';
+                    setTimeout(function() {
+                        loadingOverlay.style.display = 'none';
+                    }, 500);
+                }
             }, 1000);
 
             const params = new URLSearchParams(window.location.search);
@@ -871,7 +873,9 @@
 
             // 添加滚动效果
             window.addEventListener('scroll', function() {
-                const quickActions = document.querySelector('.quick-actions');
+                const quickActions = document.querySelector('.quick-actions') || document.querySelector('.floating-actions');
+                if (!quickActions) return;
+                
                 if (window.scrollY > 500) {
                     quickActions.style.opacity = '1';
                 } else {

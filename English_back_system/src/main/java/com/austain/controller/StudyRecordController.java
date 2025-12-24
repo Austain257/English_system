@@ -4,6 +4,7 @@ package com.austain.controller;
 import com.austain.domain.dto.Result;
 import com.austain.domain.po.RecordPO;
 import com.austain.srevice.StudyRecordService;
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
@@ -34,8 +35,9 @@ public class StudyRecordController {
      * @return 今日需要复习的记录
      */
     @GetMapping("/list")
-    public Result getTodayList(@RequestParam String table){
-        List<RecordPO> studyRecordList = studyRecordService.getTodayList(table);
+    public Result getTodayList(@RequestParam String table, HttpServletRequest request){
+        Long currentUserId = (Long) request.getAttribute("currentUserId");
+        List<RecordPO> studyRecordList = studyRecordService.getTodayList(table,currentUserId);
         System.out.println(studyRecordList.toString());
         return Result.success(studyRecordList);
     }

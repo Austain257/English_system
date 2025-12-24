@@ -18,9 +18,9 @@ public class JottingServiceImpl implements JottingService {
     private JottingMapper jottingMapper;
 
     @Override
-    public PageResult<Jotting> getList(Integer page, Integer size) {
+    public PageResult<Jotting> getList(Integer page, Integer size, Long currentUserId) {
         PageHelper.startPage(page,size);  // 开启分页,其后必须紧接查询语句才有效
-        List<Jotting> list = jottingMapper.page();  // 获取分页结果
+        List<Jotting> list = jottingMapper.page( currentUserId );  // 获取分页结果
         Page<Jotting> pageList = (Page<Jotting>) list;
         return new PageResult<>(pageList.getTotal(),pageList.getResult());
     }

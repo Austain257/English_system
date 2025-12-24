@@ -3,6 +3,7 @@ package com.austain.srevice;
 import com.austain.domain.po.AddRequest;
 import com.austain.domain.po.Englishs;
 import com.austain.domain.po.Sentence;
+import com.austain.domain.dto.WrongbookPageResponse;
 
 import java.util.List;
 
@@ -38,4 +39,6 @@ public interface EnglishService {
     List<String> getAgainWordBooksByUserId(Long userId);
     
     boolean isWordBelongsToUser(Long wordId, Long userId);
+
+    WrongbookPageResponse getWrongbookPage(Integer page, Integer size, Long currentUserId, String currentUserRole, String bookname, Integer minTimes);
 }

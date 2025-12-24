@@ -10,7 +10,7 @@ import java.util.List;
 @Mapper
 public interface JottingMapper {
 
-    List<Jotting> page();
+    List<Jotting> page(Long currentUserId);
 
     @Insert("insert into jottings(english, chinese) values(#{english}, #{chinese})")
     int addJotting(Jotting jotting);

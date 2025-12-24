@@ -20,8 +20,9 @@ public interface StudyRecordMapper {
      * 获取今天需要复习的记录
      * @return 需要复习的记录
      */
-    @Select("select * from ${table}")
-    List<RecordPO> getTodayList(String table);
+//    @Select("select * from ${table}")
+    @Select("select * from ${table} where user_id = #{currentUserId}")
+    List<RecordPO> getTodayList(String table,Long currentUserId);
 
 
     /**
@@ -35,8 +36,8 @@ public interface StudyRecordMapper {
      * 获取所有已选择的记录，表示今天要复习的内容
      * @return 已选择的记录
      */
-    @Select("select * from ${table} where selected = 1")
-    List<RecordPO> getSelectedList(String table);
+    @Select("select * from ${table} where selected = 1 and user_id = #{currentUserId}")
+    List<RecordPO> getSelectedList(String table,Long currentUserId);
 
 
     /**
@@ -57,4 +58,7 @@ public interface StudyRecordMapper {
      */
     @Update("UPDATE ${table} SET already_reviewed = 0")
     void clearReviewed(@Param("table") String table);
+
+//    @Select("select * from ${table} where user_id = #{currentUserId}")
+//    List<RecordPO> getdailyList(String table, Long currentUserId);
 }

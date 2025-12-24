@@ -4,6 +4,7 @@ import com.austain.domain.dto.PageResult;
 import com.austain.domain.dto.Result;
 import com.austain.domain.po.Jotting;
 import com.austain.srevice.JottingService;
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,8 +18,9 @@ public class JottingController {
     private JottingService jottingService;
 
     @GetMapping("/list")
-    public Result getList(@RequestParam Integer page, @RequestParam Integer size){
-        PageResult<Jotting> jpageResult = jottingService.getList(page, size);
+    public Result getList(@RequestParam Integer page, @RequestParam Integer size, HttpServletRequest request){
+        Long currentUserId = (Long) request.getAttribute("currentUserId");
+        PageResult<Jotting> jpageResult = jottingService.getList(page, size, currentUserId);
         return Result.success(jpageResult);
     }
 

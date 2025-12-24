@@ -27,13 +27,13 @@ public class StudyRecordServiceImpl implements StudyRecordService {
 
     @Override
     @Transactional
-    public List<RecordPO> getTodayList(String table) {
+    public List<RecordPO> getTodayList(String table,Long currentUserId) {
         if (table.equals("daily_record")){          // 如果是日常记录表，则直接返回所有内容，不经过筛选
             System.out.println("我是直接返回日常所有");
-            return studyRecordMapper.getTodayList(table);
+            return studyRecordMapper.getTodayList(table,currentUserId);
         }
 
-        List<RecordPO> studyRecordList = studyRecordMapper.getSelectedList(table);  // 查询数据库是否已经存在今天要复习的内容，有的话直接从数据库查
+        List<RecordPO> studyRecordList = studyRecordMapper.getSelectedList(table,currentUserId);  // 查询数据库是否已经存在今天要复习的内容，有的话直接从数据库查
         if (!studyRecordList.isEmpty()){   // 数据库查到的内容不为空，就直接返回数据库的，里面做了标记，为业务所需
             System.out.println("我来自数据库查询");
             for (RecordPO recordPO : studyRecordList){  // 遍历查到的内容做处理——添加时间（前端需要）
@@ -43,7 +43,7 @@ public class StudyRecordServiceImpl implements StudyRecordService {
             return studyRecordList;
         }
 
-        studyRecordList = studyRecordMapper.getTodayList(table);  // 数据库里面没有的，需要获取所有内容，按照艾宾浩斯算法生成
+        studyRecordList = studyRecordMapper.getTodayList(table,currentUserId);  // 数据库里面没有的，需要获取所有内容，按照艾宾浩斯算法生成
         SimpleEbbinghausReview scheduler = new SimpleEbbinghausReview();  // 创建艾宾浩斯曲线对象
 
         // 获取当前日期
@@ -55,7 +55,10 @@ public class StudyRecordServiceImpl implements StudyRecordService {
         for (RecordPO recordPO : reviewItems){  // 遍历已选择的记录,将对应的id取出
             selectedIds.add(Integer.parseInt(recordPO.getId()));
         }
-        studyRecordMapper.markSelected(selectedIds,table);  // 将已选择的记录的 selected 字段设置为 1
+
+        if (!selectedIds.isEmpty()){
+            studyRecordMapper.markSelected(selectedIds,table);  // 将已选择的记录的 selected 字段设置为 1
+        }
 
         System.out.println("我来自后端生成查询");
         return reviewItems;

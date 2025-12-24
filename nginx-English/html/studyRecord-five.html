@@ -421,7 +421,7 @@
             <div class="table-btn" data-table="word_record">单词记录表</div>
             <div class="table-btn" data-table="listening_record">听力记录表</div>
         </div>
-        <div class="current-table-info" id="currentTableInfo">当前查看：学习记录表</div>
+        <div class="current-table-info" id="currentTableInfo">当前查看：每日记录表</div>
         
         <div class="content-section">
             <h2 class="section-title">记录学习内容</h2>
@@ -465,6 +465,13 @@
     </div>
 
     <script>
+        const API_BASE = 'http://localhost:8080';
+
+        function buildAuthHeaders() {
+            const token = localStorage.getItem('auth_token');
+            return token ? { 'Authorization': `Bearer ${token}` } : {};
+        }
+        
         document.addEventListener('DOMContentLoaded', function() {
             const studyContentInput = document.getElementById('studyContentInput');
             const submitContentBtn = document.getElementById('submitContentBtn');
@@ -500,6 +507,8 @@
             
             // 初始化日期显示
             updateCurrentDate();
+            currentTableInfo.textContent = `当前查看：${getTableName(currentTable)}`;
+            refreshStudyList();
             
             // 表选择按钮事件
             tableButtons.forEach(button => {
@@ -591,11 +600,11 @@
             // 提交学习内容到后端
             async function submitStudyContent(content) {
                 // 将表名作为参数传递
-                // const response = await fetch(`http://8.148.209.41:8080/study/record?table=${currentTable}`, {
-                const response = await fetch(`http://192.168.43.106:8080/study/record?table=${currentTable}`, {
+                const response = await fetch(`${API_BASE}/study/record?table=${currentTable}`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
+                        ...buildAuthHeaders()
                     },
                     body: JSON.stringify({
                         record: content
@@ -615,8 +624,12 @@
                 
                 try {
                     // 将表名作为参数传递
-                    // const response = await fetch(`http://8.148.209.41:8080/study/list?table=${currentTable}`);
-                    const response = await fetch(`http://192.168.43.106:8080/study/list?table=${currentTable}`);
+                    const response = await fetch(`${API_BASE}/study/list?table=${currentTable}`,{
+                        headers: {
+                            'Content-Type': 'application/json',
+                            ...buildAuthHeaders()
+                        },
+                    });
                     
                     if (!response.ok) {
                         throw new Error(`HTTP错误! 状态码: ${response.status}`);
@@ -638,11 +651,11 @@
             // 标记为已复习
             async function markAsReviewed(ids) {
                 // 将表名作为参数传递
-                // const response = await fetch(`http://8.148.209.41:8080/study/mark?table=${currentTable}`, {
-                const response = await fetch(`http://192.168.43.106:8080/study/mark?table=${currentTable}`, {
+                const response = await fetch(`${API_BASE}/study/mark?table=${currentTable}`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
+                        ...buildAuthHeaders()
                     },
                     body: JSON.stringify({
                         ids: ids

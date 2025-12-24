@@ -14,6 +14,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -236,6 +238,40 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public String updateAvatarByUrl(Long userId, String avatarUrl) {
+        if (avatarUrl == null || avatarUrl.isBlank()) {
+            throw new RuntimeException("请输入头像链接");
+        }
+        avatarUrl = avatarUrl.trim();
+        if (avatarUrl.length() > 500) {
+            throw new RuntimeException("头像链接过长");
+        }
+
+        try {
+            URL parsedUrl = new URL(avatarUrl);
+            String protocol = parsedUrl.getProtocol();
+            if (!"http".equalsIgnoreCase(protocol) && !"https".equalsIgnoreCase(protocol)) {
+                throw new RuntimeException("仅支持 http/https 链接");
+            }
+        } catch (MalformedURLException e) {
+            throw new RuntimeException("头像链接格式不正确");
+        }
+
+        String pathWithoutQuery = avatarUrl.split("\\?")[0];
+        int dotIndex = pathWithoutQuery.lastIndexOf('.');
+        if (dotIndex == -1) {
+            throw new RuntimeException("头像链接需以图片格式结尾");
+        }
+        String extension = pathWithoutQuery.substring(dotIndex + 1).toLowerCase();
+        if (!ALLOWED_AVATAR_EXT.contains(extension)) {
+            throw new RuntimeException("仅支持 PNG / JPG / JPEG / WEBP 格式的头像链接");
+        }
+
+        userMapper.updateAvatar(userId, avatarUrl);
+        return avatarUrl;
+    }
+
+    @Override
     public String uploadAvatar(Long userId, MultipartFile file) {
         if (file == null || file.isEmpty()) {
             throw new RuntimeException("请选择需要上传的头像文件");
@@ -261,7 +297,9 @@ public class UserServiceImpl implements UserService {
             String fileName = userId + "_" + System.currentTimeMillis() + "." + extension;
             Path targetPath = AVATAR_UPLOAD_DIR.resolve(fileName);
             file.transferTo(targetPath.toFile());
-            return "/uploads/avatars/" + fileName;
+            String relativePath = "/uploads/avatars/" + fileName;
+            userMapper.updateAvatar(userId, relativePath);
+            return relativePath;
         } catch (IOException e) {
             throw new RuntimeException("头像上传失败，请稍后重试");
         }

@@ -3,6 +3,40 @@
  * 用于在页面右上角显示用户信息
  */
 
+let logoutModalReadyPromise = null;
+
+function ensureLogoutModalLoaded() {
+    if (window.showLogoutConfirm) {
+        return Promise.resolve();
+    }
+
+    if (logoutModalReadyPromise) {
+        return logoutModalReadyPromise;
+    }
+
+    logoutModalReadyPromise = new Promise((resolve, reject) => {
+        const existingScript = document.querySelector('script[data-logout-modal="true"]');
+        if (existingScript) {
+            existingScript.addEventListener('load', () => resolve());
+            existingScript.addEventListener('error', reject);
+            return;
+        }
+
+        const script = document.createElement('script');
+        script.src = '/assets/js/logout-modal.js';
+        script.async = true;
+        script.dataset.logoutModal = 'true';
+        script.addEventListener('load', () => resolve());
+        script.addEventListener('error', (err) => {
+            console.error('加载退出登录弹窗脚本失败:', err);
+            reject(err);
+        });
+        document.head.appendChild(script);
+    });
+
+    return logoutModalReadyPromise;
+}
+
 class UserInfo {
     constructor(options = {}) {
         this.options = {
@@ -550,12 +584,21 @@ class UserInfo {
     }
 
     async logout() {
-        if (!confirm('确定要退出登录吗？')) {
-            return;
+        try {
+            await ensureLogoutModalLoaded();
+        } catch (error) {
+            console.warn('使用备用confirm: ', error);
         }
 
+        if (typeof window.showLogoutConfirm === 'function') {
+            window.showLogoutConfirm(() => this.performLogout());
+        } else if (confirm('确定要退出登录吗？')) {
+            this.performLogout();
+        }
+    }
+
+    async performLogout() {
         try {
-            // 调用后端登出接口
             if (this.authToken) {
                 await fetch('http://localhost:8080/user/logout', {
                     method: 'POST',
@@ -569,11 +612,8 @@ class UserInfo {
             console.error('退出登录接口调用失败:', error);
         }
 
-        // 清除本地存储
         localStorage.removeItem('auth_token');
         localStorage.removeItem('user_info');
-
-        // 跳转到登录页面
         window.location.href = '/login';
     }
 

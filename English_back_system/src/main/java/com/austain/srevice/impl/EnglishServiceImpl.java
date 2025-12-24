@@ -1,12 +1,16 @@
 package com.austain.srevice.impl;
 
+import com.austain.domain.dto.WrongbookPageResponse;
 import com.austain.domain.po.AddRequest;
 import com.austain.domain.po.Englishs;
 import com.austain.domain.po.Sentence;
 import com.austain.mapper.EnglishMapper;
 import com.austain.srevice.EnglishService;
+import com.github.pagehelper.Page;
+import com.github.pagehelper.PageHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import java.util.Collections;
 import java.util.List;
 
@@ -100,5 +104,20 @@ public class EnglishServiceImpl implements EnglishService {
     @Override
     public boolean isWordBelongsToUser(Long wordId, Long userId) {
         return englishMapper.isWordBelongsToUser(wordId, userId);
+    }
+
+    @Override
+    public WrongbookPageResponse getWrongbookPage(Integer page, Integer size, Long currentUserId, String currentUserRole, String bookname, Integer minTimes) {
+        boolean isAdmin = "ADMIN".equalsIgnoreCase(currentUserRole);
+        PageHelper.startPage(page, size);
+        List<Englishs> list = englishMapper.pageWrongbook(currentUserId, isAdmin, bookname, minTimes);
+        Page<Englishs> pageList = (Page<Englishs>) list;
+
+        long total = pageList.getTotal();
+        long frequentCount = englishMapper.countFrequentWrongbook(currentUserId, isAdmin, bookname);
+        long bookCount = englishMapper.countBookWrongbook(currentUserId, isAdmin, bookname);
+        long todayCount = englishMapper.countTodayWrongbook(currentUserId, isAdmin, bookname);
+
+        return new WrongbookPageResponse(total, pageList.getResult(), frequentCount, bookCount, todayCount);
     }
 }

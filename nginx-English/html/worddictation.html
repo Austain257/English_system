@@ -567,141 +567,149 @@
             <div id="statusMessage" class="status-message"></div>
             <div id="bookInfo" class="book-info"></div>
         </div>
-    </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const startIndexInput = document.getElementById('startIndexInput');
-            const endIndexInput = document.getElementById('endIndexInput');
-            const loadWordsBtn = document.getElementById('loadWordsBtn');
-            const wordCard = document.getElementById('wordCard');
-            const userInput = document.getElementById('userInput');
-            const prevWordBtn = document.getElementById('prevWordBtn');
-            const toggleWordBtn = document.getElementById('toggleWordBtn');
-            const validateBtn = document.getElementById('validateBtn');
-            const nextWordBtn = document.getElementById('nextWordBtn');
-            const statusMessage = document.getElementById('statusMessage');
-            const bookInfo = document.getElementById('bookInfo');
-            const validationResult = document.getElementById('validationResult');
-            const correctCountEl = document.getElementById('correctCount');
-            const totalCountEl = document.getElementById('totalCount');
-            const accuracyEl = document.getElementById('accuracy');
-            const progressBar = document.getElementById('progressBar');
-            
-            let words = [];
-            let currentIndex = 0;
-            let currentWord = null;
-            let wordVisible = false;
-            let correctCount = 0;
-            let totalAttempts = 0;
+        <script>
+            const API_BASE = 'http://localhost:8080';
 
-            // 加载单词按钮点击事件
-            loadWordsBtn.addEventListener('click', loadWords);
-            
-            // 回车键支持
-            startIndexInput.addEventListener('keypress', function(e) {
-                if (e.key === 'Enter') {
-                    loadWords();
-                }
-            });
-            
-            endIndexInput.addEventListener('keypress', function(e) {
-                if (e.key === 'Enter') {
-                    loadWords();
-                }
-            });
-            
-            // 输入框回车键提交
-            userInput.addEventListener('keypress', function(e) {
-                if (e.key === 'Enter') {
-                    validateBtn.click();
-                }
-            });
-            
-            // 显示/隐藏单词
-            toggleWordBtn.addEventListener('click', function() {
-                const wordElement = document.querySelector('.word-info');
-                wordVisible = !wordVisible;
+            function buildAuthHeaders() {
+                const token = localStorage.getItem('auth_token');
+                return token ? { 'Authorization': `Bearer ${token}` } : {};
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+                const startIndexInput = document.getElementById('startIndexInput');
+                const endIndexInput = document.getElementById('endIndexInput');
+                const loadWordsBtn = document.getElementById('loadWordsBtn');
+                const wordCard = document.getElementById('wordCard');
+                const userInput = document.getElementById('userInput');
+                const prevWordBtn = document.getElementById('prevWordBtn');
+                const toggleWordBtn = document.getElementById('toggleWordBtn');
+                const validateBtn = document.getElementById('validateBtn');
+                const nextWordBtn = document.getElementById('nextWordBtn');
+                const statusMessage = document.getElementById('statusMessage');
+                const bookInfo = document.getElementById('bookInfo');
+                const validationResult = document.getElementById('validationResult');
+                const correctCountEl = document.getElementById('correctCount');
+                const totalCountEl = document.getElementById('totalCount');
+                const accuracyEl = document.getElementById('accuracy');
+                const progressBar = document.getElementById('progressBar');
                 
-                if (wordVisible) {
-                    wordElement.classList.add('show');
-                    toggleWordBtn.innerHTML = '<span>🙈 隐藏答案</span>';
-                } else {
-                    wordElement.classList.remove('show');
+                let words = [];
+                let currentIndex = 0;
+                let currentWord = null;
+                let wordVisible = false;
+                let correctCount = 0;
+                let totalAttempts = 0;
+
+                // 加载单词按钮点击事件
+                loadWordsBtn.addEventListener('click', loadWords);
+                
+                // 回车键支持
+                startIndexInput.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter') {
+                        loadWords();
+                    }
+                });
+                
+                endIndexInput.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter') {
+                        loadWords();
+                    }
+                });
+                
+                // 输入框回车键提交
+                userInput.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter') {
+                        validateBtn.click();
+                    }
+                });
+                
+                // 显示/隐藏单词
+                toggleWordBtn.addEventListener('click', function() {
+                    const wordElement = document.querySelector('.word-info');
+                    wordVisible = !wordVisible;
+                    
+                    if (wordVisible) {
+                        wordElement.classList.add('show');
+                        toggleWordBtn.innerHTML = '<span>🙈 隐藏答案</span>';
+                    } else {
+                        wordElement.classList.remove('show');
+                        toggleWordBtn.innerHTML = '<span>👁️ 显示答案</span>';
+                    }
+                });
+                
+                // 上一词按钮
+                prevWordBtn.addEventListener('click', function() {
+                    if (words.length === 0) return;
+                    
+                    currentIndex = (currentIndex - 1 + words.length) % words.length;
+                    renderCurrentWord();
+                    userInput.value = '';
+                    userInput.focus();
+                    hideValidationResult();
+                    // 重置单词显示状态
+                    wordVisible = false;
                     toggleWordBtn.innerHTML = '<span>👁️ 显示答案</span>';
-                }
-            });
-            
-            // 上一词按钮
-            prevWordBtn.addEventListener('click', function() {
-                if (words.length === 0) return;
+                });
                 
-                currentIndex = (currentIndex - 1 + words.length) % words.length;
-                renderCurrentWord();
-                userInput.value = '';
-                userInput.focus();
-                hideValidationResult();
-                // 重置单词显示状态
-                wordVisible = false;
-                toggleWordBtn.innerHTML = '<span>👁️ 显示答案</span>';
-            });
-            
-            // 校验按钮
-            validateBtn.addEventListener('click', function() {
-                if (!currentWord) return;
+                // 校验按钮
+                validateBtn.addEventListener('click', function() {
+                    if (!currentWord) return;
+                    
+                    const userText = userInput.value.trim().toLowerCase();
+                    const correctText = currentWord.word.toLowerCase();
+                    
+                    if (userText === '') {
+                        showStatus('请输入单词后再校验', 'error');
+                        return;
+                    }
+                    
+                    totalAttempts++;
+                    validateWord(userText, correctText);
+                });
                 
-                const userText = userInput.value.trim().toLowerCase();
-                const correctText = currentWord.word.toLowerCase();
+                // 下一词按钮
+                nextWordBtn.addEventListener('click', function() {
+                    if (words.length === 0) return;
+                    
+                    currentIndex = (currentIndex + 1) % words.length;
+                    renderCurrentWord();
+                    userInput.value = '';
+                    userInput.focus();
+                    hideValidationResult();
+                    // 重置单词显示状态
+                    wordVisible = false;
+                    toggleWordBtn.innerHTML = '<span>👁️ 显示答案</span>';
+                });
                 
-                if (userText === '') {
-                    showStatus('请输入单词后再校验', 'error');
-                    return;
-                }
-                
-                totalAttempts++;
-                validateWord(userText, correctText);
-            });
-            
-            // 下一词按钮
-            nextWordBtn.addEventListener('click', function() {
-                if (words.length === 0) return;
-                
-                currentIndex = (currentIndex + 1) % words.length;
-                renderCurrentWord();
-                userInput.value = '';
-                userInput.focus();
-                hideValidationResult();
-                // 重置单词显示状态
-                wordVisible = false;
-                toggleWordBtn.innerHTML = '<span>👁️ 显示答案</span>';
-            });
-            
-            // 加载单词函数
-            function loadWords() {
-                const startIndex = parseInt(startIndexInput.value);
-                const endIndex = parseInt(endIndexInput.value);
-                
-                if (isNaN(startIndex) || startIndex < 0) {
-                    alert('请输入有效的起始编号（≥0）');
-                    return;
-                }
-                
-                if (isNaN(endIndex) || endIndex <= startIndex) {
-                    alert('结束编号必须大于起始编号');
-                    return;
-                }
-                
-                // 显示加载状态
-                wordCard.innerHTML = '<div class="loading">正在加载单词数据...</div>';
-                hideStatus();
-                hideValidationResult();
-                
-                // 构建API URL
-                // const url = `http://8.148.209.41:8080/english/worddictation?start=${startIndex}&end=${endIndex}`;
-                const url = `http://192.168.43.106:8080/english/worddictation?start=${startIndex}&end=${endIndex}`;
-                
-                // 从后端API获取数据
-                fetch(url)
+                // 加载单词函数
+                function loadWords() {
+                    const startIndex = parseInt(startIndexInput.value);
+                    const endIndex = parseInt(endIndexInput.value);
+                    
+                    if (isNaN(startIndex) || startIndex < 0) {
+                        alert('请输入有效的起始编号（≥0）');
+                        return;
+                    }
+                    
+                    if (isNaN(endIndex) || endIndex <= startIndex) {
+                        alert('结束编号必须大于起始编号');
+                        return;
+                    }
+                    
+                    // 显示加载状态
+                    wordCard.innerHTML = '<div class="loading">正在加载单词数据...</div>';
+                    hideStatus();
+                    hideValidationResult();
+                    
+                    const url = `${API_BASE}/english/worddictation?start=${startIndex}&end=${endIndex}`;
+                    
+                    fetch(url, {
+                        headers: {
+                            ...buildAuthHeaders()
+                        }
+                    })
+                    
                     .then(response => {
                         if (!response.ok) {
                             throw new Error(`HTTP错误! 状态码: ${response.status}`);

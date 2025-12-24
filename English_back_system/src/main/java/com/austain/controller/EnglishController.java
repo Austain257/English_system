@@ -3,6 +3,7 @@ package com.austain.controller;
 import com.austain.domain.dto.Result;
 import com.austain.domain.po.AddRequest;
 import com.austain.domain.po.Englishs;
+import com.austain.domain.dto.WrongbookPageResponse;
 import com.austain.domain.po.Sentence;
 import com.austain.srevice.EnglishService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -96,6 +97,26 @@ public class EnglishController {
             wrongWords = englishService.getAgainWordsByUserId(currentUserId);
         }
         return Result.success(wrongWords);
+    }
+
+    /**
+     * 错词本分页查询
+     * @param page 页码，从1开始
+     * @param size 每页条数
+     * @param bookname 可选，过滤课本名
+     * @param minTimes 可选，错误次数下限，默认0
+     */
+    @GetMapping("/wrongbook/page")
+    public Result getWrongbookPage(@RequestParam Integer page,
+                                   @RequestParam Integer size,
+                                   @RequestParam(required = false, defaultValue = "all") String bookname,
+                                   @RequestParam(required = false, defaultValue = "0") Integer minTimes,
+                                   HttpServletRequest request) {
+        Long currentUserId = (Long) request.getAttribute("currentUserId");
+        String currentUserRole = (String) request.getAttribute("currentUserRole");
+
+        WrongbookPageResponse data = englishService.getWrongbookPage(page, size, currentUserId, currentUserRole, bookname, minTimes);
+        return Result.success(data);
     }
 
     @GetMapping("/wrongbook/book")

@@ -186,6 +186,46 @@
             margin-top: 20px;
         }
         
+        .pagination-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            margin: 24px 0 8px;
+            flex-wrap: wrap;
+        }
+        
+        .page-btn {
+            min-width: 38px;
+            padding: 10px 14px;
+            border-radius: 10px;
+            border: 1px solid #d6d9e0;
+            background: #fff;
+            color: #34495e;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-weight: 600;
+        }
+        
+        .page-btn:hover {
+            border-color: #4a6ee0;
+            color: #4a6ee0;
+            box-shadow: 0 8px 16px rgba(74, 110, 224, 0.12);
+        }
+        
+        .page-btn.active {
+            background: linear-gradient(135deg, #4a6ee0, #6a11cb);
+            color: #fff;
+            border-color: transparent;
+            box-shadow: 0 10px 18px rgba(74, 110, 224, 0.25);
+        }
+        
+        .page-info {
+            font-size: 0.95rem;
+            color: #6c757d;
+            margin-left: 6px;
+        }
+        
         .word-card {
             background: white;
             border-radius: 15px;
@@ -272,17 +312,20 @@
         
         .word-actions {
             display: flex;
-            gap: 10px;
-            justify-content: flex-end;
+            gap: 14px;
+            justify-content: space-between;
+            align-items: stretch;
         }
         
         .action-btn {
-            padding: 8px 15px;
+            flex: 1;
+            padding: 10px 18px;
             border: none;
-            border-radius: 8px;
+            border-radius: 10px;
             cursor: pointer;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             transition: all 0.3s ease;
+            text-align: center;
         }
         
         .action-btn.remove {
@@ -317,6 +360,34 @@
             margin-bottom: 10px;
         }
         
+        .toast {
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            background: rgba(42, 46, 65, 0.92);
+            color: #fff;
+            padding: 14px 18px;
+            border-radius: 14px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.2s ease, transform 0.2s ease;
+            z-index: 2000;
+            font-size: 0.95rem;
+        }
+
+        .toast.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .toast i {
+            font-size: 1rem;
+        }
+
         .loading {
             display: flex;
             justify-content: center;
@@ -445,19 +516,58 @@
         }
 
         .reveal-btn {
-            margin-top: 20px;
-            padding: 10px 24px;
+            margin-top: 22px;
+            padding: 12px 30px;
             border-radius: 999px;
-            border: none;
-            background: linear-gradient(135deg, #ffb347, #ffcc33);
-            color: #fff;
-            font-weight: 600;
+            border: 0;
+            background: linear-gradient(120deg, #ff9a3c, #ffbc5a 55%, #ffe08a);
+            color: #3c1b00;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
             cursor: pointer;
-            transition: transform 0.2s;
+            box-shadow: 0 12px 25px rgba(255, 153, 51, 0.35);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .reveal-btn::after {
+            content: '';
+            position: absolute;
+            inset: 2px;
+            border-radius: inherit;
+            background: linear-gradient(120deg, rgba(255,255,255,0.25), transparent 70%);
+            opacity: 0;
+            transition: opacity 0.2s ease;
+        }
+
+        .reveal-btn i {
+            position: relative;
+            z-index: 1;
+            font-size: 1rem;
+        }
+
+        .reveal-btn span {
+            position: relative;
+            z-index: 1;
         }
 
         .reveal-btn:hover {
-            transform: translateY(-2px);
+            transform: translateY(-2px) scale(1.01);
+            box-shadow: 0 18px 35px rgba(255, 153, 51, 0.4);
+        }
+
+        .reveal-btn:hover::after {
+            opacity: 1;
+        }
+
+        .reveal-btn:active {
+            transform: translateY(0);
+            box-shadow: 0 10px 20px rgba(255, 153, 51, 0.35);
         }
 
         .study-meaning {
@@ -552,6 +662,10 @@
             <h1><i class="fas fa-book-open"></i> 智能错词本</h1>
             <p>系统管理你的错误单词，智能复习，高效记忆</p>
         </div>
+    <div class="toast" id="toast">
+        <i class="fas fa-check-circle"></i>
+        <span id="toastMessage">操作成功</span>
+    </div>
         
         <div class="stats-bar">
             <div class="stat-card">
@@ -592,7 +706,7 @@
                 <button class="btn btn-success" onclick="startPractice()">
                     <i class="fas fa-play"></i> 开始练习
                 </button>
-                <a href="/allbook" class="btn btn-danger">
+                <a href="/index.html" class="btn btn-danger">
                     <i class="fas fa-arrow-left"></i> 返回
                 </a>
             </div>
@@ -610,6 +724,8 @@
             </div>
             
             <div class="word-grid" id="wordGrid"></div>
+            <div class="pagination-bar" id="paginationBar"></div>
+            <div class="pagination-bar" id="paginationInfo" style="margin-top:0;"></div>
         </div>
     </div>
 
@@ -621,7 +737,7 @@
                 <div class="study-word" id="studyWord">apple</div>
                 <div class="study-pronounce" id="studyPronounce">/ˈæpl/</div>
                 <button class="reveal-btn" id="revealButton" onclick="revealMeaning()">
-                    <i class="fas fa-eye"></i> 显示释义
+                    <i class="fas fa-eye"></i> <span></span>显示释义</span>
                 </button>
                 <div class="study-meaning" id="studyMeaning">示例释义</div>
             </div>
@@ -657,11 +773,12 @@
         let studyIndex = 0;
         let studyStats = { completed: 0, known: 0, unknown: 0 };
         let meaningRevealed = false;
+        const paginationState = { currentPage: 1, pageSize: 9, totalPages: 1, total: 0 };
         
         // 页面加载时初始化
         document.addEventListener('DOMContentLoaded', function() {
             loadBooks();
-            loadWords();
+            loadWords(true);
             setupEventListeners();
         });
         
@@ -677,12 +794,12 @@
         function setupEventListeners() {
             document.getElementById('bookFilter').addEventListener('change', function() {
                 currentFilter.book = this.value;
-                filterWords();
+                loadWords(true);
             });
             
             document.getElementById('timesFilter').addEventListener('change', function() {
                 currentFilter.times = parseInt(this.value);
-                filterWords();
+                loadWords(true);
             });
         }
         
@@ -717,14 +834,21 @@
             }
         }
         
-        // 加载错词数据
-        async function loadWords() {
+        // 加载错词数据（后端分页）
+        async function loadWords(resetPage = false) {
             const token = getToken();
             if (!token) return;
+            if (resetPage) paginationState.currentPage = 1;
             showLoading(true);
             
             try {
-                const response = await fetch(`${API_BASE}/english/wrongbook/all`, {
+                const query = new URLSearchParams({
+                    page: paginationState.currentPage,
+                    size: paginationState.pageSize,
+                    bookname: currentFilter.book,
+                    minTimes: currentFilter.times
+                }).toString();
+                const response = await fetch(`${API_BASE}/english/wrongbook/page?${query}`, {
                     headers: {
                         'Authorization': `Bearer ${token}`,
                         'Content-Type': 'application/json'
@@ -732,10 +856,13 @@
                 });
                 const result = await response.json();
                 
-                if (result.code === 1) {
-                    allWords = result.data || [];
-                    filterWords();
-                    updateStats();
+                if (result.code === 1 && result.data) {
+                    allWords = result.data.records || [];
+                    paginationState.total = result.data.total || 0;
+                    paginationState.totalPages = paginationState.total > 0 ? Math.ceil(paginationState.total / paginationState.pageSize) : 1;
+                    displayWords(allWords, allWords.length === 0);
+                    renderPagination(paginationState.total);
+                    updateStats(result.data);
                 } else {
                     showEmpty();
                 }
@@ -747,29 +874,12 @@
             }
         }
         
-        function getFilteredWords() {
-            let filteredWords = allWords;
-            if (currentFilter.book !== 'all') {
-                filteredWords = filteredWords.filter(word => word.bookname === currentFilter.book);
-            }
-            if (currentFilter.times > 0) {
-                filteredWords = filteredWords.filter(word => (word.times || 0) >= currentFilter.times);
-            }
-            return filteredWords;
-        }
-        
-        // 过滤单词
-        function filterWords() {
-            const filteredWords = getFilteredWords();
-            displayWords(filteredWords);
-        }
-        
         // 显示单词列表
-        function displayWords(words) {
+        function displayWords(words, isEmpty = false) {
             const wordGrid = document.getElementById('wordGrid');
             const emptyState = document.getElementById('emptyState');
             
-            if (!words || words.length === 0) {
+            if (isEmpty || !words || words.length === 0) {
                 wordGrid.style.display = 'none';
                 emptyState.style.display = 'block';
                 return;
@@ -792,37 +902,65 @@
                     
                     <div class="word-meta">
                         <span class="book-tag">${word.bookname || '未知'}</span>
-                        <span>${formatDate(word.create_time)}</span>
+                        <span>${formatDateValue(word.createTime)}</span>
                     </div>
                     
                     <div class="word-actions">
                         <button class="action-btn practice" onclick="practiceWord(${word.id}, '${word.word}')">
-                            <i class="fas fa-play"></i> 练习
+                            <i class="fas fa-play"></i> 我不会
                         </button>
                         <button class="action-btn remove" onclick="removeWord(${word.id}, '${word.word}')">
-                            <i class="fas fa-trash"></i> 删除
+                            <i class="fas fa-trash"></i> 小意思
                         </button>
                     </div>
                 </div>
             `).join('');
         }
+
+        function renderPagination(totalItems) {
+            const bar = document.getElementById('paginationBar');
+            const info = document.getElementById('paginationInfo');
+            if (totalItems <= paginationState.pageSize) {
+                bar.innerHTML = '';
+                info.textContent = '';
+                return;
+            }
+            let html = '';
+            const { currentPage, totalPages } = paginationState;
+            const createBtn = (page, label, disabled = false, active = false) => {
+                if (disabled) return '';
+                return `<button class="page-btn ${active ? 'active' : ''}" data-page="${page}">${label}</button>`;
+            };
+            html += createBtn(currentPage - 1, '上一页', currentPage === 1);
+            const startPage = Math.max(1, currentPage - 2);
+            const endPage = Math.min(totalPages, currentPage + 2);
+            for (let i = startPage; i <= endPage; i++) {
+                html += createBtn(i, i, false, i === currentPage);
+            }
+            html += createBtn(currentPage + 1, '下一页', currentPage === totalPages);
+            bar.innerHTML = html;
+            info.innerHTML = `<span class="page-info">共 ${totalItems} 条 · 第 ${currentPage} / ${totalPages} 页</span>`;
+            bar.querySelectorAll('.page-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const target = parseInt(btn.getAttribute('data-page'));
+                    if (!Number.isNaN(target) && target !== paginationState.currentPage) {
+                        paginationState.currentPage = target;
+                        loadWords();
+                    }
+                });
+            });
+        }
         
         // 更新统计信息
-        function updateStats() {
-            document.getElementById('totalCount').textContent = allWords.length;
-            
-            const frequentWords = allWords.filter(word => (word.times || 1) >= 3);
-            document.getElementById('frequentCount').textContent = frequentWords.length;
-            
-            const uniqueBooks = new Set(allWords.map(word => word.bookname)).size;
-            document.getElementById('bookCount').textContent = uniqueBooks;
-            
-            const today = new Date().toDateString();
-            const todayWords = allWords.filter(word => {
-                const wordDate = new Date(word.create_time).toDateString();
-                return wordDate === today;
-            });
-            document.getElementById('todayCount').textContent = todayWords.length;
+        function updateStats(serverData) {
+            if (serverData) {
+                document.getElementById('totalCount').textContent = serverData.total ?? 0;
+                document.getElementById('frequentCount').textContent = serverData.frequentCount ?? 0;
+                document.getElementById('bookCount').textContent = serverData.bookCount ?? 0;
+                document.getElementById('todayCount').textContent = serverData.todayCount ?? 0;
+                return;
+            }
+            document.getElementById('totalCount').textContent = paginationState.total;
         }
         
         // 删除单词
@@ -831,33 +969,68 @@
                 return;
             }
             
-            const token = getToken();
-            if (!token) return;
             try {
-                const response = await fetch(`${API_BASE}/english/remove`, {
-                    method: 'POST',
-                    headers: {
-                        'Authorization': `Bearer ${token}`,
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({ id: id, word: word })
-                });
-                
-                const result = await response.json();
-                
-                if (result.code === 1) {
-                    // 从本地数据中删除
-                    allWords = allWords.filter(w => w.id !== id);
-                    filterWords();
-                    updateStats();
-                    alert('删除成功！');
-                } else {
-                    alert('删除失败：' + result.message);
-                }
+                await sendRemoveWordRequest(id, word);
+                allWords = allWords.filter(w => String(w.id) !== String(id));
+                filterWords();
+                updateStats();
+                alert('删除成功！');
             } catch (error) {
                 console.error('删除失败:', error);
-                alert('删除失败，请重试');
+                alert(error.message || '删除失败，请重试');
             }
+        }
+        
+        async function sendRemoveWordRequest(id, word) {
+            const token = getToken();
+            if (!token) throw new Error('未登录');
+            
+            const response = await fetch(`${API_BASE}/english/remove`, {
+                method: 'POST',
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ id: id, word: word })
+            });
+            
+            const result = await response.json();
+            if (result.code !== 1) {
+                throw new Error(result.message || '删除失败');
+            }
+        }
+        
+        function parseDateValue(rawValue) {
+            if (!rawValue) return null;
+            let parsed = Date.parse(rawValue);
+            if (Number.isNaN(parsed)) {
+                const normalized = rawValue.replace(' ', 'T').replace(/-/g, '/');
+                parsed = Date.parse(normalized);
+            }
+            if (Number.isNaN(parsed)) {
+                return null;
+            }
+            return new Date(parsed);
+        }
+        
+        function formatDateValue(rawValue) {
+            const date = parseDateValue(rawValue);
+            if (!date) return '未知时间';
+            return date.toLocaleString('zh-CN', {
+                hour12: false
+            });
+        }
+        
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const toastMessage = document.getElementById('toastMessage');
+            if (!toast || !toastMessage) return;
+            toastMessage.textContent = message;
+            toast.classList.add('show');
+            clearTimeout(showToast.timeoutId);
+            showToast.timeoutId = setTimeout(() => {
+                toast.classList.remove('show');
+            }, 1800);
         }
         
         // 单词练习（增加错误次数）
@@ -867,13 +1040,12 @@
                 const wordObj = allWords.find(w => w.id === id);
                 if (wordObj) {
                     wordObj.times = (wordObj.times || 1) + 1;
-                    filterWords();
-                    updateStats();
+                    loadWords();
                 }
-                alert(`单词 "${word}" 练习次数已记录`);
+                showToast(`已记录 "${word}" 的练习次数`);
             } catch (error) {
                 console.error('练习记录失败:', error);
-                alert('记录失败，请重试');
+                showToast('练习记录失败，请稍后重试');
             }
         }
         
@@ -899,7 +1071,7 @@
         }
         
         function startStudySession() {
-            const pool = getFilteredWords();
+            const pool = allWords;
             if (!pool || pool.length === 0) {
                 alert('当前筛选下暂无需要复习的错词');
                 return;
@@ -954,13 +1126,20 @@
                 return;
             }
             const current = studyWords[studyIndex];
-            if (!meaningRevealed) {
-                revealMeaning();
-                return;
-            }
-            studyStats.completed += 1;
+            let removedCurrentWord = false;
             if (isKnown) {
-                studyStats.known += 1;
+                try {
+                    await sendRemoveWordRequest(current.id, current.word);
+                    allWords = allWords.filter(w => String(w.id) !== String(current.id));
+                    studyStats.known += 1;
+                    removedCurrentWord = true;
+                    filterWords();
+                    updateStats();
+                } catch (error) {
+                    console.error('记住单词后删除失败:', error);
+                    alert(error.message || '从错词本移除失败，请稍后重试');
+                    return;
+                }
             } else {
                 studyStats.unknown += 1;
                 try {
@@ -973,6 +1152,11 @@
                     console.error(error);
                     alert('记录失败，请稍后再试');
                 }
+            }
+            studyStats.completed += 1;
+            if (removedCurrentWord) {
+                studyWords.splice(studyIndex, 1);
+                studyIndex = Math.max(studyIndex - 1, -1);
             }
             studyIndex += 1;
             meaningRevealed = false;
