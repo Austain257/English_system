@@ -262,3 +262,112 @@ SELECT CONCAT(
     '  密码: test123\n\n',
     '请及时修改默认密码！'
 ) as '初始化结果';
+
+-- ========================================
+-- 9. 学习行为拓展（累计学习时长 & 已掌握词汇量）
+-- ========================================
+
+-- 9.1 学习会话记录表（绑定 user_books.id 作为课本来源）
+DROP TABLE IF EXISTS `study_sessions`;
+CREATE TABLE `study_sessions` (
+    `id` bigint NOT NULL AUTO_INCREMENT COMMENT '学习会话ID',
+    `user_id` bigint NOT NULL COMMENT '所属用户',
+    `scene` varchar(60) COLLATE utf8mb4_general_ci NOT NULL DEFAULT 'GENERIC' COMMENT '学习场景（单词/听力/写作等）',
+    `source` varchar(60) COLLATE utf8mb4_general_ci DEFAULT 'web' COMMENT '入口来源（web/mobile等）',
+    `start_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '开始时间',
+    `end_time` datetime DEFAULT NULL COMMENT '结束时间',
+    `duration_seconds` int NOT NULL DEFAULT '0' COMMENT '学习时长（秒）',
+    `status` enum('RUNNING','COMPLETED','TIMEOUT','CANCELLED') COLLATE utf8mb4_general_ci NOT NULL DEFAULT 'RUNNING' COMMENT '会话状态',
+    `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '记录创建时间',
+    `updated_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '记录更新时间',
+    PRIMARY KEY (`id`),
+    KEY `idx_study_sessions_user_id` (`user_id`),
+    KEY `idx_study_sessions_scene` (`scene`),
+    KEY `idx_study_sessions_start_time` (`start_time`),
+    CONSTRAINT `fk_study_sessions_user_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='学习会话记录表（不再依赖课本信息）';
+
+DROP VIEW IF EXISTS `user_learning_time_stats`;
+CREATE VIEW `user_learning_time_stats` AS
+SELECT 
+    ss.user_id,
+    ss.scene,
+    ss.source,
+    SUM(ss.duration_value) AS total_seconds,
+    SUM(CASE WHEN DATE(ss.updated_at) = CURRENT_DATE THEN ss.duration_value ELSE 0 END) AS today_seconds,
+    SUM(CASE WHEN ss.updated_at >= DATE_SUB(NOW(), INTERVAL 7 DAY) THEN ss.duration_value ELSE 0 END) AS last7days_seconds
+FROM (
+         SELECT
+             user_id,
+             scene,
+             source,
+             updated_at,
+             IFNULL(duration_seconds,
+                    TIMESTAMPDIFF(SECOND, start_time, IFNULL(end_time, NOW()))
+             ) AS duration_value
+         FROM study_sessions
+         WHERE status IN ('COMPLETED', 'TIMEOUT')
+     ) ss
+GROUP BY ss.user_id, ss.scene, ss.source
+ORDER BY today_seconds DESC, total_seconds DESC;
+
+-- 9.2 词汇掌握表（使用课本ID并绑定外键）
+DROP TABLE IF EXISTS `word_mastery`;
+CREATE TABLE `word_mastery` (
+    `id` bigint NOT NULL AUTO_INCREMENT COMMENT '主键ID',
+    `user_id` bigint NOT NULL COMMENT '所属用户',
+    `book_id` bigint NOT NULL COMMENT '所属课本ID（user_books.id）',
+    `word_bank` varchar(120) COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT '词库来源（如 englishword4420）',
+    `word_id` bigint DEFAULT NULL COMMENT '词库中的单词ID',
+    `word_text` varchar(100) COLLATE utf8mb4_general_ci NOT NULL COMMENT '单词原文快照',
+    `proficiency_score` tinyint DEFAULT NULL COMMENT '熟练度(0-100)',
+    `mastered` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否已掌握',
+    `first_mastered_time` datetime DEFAULT NULL COMMENT '首次判定掌握时间',
+    `last_mastered_time` datetime DEFAULT NULL COMMENT '最近一次判定掌握时间',
+    `review_count` int NOT NULL DEFAULT '0' COMMENT '复习次数',
+    `regression_count` int NOT NULL DEFAULT '0' COMMENT '遗忘次数',
+    `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+    `updated_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+    PRIMARY KEY (`id`),
+    UNIQUE KEY `uk_word_mastery_user_book_word` (`user_id`,`book_id`,`word_id`,`word_text`),
+    KEY `idx_word_mastery_user` (`user_id`),
+    KEY `idx_word_mastery_book` (`book_id`),
+    KEY `idx_word_mastery_mastered` (`mastered`),
+    CONSTRAINT `fk_word_mastery_user_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE,
+    CONSTRAINT `fk_word_mastery_book_id` FOREIGN KEY (`book_id`) REFERENCES `user_books` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='用户词汇掌握记录';
+
+DROP VIEW IF EXISTS `user_word_mastery_stats`;
+CREATE VIEW `user_word_mastery_stats` AS
+SELECT
+    wm.user_id,
+    wm.book_id,
+    b.book_name,
+    COUNT(CASE WHEN wm.mastered = 1 THEN 1 END) AS mastered_count
+FROM word_mastery wm
+LEFT JOIN user_books b ON wm.book_id = b.id
+GROUP BY wm.user_id, wm.book_id, b.book_name;
+
+-- ========================================
+-- 10. 激励文案（鸡汤文）支持
+-- ========================================
+
+DROP TABLE IF EXISTS `motivation_quotes`;
+CREATE TABLE `motivation_quotes` (
+    `id` bigint NOT NULL AUTO_INCREMENT COMMENT '主键ID',
+    `content` varchar(500) NOT NULL COMMENT '文案内容',
+    `author` varchar(120) DEFAULT NULL COMMENT '署名',
+    `tag` varchar(80) DEFAULT NULL COMMENT '主题标签',
+    `priority` int NOT NULL DEFAULT 0 COMMENT '权重，越大越优先',
+    `status` tinyint NOT NULL DEFAULT 1 COMMENT '状态：1-启用 0-停用',
+    `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+    `updated_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+    PRIMARY KEY (`id`),
+    KEY `idx_motivation_status` (`status`),
+    KEY `idx_motivation_priority` (`priority`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='学习激励鸡汤文';
+
+INSERT INTO `motivation_quotes` (`content`, `author`, `tag`, `priority`, `status`)
+VALUES
+('你不是在背单词，而是在构建通往更大世界的桥梁。', '学习助手', '成长', 10, 1),
+('再小的坚持，都会被时间放大；再慢的脚步，也能抵达目的地。', '学习助手', '坚持', 9, 1);

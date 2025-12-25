@@ -453,7 +453,7 @@
             }
         </style>
     </head>
-    <body data-require-auth="true">
+    <body data-require-auth="true" data-track-scene="WORD_RECITE" data-track-source="web_word">
         <div class="container">
             <div class="header">
                 <h1>📚 英语词汇背诵</h1>
@@ -492,6 +492,7 @@
                         <button id="showChineseBtn" class="btn btn-primary">显示中文</button>
                         <button id="addToCollectionBtn" class="btn btn-success">加入学习</button>
                         <button id="removeFromCollectionBtn" class="btn btn-danger">移除单词</button>
+                        <button id="markMasteredBtn" class="btn btn-info">标记已掌握</button>
                     </div>
                     <button id="nextWordBtn" class="btn btn-secondary">下一个</button>
                 </div>
@@ -501,6 +502,7 @@
             </div>
         </div>
 
+        <script src="/assets/js/learning-tracker.js"></script>
         <script>
             const API_BASE = 'http://localhost:8080';
 
@@ -510,16 +512,23 @@
             }
 
             document.addEventListener('DOMContentLoaded', function() {
+                if (window.LearningTracker) {
+                    LearningTracker.trackPageSession({
+                        scene: 'WORD_RECITE',
+                        source: 'web_word'
+                    });
+                }
+
                 const startIndexInput = document.getElementById('startIndexInput');
                 const endIndexInput = document.getElementById('endIndexInput');
                 const loadWordsBtn = document.getElementById('loadWordsBtn');
+                
                 const wordCard = document.getElementById('wordCard');
                 const showChineseBtn = document.getElementById('showChineseBtn');
                 const addToCollectionBtn = document.getElementById('addToCollectionBtn');
                 const removeFromCollectionBtn = document.getElementById('removeFromCollectionBtn');
+                const markMasteredBtn = document.getElementById('markMasteredBtn');
                 const nextWordBtn = document.getElementById('nextWordBtn');
-                const statusMessage = document.getElementById('statusMessage');
-                const bookInfo = document.getElementById('bookInfo');
                 
                 let words = [];
                 let currentIndex = 0;
@@ -531,17 +540,22 @@
                 const urlParams = new URLSearchParams(window.location.search);
                 currentBookname = urlParams.get('bookname');
                 
-                // 根据书本名称显示/隐藏按钮
+                // 根据书本名称显示/隐藏按钮并同步上下文
                 if (currentBookname === 'againenglishword') {
                     addToCollectionBtn.style.display = 'none';
                     removeFromCollectionBtn.style.display = 'block';
-                    bookInfo.textContent = `当前书本: ${currentBookname} (管理员模式)`;
+                    document.getElementById('bookInfo').textContent = `当前书本: ${currentBookname} (管理员模式)`;
                 } else {
+
                     addToCollectionBtn.style.display = 'block';
                     removeFromCollectionBtn.style.display = 'none';
                     if (currentBookname) {
-                        bookInfo.textContent = `当前书本: ${currentBookname}`;
+                        document.getElementById('bookInfo').textContent = `当前书本: ${currentBookname}`;
                     }
+                }
+                if (currentBookname && window.LearningTracker) {
+                    LearningTracker.setBookContext({ bookName: currentBookname, wordBank: currentBookname });
+                    document.body.dataset.bookName = currentBookname;
                 }
 
                 // 加载单词按钮点击事件
@@ -606,6 +620,15 @@
                     .then(data => {
                         if (data.code === 1) {
                             showStatus('成功加入学习集!', 'success');
+                            if (window.LearningTracker) {
+                                LearningTracker.markMastery({
+                                    wordId: currentWord.id,
+                                    wordText: currentWord.word,
+                                    wordBank: currentBookname,
+                                    proficiencyScore: 100,
+                                    mastered: true
+                                });
+                            }
                         } else {
                             showStatus('操作失败: ' + data.message, 'error');
                         }
@@ -685,6 +708,34 @@
                     });
                 });
                 
+                markMasteredBtn.addEventListener('click', async function() {
+                    if (!currentWord) {
+                        showStatus('请先加载单词', 'error');
+                        return;
+                    }
+                    if (!window.LearningTracker) {
+                        showStatus('学习跟踪服务未就绪', 'error');
+                        return;
+                    }
+                    const targetBook = currentBookname || currentWord.bookname;
+                    if (targetBook) {
+                        LearningTracker.setBookContext({ bookName: targetBook, wordBank: targetBook });
+                    }
+                    try {
+                        await LearningTracker.markMastery({
+                            wordId: currentWord.id,
+                            wordText: currentWord.word,
+                            bookName: targetBook,
+                            wordBank: targetBook,
+                            proficiencyScore: 100
+                        });
+                        showStatus('已记录为掌握 ✅', 'success');
+                    } catch (err) {
+                        console.error('标记掌握失败:', err);
+                        showStatus('标记失败，请稍后再试', 'error');
+                    }
+                });
+                
                 // 下一个单词
                 nextWordBtn.addEventListener('click', function() {
                     if (words.length === 0) return;
@@ -744,6 +795,9 @@
                             
                             words = data.data;
                             currentIndex = 0;
+                            if (window.LearningTracker && currentBookname) {
+                                LearningTracker.setBookContext({ bookName: currentBookname, wordBank: currentBookname });
+                            }
                             renderCurrentWord();
                         })
                         .catch(error => {

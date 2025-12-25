@@ -34,4 +34,23 @@ public interface IndexListMapper {
     int countBookByName(@Param("bookName") String bookName,
                         @Param("userId") Long userId,
                         @Param("isAdmin") boolean isAdmin);
+
+    @Select("""
+            SELECT id,user_id,book_name,book_code,description,cover_url,word_count,visibility,status,created_at,updated_at
+            FROM user_books
+            WHERE id = #{bookId}
+            LIMIT 1
+            """)
+    UserBook getBookById(@Param("bookId") Long bookId);
+
+    @Select("""
+            SELECT id,user_id,book_name,book_code,description,cover_url,word_count,visibility,status,created_at,updated_at
+            FROM user_books
+            WHERE book_name = #{bookName}
+              AND status = 1
+              AND (user_id = #{userId} OR visibility = 'PUBLIC' OR user_id = 2)
+            LIMIT 1
+            """)
+    UserBook getBookByName(@Param("bookName") String bookName,
+                           @Param("userId") Long userId);
 }

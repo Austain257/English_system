@@ -14,11 +14,12 @@
         }
         
         :root {
-            --bg-gradient: linear-gradient(135deg, #0c1027 0%, #1b2563 55%, #4e1fb8 100%);
+            --bg-gradient: radial-gradient(120% 140% at 20% 20%, #2a42ff 0%, transparent 55%), radial-gradient(120% 140% at 80% 0%, #10e0ff 0%, transparent 50%), linear-gradient(135deg, #0b1028 0%, #0c163a 45%, #0b1c4f 100%);
             --card-glass: rgba(255, 255, 255, 0.08);
             --card-solid: rgba(255, 255, 255, 0.96);
             --text-muted: rgba(255, 255, 255, 0.75);
-            --accent: #7a5cff;
+            --accent: #82a0ff;
+            --accent-strong: #5f7bff;
             --success: #35d39d;
             --danger: #ff6b6b;
         }
@@ -27,7 +28,7 @@
             min-height: 100vh;
             background: var(--bg-gradient);
             color: #fff;
-            padding: 35px 20px 60px;
+            padding: 30px 16px 60px;
             position: relative;
             overflow-x: hidden;
         }
@@ -51,18 +52,23 @@
         }
         
         .glass-panel {
-            background: rgba(18, 25, 74, 0.6);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: rgba(15, 24, 66, 0.65);
+            border: 1px solid rgba(255, 255, 255, 0.06);
             border-radius: 28px;
             padding: 32px;
-            box-shadow: 0 30px 60px rgba(5, 9, 38, 0.45);
-            backdrop-filter: blur(18px);
+            box-shadow: 0 30px 60px rgba(3, 8, 35, 0.5);
+            backdrop-filter: blur(16px);
         }
         
         .profile-hero {
             margin-bottom: 32px;
             position: relative;
             overflow: hidden;
+            border-radius: 32px;
+            padding: 30px 32px;
+            background: linear-gradient(135deg, rgba(19, 34, 96, 0.9), rgba(13, 25, 75, 0.9));
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            box-shadow: 0 30px 60px rgba(4, 9, 40, 0.55);
         }
         
         .hero-hero::after {
@@ -74,8 +80,9 @@
         }
         
         .hero-header {
-            display: flex;
-            gap: 32px;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 28px;
             align-items: center;
             position: relative;
             z-index: 1;
@@ -86,27 +93,27 @@
             width: 120px;
             height: 120px;
         }
-        
+
         .hero-avatar-wrap img {
             width: 100%;
             height: 100%;
-            border-radius: 36px;
+            border-radius: 32px;
             object-fit: cover;
             border: 3px solid rgba(255, 255, 255, 0.4);
-            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.45);
         }
-        
+
         .status-badge {
             position: absolute;
             bottom: 8px;
-            right: -6px;
+            right: -8px;
             background: linear-gradient(135deg, #39d98a, #17b26a);
             color: #0e1a2b;
             padding: 6px 14px;
             border-radius: 999px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            box-shadow: 0 10px 20px rgba(23, 178, 106, 0.45);
+            font-size: 0.82rem;
+            font-weight: 700;
+            box-shadow: 0 10px 20px rgba(23, 178, 106, 0.4);
         }
         
         .hero-text {
@@ -115,21 +122,24 @@
         
         .hero-kicker {
             text-transform: uppercase;
-            letter-spacing: 0.2em;
-            font-size: 0.8rem;
+            letter-spacing: 0.22em;
+            font-size: 0.82rem;
             color: var(--text-muted);
         }
         
         .hero-text h1 {
-            font-size: clamp(2.4rem, 3vw, 2.9rem);
+            font-size: clamp(2.5rem, 3vw, 3rem);
             margin: 10px 0;
+            letter-spacing: 0.01em;
         }
         
         .hero-meta {
             display: flex;
             gap: 12px;
+            flex-wrap: wrap;
             align-items: center;
             color: var(--text-muted);
+            margin-top: 2px;
         }
         
         .hero-meta .dot {
@@ -140,10 +150,10 @@
         }
         
         .hero-actions {
-            margin-top: 20px;
+            margin-top: 18px;
             display: flex;
             flex-wrap: wrap;
-            gap: 16px;
+            gap: 12px;
         }
         
         .btn {
@@ -159,9 +169,9 @@
         }
         
         .btn.primary {
-            background: linear-gradient(135deg, #5c6fff, #8f64ff);
-            color: #fff;
-            box-shadow: 0 20px 35px rgba(116, 143, 255, 0.35);
+            background: linear-gradient(135deg, #5f7bff, #7ad0ff);
+            color: #0c1536;
+            box-shadow: 0 18px 30px rgba(94, 140, 255, 0.3);
         }
         
         .btn.ghost {
@@ -187,10 +197,10 @@
         }
         
         .hero-stats {
-            margin-top: 32px;
+            margin-top: 26px;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 16px;
             position: relative;
             z-index: 1;
         }
@@ -209,10 +219,11 @@
         }
         
         .hero-stat {
-            padding: 18px;
+            padding: 18px 18px 16px;
             border-radius: 20px;
-            background: rgba(255, 255, 255, 0.06);
+            background: linear-gradient(145deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
             border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: inset 0 0 0 1px rgba(255,255,255,0.02);
         }
         
         .hero-stat span {
@@ -222,8 +233,9 @@
         
         .hero-stat strong {
             display: block;
-            font-size: 1.9rem;
-            margin-top: 6px;
+            font-size: 2rem;
+            margin-top: 8px;
+            letter-spacing: 0.01em;
         }
         
         .hero-stat small {
@@ -457,27 +469,28 @@
         .section-chips {
             display: flex;
             flex-wrap: wrap;
-            gap: 12px;
-            margin-bottom: 24px;
+            gap: 14px;
+            margin: 6px 0 26px;
         }
         
         .chip {
-            min-width: 160px;
-            padding: 12px 18px;
-            border-radius: 18px;
-            border: 1px solid rgba(255, 255, 255, 0.18);
-            background: rgba(7, 11, 35, 0.55);
+            min-width: 170px;
+            padding: 14px 18px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            background: linear-gradient(135deg, rgba(18, 28, 76, 0.9), rgba(10, 22, 66, 0.88));
             color: #fff;
             display: flex;
             align-items: center;
             gap: 12px;
             cursor: pointer;
-            transition: transform 0.2s ease, border-color 0.2s ease;
+            box-shadow: 0 20px 40px rgba(2, 7, 26, 0.35);
+            transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
         }
         
         .chip i {
-            width: 36px;
-            height: 36px;
+            width: 38px;
+            height: 38px;
             border-radius: 12px;
             background: rgba(255, 255, 255, 0.08);
             display: flex;
@@ -488,12 +501,12 @@
         
         .chip strong {
             display: block;
-            font-size: 0.95rem;
+            font-size: 1rem;
         }
         
         .chip span {
             display: block;
-            font-size: 0.78rem;
+            font-size: 0.8rem;
             color: rgba(255, 255, 255, 0.65);
         }
         
@@ -501,6 +514,7 @@
         .chip.active {
             transform: translateY(-2px);
             border-color: rgba(122, 92, 255, 0.8);
+            box-shadow: 0 24px 45px rgba(10, 22, 66, 0.45);
         }
         
         .alert {
@@ -683,6 +697,48 @@
             outline: none;
             border-bottom-color: rgba(122, 92, 255, 0.85);
         }
+
+        .settings-layout {
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            gap: 24px;
+        }
+
+        .settings-card {
+            background: rgba(4, 9, 32, 0.45);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 24px;
+            padding: 28px;
+        }
+
+        .settings-card h4 {
+            font-size: 1.25rem;
+            margin-bottom: 6px;
+        }
+
+        .settings-card p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 24px;
+        }
+
+        .avatar-card {
+            text-align: center;
+        }
+
+        .info-card .form-section {
+            margin-bottom: 32px;
+        }
+
+        .info-card .form-section:last-of-type {
+            margin-bottom: 24px;
+        }
+
+        .verification-section {
+            margin-top: 16px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
         
         .form-actions {
             margin-top: 10px;
@@ -750,6 +806,12 @@
             gap: 16px;
         }
         
+        @media (max-width: 992px) {
+            .settings-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+
         @media (max-width: 768px) {
             body {
                 padding: 20px 16px 40px;
@@ -819,7 +881,7 @@
                 </div>
                 <div class="hero-stat">
                     <span>累计学习</span>
-                    <strong id="totalSessions">0</strong>
+                    <strong id="totalStudy">0</strong>
                 </div>
             </div>
             <div class="admin-hero-stats" id="adminHeroStats">
@@ -920,13 +982,6 @@
                     <span>修改 · 密码</span>
                 </div>
             </button>
-            <button class="chip" type="button" data-tab-target="insight">
-                <i class="fas fa-chart-line"></i>
-                <div>
-                    <strong>学习洞察</strong>
-                    <span>统计 · 记录</span>
-                </div>
-            </button>
             <button class="chip admin-chip" type="button" data-tab-target="admin-panel">
                 <i class="fas fa-crown"></i>
                 <div>
@@ -949,61 +1004,84 @@
                     </div>
                     <div class="alert alert-success" id="profileSuccessAlert"></div>
                     <div class="alert alert-error" id="profileErrorAlert"></div>
-                    <div class="avatar-upload">
-                        <img src="/assets/images/default-avatar1.jpg" alt="用户头像" id="profileAvatar">
-                        <input type="file" id="avatarInput" accept="image/*">
-                        <div class="avatar-upload-overlay">
-                            <i class="fas fa-camera"></i>
-                            <span>更换头像</span>
+                    <div class="settings-layout">
+                        <div class="settings-card avatar-card">
+                            <h4>头像设置</h4>
+                            <p>点击头像以上传，或使用链接</p>
+                            <div class="avatar-upload">
+                                <img src="/assets/images/default-avatar1.jpg" alt="用户头像" id="profileAvatar">
+                                <div class="avatar-upload-overlay">
+                                    <i class="fas fa-camera"></i>
+                                    <span>更换头像</span>
+                                </div>
+                                <input type="file" id="avatarUploadInput" accept="image/png, image/jpeg, image/webp">
+                                <div class="avatar-upload-status">
+                                    <i class="fas fa-spinner fa-spin"></i>
+                                    <span>上传中...</span>
+                                </div>
+                            </div>
+                            <div class="avatar-tools">
+                                <button class="btn small ghost" id="uploadLocalBtn"><i class="fas fa-upload"></i> 本地上传</button>
+                                <button class="btn small ghost" id="useUrlBtn"><i class="fas fa-link"></i> 使用链接</button>
+                            </div>
+                            <div class="avatar-url-form" id="avatarUrlForm">
+                                <label for="avatarUrlInput">输入头像图片链接</label>
+                                <input type="text" id="avatarUrlInput" placeholder="https://example.com/avatar.png">
+                                <div class="avatar-url-actions">
+                                    <button class="btn small primary" id="confirmUrlBtn">确定</button>
+                                    <button class="btn small ghost" id="cancelUrlBtn">取消</button>
+                                </div>
+                            </div>
                         </div>
-                        <div class="avatar-upload-status" id="avatarUploadStatus">
-                            <i class="fas fa-spinner"></i> 上传中...
+                        <div class="settings-card info-card">
+                            <form id="profileForm">
+                                <div class="form-section">
+                                    <h4>公开资料</h4>
+                                    <p>此信息将对站内其他用户可见</p>
+                                    <div class="form-grid">
+                                        <div class="form-group">
+                                            <label for="username">用户名</label>
+                                            <input type="text" id="username" name="username" readonly>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="nickname">昵称</label>
+                                            <input type="text" id="nickname" name="nickname" required>
+                                        </div>
+                                        <div class="form-group full">
+                                            <label for="socialLink">联系方式 <span class="field-note">选填</span></label>
+                                            <input type="text" id="socialLink" name="socialLink" placeholder="电话、微信、QQ等">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-section">
+                                    <h4>私人信息</h4>
+                                    <p>此信息不会公开，仅用于账号管理</p>
+                                    <div class="form-grid">
+                                        <div class="form-group">
+                                            <label for="email">邮箱 <span class="field-note">用于接收学习通知</span></label>
+                                            <input type="email" id="email" name="email">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-section verification-section">
+                                    <h4>安全验证</h4>
+                                    <p>为确保是你本人操作，请输入当前密码</p>
+                                    <div class="form-grid">
+                                        <div class="form-group">
+                                            <label for="verifyPassword">当前密码</label>
+                                            <input type="password" id="verifyPassword" name="verifyPassword" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-actions">
+                                    <button type="submit" class="btn primary">
+                                        <i class="fas fa-save"></i> 保存更改
+                                        <span class="loading"><i class="fas fa-spinner"></i></span>
+                                    </button>
+                                </div>
+                            </form>
                         </div>
                     </div>
-                    <div class="avatar-tools">
-                        <button type="button" class="btn ghost small" id="avatarUploadTrigger">
-                            <i class="fas fa-upload"></i> 本地上传
-                        </button>
-                        <button type="button" class="btn ghost small" id="avatarUrlToggle">
-                            <i class="fas fa-link"></i> 使用链接
-                        </button>
-                    </div>
-                    <div class="avatar-url-form" id="avatarUrlForm">
-                        <label for="avatarUrlInput">头像链接（支持 http / https 图片地址）</label>
-                        <input type="url" id="avatarUrlInput" placeholder="例如：https://example.com/avatar.png">
-                        <div class="avatar-url-actions">
-                            <button type="button" class="btn primary small" id="avatarUrlSubmit">
-                                <i class="fas fa-check"></i> 应用头像
-                            </button>
-                            <button type="button" class="btn ghost small" id="avatarUrlCancel">
-                                取消
-                            </button>
-                        </div>
-                    </div>
-                    <form id="profileForm" class="form-grid">
-                        <div class="form-group">
-                            <label for="username">用户名</label>
-                            <input type="text" id="username" name="username" disabled>
-                        </div>
-                        <div class="form-group">
-                            <label for="nickname">昵称</label>
-                            <input type="text" id="nickname" name="nickname" placeholder="输入您的昵称">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">邮箱 <small>用于接收学习通知</small></label>
-                            <input type="email" id="email" name="email" placeholder="输入您的邮箱">
-                        </div>
-                        <div class="form-group">
-                            <label for="verifyPassword">当前密码 <small>身份验证</small></label>
-                            <input type="password" id="verifyPassword" name="verifyPassword" placeholder="请输入当前密码完成验证">
-                        </div>
-                        <button type="submit" class="btn primary" id="profileSaveBtn">
-                            <i class="fas fa-save"></i> 保存更改
-                            <span class="loading" id="profileLoading">
-                                <i class="fas fa-spinner"></i>
-                            </span>
-                        </button>
-                    </form>
                 </div>
             </div>
             
@@ -1078,7 +1156,7 @@
                             <div class="stat-label">学习天数</div>
                         </div>
                         <div class="stat-item">
-                            <div class="stat-value" id="totalSessionsDisplay">0</div>
+                            <div class="stat-value" id="totalStudyDisplay">0</div>
                             <div class="stat-label">学习次数</div>
                         </div>
                     </div>
@@ -1233,17 +1311,18 @@
         
         // 设置头像上传
         function setupAvatarUpload() {
-            const avatarInput = document.getElementById('avatarInput');
+            const avatarInput = document.getElementById('avatarUploadInput');
+            if (!avatarInput) return;
             avatarInput.addEventListener('change', handleAvatarUpload);
         }
         
         function setupAvatarTools() {
-            const avatarInput = document.getElementById('avatarInput');
-            const uploadTrigger = document.getElementById('avatarUploadTrigger');
-            const urlToggle = document.getElementById('avatarUrlToggle');
+            const avatarInput = document.getElementById('avatarUploadInput');
+            const uploadTrigger = document.getElementById('uploadLocalBtn');
+            const urlToggle = document.getElementById('useUrlBtn');
             const urlForm = document.getElementById('avatarUrlForm');
-            const urlCancel = document.getElementById('avatarUrlCancel');
-            const urlSubmit = document.getElementById('avatarUrlSubmit');
+            const urlCancel = document.getElementById('cancelUrlBtn');
+            const urlSubmit = document.getElementById('confirmUrlBtn');
             const urlInput = document.getElementById('avatarUrlInput');
             
             if (uploadTrigger && avatarInput) {
@@ -1524,28 +1603,51 @@
         // 加载用户统计数据
         async function loadUserStats() {
             try {
-                // 获取错词统计
-                const wrongWordsResponse = await fetch(`${API_BASE}/english/wrongbook/all`, {
-                    headers: buildAuthHeaders()
-                });
-                
-                if (wrongWordsResponse.ok) {
-                    const wrongWordsResult = await wrongWordsResponse.json();
-                    if (wrongWordsResult.code === 1) {
-                        document.getElementById('wrongWordsCount').textContent = wrongWordsResult.data.length;
+                let overview = null;
+                try {
+                    const overviewResp = await fetch(`${API_BASE}/user/overview`, {
+                        headers: buildAuthHeaders()
+                    });
+                    if (overviewResp.ok) {
+                        const overviewResult = await overviewResp.json();
+                        if (overviewResult.code === 1) {
+                            overview = overviewResult.data;
+                        }
                     }
+                } catch (err) {
+                    console.warn('获取概览接口失败，尝试回退数据源', err);
                 }
-                
-                // 这里可以添加更多统计数据的获取逻辑
-                document.getElementById('totalWordsLearned').textContent = '156';
-                document.getElementById('studyDays').textContent = '28';
-                document.getElementById('totalSessions').textContent = '42';
-                
-                document.getElementById('totalWordsLearnedDisplay').textContent = document.getElementById('totalWordsLearned').textContent;
-                document.getElementById('wrongWordsCountDisplay').textContent = document.getElementById('wrongWordsCount').textContent;
-                document.getElementById('studyDaysDisplay').textContent = document.getElementById('studyDays').textContent;
-                document.getElementById('totalSessionsDisplay').textContent = document.getElementById('totalSessions').textContent;
-                
+
+                // 回退：获取错词统计（用于保证错词数有值）
+                let wrongCount = null;
+                try {
+                    const wrongWordsResponse = await fetch(`${API_BASE}/english/wrongbook/all`, {
+                        headers: buildAuthHeaders()
+                    });
+                    if (wrongWordsResponse.ok) {
+                        const wrongWordsResult = await wrongWordsResponse.json();
+                        if (wrongWordsResult.code === 1) {
+                            wrongCount = wrongWordsResult.data.length;
+                        }
+                    }
+                } catch (err) {
+                    console.warn('错词统计获取失败', err);
+                }
+
+                const totalWordsLearned = overview?.totalWordsLearned ?? '--';
+                const wrongWordsCount = overview?.wrongWordsCount ?? wrongCount ?? '--';
+                const studyDays = overview?.studyDays ?? '--';
+                const totalStudy = overview?.totalStudy ?? '--';
+
+                setElementText('totalWordsLearned', totalWordsLearned);
+                setElementText('wrongWordsCount', wrongWordsCount);
+                setElementText('studyDays', studyDays);
+                setElementText('totalStudy', totalStudy);
+
+                setElementText('totalWordsLearnedDisplay', totalWordsLearned);
+                setElementText('wrongWordsCountDisplay', wrongWordsCount);
+                setElementText('studyDaysDisplay', studyDays);
+                setElementText('totalStudyDisplay', totalStudy);
             } catch (error) {
                 console.error('加载统计数据失败:', error);
             }

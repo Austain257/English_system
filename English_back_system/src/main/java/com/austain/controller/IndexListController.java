@@ -32,7 +32,8 @@ public class IndexListController {
         Long currentUserId = (Long) request.getAttribute("currentUserId");
         String role = (String) request.getAttribute("currentUserRole");
         boolean isAdmin = "ADMIN".equals(role);
-        return indexListService.checkBookExist(currentUserId, isAdmin, bookName);
+        UserBook book = indexListService.findBook(currentUserId, isAdmin, null, bookName);
+        return book != null ? Result.success(book) : Result.error("不存在该书本");
     }
 }
 

@@ -29,7 +29,7 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(authInterceptor)
-                .addPathPatterns("/english/**", "/list/**","/study/**","/jotting/**")
+                .addPathPatterns("/english/**", "/list/**","/study/**","/jotting/**", "/sessions/**", "/mastery/**", "/learning/**")
                 .excludePathPatterns(
                     "/user/register",
                     "/user/login",

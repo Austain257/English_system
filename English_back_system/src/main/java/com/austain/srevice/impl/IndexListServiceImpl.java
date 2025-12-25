@@ -27,4 +27,12 @@ public class IndexListServiceImpl implements IndexListService {
         int count = indexListMapper.countBookByName(bookName, userId, isAdmin);
         return count > 0 ? Result.success() : Result.error("不存在该书本");
     }
+
+    @Override
+    public UserBook findBook(Long userId, boolean isAdmin, Long bookId, String bookName) {
+        if (bookId != null) {
+            return indexListMapper.getBookById(bookId);
+        }
+        return indexListMapper.getBookByName(bookName, userId);
+    }
 }

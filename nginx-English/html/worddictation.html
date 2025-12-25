@@ -415,6 +415,25 @@
             margin-top: 10px;
         }
         
+        .test-toggle {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 20px;
+            padding: 10px 14px;
+            border-radius: 999px;
+            background: rgba(74, 110, 224, 0.08);
+            color: #4a6ee0;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        
+        .test-toggle input {
+            width: 44px;
+            height: 22px;
+            accent-color: #4a6ee0;
+        }
+        
         @media (max-width: 768px) {
             .container {
                 max-width: 95%;
@@ -476,7 +495,7 @@
         }
     </style>
 </head>
-<body data-require-auth="true">
+<body data-require-auth="true" data-track-scene="WORD_DICTATION" data-track-source="web_main">
     <div class="container">
         <div class="header">
             <h1>📝 英语单词默写</h1>
@@ -505,6 +524,10 @@
                     >
                 </div>
             </div>
+            <label class="test-toggle">
+                <input type="checkbox" id="testModeToggle">
+                <span>测试模式（开启时答对才计入已掌握）</span>
+            </label>
             <button id="loadWordsBtn" class="btn btn-primary">
                 <span>📥 加载单词</span>
             </button>
@@ -568,6 +591,7 @@
             <div id="bookInfo" class="book-info"></div>
         </div>
 
+        <script src="/assets/js/learning-tracker.js"></script>
         <script>
             const API_BASE = 'http://localhost:8080';
 
@@ -593,6 +617,7 @@
                 const totalCountEl = document.getElementById('totalCount');
                 const accuracyEl = document.getElementById('accuracy');
                 const progressBar = document.getElementById('progressBar');
+                const testModeToggle = document.getElementById('testModeToggle');
                 
                 let words = [];
                 let currentIndex = 0;
@@ -600,7 +625,41 @@
                 let wordVisible = false;
                 let correctCount = 0;
                 let totalAttempts = 0;
+                let testMode = true;
+                let currentBookName = null;
 
+                if (localStorage.getItem('dictation_test_mode')) {
+                    testMode = localStorage.getItem('dictation_test_mode') === 'true';
+                }
+                testModeToggle.checked = testMode;
+                testModeToggle.addEventListener('change', () => {
+                    testMode = testModeToggle.checked;
+                    localStorage.setItem('dictation_test_mode', String(testMode));
+                });
+                
+                function syncBookContext() {
+                    const params = new URLSearchParams(window.location.search);
+                    const bookName = params.get('bookname');
+                    if (!bookName) {
+                        bookInfo.textContent = '未指定课本，无法加载听写数据';
+                        showStatus('请从课本选择页进入听写本，确保携带课本名称', 'error');
+                        loadWordsBtn.disabled = true;
+                        return null;
+                    }
+                    currentBookName = bookName;
+                    bookInfo.textContent = `当前课本：${bookName}`;
+                    if (window.LearningTracker) {
+                        LearningTracker.setBookContext({ bookName, wordBank: bookName });
+                        document.body.dataset.bookName = bookName;
+                    }
+                    return bookName;
+                }
+
+                const defaultBookName = syncBookContext();
+                if (!defaultBookName) {
+                    return;
+                }
+                
                 // 加载单词按钮点击事件
                 loadWordsBtn.addEventListener('click', loadWords);
                 
@@ -702,7 +761,7 @@
                     hideStatus();
                     hideValidationResult();
                     
-                    const url = `${API_BASE}/english/worddictation?start=${startIndex}&end=${endIndex}`;
+                    const url = `${API_BASE}/english/worddictation?start=${startIndex}&end=${endIndex}&bookname=${encodeURIComponent(currentBookName)}`;
                     
                     fetch(url, {
                         headers: {
@@ -775,15 +834,39 @@
             }
             
             // 校验单词
+            function recordDictationMastery(isCorrect) {
+                const tracker = window.LearningTracker;
+                const shouldReport = testModeToggle?.checked ?? testMode;
+                if (!tracker || !currentWord || !shouldReport) {
+                    return;
+                }
+                const bookName = currentWord.bookname || document.body.dataset.bookName || defaultBookName;
+                tracker.setBookContext({ bookName, wordBank: bookName });
+                const payload = {
+                    wordId: currentWord.id,
+                    wordText: currentWord.word,
+                    bookName,
+                    wordBank: bookName,
+                    proficiencyScore: isCorrect ? 95 : 40,
+                    mastered: isCorrect
+                };
+                const runner = isCorrect ? tracker.markMastery(payload) : tracker.regressMastery(payload);
+                if (runner && typeof runner.catch === 'function') {
+                    runner.catch(err => console.warn('听写掌握状态上报失败', err));
+                }
+            }
+
             function validateWord(userText, correctText) {
                 if (userText === correctText) {
                     correctCount++;
                     validationResult.innerHTML = `
                         <div class="validation-correct">
+                            <strong> 正确！</strong> 你输入的单词完全正确。
                             <strong>✓ 正确！</strong> 你输入的单词完全正确。
                         </div>
                     `;
                     validationResult.className = 'validation-result validation-correct';
+                    recordDictationMastery(true);
                     
                     // 自动跳转到下一个单词
                     setTimeout(() => {
@@ -800,6 +883,7 @@
                         </div>
                     `;
                     validationResult.className = 'validation-result validation-incorrect';
+                    recordDictationMastery(false);
                 }
                 
                 updateStats();

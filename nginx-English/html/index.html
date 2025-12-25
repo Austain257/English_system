@@ -625,7 +625,7 @@
             </div>
         </div>
         <nav class="nav-links">
-            <a href="/function">功能</a>
+            <a href="/index.html?focus=core">功能</a>
             <a href="/wrongbook">错词本</a>
             <a href="/profile">个人中心</a>
         </nav>
@@ -651,7 +651,7 @@
                         <li><i class="fas fa-check-circle"></i> 多终端响应式界面，随时随地继续练习</li>
                     </ul>
                     <div class="hero-cta">
-                        <a class="primary" href="/function"><i class="fas fa-play"></i> 立即进入功能面板</a>
+                        <a class="primary" href="/index.html?focus=core"><i class="fas fa-play"></i> 立即进入功能面板</a>
                         <a class="ghost" href="/landing#feature">了解平台特色</a>
                     </div>
                 </div>
@@ -664,16 +664,6 @@
                     <div class="insight-card">
                         <span class="insight-label">学习效率指数</span>
                         <div class="insight-value" style="font-size:2.2rem;">92%</div>
-                        <div class="mini-metrics">
-                            <div class="mini-metric">
-                                连续学习
-                                <strong>14天</strong>
-                            </div>
-                            <div class="mini-metric">
-                                AI推荐命中率
-                                <strong>87%</strong>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -682,24 +672,24 @@
         <!-- 数据统计 -->
         <div class="stats-section">
             <div class="stat-card">
-                <div class="stat-icon"><i class="fas fa-book"></i></div>
-                <div class="stat-number">15+</div>
-                <div class="stat-label">学习功能</div>
+                <div class="stat-icon"><i class="fas fa-clock"></i></div>
+                <div class="stat-number" id="statTodayTime">--</div>
+                <div class="stat-label">今日学习时长</div>
             </div>
             <div class="stat-card">
-                <div class="stat-icon"><i class="fas fa-brain"></i></div>
-                <div class="stat-number">AI</div>
-                <div class="stat-label">智能驱动</div>
+                <div class="stat-icon"><i class="fas fa-infinity"></i></div>
+                <div class="stat-number" id="statTotalTime">--</div>
+                <div class="stat-label">累计学习时长</div>
             </div>
             <div class="stat-card">
-                <div class="stat-icon"><i class="fas fa-chart-line"></i></div>
-                <div class="stat-number">100%</div>
-                <div class="stat-label">个性化</div>
+                <div class="stat-icon"><i class="fa-regular fa-calendar"></i></div>
+                <div class="stat-number" id="statWeekTime">--</div>
+                <div class="stat-label">近7日高效时长</div>
             </div>
             <div class="stat-card">
-                <div class="stat-icon"><i class="fas fa-mobile-alt"></i></div>
-                <div class="stat-number">响应式</div>
-                <div class="stat-label">移动优化</div>
+                <div class="stat-icon"><i class="fas fa-graduation-cap"></i></div>
+                <div class="stat-number" id="statMasteredWords">--</div>
+                <div class="stat-label">已掌握词汇</div>
             </div>
         </div>
 
@@ -727,16 +717,6 @@
                 </div>
             </div>
 
-            <div class="function-card" onclick="navigateTo('/dictation')">
-                <div class="function-icon"><i class="fas fa-pen-fancy"></i></div>
-                <h3 class="function-title">单词听写</h3>
-                <p class="function-description">英语听写练习功能，提升单词拼写能力和听力理解</p>
-                <div class="function-tags">
-                    <span class="tag">听写</span>
-                    <span class="tag">拼写</span>
-                </div>
-            </div>
-
             <div class="function-card" onclick="navigateTo('/sentence')">
                 <div class="function-icon"><i class="fas fa-quote-left"></i></div>
                 <h3 class="function-title">句子学习</h3>
@@ -756,6 +736,17 @@
                     <span class="tag">知识库</span>
                 </div>
             </div>
+
+            <div class="function-card" onclick="navigateTo('/wrongbook')">
+                <div class="function-icon"><i class="fas fa-file-alt"></i></div>
+                <h3 class="function-title">错词本常练</h3>
+                <p class="function-description">定位薄弱词汇，高频巩固易错点，帮你快速弥补记忆断层</p>
+                <div class="function-tags">
+                    <span class="tag">巩固</span>
+                    <span class="tag">错题集</span>
+                    <span class="tag">数据追踪</span>
+                </div>
+            </div>
         </div>
 
         <!-- AI功能区 -->
@@ -773,14 +764,14 @@
                     </div>
                 </div>
 
-                <div class="function-card" onclick="navigateTo('/wrongbook')">
-                    <div class="function-icon"><i class="fas fa-file-alt"></i></div>
-                    <h3 class="function-title">错词本常练</h3>
-                    <p class="function-description">错词要多看，而不是一直盯着会的词</p>
+                <div class="function-card" onclick="navigateTo('/insights.html')">
+                    <div class="function-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3 class="function-title">学习洞察</h3>
+                    <p class="function-description">实时查看学习数据、坚持天数与高效场景，为下一步制定提供依据</p>
                     <div class="function-tags">
-                        <span class="tag">全面</span>
-                        <span class="tag">深化</span>
-                        <span class="tag">定制</span>
+                        <span class="tag">数据分析</span>
+                        <span class="tag">效率评估</span>
+                        <span class="tag">进度洞察</span>
                     </div>
                 </div>
             </div>
@@ -896,7 +887,23 @@
             statNumbers.forEach(stat => {
                 observer.observe(stat);
             });
+
+            refreshLearningStats();
+            setInterval(refreshLearningStats, 60000);
         });
+
+        function refreshLearningStats() {
+            if (!window.LearningTracker) return;
+            LearningTracker.fetchDashboard().then(data => {
+                if (!data) return;
+                LearningTracker.footprintSummary(data, {
+                    todayEl: document.getElementById('statTodayTime'),
+                    totalEl: document.getElementById('statTotalTime'),
+                    last7El: document.getElementById('statWeekTime'),
+                    masteredEl: document.getElementById('statMasteredWords')
+                });
+            });
+        }
 
         // 浮动按钮功能
         let isFabOpen = false;
@@ -986,6 +993,7 @@
     
     <!-- 用户信息组件 -->
     <script src="/assets/js/user-info.js"></script>
+    <script src="/assets/js/learning-tracker.js"></script>
     <script src="/assets/js/auth-guard.js"></script>
 </body>
 </html>

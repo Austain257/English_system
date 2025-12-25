@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习洞察 · 英语智学平台</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600&display=swap');
+
+        :root {
+            --bg: #050816;
+            --panel: rgba(15, 22, 48, 0.92);
+            --glass: rgba(255,255,255,0.05);
+            --border: rgba(255,255,255,0.08);
+            --text: #f4f6fb;
+            --sub: #98a2c5;
+            --accent: #7d74ff;
+            --accent-2: #5be4ff;
+            --accent-3: #f9b234;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: 'Space Grotesk','Noto Sans SC','HarmonyOS Sans SC',sans-serif;
+            background: radial-gradient(circle at 20% 20%, rgba(125,116,255,0.28), transparent 35%),
+                        radial-gradient(circle at 80% 0%, rgba(91,228,255,0.18), transparent 40%),
+                        var(--bg);
+            color: var(--text);
+            padding: 32px 20px 60px;
+        }
+
+        .page {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        header.top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand .icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 16px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            display: grid;
+            place-items: center;
+            color: #050816;
+            font-size: 1.25rem;
+        }
+
+        .brand h1 {
+            font-size: 1.4rem;
+            letter-spacing: 0.04em;
+        }
+
+        .actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 10px 16px;
+            color: var(--text);
+            background: var(--glass);
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            color: #050816;
+            font-weight: 700;
+            border: none;
+            border-radius: 14px;
+            padding: 10px 16px;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+        }
+
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 12px;
+            border-radius: 999px;
+            background: rgba(255,255,255,0.08);
+            font-size: 0.85rem;
+            color: var(--sub);
+            letter-spacing: 0.04em;
+        }
+
+        .pill.solid {
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            color: #050816;
+            font-weight: 700;
+        }
+
+        .chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 12px;
+            border-radius: 24px;
+            background: rgba(255,255,255,0.08);
+            font-size: 0.78rem;
+            letter-spacing: 0.04em;
+            color: var(--text);
+            text-transform: uppercase;
+        }
+
+        .chip.glow {
+            background: linear-gradient(120deg, rgba(125,116,255,0.3), rgba(91,228,255,0.35));
+            box-shadow: 0 10px 30px rgba(91,228,255,0.25);
+        }
+
+        .card {
+            border-radius: 22px;
+            border: 1px solid var(--border);
+            padding: 22px;
+            background: var(--panel);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.35);
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 18px;
+        }
+
+        .hero-card {
+            background: linear-gradient(135deg, rgba(125,116,255,0.25), rgba(91,228,255,0.2));
+            border: 1px solid rgba(255,255,255,0.15);
+            backdrop-filter: blur(12px);
+        }
+
+        .hero-title {
+            margin-top: 10px;
+        }
+
+        .hero-title h2 {
+            font-size: 1.8rem;
+            margin-bottom: 6px;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+            gap: 16px;
+            margin-top: 22px;
+        }
+
+        .stat,
+        .range-panel {
+            padding: 14px;
+            border-radius: 16px;
+            background: rgba(5,8,16,0.35);
+            border: 1px solid rgba(255,255,255,0.12);
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .stat .label {
+            font-size: 0.85rem;
+            color: var(--sub);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            letter-spacing: 0.04em;
+        }
+
+        .stat .value {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .section-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 12px;
+        }
+
+        .section-head h3 {
+            font-size: 1.2rem;
+        }
+
+        .insight-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 18px;
+        }
+
+        .insight-block {
+            position: relative;
+            padding: 20px 22px;
+            border-radius: 22px;
+            border: 1px solid rgba(255,255,255,0.1);
+            background: rgba(8,13,30,0.85);
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            overflow: hidden;
+        }
+
+        .insight-block::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            background: radial-gradient(circle at 20% -30%, rgba(91,228,255,0.25), transparent 60%);
+            opacity: 0.4;
+            pointer-events: none;
+        }
+
+        .insight-block.primary {
+            background: linear-gradient(135deg, rgba(30,20,88,0.92), rgba(22,80,141,0.88));
+            border-color: rgba(255,255,255,0.18);
+            box-shadow: 0 20px 45px rgba(30,20,88,0.45);
+        }
+
+        .insight-block.wide {
+            grid-column: span 2;
+        }
+
+        .insight-head {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        .insight-head small {
+            color: var(--sub);
+            letter-spacing: 0.05em;
+        }
+
+        .insight-value {
+            position: relative;
+            z-index: 1;
+            font-size: 2.6rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+        }
+
+        .insight-meta {
+            position: relative;
+            z-index: 1;
+            color: var(--sub);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .insight-actions {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 640px) {
+            .insight-block.wide {
+                grid-column: span 1;
+            }
+        }
+
+        .chart-row {
+            display: grid;
+            grid-template-columns: minmax(0, 1.6fr) minmax(320px, 0.8fr);
+            gap: 22px;
+            align-items: stretch;
+        }
+
+        .trend-visuals {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 18px;
+        }
+
+        .chart-card {
+            position: relative;
+            padding: 18px 20px 24px;
+            border-radius: 24px;
+            border: 1px solid rgba(255,255,255,0.12);
+            background: radial-gradient(circle at 10% 0%, rgba(91,228,255,0.18), transparent 48%), rgba(6,11,28,0.65);
+            box-shadow: 0 20px 45px rgba(5,8,16,0.35);
+            overflow: hidden;
+        }
+
+        .chart-card.gradient {
+            background: linear-gradient(145deg, rgba(38,15,74,0.8), rgba(15,44,92,0.85));
+        }
+
+        .chart-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            pointer-events: none;
+            background: radial-gradient(circle at 80% 20%, rgba(249,178,52,0.25), transparent 40%);
+            opacity: 0.4;
+        }
+
+        .chart-card__meta {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .chart-card__meta h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .chart-card__meta .eyebrow {
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.6);
+        }
+
+        .chart-desc {
+            position: relative;
+            z-index: 1;
+            margin: 10px 0 16px;
+            font-size: 0.85rem;
+            color: var(--sub);
+        }
+
+        .chart-legend {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 14px;
+            margin-top: 16px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 12px;
+            border-radius: 999px;
+            background: rgba(5,8,16,0.35);
+            border: 1px solid rgba(255,255,255,0.08);
+            font-size: 0.85rem;
+        }
+
+        .legend-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+
+        canvas {
+            background: rgba(255,255,255,0.04);
+            border-radius: 18px;
+            width: 100%;
+            border: 1px solid rgba(255,255,255,0.06);
+            position: relative;
+            z-index: 1;
+        }
+
+        .range-panel {
+            flex-direction: column;
+            gap: 12px;
+            background: linear-gradient(160deg, rgba(15,22,52,0.95), rgba(8,12,30,0.9));
+            border: 1px solid rgba(91,228,255,0.1);
+            border-radius: 28px;
+            padding: 22px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .range-panel::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 20% -20%, rgba(91,228,255,0.22), transparent 55%);
+            opacity: 0.6;
+            pointer-events: none;
+        }
+
+        .range-panel h4 {
+            font-size: 1rem;
+            margin-bottom: 4px;
+        }
+
+        .range-panel .range-total {
+            font-size: 2.4rem;
+            font-weight: 700;
+        }
+
+        .range-panel .range-sub {
+            font-size: 0.9rem;
+            color: var(--sub);
+        }
+
+        .range-panel__header {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        .range-panel__badge {
+            font-size: 0.8rem;
+            color: var(--accent-2);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .range-headline {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .range-tabs {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 8px;
+            background: rgba(5,8,16,0.35);
+            border-radius: 16px;
+            padding: 6px;
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .range-tab {
+            border: none;
+            border-radius: 12px;
+            padding: 10px 12px;
+            background: transparent;
+            color: rgba(255,255,255,0.7);
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.2s ease, color 0.2s ease;
+        }
+
+        .range-tab.active {
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            color: #050816;
+            box-shadow: 0 12px 28px rgba(91,228,255,0.3);
+        }
+
+        .range-divider {
+            position: relative;
+            z-index: 1;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            margin: 4px 0 2px;
+        }
+
+        .range-footnote {
+            position: relative;
+            z-index: 1;
+            font-size: 0.78rem;
+            color: rgba(255,255,255,0.6);
+            line-height: 1.4;
+        }
+
+        .range-footnote + .range-footnote {
+            margin-top: 6px;
+            color: rgba(255,255,255,0.5);
+        }
+
+        #rangeHighlight {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.88);
+            font-weight: 600;
+        }
+
+        .chart-tooltip {
+            position: absolute;
+            padding: 10px 12px;
+            border-radius: 12px;
+            background: rgba(5,8,16,0.85);
+            border: 1px solid rgba(255,255,255,0.12);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+            pointer-events: none;
+            font-size: 0.85rem;
+            color: var(--text);
+            opacity: 0;
+            transform: translate(-50%, -120%);
+            transition: opacity 0.15s ease, transform 0.15s ease;
+            white-space: nowrap;
+            z-index: 5;
+        }
+
+        .chart-tooltip.visible {
+            opacity: 1;
+            transform: translate(-50%, -140%);
+        }
+
+        .list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .list-item {
+            padding: 14px;
+            border-radius: 16px;
+            background: var(--glass);
+            border: 1px solid var(--border);
+        }
+
+        .muted {
+            color: var(--sub);
+        }
+
+        .actions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+            gap: 14px;
+        }
+
+        .action-item strong {
+            font-size: 1.1rem;
+        }
+
+        .scene-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .scene-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .scene-progress {
+            flex: 1;
+            height: 8px;
+            border-radius: 999px;
+            background: rgba(255,255,255,0.08);
+            overflow: hidden;
+        }
+
+        .scene-progress span {
+            display: block;
+            height: 100%;
+            border-radius: inherit;
+            background: linear-gradient(135deg, var(--accent), var(--accent-3));
+        }
+
+        @media(max-width: 768px) {
+            header.top {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body data-require-auth="true">
+<div class="page">
+    <header class="top">
+        <div class="brand">
+            <div class="icon"><i class="fas fa-chart-line"></i></div>
+            <div>
+                <!-- <div class="pill solid"><i class="fas fa-signal"></i> 学习洞察</div> -->
+                <h1>个人全局学习看板</h1>
+            </div>
+        </div>
+        <div class="actions">
+            <button class="btn" id="backBtn"><i class="fas fa-arrow-left"></i> 返回工作台</button>
+            <button class="btn" id="manageBooksBtn"><i class="fas fa-book-open"></i> 词书管理</button>
+            <button class="btn-primary" id="refreshBtn"><i class="fas fa-rotate"></i> 刷新数据</button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <article class="card hero-card">
+            <div class="hero-top">
+                <div class="pill solid"><i class="fas fa-globe-americas"></i> 全局概览</div>
+                <span class="muted" id="updatedAt">数据同步中</span>
+            </div>
+            <div class="hero-title">
+                <h2>我的学习轨迹</h2>
+                <p class="muted">基于平台全部学习记录的实时洞察，不依赖任何单一课本。</p>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="label"><i class="fas fa-sun"></i> 今日学习</div>
+                    <div class="value" id="statToday">--</div>
+                    <small class="muted">最近一次刷新</small>
+                </div>
+                <div class="stat">
+                    <div class="label"><i class="fas fa-graduation-cap"></i> 掌握词数量</div>
+                    <div class="value" id="statMastered">--</div>
+                    <small class="muted">来自全部课本</small>
+                </div>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="section-head">
+                <h3>系统洞察</h3>
+            </div>
+            <div class="insight-grid">
+                <article class="insight-block primary">
+                    <div class="insight-head">
+                        <div>
+                            <small>近7日掌握</small>
+                            <div class="insight-value" id="insightMastered">--</div>
+                        </div>
+                        <span class="pill">掌握节奏</span>
+                    </div>
+                    <p class="insight-meta" id="insightMasteredMsg">等待数据...</p>
+                </article>
+
+                <article class="insight-block">
+                    <div class="insight-head">
+                        <div>
+                            <small>高频学习场景</small>
+                            <div class="insight-value" style="font-size:1.6rem;" id="insightScene">--</div>
+                        </div>
+                        <span class="pill">效率建议</span>
+                    </div>
+                    <p class="insight-meta" id="insightSceneMsg">等待数据...</p>
+                </article>
+
+                <article class="insight-block wide">
+                    <div class="insight-head">
+                        <div>
+                            <small>下一步建议</small>
+                            <div class="insight-value" style="font-size:1.5rem;" id="insightAction">快速行动</div>
+                        </div>
+                        <button class="btn-primary" onclick="navigateAction('/wrongbook')">打开错词本</button>
+                    </div>
+                    <p class="insight-meta" id="insightActionMsg">结合系统建议选择入口</p>
+                </article>
+            </div>
+        </article>
+    </section>
+
+    <section class="card">
+        <div class="section-head">
+            <div>
+                <div class="chip glow"><i class="fas fa-satellite-dish"></i> 深度趋势</div>
+                <h3 style="margin-top:8px;">学习时长趋势</h3>
+            </div>
+        </div>
+        <div class="chart-row">
+            <div class="trend-visuals">
+                <article class="chart-card gradient">
+                    <div class="chart-card__meta">
+                        <div>
+                            <div class="eyebrow">SESSION TREND</div>
+                            <h4>场景学习柱状图</h4>
+                        </div>
+                        <span class="chip"><i class="fas fa-clock"></i> 近7日</span>
+                    </div>
+                    <p class="chart-desc">以学习场景为维度，展示最近七天的时长占比与节奏波动。</p>
+                    <canvas id="barTime" height="220"></canvas>
+                    <div class="chart-legend" id="barLegend"></div>
+                </article>
+                <article class="chart-card">
+                    <div class="chart-card__meta">
+                        <div>
+                            <div class="eyebrow">FOCUS MIX</div>
+                            <h4>学习时间构成</h4>
+                        </div>
+                        <span class="chip"><i class="fas fa-percentage"></i> 占比</span>
+                    </div>
+                    <p class="chart-desc">快速了解主要学习类型的投入占比，为下一步资源分配提供依据。</p>
+                    <canvas id="pieScene" height="220"></canvas>
+                    <div class="chart-tooltip" id="pieTooltip"></div>
+                </article>
+            </div>
+            <aside class="range-panel">
+                <div class="range-panel__header">
+                    <div class="chip glow"><i class="fas fa-layer-group"></i> 累计时长</div>
+                    <div class="range-panel__badge"><i class="fas fa-sparkles"></i> 实时同步</div>
+                </div>
+                <div class="range-headline">
+                    <h4 id="rangeTitle">近7天总时长</h4>
+                    <div class="pill" style="align-self:flex-start;"><i class="fas fa-gauge-high"></i> 动态平均</div>
+                </div>
+                <div class="range-total" id="rangeTotalValue">--</div>
+                <div class="range-sub" id="rangeAvgValue">日均 --</div>
+                <div class="range-tabs" id="rangeTabs">
+                    <button class="range-tab" data-range="3d">近3天</button>
+                    <button class="range-tab active" data-range="7d">近7天</button>
+                    <button class="range-tab" data-range="30d">近30天</button>
+                    <button class="range-tab" data-range="365d">近一年</button>
+                </div>
+                <p class="range-footnote" id="rangeHighlight">等待数据...</p>
+                <p class="range-footnote">* 所有时长均基于个人真实学习记录，可配合词书计划或错词本进行精细化调整。</p>
+            </aside>
+        </div>
+    </section>
+
+    <section class="card">
+        <div class="section-head">
+            <h3>AI 建议 · 下一步行动</h3>
+        </div>
+        <div class="actions-grid">
+            <div class="list-item action-item">
+                <strong>巩固错词</strong>
+                <p class="muted" id="actionWrongbookTip">结合错词本拉齐记忆，提升掌握率。</p>
+                <button class="btn-primary" style="margin-top:10px;" onclick="navigateAction('/wrongbook')">进入错词本</button>
+            </div>
+            <div class="list-item action-item">
+                <strong>查看学习记录</strong>
+                <p class="muted" id="actionRecordTip">整体趋势波动较大，建议回顾学习清单。</p>
+                <button class="btn-primary" style="margin-top:10px;" onclick="navigateAction('/allrecord')">打开学习清单</button>
+            </div>
+            <div class="list-item action-item">
+                <strong>规划本周词书</strong>
+                <p class="muted" id="actionPlanTip">根据活跃场景调整词书与练习模式。</p>
+                <button class="btn-primary" style="margin-top:10px;" onclick="navigateAction('/allbook')">前往词书库</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="card">
+        <div class="section-head">
+            <h3>高频学习场景</h3>
+        </div>
+        <div class="scene-list" id="sceneList">
+            <div class="muted">暂无学习记录</div>
+        </div>
+    </section>
+
+    <section class="card">
+        <div class="section-head"><h3>近期学习记录</h3></div>
+        <div class="list" id="recentList">
+            <div class="muted">暂无数据</div>
+        </div>
+    </section>
+</div>
+
+<script src="/assets/js/learning-tracker.js"></script>
+<script src="/assets/js/auth-guard.js"></script>
+<script>
+    const API_BASE = 'http://localhost:8080';
+    const state = { dashboard: null, pieSlices: [], pieCenter: null, barLegendColors: ['#7d74ff','#5be4ff','#8dd0ff','#ffc857','#ff8b8b'] };
+    const pieCanvas = document.getElementById('pieScene');
+    const pieTooltip = document.getElementById('pieTooltip');
+    const rangeHighlightEl = document.getElementById('rangeHighlight');
+
+    function buildAuthHeaders() {
+        const token = localStorage.getItem('auth_token');
+        return token ? { 'Authorization': `Bearer ${token}` } : {};
+    }
+
+    function formatDuration(seconds = 0) {
+        if (!seconds) return '0min';
+        const hours = Math.floor(seconds / 3600);
+        const minutes = Math.floor((seconds % 3600) / 60);
+        if (hours > 0) {
+            return `${hours}h${minutes.toString().padStart(2, '0')}m`;
+        }
+        return `${minutes || 1}min`;
+    }
+
+    function formatScene(scene) {
+        if (window.LearningTracker?.formatScene) {
+            return window.LearningTracker.formatScene(scene);
+        }
+        return scene || '未标记场景';
+    }
+
+    function formatTimestamp(date = new Date()) {
+        return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2,'0')}-${String(date.getDate()).padStart(2,'0')} ${String(date.getHours()).padStart(2,'0')}:${String(date.getMinutes()).padStart(2,'0')}`;
+    }
+
+    async function fetchDashboard() {
+        const headers = buildAuthHeaders();
+        const resp = await fetch(`${API_BASE}/learning/dashboard`, { headers });
+        if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+        const data = await resp.json();
+        if (data.code !== 1) throw new Error(data.msg || '获取数据失败');
+        return data.data || {};
+    }
+
+    function renderOverview(dashboard) {
+        const learningTime = dashboard.learningTime || [];
+        const mastery = dashboard.wordMastery || [];
+        const stats = learningTime.reduce((acc, cur) => {
+            acc.total += cur.totalSeconds || 0;
+            acc.today += cur.todaySeconds || 0;
+            acc.week += cur.last7DaysSeconds || 0;
+            return acc;
+        }, { total: 0, today: 0, week: 0 });
+        const mastered = mastery.reduce((sum, item) => sum + (item.masteredCount || 0), 0);
+        const mastered7 = mastery.reduce((sum, item) => sum + (item.last7DaysMastered || 0), 0);
+        const topScene = [...learningTime].sort((a, b) => (b.last7DaysSeconds || 0) - (a.last7DaysSeconds || 0))[0];
+
+        document.getElementById('statToday').textContent = formatDuration(stats.today);
+        document.getElementById('statMastered').textContent = mastered.toString();
+        document.getElementById('insightMastered').textContent = `${mastered7} 词`;
+        document.getElementById('insightMasteredMsg').textContent = mastered7 >= 20 ? '节奏极佳，继续保持' : mastered7 >= 5 ? '节奏稳定，可适当提速' : '建议补充记忆训练';
+        document.getElementById('insightScene').textContent = topScene ? formatScene(topScene.scene) : '暂未开始';
+        document.getElementById('insightSceneMsg').textContent = topScene ? `近7日累计 ${formatDuration(topScene.last7DaysSeconds || 0)}，可以继续深耕。` : '尚无场景数据，先进入任意学习功能。';
+        document.getElementById('updatedAt').textContent = `最近更新：${formatTimestamp(new Date())}`;
+
+        const highlight = topScene?.scene === 'WRONG_WORD'
+            ? '错词巩固势头很好，可以同步做句子/听写。'
+            : '建议从错词本或学习清单开始，形成闭环。';
+        document.getElementById('insightActionMsg').textContent = highlight;
+
+        updateActionTips(mastered7, topScene);
+    }
+
+    function updateActionTips(mastered7, topScene) {
+        const wrongbookTip = document.getElementById('actionWrongbookTip');
+        const recordTip = document.getElementById('actionRecordTip');
+        const planTip = document.getElementById('actionPlanTip');
+
+        wrongbookTip.textContent = mastered7 < 5
+            ? '近7日掌握偏低，建议先复盘错词。'
+            : '保持错词回顾节奏，进一步提升掌握度。';
+
+        recordTip.textContent = topScene
+            ? `最近常在「${formatScene(topScene.scene)}」场景学习，查看学习清单进行整体复盘。`
+            : '暂无场景数据，建议打开学习清单制定计划。';
+
+        planTip.textContent = mastered7 >= 15
+            ? '本周完成度高，可在词书库挑选更具挑战的内容。'
+            : '通过词书库调节难度，匹配当前节奏。';
+    }
+
+    function renderScenes(learningTime = []) {
+        const list = document.getElementById('sceneList');
+        list.innerHTML = '';
+        if (!learningTime.length) {
+            list.innerHTML = '<div class="muted">暂无学习记录</div>';
+            return;
+        }
+        const top = [...learningTime]
+            .sort((a, b) => (b.totalSeconds || 0) - (a.totalSeconds || 0))
+            .slice(0, 5);
+        const max = top[0]?.totalSeconds || 1;
+
+        top.forEach(item => {
+            const wrapper = document.createElement('div');
+            wrapper.className = 'scene-item';
+            wrapper.innerHTML = `
+                <div style="min-width:130px;">
+                    <strong>${formatScene(item.scene)}</strong>
+                    <div class="muted" style="font-size:0.85rem;">总 ${formatDuration(item.totalSeconds || 0)}</div>
+                </div>
+                <div class="scene-progress">
+                    <span style="width:${Math.max(8, (item.totalSeconds || 0) / max * 100)}%"></span>
+                </div>
+                <div style="min-width:90px;text-align:right;">
+                    <small class="muted">近7日</small>
+                    <div>${formatDuration(item.last7DaysSeconds || 0)}</div>
+                </div>
+            `;
+            list.appendChild(wrapper);
+        });
+    }
+
+    function renderRecent(dashboard) {
+        const list = document.getElementById('recentList');
+        list.innerHTML = '';
+        const learningTime = dashboard.learningTime || [];
+        if (!learningTime.length) {
+            list.innerHTML = '<div class="muted">暂未记录学习会话</div>';
+            return;
+        }
+        learningTime
+            .sort((a, b) => (b.updatedAt || b.totalSeconds || 0) - (a.updatedAt || a.totalSeconds || 0))
+            .slice(0, 5)
+            .forEach(item => {
+                const div = document.createElement('div');
+                div.className = 'list-item';
+                div.innerHTML = `
+                    <strong>${formatScene(item.scene)}</strong>
+                    <div class="muted" style="margin-top:4px;">
+                        今日 ${formatDuration(item.todaySeconds || 0)} · 累计 ${formatDuration(item.totalSeconds || 0)}
+                    </div>
+                `;
+                list.appendChild(div);
+            });
+    }
+
+    function renderBarLegend(data = []) {
+        const legend = document.getElementById('barLegend');
+        if (!legend) return;
+        legend.innerHTML = '';
+        if (!data.length) {
+            legend.innerHTML = '<div class="muted">暂无场景</div>';
+            return;
+        }
+        data.forEach((item, idx) => {
+            const div = document.createElement('div');
+            div.className = 'legend-item';
+            const dot = document.createElement('span');
+            dot.className = 'legend-dot';
+            const color = state.barLegendColors[idx % state.barLegendColors.length];
+            dot.style.background = color;
+            const label = document.createElement('span');
+            label.textContent = formatScene(item.scene);
+            div.appendChild(dot);
+            div.appendChild(label);
+            legend.appendChild(div);
+        });
+    }
+
+    function drawBar(learningTime = []) {
+        const canvas = document.getElementById('barTime');
+        const ctx = canvas.getContext('2d');
+        const width = canvas.width = canvas.offsetWidth;
+        const height = canvas.height;
+        ctx.clearRect(0, 0, width, height);
+
+        const data = learningTime.slice(0, 5);
+        renderBarLegend(data);
+        const max = Math.max(...data.map(d => d.last7DaysSeconds || 0), 1);
+        const chartPadding = 50;
+        const axisY = height - chartPadding;
+        const barGap = 24;
+        const barWidth = Math.min(60, (width - chartPadding * 2) / (data.length || 1) - barGap);
+
+        ctx.strokeStyle = 'rgba(255,255,255,0.08)';
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(chartPadding - 10, axisY);
+        ctx.lineTo(width - chartPadding + 20, axisY);
+        ctx.stroke();
+        ctx.font = '11px "Space Grotesk","Noto Sans SC"';
+        ctx.fillStyle = 'rgba(255,255,255,0.5)';
+        ctx.textAlign = 'left';
+        ctx.fillText('时间（min）', chartPadding - 10, chartPadding - 15);
+        ctx.textAlign = 'right';
+        ctx.fillText('近7日累计', width - chartPadding + 20, chartPadding - 15);
+        ctx.textAlign = 'right';
+        ctx.textBaseline = 'middle';
+        const ticks = 4;
+        [...Array(ticks)].forEach((_, idx) => {
+            const value = max / ticks * idx;
+            const yPos = axisY - (height - chartPadding * 2) * (value / max);
+            ctx.strokeStyle = 'rgba(255,255,255,0.05)';
+            ctx.beginPath();
+            ctx.moveTo(chartPadding - 10, yPos);
+            ctx.lineTo(width - chartPadding + 20, yPos);
+            ctx.stroke();
+            ctx.fillStyle = 'rgba(255,255,255,0.45)';
+            ctx.fillText(`${Math.round(value / 60)}h`, chartPadding - 15, yPos);
+        });
+
+        const wrapLabel = (text, maxPerLine = 4) => {
+            if (!text) return ['未标记'];
+            const lines = [];
+            let buffer = '';
+            Array.from(text).forEach(char => {
+                buffer += char;
+                if (buffer.length >= maxPerLine) {
+                    lines.push(buffer);
+                    buffer = '';
+                }
+            });
+            if (buffer) lines.push(buffer);
+            return lines;
+        };
+
+        data.forEach((item, index) => {
+            const value = item.last7DaysSeconds || 0;
+            const barHeight = value / max * (height - chartPadding * 2);
+            const x = chartPadding + index * (barWidth + barGap);
+            const y = axisY - barHeight;
+            const gradient = ctx.createLinearGradient(0, y, 0, axisY);
+            const primaryColor = state.barLegendColors[index % state.barLegendColors.length];
+            gradient.addColorStop(0, primaryColor);
+            gradient.addColorStop(1, 'rgba(255,255,255,0.05)');
+            ctx.fillStyle = gradient;
+            ctx.fillRect(x, y, barWidth, barHeight);
+
+            const labelLines = wrapLabel(formatScene(item.scene), 4);
+            ctx.save();
+            ctx.font = '12px "Space Grotesk","Noto Sans SC",sans-serif';
+            ctx.fillStyle = 'rgba(244,247,255,0.82)';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'top';
+            const centerX = x + barWidth / 2;
+            labelLines.forEach((line, idx) => {
+                ctx.fillText(line, centerX, axisY + 8 + idx * 16);
+            });
+            ctx.restore();
+        });
+    }
+
+    function drawPie(learningTime = []) {
+        if (!pieCanvas) return;
+        const ctx = pieCanvas.getContext('2d');
+        const width = pieCanvas.width = pieCanvas.offsetWidth;
+        const height = pieCanvas.height;
+        ctx.clearRect(0, 0, width, height);
+        const entries = learningTime.filter(item => (item.totalSeconds || 0) > 0).slice(0, 5);
+        if (!entries.length) {
+            state.pieSlices = [];
+            hidePieTooltip();
+            return;
+        }
+        const sum = entries.reduce((acc, item) => acc + (item.totalSeconds || 0), 0) || 1;
+        let startAngle = -Math.PI / 2;
+        const radius = Math.min(width, height) / 2 - 20;
+        const colors = ['#7d74ff','#5be4ff','#8dd0ff','#ffc857','#ff8b8b'];
+        const slices = [];
+        entries.forEach((item, idx) => {
+            const value = item.totalSeconds || 0;
+            const sliceAngle = value / sum * Math.PI * 2;
+            if (!sliceAngle) return;
+            const scene = formatScene(item.scene);
+            ctx.beginPath();
+            ctx.moveTo(width / 2, height / 2);
+            ctx.arc(width / 2, height / 2, radius, startAngle, startAngle + sliceAngle);
+            ctx.closePath();
+            const color = colors[idx % colors.length];
+            ctx.fillStyle = color;
+            ctx.fill();
+            slices.push({
+                scene,
+                seconds: value,
+                percent: Math.round(value / sum * 100),
+                start: startAngle,
+                end: startAngle + sliceAngle,
+                color
+            });
+            startAngle += sliceAngle;
+        });
+        state.pieSlices = slices;
+        state.pieCenter = { x: width / 2, y: height / 2, radius };
+    }
+
+    function normalizePieAngle(angle) {
+        return angle < -Math.PI / 2 ? angle + Math.PI * 2 : angle;
+    }
+
+    function hidePieTooltip() {
+        if (!pieTooltip) return;
+        pieTooltip.classList.remove('visible');
+    }
+
+    function handlePieHover(event) {
+        if (!pieCanvas || !pieTooltip || !state.pieSlices.length || !state.pieCenter) {
+            hidePieTooltip();
+            return;
+        }
+        const { x: centerX, y: centerY, radius } = state.pieCenter;
+        const canvasRect = pieCanvas.getBoundingClientRect();
+        const parentRect = pieCanvas.parentElement.getBoundingClientRect();
+        const x = event.clientX - canvasRect.left;
+        const y = event.clientY - canvasRect.top;
+        const dx = x - centerX;
+        const dy = y - centerY;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+        if (distance > radius || distance < 12) {
+            hidePieTooltip();
+            return;
+        }
+        let angle = Math.atan2(dy, dx);
+        angle = normalizePieAngle(angle);
+        const matched = state.pieSlices.find(slice => {
+            const start = normalizePieAngle(slice.start);
+            const end = normalizePieAngle(slice.end);
+            if (start <= end) {
+                return angle >= start && angle <= end;
+            }
+            return angle >= start || angle <= end;
+        });
+        if (!matched) {
+            hidePieTooltip();
+            return;
+        }
+        pieTooltip.innerHTML = `<strong>${matched.scene}</strong><br>${formatDuration(matched.seconds)} · ${matched.percent}%`;
+        pieTooltip.style.left = `${event.clientX - parentRect.left}px`;
+        pieTooltip.style.top = `${event.clientY - parentRect.top}px`;
+        pieTooltip.classList.add('visible');
+    }
+
+    function setupPieHover() {
+        if (!pieCanvas) return;
+        pieCanvas.addEventListener('mousemove', handlePieHover);
+        pieCanvas.addEventListener('mouseleave', hidePieTooltip);
+    }
+
+    async function loadData() {
+        try {
+            document.getElementById('updatedAt').textContent = '数据刷新中...';
+            const dashboard = await fetchDashboard();
+            state.dashboard = dashboard;
+            renderOverview(dashboard);
+            updateRangePanel(dashboard.learningTime || [], '7d');
+            renderScenes(dashboard.learningTime || []);
+            renderRecent(dashboard);
+            drawBar(dashboard.learningTime || []);
+            drawPie(dashboard.learningTime || []);
+        } catch (err) {
+            console.error(err);
+            alert(err.message || '加载学习洞察失败');
+        }
+    }
+
+    function navigateAction(path) {
+        window.location.href = path;
+    }
+
+    function updateRangePanel(learningTime, rangeKey) {
+        const ranges = {
+            '3d': { label: '近3天', days: 3 },
+            '7d': { label: '近7天', days: 7 },
+            '30d': { label: '近30天', days: 30 },
+            '365d': { label: '近一年', days: 365 }
+        };
+        const range = ranges[rangeKey] || ranges['7d'];
+        const seconds = learningTime.reduce((acc, item) => {
+            if (!item || !item.scene) return acc;
+            const value = rangeKey === '365d'
+                ? (item.totalSeconds || 0)
+                : rangeKey === '30d'
+                    ? (item.last30DaysSeconds || item.last7DaysSeconds || 0)
+                    : rangeKey === '7d'
+                        ? (item.last7DaysSeconds || 0)
+                        : (item.last3DaysSeconds || (item.last7DaysSeconds || 0) / 2);
+            acc.total += value;
+            acc.breakdown.push({ scene: formatScene(item.scene), seconds: value });
+            return acc;
+        }, { total: 0, breakdown: [] });
+
+        const average = seconds.total / range.days;
+        document.getElementById('rangeTitle').textContent = `${range.label}总时长`;
+        document.getElementById('rangeTotalValue').textContent = formatDuration(seconds.total);
+        document.getElementById('rangeAvgValue').textContent = `日均 ${formatDuration(Math.round(average))}`;
+
+        const list = document.getElementById('rangeBreakdown');
+        if (rangeHighlightEl) {
+            if (!seconds.breakdown.length) {
+                rangeHighlightEl.textContent = '暂无场景拆解数据';
+            } else {
+                const topScene = seconds.breakdown.sort((a, b) => b.seconds - a.seconds)[0];
+                rangeHighlightEl.textContent = `当前投入最多：${topScene.scene} · ${formatDuration(topScene.seconds)}`;
+            }
+        }
+    }
+
+    document.getElementById('refreshBtn').addEventListener('click', () => {
+        const currentRange = document.querySelector('.range-tab.active')?.dataset.range || '7d';
+        loadData().then(() => updateRangePanel(state.dashboard?.learningTime || [], currentRange));
+    });
+    document.getElementById('backBtn').addEventListener('click', () => navigateAction('/index.html?focus=core'));
+    document.getElementById('manageBooksBtn').addEventListener('click', () => navigateAction('/allbook'));
+    document.getElementById('rangeTabs').addEventListener('click', (event) => {
+        const button = event.target.closest('.range-tab');
+        if (!button) return;
+        document.querySelectorAll('.range-tab').forEach(tab => tab.classList.remove('active'));
+        button.classList.add('active');
+        updateRangePanel(state.dashboard?.learningTime || [], button.dataset.range);
+    });
+    setupPieHover();
+    document.addEventListener('DOMContentLoaded', () => loadData());
+</script>
+</body>
+</html>

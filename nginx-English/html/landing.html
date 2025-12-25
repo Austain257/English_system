@@ -371,7 +371,7 @@
         }
     </style>
 </head>
-<body data-redirect-if-authed="true">
+<body>
     <header>
         <div class="brand">
             <div class="brand-logo"><i class="fas fa-graduation-cap"></i></div>
@@ -380,14 +380,18 @@
                 <small style="opacity:0.8;">AI赋能 · 多角色协同学习</small>
             </div>
         </div>
-        <nav>
+        <nav data-guest-only="true">
             <a href="#feature">核心特色</a>
             <a href="#steps">学习流程</a>
             <a href="#cta">立即加入</a>
         </nav>
-        <div class="cta-group">
+        <div class="cta-group" data-guest-only="true">
             <a class="btn" href="/register">注册</a>
             <a class="btn btn-primary" href="/login">登录</a>
+        </div>
+        <div class="cta-group" data-authed-only="true" style="display:none;">
+            <a class="btn btn-primary" href="/index.html?focus=core">进入学习工作台</a>
+            <a class="btn" href="/allbook">继续学习</a>
         </div>
     </header>
 
@@ -396,9 +400,13 @@
             <h2>一站式英语学习生态，
                 让每一次复习都有数据撑腰</h2>
             <p>从课本选择到错词巩固、AI听写、沉浸式听说训练——所有学习场景都在同一平台下联动。登录后，将自动同步个人笔记、错词和学习曲线。</p>
-            <div class="cta-group">
+            <div class="cta-group" data-guest-only="true">
                 <a class="btn btn-primary" href="/login">进入个人学习空间</a>
                 <a class="btn" href="/register">创建新账户</a>
+            </div>
+            <div class="cta-group" data-authed-only="true" style="display:none;">
+                <a class="btn btn-primary" href="/index.html?focus=core">前往学习工作台</a>
+                <a class="btn" href="/allbook">继续上次学习</a>
             </div>
             <div class="stats">
                 <div class="stat-card">
@@ -496,18 +504,41 @@
     </section>
 
     <section id="cta" class="cta">
-        <h3>准备好让英语学习全程可视、可控了吗？</h3>
-        <p>立即登录，把散落在不同设备与软件中的词汇、进度收拢到一个空间。</p>
-        <div class="cta-group" style="justify-content:center;">
+        <h3 data-guest-only="true">准备好让英语学习全程可视、可控了吗？</h3>
+        <h3 data-authed-only="true" style="display:none;">继续巩固你的学习进度吧</h3>
+
+        <p data-guest-only="true">立即登录，把散落在不同设备与软件中的词汇、进度收拢到一个空间。</p>
+        <p data-authed-only="true" style="display:none;">已为你保留上次的任务与词书，随时返回学习工作台或继续核心学习。</p>
+
+        <div class="cta-group" style="justify-content:center;" data-guest-only="true">
             <a class="btn btn-primary" href="/login">已有账号 · 登录</a>
             <a class="btn" href="/register">我是新用户 · 注册</a>
+        </div>
+        <div class="cta-group" style="justify-content:center; display:none;" data-authed-only="true">
+            <a class="btn btn-primary" href="/index.html?focus=core">进入学习工作台</a>
+            <a class="btn" href="/allbook">继续核心学习</a>
         </div>
     </section>
 
     <footer>
-        <p>© 2025 英语智学平台 · 多角色协作学习系统. 未登录用户仅能预览此页。</p>
+        <p data-guest-only="true">© 2025 英语智学平台 · 多角色协作学习系统. 未登录用户仅能预览此页。</p>
+        <p data-authed-only="true" style="display:none;">© 2025 英语智学平台 · 多角色协作学习系统. 欢迎回来，已为你保留学习进度。</p>
     </footer>
 
     <script src="/assets/js/auth-guard.js"></script>
+    <script>
+        (function() {
+            const token = localStorage.getItem('auth_token');
+            const guestNodes = document.querySelectorAll('[data-guest-only="true"]');
+            const authedNodes = document.querySelectorAll('[data-authed-only="true"]');
+            if (token) {
+                guestNodes.forEach(el => el.style.display = 'none');
+                authedNodes.forEach(el => el.style.display = '');
+            } else {
+                guestNodes.forEach(el => el.style.display = '');
+                authedNodes.forEach(el => el.style.display = 'none');
+            }
+        })();
+    </script>
 </body>
 </html>

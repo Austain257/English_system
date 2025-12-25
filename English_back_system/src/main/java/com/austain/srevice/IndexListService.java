@@ -8,4 +8,6 @@ public interface IndexListService {
     List<UserBook> getUserBooks(Long userId, boolean isAdmin);
 
     Result checkBookExist(Long userId, boolean isAdmin, String bookName);
+
+    UserBook findBook(Long userId, boolean isAdmin, Long bookId, String bookName);
 }

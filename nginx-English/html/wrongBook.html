@@ -12,7 +12,7 @@
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        
+
         body {
             background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
             min-height: 100vh;
@@ -656,7 +656,7 @@
         }
     </style>
 </head>
-<body data-require-auth="true">
+<body data-require-auth="true" data-track-scene="WRONG_WORD" data-track-source="web_wrong_book">
     <div class="container">
         <div class="header">
             <h1><i class="fas fa-book-open"></i> 智能错词本</h1>
@@ -764,9 +764,28 @@
         </div>
     </div>
 
+    <script src="/assets/js/learning-tracker.js"></script>
     <script>
         const API_BASE = 'http://localhost:8080';
         const STUDY_BATCH_SIZE = 8;
+        const TRACKER_SCENE = 'WRONG_WORD';
+        const TRACKER_SOURCE = 'web_wrong_book';
+        let trackerActive = false;
+
+        function ensureTrackerStarted() {
+            if (trackerActive || !window.LearningTracker) return;
+            window.LearningTracker.trackPageSession({
+                scene: TRACKER_SCENE,
+                source: TRACKER_SOURCE
+            });
+            trackerActive = true;
+        }
+
+        function endTrackerSession() {
+            if (!trackerActive || !window.LearningTracker) return;
+            window.LearningTracker.endSession();
+            trackerActive = false;
+        }
         let allWords = [];
         let currentFilter = { book: 'all', times: 0 };
         let studyWords = [];
@@ -774,6 +793,28 @@
         let studyStats = { completed: 0, known: 0, unknown: 0 };
         let meaningRevealed = false;
         const paginationState = { currentPage: 1, pageSize: 9, totalPages: 1, total: 0 };
+
+        function recordWordMastery(word, mastered = true) {
+            if (!window.LearningTracker || !word) return;
+            const bookName = word.bookname || document.body.dataset.bookName || '错词本';
+            LearningTracker.setBookContext({
+                bookName,
+                wordBank: bookName,
+                bookId: word.bookId
+            });
+            const payload = {
+                wordId: word.id,
+                wordText: word.word,
+                bookName,
+                wordBank: bookName,
+                proficiencyScore: mastered ? 100 : 40,
+                mastered
+            };
+            const runner = mastered ? LearningTracker.markMastery(payload) : LearningTracker.regressMastery(payload);
+            if (runner && typeof runner.catch === 'function') {
+                runner.catch(err => console.warn('掌握状态上报失败', err));
+            }
+        }
         
         // 页面加载时初始化
         document.addEventListener('DOMContentLoaded', function() {
@@ -801,6 +842,26 @@
                 currentFilter.times = parseInt(this.value);
                 loadWords(true);
             });
+        }
+
+        function updateStats(serverData) {
+            const totalEl = document.getElementById('totalCount');
+            const frequentEl = document.getElementById('frequentCount');
+            const bookEl = document.getElementById('bookCount');
+            const todayEl = document.getElementById('todayCount');
+
+            if (serverData) {
+                totalEl.textContent = serverData.total ?? 0;
+                frequentEl.textContent = serverData.frequentCount ?? 0;
+                bookEl.textContent = serverData.bookCount ?? 0;
+                todayEl.textContent = serverData.todayCount ?? 0;
+                return;
+            }
+
+            totalEl.textContent = paginationState.total ?? 0;
+            if (frequentEl && frequentEl.textContent === '') frequentEl.textContent = '0';
+            if (bookEl && bookEl.textContent === '') bookEl.textContent = '0';
+            if (todayEl && todayEl.textContent === '') todayEl.textContent = '0';
         }
         
         // 加载课本列表
@@ -909,7 +970,7 @@
                         <button class="action-btn practice" onclick="practiceWord(${word.id}, '${word.word}')">
                             <i class="fas fa-play"></i> 我不会
                         </button>
-                        <button class="action-btn remove" onclick="removeWord(${word.id}, '${word.word}')">
+                        <button class="action-btn remove" data-remove-btn="${word.id}" onclick="scheduleRemove(${word.id}, '${word.word}', '${word.bookname || ''}')">
                             <i class="fas fa-trash"></i> 小意思
                         </button>
                     </div>
@@ -951,33 +1012,98 @@
             });
         }
         
-        // 更新统计信息
-        function updateStats(serverData) {
-            if (serverData) {
-                document.getElementById('totalCount').textContent = serverData.total ?? 0;
-                document.getElementById('frequentCount').textContent = serverData.frequentCount ?? 0;
-                document.getElementById('bookCount').textContent = serverData.bookCount ?? 0;
-                document.getElementById('todayCount').textContent = serverData.todayCount ?? 0;
-                return;
+        function filterWords() {
+            const hasWords = Array.isArray(allWords) && allWords.length > 0;
+            if (!hasWords) {
+                if (paginationState.currentPage > 1) {
+                    paginationState.currentPage = Math.max(1, paginationState.currentPage - 1);
+                    loadWords();
+                    return;
+                }
+                displayWords([], true);
+            } else {
+                displayWords(allWords, false);
             }
-            document.getElementById('totalCount').textContent = paginationState.total;
+            renderPagination(paginationState.total);
         }
         
-        // 删除单词
-        async function removeWord(id, word) {
-            if (!confirm(`确定要删除单词 "${word}" 吗？`)) {
+        // 延时删除队列
+        const pendingRemovals = new Map();
+        
+        function scheduleRemove(id, word, bookname = '') {
+            // 已处于待删除，则本次点击视为撤销
+            if (pendingRemovals.has(id)) {
+                cancelPendingRemoval(id);
                 return;
             }
-            
+            const btn = document.querySelector(`[data-remove-btn="${id}"]`);
+            if (btn) {
+                btn.classList.add('undo-state');
+                btn.innerHTML = '<i class="fas fa-undo"></i> 撤销';
+            }
+            const timer = setTimeout(() => {
+                pendingRemovals.delete(id);
+                performRemove(id, word, bookname);
+            }, 5000);
+            pendingRemovals.set(id, { timer, word, bookname });
+        }
+        
+        function cancelPendingRemoval(id) {
+            const pending = pendingRemovals.get(id);
+            if (!pending) return false;
+            clearTimeout(pending.timer);
+            pendingRemovals.delete(id);
+            restoreRemoveButton(id);
+            showToast('已取消删除');
+            return true;
+        }
+        
+        function restoreRemoveButton(id) {
+            const btn = document.querySelector(`[data-remove-btn="${id}"]`);
+            if (btn) {
+                btn.classList.remove('undo-state');
+                btn.innerHTML = '<i class="fas fa-trash"></i> 小意思';
+            }
+        }
+        
+        // 删除单词（最终执行）
+        async function performRemove(id, word, bookname = '') {
             try {
+                await markMasteredBeforeRemove(id, word, bookname);
                 await sendRemoveWordRequest(id, word);
                 allWords = allWords.filter(w => String(w.id) !== String(id));
+                if (paginationState.total > 0) {
+                    paginationState.total -= 1;
+                }
                 filterWords();
                 updateStats();
-                alert('删除成功！');
+                showToast('删除成功');
             } catch (error) {
                 console.error('删除失败:', error);
-                alert(error.message || '删除失败，请重试');
+                showToast(error.message || '删除失败，请重试');
+            } finally {
+                restoreRemoveButton(id);
+            }
+        }
+        
+        // 删除前标记为已掌握，方便从错词本同步移除掌握状态
+        async function markMasteredBeforeRemove(id, word, bookname = '') {
+            const tracker = window.LearningTracker;
+            if (!tracker) return;
+            const bookNameSafe = bookname || document.body.dataset.bookName || '错词本';
+            tracker.setBookContext({ bookName: bookNameSafe, wordBank: bookNameSafe });
+            const payload = {
+                wordId: id,
+                wordText: word,
+                bookName: bookNameSafe,
+                wordBank: bookNameSafe,
+                proficiencyScore: 95,
+                mastered: true
+            };
+            try {
+                await tracker.markMastery(payload);
+            } catch (err) {
+                console.warn('标记已掌握失败，继续删除流程', err);
             }
         }
         
@@ -1067,6 +1193,7 @@
         
         // 开始学习模式
         function startPractice() {
+            ensureTrackerStarted();
             startStudySession();
         }
         
@@ -1131,10 +1258,14 @@
                 try {
                     await sendRemoveWordRequest(current.id, current.word);
                     allWords = allWords.filter(w => String(w.id) !== String(current.id));
+                    if (paginationState.total > 0) {
+                        paginationState.total -= 1;
+                    }
                     studyStats.known += 1;
                     removedCurrentWord = true;
                     filterWords();
                     updateStats();
+                    recordWordMastery(current, true);
                 } catch (error) {
                     console.error('记住单词后删除失败:', error);
                     alert(error.message || '从错词本移除失败，请稍后重试');
@@ -1148,6 +1279,7 @@
                     if (wordObj) {
                         wordObj.times = (wordObj.times || 1) + 1;
                     }
+                    recordWordMastery(current, false);
                 } catch (error) {
                     console.error(error);
                     alert('记录失败，请稍后再试');
@@ -1204,6 +1336,7 @@
             document.getElementById('studyEmpty').style.display = 'none';
             document.getElementById('revealButton').style.display = 'inline-flex';
             document.getElementById('studyMeaning').style.display = 'none';
+            endTrackerSession();
         }
         
         function shuffleArray(arr) {

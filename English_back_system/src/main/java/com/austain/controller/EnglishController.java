@@ -77,9 +77,17 @@ public class EnglishController {
 
     @GetMapping("/worddictation")
     public Result getDictationList(@RequestParam(value = "start") String start,
-                                   @RequestParam(value = "end") String end){
-        List<Englishs> dactationList = englishService.getEnglishList(start,end,"englishword575");
-        return Result.success(dactationList);
+                                   @RequestParam(value = "end") String end,
+                                   @RequestParam(value = "bookname") String bookname){
+        if (bookname == null || bookname.trim().isEmpty()) {
+            return Result.error("缺少课本名称");
+        }
+        // 简单表名校验，避免非法字符
+        if (!bookname.matches("[a-zA-Z0-9_]+")) {
+            return Result.error("课本名称不合法");
+        }
+        List<Englishs> dictationList = englishService.getEnglishList(start, end, bookname);
+        return Result.success(dictationList);
     }
 
     // 错词本相关接口

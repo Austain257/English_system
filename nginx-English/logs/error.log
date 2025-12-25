@@ -68,3 +68,22 @@
 2025/12/24 15:46:55 [error] 9728#18680: *29 CreateFile() "D:\develop\code-file\GitHub\English_system\nginx-English/html/index" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /index HTTP/1.1", host: "localhost", referrer: "http://localhost/profile/"
 2025/12/24 20:44:54 [notice] 15628#32108: signal process started
 2025/12/24 21:41:28 [notice] 4880#16352: signal process started
+2025/12/24 23:23:27 [notice] 20124#30912: signal process started
+2025/12/24 23:23:27 [error] 20124#30912: OpenEvent("Global\ngx_stop_17536") failed (2: The system cannot find the file specified)
+2025/12/25 12:09:02 [notice] 21460#2452: signal process started
+2025/12/25 16:22:03 [notice] 23360#5000: signal process started
+2025/12/25 16:22:03 [error] 23360#5000: CreateFile() "D:\develop\code-file\GitHub\English_system\nginx-English/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2025/12/25 17:34:34 [notice] 25820#17668: signal process started
+2025/12/25 20:59:19 [notice] 31616#22248: signal process started
+2025/12/25 21:02:03 [notice] 32252#19932: signal process started
+2025/12/25 21:02:03 [error] 32252#19932: CreateFile() "D:\develop\code-file\GitHub\English_system\nginx-English/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2025/12/25 21:02:44 [notice] 16908#30020: signal process started
+2025/12/25 21:02:44 [error] 16908#30020: CreateFile() "D:\develop\code-file\GitHub\English_system\nginx-English/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2025/12/25 21:03:26 [notice] 25848#10096: signal process started
+2025/12/25 21:03:26 [error] 25848#10096: CreateFile() "D:\develop\code-file\GitHub\English_system\nginx-English/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2025/12/25 21:03:57 [notice] 29524#23576: signal process started
+2025/12/25 21:03:57 [error] 29524#23576: CreateFile() "D:\develop\code-file\GitHub\English_system\nginx-English/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2025/12/25 21:03:57 [notice] 2996#31868: signal process started
+2025/12/25 21:03:57 [error] 2996#31868: CreateFile() "D:\develop\code-file\GitHub\English_system\nginx-English/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2025/12/25 21:03:58 [notice] 10024#8988: signal process started
+2025/12/25 21:03:58 [error] 10024#8988: CreateFile() "D:\develop\code-file\GitHub\English_system\nginx-English/logs/nginx.pid" failed (2: The system cannot find the file specified)

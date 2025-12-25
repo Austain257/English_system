@@ -124,32 +124,34 @@
 
         .hero {
             margin-top: 40px;
-            padding: 48px clamp(20px, 6vw, 64px);
+            padding: clamp(32px, 5vw, 60px);
             background: linear-gradient(135deg, rgba(125, 116, 255, 0.25), rgba(5, 110, 255, 0.15));
             border-radius: 32px;
             border: 1px solid rgba(255, 255, 255, 0.1);
             position: relative;
             overflow: hidden;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
         }
 
         .hero::after {
             content: "";
             position: absolute;
-            width: 180px;
-            height: 180px;
-            background: radial-gradient(circle, rgba(249, 178, 52, 0.8), transparent 65%);
-            top: -40px;
-            right: -40px;
-            opacity: 0.3;
+            width: 220px;
+            height: 220px;
+            background: radial-gradient(circle, rgba(249, 178, 52, 0.75), transparent 65%);
+            top: -60px;
+            right: -60px;
+            opacity: 0.35;
         }
 
-        .hero h1 {
+        .hero-copy h1 {
             font-size: clamp(2.1rem, 4vw, 3.2rem);
             line-height: 1.2;
-            max-width: 600px;
         }
 
-        .hero p {
+        .hero-copy p {
             color: var(--text-secondary);
             margin-top: 16px;
             max-width: 520px;
@@ -161,6 +163,143 @@
             display: flex;
             flex-wrap: wrap;
             gap: 14px;
+        }
+
+        .hero-visual {
+            position: relative;
+            min-height: 260px;
+            border-radius: 28px;
+            background: linear-gradient(150deg, rgba(9, 25, 60, 0.8), rgba(18, 36, 82, 0.7));
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: inset 0 0 0 1px rgba(255,255,255,0.04);
+            overflow: hidden;
+        }
+
+        .hero-visual canvas {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .hero-visual__content {
+            position: relative;
+            z-index: 1;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .hero-visual__content h3 {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .hero-visual__content .metric {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 16px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .hero-visual__content .metric span {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .hero-visual__content .metric strong {
+            font-size: 1.4rem;
+        }
+
+        .hero-visual__foot {
+            margin-top: auto;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .motivation-card {
+            margin-top: 32px;
+            padding: 24px 26px;
+            border-radius: 28px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: radial-gradient(circle at 12% 20%, rgba(93, 148, 255, 0.18), transparent 60%), rgba(6, 14, 30, 0.9);
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 18px;
+            align-items: center;
+        }
+
+        .motivation-text {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .motivation-label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .motivation-quote {
+            font-size: 1.2rem;
+            font-weight: 600;
+            line-height: 1.6;
+        }
+
+        .motivation-meta {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .motivation-meta .tag {
+            padding: 4px 12px;
+            border-radius: 999px;
+            background: rgba(255,255,255,0.08);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .motivation-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            align-items: flex-end;
+        }
+
+        .btn-refresh {
+            background: transparent;
+            border: 1px solid rgba(255,255,255,0.2);
+            color: var(--text-secondary);
+        }
+
+        .btn-refresh.loading {
+            opacity: 0.6;
+            pointer-events: none;
+        }
+
+        @media (max-width: 640px) {
+            .motivation-card {
+                grid-template-columns: 1fr;
+                align-items: flex-start;
+            }
+
+            .motivation-actions {
+                width: 100%;
+                align-items: flex-start;
+            }
         }
 
         .btn {
@@ -455,7 +594,7 @@
         }
     </style>
 </head>
-<body data-require-auth="true">
+<body data-require-auth="true" data-track-scene="COURSE_SELECT" data-track-source="web_main">
     <div class="page-shell">
         <header class="glass-nav">
             <div class="brand-mark">
@@ -466,7 +605,7 @@
                 </div>
             </div>
             <nav class="nav-links">
-                <a href="/function">学习工作台</a>
+                <a href="/index.html?focus=core">学习工作台</a>
                 <a href="/wrongbook">错词本</a>
                 <a href="/profile">个人中心</a>
             </nav>
@@ -474,11 +613,50 @@
         </header>
 
         <section class="hero">
-            <h1>从一本词书开始，构建你的英语语料宇宙</h1>
-            <p>系统会根据词书词频、难度、练习进度实时生成学习曲线，帮助你保持持续的语言输入与输出效率。</p>
-            <div class="hero-actions">
-                <button id="refreshBooks" class="btn btn-primary"><i class="fas fa-rotate"></i> 同步词书</button>
-                <a class="btn btn-ghost" href="/wrongbook"><i class="fas fa-book-open"></i> 快速复盘错词</a>
+            <div class="hero-copy">
+                <h1>从一本词书开始，构建你的英语语料宇宙</h1>
+                <p>系统会根据词书词频、难度、练习进度实时生成学习曲线，帮助你保持持续的语言输入与输出效率。</p>
+                <div class="hero-actions">
+                    <button id="refreshBooks" class="btn btn-primary"><i class="fas fa-rotate"></i> 同步词书</button>
+                    <a class="btn btn-ghost" href="/wrongbook"><i class="fas fa-book-open"></i> 快速复盘错词</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <canvas id="heroConstellation" aria-hidden="true"></canvas>
+                <div class="hero-visual__content">
+                    <h3>学习体征</h3>
+                    <div class="metric">
+                        <span>词书池</span>
+                        <strong id="metricBooks">--</strong>
+                    </div>
+                    <div class="metric">
+                        <span>已掌握词汇总数</span>
+                        <strong id="metricWords">--</strong>
+                    </div>
+                    <div class="metric">
+                        <span>活跃度</span>
+                        <strong id="metricActivity">--</strong>
+                    </div>
+                    <div class="hero-visual__foot">
+                        <span>学习窗口 07:00 - 23:00</span>
+                        <span>AI 记忆追踪 · 已启用</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="motivation-card" id="motivationCard">
+            <div class="motivation-text">
+                <span class="motivation-label">今日鸡汤</span>
+                <div class="motivation-quote" id="motivationQuote">学习是一个过程，耐心一点，再走一步。</div>
+                <div class="motivation-meta">
+                    <span id="motivationAuthor">—— 系统助手</span>
+                    <span class="tag" id="motivationTag">GENERAL</span>
+                </div>
+            </div>
+            <div class="motivation-actions">
+                <button class="btn btn-refresh" id="refreshQuote"><i class="fas fa-meteor"></i> 换一句</button>
+                <small class="muted" id="motivationHint">灵感来自你的学习数据</small>
             </div>
         </section>
 
@@ -532,10 +710,12 @@
         </footer>
     </div>
 
+    <script src="/assets/js/learning-tracker.js"></script>
     <script>
         const API_BASE = 'http://localhost:8080';
         const state = {
-            books: []
+            books: [],
+            currentBookId: null
         };
 
         function buildAuthHeaders() {
@@ -551,6 +731,8 @@
                 return;
             }
 
+            const urlParams = new URLSearchParams(window.location.search);
+            const presetBookId = urlParams.get('bookId');
             const booksContainer = document.getElementById('booksContainer');
             const emptyState = document.getElementById('emptyState');
             const emptyStateMessage = document.getElementById('emptyStateMessage');
@@ -560,6 +742,14 @@
             const refreshButton = document.getElementById('refreshBooks');
             const searchInput = document.getElementById('bookSearch');
             const levelChips = document.querySelectorAll('.chip-group .chip');
+            const metricBooksEl = document.getElementById('metricBooks');
+            const metricWordsEl = document.getElementById('metricWords');
+            const metricActivityEl = document.getElementById('metricActivity');
+            const motivationQuoteEl = document.getElementById('motivationQuote');
+            const motivationAuthorEl = document.getElementById('motivationAuthor');
+            const motivationTagEl = document.getElementById('motivationTag');
+            const motivationHintEl = document.getElementById('motivationHint');
+            const refreshQuoteBtn = document.getElementById('refreshQuote');
 
             const skeletonMarkup = () => Array.from({ length: 3 }).map(() => '<div class="skeleton-card"></div>').join('');
 
@@ -572,6 +762,55 @@
                 }
             };
 
+            async function loadDashboard(bookId) {
+                try {
+                    const resp = await fetch(`${API_BASE}/learning/dashboard${bookId ? `?bookId=${bookId}` : ''}`, { headers });
+                    if (!resp.ok) throw new Error(`HTTP状态 ${resp.status}`);
+                    const result = await resp.json();
+                    if (result.code !== 1) throw new Error(result.msg || '获取数据失败');
+                    return result.data || {};
+                } catch (e) {
+                    console.error('获取学习概览失败:', e);
+                    return {};
+                }
+            }
+
+            function updateMasteredMetric(dashboard = {}) {
+                const totalMastered = (dashboard.wordMastery || []).reduce((acc, item) => acc + (item.masteredCount || 0), 0);
+                if (metricWordsEl) {
+                    metricWordsEl.textContent = totalMastered ? `${totalMastered}+` : '—';
+                }
+            }
+
+            function renderMotivationQuote(data) {
+                if (!data) return;
+                motivationQuoteEl.textContent = data.content || '坚持就是胜利。';
+                motivationAuthorEl.textContent = data.author ? `—— ${data.author}` : '—— 学习助手';
+                motivationTagEl.textContent = (data.tag || 'General').toUpperCase();
+                motivationHintEl.textContent = '来自平台精选灵感';
+            }
+
+            const setQuoteLoading = (flag) => {
+                refreshQuoteBtn.classList.toggle('loading', flag);
+                refreshQuoteBtn.innerHTML = flag ? '<i class="fas fa-spinner fa-spin"></i> 刷新中' : '<i class="fas fa-meteor"></i> 换一句';
+            };
+
+            async function fetchMotivationQuote() {
+                setQuoteLoading(true);
+                try {
+                    const resp = await fetch(`${API_BASE}/motivation/quote`);
+                    if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+                    const result = await resp.json();
+                    if (result.code !== 1) throw new Error(result.msg || '获取鸡汤文失败');
+                    renderMotivationQuote(result.data);
+                } catch (e) {
+                    console.error('加载鸡汤文失败:', e);
+                    motivationHintEl.textContent = '暂时无法获取鸡汤，稍后再试';
+                } finally {
+                    setQuoteLoading(false);
+                }
+            }
+
             const fetchBooks = () => {
                 setLoading(true);
                 fetch(`${API_BASE}/list`, { headers })
@@ -581,23 +820,25 @@
                         }
                         return response.json();
                     })
-                    .then(data => {
-                        if (data.code !== 1 || !Array.isArray(data.data)) {
-                            throw new Error('服务端返回异常');
+                    .then(async data => {
+                        if (data.code !== 1) {
+                            throw new Error(data.msg || '获取词书失败');
                         }
-                        state.books = data.data;
-                        if (!state.books.length) {
-                            showEmptyState('暂无词书数据，请联系管理员或稍后再试。');
-                            return;
-                        }
-                        updateStats(state.books);
+                        state.books = data.data || [];
                         applyFilters();
+                        updateStats(state.books);
+                        const firstBook = state.books[0];
+                        const defaultBookId = presetBookId || (firstBook ? firstBook.id : null);
+                        state.currentBookId = defaultBookId;
+                        const dashboard = await loadDashboard();
+                        updateMasteredMetric(dashboard);
+                        setLoading(false);
                     })
                     .catch(error => {
-                        console.error('获取词书数据失败:', error);
-                        showEmptyState('数据加载失败，请检查网络或稍后再试。');
-                    })
-                    .finally(() => setLoading(false));
+                        console.error('加载词书失败:', error);
+                        setLoading(false);
+                        alert(error.message || '加载词书失败');
+                    });
             };
 
             const getWordCount = (book) => {
@@ -609,8 +850,8 @@
             const getDifficultyKey = (book) => {
                 const count = getWordCount(book);
                 if (!count) return 'balanced';
-                if (count > 500) return 'advanced';
-                if (count > 300) return 'intermediate';
+                if (count > 1000) return 'advanced';
+                if (count > 500) return 'intermediate';
                 return 'starter';
             };
 
@@ -629,8 +870,24 @@
 
             const formatDate = (date) => `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
 
+            const updateHeroMetrics = (bookCount, latestDate) => {
+                if (metricBooksEl) {
+                    metricBooksEl.textContent = bookCount || '--';
+                }
+                if (metricActivityEl) {
+                    if (!latestDate) {
+                        metricActivityEl.textContent = '72%';
+                        return;
+                    }
+                    const dayGap = Math.max(0, (Date.now() - latestDate.getTime()) / 86_400_000);
+                    const activityScore = Math.max(24, Math.min(96, Math.round(96 - dayGap * 12)));
+                    metricActivityEl.textContent = `${activityScore}%`;
+                }
+            };
+
             const updateStats = (books) => {
-                totalBooksEl.textContent = books.length;
+                const bookCount = books.length;
+                totalBooksEl.textContent = bookCount;
                 const wordSum = books.reduce((sum, book) => sum + (getWordCount(book) || 0), 0);
                 totalWordsEl.textContent = wordSum ? `${wordSum}+` : '—';
                 const latest = books.reduce((latestDate, book) => {
@@ -638,6 +895,7 @@
                     return current && (!latestDate || current > latestDate) ? current : latestDate;
                 }, null);
                 lastUpdatedEl.textContent = latest ? formatDate(latest) : '刚刚';
+                updateHeroMetrics(bookCount, latest);
             };
 
             const showEmptyState = (message) => {
@@ -684,7 +942,8 @@
                     card.className = 'book-card';
                     card.setAttribute('role', 'button');
                     card.setAttribute('tabindex', '0');
-                    card.addEventListener('click', () => {
+                    card.addEventListener('click', async () => {
+                        state.currentBookId = book.id || null;
                         window.location.href = `/function?bookname=${encodeURIComponent(name)}`;
                     });
 
@@ -746,6 +1005,66 @@
                 });
             };
 
+            const startConstellation = () => {
+                const canvas = document.getElementById('heroConstellation');
+                if (!canvas) return;
+                const ctx = canvas.getContext('2d');
+                let width = 0;
+                let height = 0;
+                let particles = [];
+
+                const initParticles = () => {
+                    particles = Array.from({ length: 22 }).map(() => ({
+                        x: Math.random() * width,
+                        y: Math.random() * height,
+                        vx: (Math.random() - 0.5) * 0.25,
+                        vy: (Math.random() - 0.5) * 0.25,
+                        size: Math.random() * 2 + 0.6
+                    }));
+                };
+
+                const resize = () => {
+                    width = canvas.clientWidth;
+                    height = canvas.clientHeight;
+                    canvas.width = width;
+                    canvas.height = height;
+                    initParticles();
+                };
+
+                const draw = () => {
+                    ctx.clearRect(0, 0, width, height);
+                    particles.forEach((p, idx) => {
+                        p.x += p.vx;
+                        p.y += p.vy;
+                        if (p.x < 0 || p.x > width) p.vx *= -1;
+                        if (p.y < 0 || p.y > height) p.vy *= -1;
+
+                        ctx.beginPath();
+                        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                        ctx.fillStyle = 'rgba(255,255,255,0.75)';
+                        ctx.fill();
+
+                        for (let j = idx + 1; j < particles.length; j += 1) {
+                            const p2 = particles[j];
+                            const dist = Math.hypot(p.x - p2.x, p.y - p2.y);
+                            if (dist < 120) {
+                                ctx.strokeStyle = `rgba(125, 165, 255, ${1 - dist / 120})`;
+                                ctx.lineWidth = 0.5;
+                                ctx.beginPath();
+                                ctx.moveTo(p.x, p.y);
+                                ctx.lineTo(p2.x, p2.y);
+                                ctx.stroke();
+                            }
+                        }
+                    });
+                    requestAnimationFrame(draw);
+                };
+
+                resize();
+                window.addEventListener('resize', resize);
+                draw();
+            };
+
             refreshButton.addEventListener('click', fetchBooks);
             searchInput.addEventListener('input', () => applyFilters());
             levelChips.forEach(chip => {
@@ -755,8 +1074,11 @@
                     applyFilters();
                 });
             });
+            refreshQuoteBtn.addEventListener('click', fetchMotivationQuote);
 
             fetchBooks();
+            fetchMotivationQuote();
+            startConstellation();
         });
     </script>
 

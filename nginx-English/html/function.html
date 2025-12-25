@@ -65,6 +65,8 @@
             background: rgba(10, 16, 38, 0.8);
             border: 1px solid rgba(255, 255, 255, 0.08);
             backdrop-filter: blur(16px);
+            position: relative;
+            z-index: 40;
         }
 
         .brand {
@@ -115,6 +117,11 @@
 
         .user-info-slot {
             min-width: 240px;
+            display: flex;
+            justify-content: flex-end;
+            position: relative;
+            z-index: 60;
+            overflow: visible;
         }
 
         .dashboard {
@@ -193,6 +200,10 @@
             display: flex;
             flex-direction: column;
             gap: 18px;
+            background: linear-gradient(135deg, rgba(125, 116, 255, 0.18), rgba(91, 228, 255, 0.12));
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 24px;
+            padding: 28px;
         }
 
         .book-label {
@@ -218,6 +229,51 @@
             margin-top: auto;
             display: flex;
             gap: 12px;
+        }
+
+        .book-mastery {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 16px;
+            background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(125,116,255,0.18));
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 18px;
+            margin-top: 6px;
+        }
+
+        .book-mastery .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 12px;
+            background: rgba(255,255,255,0.14);
+            color: var(--text);
+            border-radius: 12px;
+            font-size: 0.88rem;
+            font-weight: 600;
+        }
+
+        .book-mastery .badge i {
+            color: #7d74ff;
+        }
+
+        .book-mastery .mastery-meta {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .book-mastery .mastery-meta small {
+            color: var(--text-sub);
+            font-size: 0.9rem;
+        }
+
+        .book-mastery .mastery-value {
+            font-size: 2.2rem;
+            font-weight: 800;
+            letter-spacing: 0.5px;
         }
 
         .btn-primary,
@@ -453,7 +509,7 @@
                 </div>
             </div>
             <nav class="nav-links">
-                <a href="/function">功能总览</a>
+                <a href="/index.html?focus=core">功能总览</a>
                 <a href="/wrongbook">错词本</a>
                 <a href="/profile">个人中心</a>
             </nav>
@@ -480,6 +536,14 @@
                     <div class="book-meta">
                         <span id="bookSummary">系统正在检查课本信息</span>
                         <span id="bookProgress">——</span>
+                    </div>
+                    <div class="book-mastery">
+                        <div class="badge"><i class="fas fa-sun"></i> 掌握进度</div>
+                        <div class="mastery-meta">
+                            <strong>已掌握词汇</strong>
+                            <small>当前课本</small>
+                        </div>
+                        <div class="mastery-value" id="bookMasteredCount">--</div>
                     </div>
                     <div class="book-cta">
                         <button class="btn-primary" onclick="startLearning()">
@@ -538,6 +602,10 @@
 
     <script>
         const API_BASE = 'http://localhost:8080';
+        const state = {
+            bookId: null,
+            bookName: null
+        };
 
         function buildAuthHeaders() {
             const token = localStorage.getItem('auth_token');
@@ -565,6 +633,7 @@
             const bookNameElement = document.getElementById('bookName');
             const summaryEl = document.getElementById('bookSummary');
             const progressEl = document.getElementById('bookProgress');
+            const masteryEl = document.getElementById('bookMasteredCount');
             const functionsContainer = document.getElementById('functionsContainer');
             
             if (!bookName || bookName === 'null') {
@@ -575,6 +644,7 @@
             }
             
             bookNameElement.textContent = bookName;
+            state.bookName = bookName;
             summaryEl.textContent = '系统正在验证课本可用性...';
             
             const headers = buildAuthHeaders();
@@ -600,8 +670,11 @@
                         return;
                     }
                     
+                    const bookInfo = data.data;
+                    state.bookId = bookInfo?.id || null;
                     summaryEl.textContent = '课本验证成功，推荐完成 1~2 轮基础练习后进入挑战模式';
                     progressEl.textContent = '建议流程：背诵 → 练习 → 错词巩固';
+                    loadMasteredCount(state.bookId, masteryEl);
                     renderFunctionCards(bookName);
                 })
                 .catch(error => {
@@ -610,6 +683,25 @@
                     functionsContainer.innerHTML = '<div class="error">错误：无法验证课本，请检查网络连接或重新登录</div>';
                 });
         });
+
+        async function loadMasteredCount(bookId, targetEl) {
+            if (!targetEl) return;
+            try {
+                const headers = buildAuthHeaders();
+                if (!headers.Authorization) return;
+                const url = `${API_BASE}/learning/dashboard${bookId ? `?bookId=${bookId}` : ''}`;
+                const resp = await fetch(url, { headers });
+                if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+                const result = await resp.json();
+                if (result.code !== 1) throw new Error(result.msg || '获取掌握数失败');
+                const mastery = result.data?.wordMastery || [];
+                const masteredCount = mastery.reduce((acc, item) => acc + (item.masteredCount || 0), 0);
+                targetEl.textContent = masteredCount.toString();
+            } catch (err) {
+                console.error('加载掌握数量失败:', err);
+                targetEl.textContent = '--';
+            }
+        }
         
         function renderFunctionCards(bookName) {
             const functionsContainer = document.getElementById('functionsContainer');
@@ -635,6 +727,15 @@
                 },
                 {
                     id: 3,
+                    title: '单词听写',
+                    description: '听写当前课本单词，正确才计入掌握',
+                    icon: '<i class="fas fa-pen-fancy"></i>',
+                    iconClass: 'icon-3',
+                    page: 'worddictation.html',
+                    meta: '仅当前课本'
+                },
+                {
+                    id: 4,
                     title: '单词大冒险',
                     description: '通过选择题形式巩固单词记忆',
                     icon: '<i class="fas fa-list-check"></i>',
@@ -643,7 +744,7 @@
                     meta: '适合查漏补缺'
                 },
                 {
-                    id: 4,
+                    id: 5,
                     title: '单词游戏',
                     description: '在趣味游戏中快速掌握单词',
                     icon: '<i class="fas fa-gamepad"></i>',
@@ -652,22 +753,13 @@
                     meta: '快速反应训练'
                 },
                 {
-                    id: 5,
+                    id: 6,
                     title: '错词本',
                     description: '回顾高频错词，打造专属复习计划',
                     icon: '<i class="fas fa-repeat"></i>',
                     iconClass: 'icon-1',
                     page: 'wrongbook',
                     meta: '智能复习'
-                },
-                {
-                    id: 6,
-                    title: '学习洞察',
-                    description: '查看学习数据和成就，持续激励',
-                    icon: '<i class="fas fa-chart-line"></i>',
-                    iconClass: 'icon-2',
-                    page: 'profile',
-                    meta: '成就看板'
                 }
             ];
             
@@ -678,10 +770,11 @@
                 functionCard.className = 'function-card';
                 functionCard.setAttribute('data-function-target', index === 0 ? 'true' : 'false');
                 functionCard.onclick = () => {
-                    const url = func.page === 'wrongbook' || func.page === 'profile'
-                        ? `/${func.page}`
-                        : `/${func.page}?bookname=${encodeURIComponent(bookName)}`;
-                    window.location.href = url;
+                    const base = `/${func.page}`;
+                    const query = func.page === 'wrongbook'
+                        ? ''
+                        : `?bookname=${encodeURIComponent(bookName)}${state.bookId ? `&bookId=${state.bookId}` : ''}`;
+                    window.location.href = `${base}${query}`;
                 };
                 
                 functionCard.innerHTML = `
